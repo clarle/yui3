@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Touch Events and Abstractions - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+        
+        
+    
+    
+    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+        <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+        <link rel="stylesheet" href="/combo/css-main-min.css">
+    
+        <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+        <link rel="stylesheet" href="/css/docs-min.css">
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    
+    
+            <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29453705-2']);
+            _gaq.push(['_trackPageview']);
+            </script>
+    
+    
+            <script>
+            var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.18.1/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+            if (location.protocol.indexOf('https') > -1) {
+                YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+                YUI_config.combine = true;
+            }
+            </script>
+    
+            <script src="https://yui-s.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="https://search.yahoo.com/search"
+                        method="get" role="search">
+                
+                    <input type="search" class="search-input" name="q"
+                            aria-label="Search APIs"
+                            placeholder="Search APIs">
+                
+                    <input type="hidden" name="vs" value="yuilibrary.com">
+                    <input type="hidden" name="vs" value="yuiblog.com">
+                </form>
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+                <ul class="nav hoverable-group">
+                        <li class="nav-tab hoverable ">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/yui/quick-start/">Quick Start</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/download/yui3/">Download YUI 3</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable  nav-tab-active">
+                            <a href="/yui/docs/">Documentation</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/guides/">User Guides</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/examples/">Examples</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/api/">API Docs</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/environments/">Environments</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable nav-break">
+                            <a href="/community/">Community</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/gallery/">Gallery</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yuiblog.com/">Blog</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/forum/">Forums</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/theater/">YUI Theater</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/projects/">Other Projects</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yui2/">YUI 2</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yuitest/">YUI Test</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/phploader/">YUI PHP Loader</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                        </li>
+                                </ul>
+                        </li>
+                </ul>
+            </nav></div>
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+            <div id="breadcrumbs" class="yui3-u-1">
+                <ul class="breadcrumbs">
+                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/core">Core</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/docs/event/touch.html">Event</a></li>
+                </ul>
+            </div>
+                <div class="project-version yui3-u">Version 3.18.1</div>
+
+
+            
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Touch Events and Abstractions</h1>
+
+        
+            <a href="#docs-toc" class="jump" tabindex="1">Jump to Table of Contents</a>
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <div class="intro">
+    <p>The <code>event-touch</code> module extends the <a
+    href="index.html#event-whitelist">whitelist of DOM events</a> to include the
+    native touch and gesture events and adds  relevant information to event
+    facades.</p>
+
+    <p>The <code>event-move</code> module adds a set of abstract events that adapt to
+    the client environment to handle either touch or mouse input.</p>
+
+    <p>The <code>event-flick</code> module adds a "flick" event on top of the gesture
+    abstraction layer to capture a user flicking an element with mouse or
+    finger.</p>
+
+    <p>The <code>event-gestures</code> module is a rollup of these three, but will
+    potentially roll in more gesture based events in the future.</p>
+</div>
+
+<h2 id="using-touch-events">Using Touch Events</h2>
+
+<p>YUI DOM event support also extends to touch events. To use touch events in your application, you will need to include the <code>event-touch</code> module in your use statement.</p>
+
+<p>The set of common low-level touch events, which exist on most touch-enabled OSes are supported:</p>
+
+<ul>
+    <li><code>touchstart</code></li>
+    <li><code>touchmove</code></li>
+    <li><code>touchend</code></li>
+    <li><code>touchcancel</code></li>
+</ul>
+
+<p>Additionally, the iOS specific touch events, <code>gesturestart</code>,
+<code>gesturechange</code> and <code>gestureend</code>, are also supported.
+YUI doesn't replicate support for these events on other touch OSes currently,
+due to their lack of DOM level multi-touch support. At the point at which they
+do expose multi-touch information in the lower level touch events, we can build
+in cross-platform support for multi-touch gestures.</p>
+
+<pre class="code prettyprint">node.on(&quot;touchstart&quot;, function () {
+    this.addClass(&quot;detached&quot;);
+});</pre>
+
+
+<h4 id="the-touch-event-facade">The Touch Event Facade</h4>
+
+<p>The event facade passed to touch events has the common set of touch specific
+array properties available:</p>
+
+<ul>
+    <li><code>touches</code></li>
+    <li><code>changedTouches</code></li>
+    <li><code>touchTargets</code></li>
+</ul>
+
+<p>These event objects in these arrays are also normalized, just the same as
+the event object pass to any other DOM listener.</p>
+
+<p>The event object for the iOS gesture events have <code>scale</code> and
+<code>rotation</code> properties, the same as the native event object.</p>
+
+<h2 id="move">Cross-Device Gesture Support</h2>
+
+<p>The <code>event-move</code> module provides the following events that
+<em>roughly</em> relate to the associated touch or mouse event, depending on the client
+device:</p>
+
+<table>
+<thead>
+    <tr>
+        <th>Abstract event</th>
+        <th>Mouse event</th>
+        <th>Touch event</th>
+    </th>
+</thead>
+<tbody>
+    <tr>
+        <td><strong><code>gesturemovestart</code></strong></td>
+        <td><code>mousedown</code></td>
+        <td><code>touchstart</code></td>
+    </tr>
+    <tr>
+        <td><strong><code>gesturemove</code></strong></td>
+        <td><code>mousemove</code></td>
+        <td><code>touchmove</code></td>
+    </tr>
+    <tr>
+        <td><strong><code>gesturemoveend</code></strong></td>
+        <td><code>mouseup</code></td>
+        <td><code>touchend</code></td>
+    </tr>
+</tbody>
+</table>
+
+<p>I say "roughly" because the gesture events aim to encapsulate common
+interactions rather than just serving as a relay to other events.  Where this
+comes out is in the additional configuration that can be included in the
+subscription as a third argument.</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Notify me when the user puts a finger down, or mouses down on
+&#x2F;&#x2F; the car node
+car.on(&quot;gesturemovestart&quot;, alignForMove, {
+
+    &#x2F;&#x2F; fire the event only after 300ms of continuous contact...
+    minTime: 300,
+
+    &#x2F;&#x2F; ...or if the finger&#x2F;mouse moves more than 3px
+    minDistance: 3
+});
+
+&#x2F;&#x2F; Move the car node when the user moves the finger or mouse.
+&#x2F;&#x2F; Note the &#x60;this&#x60; override parameter is shifted to account for
+&#x2F;&#x2F; the configuration param
+car.on(&quot;gesturemove&quot;, car.move, null, car);
+
+
+&#x2F;&#x2F; Notify me when the user lifts their finger, or lets go of
+&#x2F;&#x2F; the mouse button (only if a gesturemovestart was received
+&#x2F;&#x2F; on the node).
+car.on(&quot;gesturemoveend&quot;, screechingHalt);</pre>
+
+
+<p>The complete set of configuration parameters for the gesture events is <a href="/yui/docs/api/module_event-move.html#event_gesturemove">in the API docs</a>.</p>
+
+<h4 id="related-events">Related Events</h4>
+
+<p>The three gesture events are related to each other.  They are notifications
+for the start, progress, and end of the same gesture. <code>gesturemove</code> and
+<code>gesturemoveend</code> subscriptions won't execute unless a <code>gesturemovestart</code>
+happens.</p>
+
+<p>If you need them to fire separately, such as when attaching and detaching
+subscribers dynamically, the <code>gesturemove</code> and <code>gesturemoveend</code> events can be
+subscribed to individually by configuring <code>standAlone: true</code></p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Doesn&#x27;t require an associated &#x60;gesturemovestart&#x60; subscription
+Y.one(&quot;doc&quot;).on(&quot;gesturemove&quot;, function(e) {...}, {
+    standAlone:true
+});</pre>
+
+
+<p>Under the hood, the DOM listeners which monitor mousemove/touchmove and
+mouseup/touchend are bound to the <code>document</code> by default. The node only provides
+the shared context to relate the three events.</p>
+
+
+<h2 id="flick">Flick Gesture Event</h2>
+
+<p>The flick gesture event is fired whenever the user initiates a flick gesture (with a finger or the mouse) on the node where the listener is attached.</p>
+
+<pre class="code prettyprint">myNode.on(&quot;flick&quot;, function(e) {
+
+  &#x2F;&#x2F; Some of the flick specific data on the event facade
+
+  var flick = e.flick,
+      velocity = flick.velocity,
+      distance = flick.distance,
+      axis = flick.axis,
+      startX = flick.start.pageX,
+      startY = flick.start.pageY,
+
+  &#x2F;&#x2F; The event object itself is the event object for
+  &#x2F;&#x2F; the event which concludes the flick (the mouseup or touchend)
+
+      endX = e.pageX,
+      endY = e.pageY,
+      endTarget = e.target;
+
+});</pre>
+
+
+<p>Like with the supporting gesture events, when subscribing to
+<code>flick</code>, you can also pass additional configuration to control
+when and how the flick subscriber is notified.</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Custom config, with no context or extra args
+myNode.on(&quot;flick&quot;, flickHandler, {
+
+    &#x2F;&#x2F; only notify me if the flick covered
+    &#x2F;&#x2F; more than 20px and was faster than 0.8 px&#x2F;ms
+    minDistance: 20,
+    minVelocity: 0.8,
+
+    &#x2F;&#x2F; prevent the default behavior for the
+    &#x2F;&#x2F; underlying mouse&#x2F;touch events
+    preventDefault: true
+});
+
+&#x2F;&#x2F; Another option to avoid confusion when specifying the &#x60;this&#x60;
+&#x2F;&#x2F; override or bound arguments for events with custom signatures
+&#x2F;&#x2F; is to use Y.bind
+myNode.on(&quot;flick&quot;, Y.bind(o.flickHandler, o, arg1), {
+    minDistance: 20,
+    minVelocity: 0.8,
+    preventDefault: true
+});
+
+&#x2F;&#x2F; Alternately, make sure to account for the additional subscription
+&#x2F;&#x2F; parameter by passing null if there is no configuration.
+myNode.on(&quot;flick&quot;, o.flickHandler, null, o, arg1);</pre>
+
+
+<p>The complete set of configuration parameters for the <code>flick</code> event is <a href="/yui/docs/api/module_event-flick.html#event_flick">in the API docs</a>.</p>
+
+<h2 id="caveats">Caveats</h2>
+
+<ol>
+    <li>The <code>flick</code> event doesn't (yet) support delegation.</li>
+    <li>
+        The <code>delegate()</code> signature for the gesture events is
+        <code>node.delegate('gesturemove', callback, <em>filter</em>,
+        <em>gestureConfig</em>)</code>, reversing the order of the delegation
+        filter and extra params from the <a href="hover.html"><code>hover</code></a> and
+        <a href="key.html"><code>key</code></a> events.  This may be changed in a future
+        release.
+    </li>
+</ol>
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+                
+            
+        
+
+        
+            <div id="docs-toc" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Table of Contents</h2>
+                </div>
+
+                <div class="bd">
+                    <ul class="toc">
+<li>
+<a href="#using-touch-events">Using Touch Events</a>
+<ul class="toc">
+<li>
+<a href="#the-touch-event-facade">The Touch Event Facade</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#move">Cross-Device Gesture Support</a>
+<ul class="toc">
+<li>
+<a href="#related-events">Related Events</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#flick">Flick Gesture Event</a>
+</li>
+<li>
+<a href="#caveats">Caveats</a>
+</li>
+</ul>
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Use the Event Utility to attach simple DOM event handlers.">
+                                        <a href="basic-example.html">Simple DOM Events</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Using the synthetic event API to create a DOM event that fires in response to arrow keys being pressed.">
+                                        <a href="synth-example.html">Creating an Arrow Event for DOM Subscription</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Supporting cross-device swipe gestures, using the event-move gesture events">
+                                        <a href="swipe-example.html">Supporting A Swipe Left Gesture</a>
+                                    </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Related Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li data-description="Example Photo Browser application.">
+                                        <a href="../dd/photo-browser.html">Photo Browser</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Portal style example using Drag &amp; Drop Event Bubbling and Animation.">
+                                        <a href="../dd/portal-drag.html">Portal Style Example</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Use IO to request data over HTTP.">
+                                        <a href="../io/get.html">HTTP GET to request data</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.">
+                                        <a href="../node-focusmanager/node-focusmanager-button.html">Accessible Menu Button</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to extend the base widget class, to create your own Widgets.">
+                                        <a href="../widget/widget-extend.html">Extending the Base Widget Class</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+    </script>
+
+</body>
+</html>

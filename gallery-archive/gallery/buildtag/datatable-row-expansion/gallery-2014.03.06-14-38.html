@@ -1,0 +1,301 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/home.png" /> <a href="../../index.html">Home</a><li><img src="../../../assets/gallery/star.png" /> <a href="../../featured.html">Featured</a><li><img src="../../../assets/gallery/thumb_up.png" /> <a href="../../popular.html">Popular</a><li><img src="../../../assets/gallery/greenled.png" /> <a href="../../new.html">New</a><li><img src="../../../assets/gallery/script_code_red.png" /> <a href="../../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../../assets/gear.png" /> <a href="../../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Build Tag: <a href="../gallery-2014.03.06-14-38.html">gallery-2014.03.06-14-38</a></h2>
+									<p><a href="../../show/datatable-row-expansion.html">Return to Row Expansion for DataTable</a><div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2014.03.06-14-38'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-datatable-row-expansion'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+	<span style="color: #003366; font-weight: bold;">var</span> table <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">DataTable</span><span style="color: #009900;">&#40;</span>
+	<span style="color: #009900;">&#123;</span>
+		columns<span style="color: #339933;">:</span>
+		<span style="color: #009900;">&#91;</span>
+			<span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span> Y.<span style="color: #660066;">Plugin</span>.<span style="color: #660066;">RowExpansion</span>.<span style="color: #660066;">column_key</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span> <span style="color: #3366CC;">' '</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+			<span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span> <span style="color: #3366CC;">'title'</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Title'</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+			<span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span> <span style="color: #3366CC;">'year'</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Year'</span> <span style="color: #009900;">&#125;</span>
+		<span style="color: #009900;">&#93;</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	table.<span style="color: #660066;">plug</span><span style="color: #009900;">&#40;</span>Y.<span style="color: #660066;">Plugin</span>.<span style="color: #660066;">RowExpansion</span><span style="color: #339933;">,</span>
+	<span style="color: #009900;">&#123;</span>
+		uniqueIdKey<span style="color: #339933;">:</span> <span style="color: #3366CC;">'id'</span><span style="color: #339933;">,</span>
+		template<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>data<span style="color: #009900;">&#41;</span>
+		<span style="color: #009900;">&#123;</span>
+			<span style="color: #000066; font-weight: bold;">return</span> Y.<span style="color: #660066;">Lang</span>.<span style="color: #660066;">sub</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Author: {author}, Length of title: {len}'</span><span style="color: #339933;">,</span>
+			<span style="color: #009900;">&#123;</span>
+				author<span style="color: #339933;">:</span> data.<span style="color: #660066;">author</span><span style="color: #339933;">,</span>
+				len<span style="color: #339933;">:</span>    data.<span style="color: #660066;">title</span>.<span style="color: #660066;">length</span>
+			<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+		<span style="color: #009900;">&#125;</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	table.<span style="color: #660066;">render</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#my-table'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2014.03.06-14-38'
+}).use('gallery-datatable-row-expansion', function(Y)
+
+{
+
+	var table = new Y.DataTable(
+
+	{
+
+		columns:
+
+		[
+
+			{ key: Y.Plugin.RowExpansion.column_key, label: '&Acirc;&nbsp;' },
+
+			{ key: 'title', label: 'Title' },
+
+			{ key: 'year', label: 'Year' }
+
+		]
+
+	});
+
+	table.plug(Y.Plugin.RowExpansion,
+
+	{
+
+		uniqueIdKey: 'id',
+
+		template: function(data)
+
+		{
+
+			return Y.Lang.sub('Author: {author}, Length of title: {len}',
+
+			{
+
+				author: data.author,
+
+				len:    data.title.length
+
+			});
+
+		}
+
+	});
+
+	table.render('#my-table');
+
+});</textarea>
+									</div>
+									<div id="build_info">
+										<h3 id="build_output">Build Output</h3><pre class="cmd" id="build_output_cmd" style="background-color: black; color: white;">---------- start logs from yogi.stdout.log ----------
+
+   <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  using yogi@0.1.11 on node@0.10.26
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  using module: gallery-datatable-row-expansion
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  running with shifter
+    shifter [info] racing to find the closest .shifter.json file
+    shifter [info] revving up
+    shifter [info] looking for build.json file
+    shifter [info] found build.json file, shifting
+    shifter [info] putting the hammer down, let's build this thing!
+    shifter [warn] down shifting, can't find a meta directory
+    shifter [info] putting the hammer down
+    shifter [info] shifting into gear for gallery-datatable-row-expansion
+       #1: Trailing whitespace.
+           * // line 13, pos 3
+       #2: Possible strict violation.
+           var plugin = this.rowexpander; // line 87, pos 18
+       #3: Too many var statements.
+           var pre_cells = ''; // line 89, pos 9
+       #4: Too many var statements.
+           for (var i=0; i&lt;=plugin.col_count.pre; i++) // line 90, pos 14
+       #5: Too many var statements.
+           var tmpl = plugin.get('template'); // line 95, pos 9
+       #6: Too many var statements.
+           var s = tmpl.call(this, o.data); // line 98, pos 13
+       #7: Possible strict violation.
+           var s = tmpl.call(this, o.data); // line 98, pos 27
+       #8: Too many var statements.
+           var s = Y.Lang.sub(tmpl, o.data); // line 102, pos 13
+       #9: 's' is already defined.
+           var s = Y.Lang.sub(tmpl, o.data); // line 102, pos 15
+       #10: Too many var statements.
+           var row       = o.cell.ancestor(); // line 105, pos 9
+       #11: Too many var statements.
+           var extra_row = Y.Lang.sub( // line 106, pos 9
+       #12: 's' used out of scope.
+           tmpl: s // line 115, pos 19
+       #13: Possible strict violation.
+           var plugin = this.rowexpander, // line 123, pos 18
+       #14: Possible strict violation.
+           this); // line 144, pos 5
+       #15: Possible strict violation.
+           insertRow.call(this, o); // line 150, pos 24
+       #16: Expected '===' and instead saw '=='.
+           if (col.key == RowExpansion.column_key) // line 158, pos 21
+       #17: Possible strict violation.
+           this.col_count = Y.reduce( // line 174, pos 5
+       #18: Possible strict violation.
+           this.get('host').get('columns'), // line 175, pos 9
+       #19: Possible strict violation.
+           var tbody = this.tbodyNode, // line 217, pos 17
+       #20: Missing 'new' prefix when invoking a constructor.
+           throw Error('unknown shift in getCell: ' + shift); // line 230, pos 23
+       #21: Possible strict violation.
+           cell = seed.ancestor('.' + this.getClassName('cell'), true); // line 249, pos 40
+       #22: Missing 'new' prefix when invoking a constructor.
+           throw Error('getCell cannot be called with an element from an expansion row'); // line 252, pos 23
+       #23: Too many var statements.
+           var firstRowIndex = tbody.get('firstChild.rowIndex'); // line 258, pos 17
+       #24: Too many var statements.
+           var delta = Math.sign(shift[0]); // line 262, pos 21
+       #25: Too many var statements.
+           var rows  = tbody.get('children'); // line 265, pos 25
+       #26: Too many var statements.
+           var index = row.get('rowIndex') - firstRowIndex; // line 266, pos 25
+       #27: Too many var statements.
+           var count = Math.abs(shift[0]); // line 267, pos 25
+       #28: Too many var statements.
+           for (var i=0; i&lt;count &amp;&amp; row; i++) // line 268, pos 30
+       #29: 'index' used out of scope.
+           index = cell.get('cellIndex') + shift[1]; // line 280, pos 17
+       #30: 'index' used out of scope.
+           cell  = row &amp;&amp; row.get('children').item(index); // line 281, pos 57
+       #31: Possible strict violation.
+           var tbody = this.tbodyNode, // line 301, pos 17
+       #32: Possible strict violation.
+           id = this._idMap[id.get ? id.get('clientId') : id] || id; // line 308, pos 18
+       #33: Possible strict violation.
+           row = Y.one(Y.Lang.isNumber(id) ? this.getCell([id,0]).ancestor() : '#' + id); // line 311, pos 43
+       #34: Possible strict violation.
+           var view = this.get('host').view; // line 319, pos 16
+       #35: Too many var statements.
+           var body = view.body; // line 323, pos 13
+       #36: Possible strict violation.
+           this.orig_getCell = body.getCell; // line 325, pos 9
+       #37: Possible strict violation.
+           this.orig_getRow  = body.getRow; // line 326, pos 9
+       #38: Possible strict violation.
+           var view = this.get('host').view; // line 335, pos 16
+       #39: Possible strict violation.
+           if (view.body &amp;&amp; this.orig_getCell) // line 336, pos 22
+       #40: Possible strict violation.
+           view.body.getCell = this.orig_getCell; // line 338, pos 29
+       #41: Possible strict violation.
+           if (view.body &amp;&amp; this.orig_getRow) // line 341, pos 22
+       #42: Possible strict violation.
+           view.body.getRow = this.orig_getRow; // line 343, pos 28
+       #43: 's' is defined but never used.
+           var s = Y.Lang.sub(tmpl, o.data); // line 102, pos 14
+       #44: 'config' is defined but never used.
+           initializer: function(config) // line 349, pos 33
+    shifter [queu] file has changed, continuing build
+    shifter [queu] writing RAW file
+    shifter [queu] compressing gallery-datatable-row-expansion/gallery-datatable-row-expansion.js with UglifyJS
+    shifter [queu] writing -min file
+    shifter [info] shifting for coverage
+    shifter [info] shifting skin for gallery-datatable-row-expansion
+    shifter [queu] coverage file read, starting coverage for: gallery-datatable-row-expansion/gallery-datatable-row-expansion.js
+    shifter [info] istanbul providing coverage
+    shifter [queu] instrumenting with istanbul
+    shifter [queu] writing coverage file to gallery-datatable-row-expansion/gallery-datatable-row-expansion-coverage.js
+    shifter [queu] copying assets to skin for sam
+       #1: [warning] Element (tr.row-expansion) is overqualified, just use .row-expansion without element name.
+           /* nothing to see here */.yui3-skin-sam .yui3-datatable tr.row-expansion td.post-row-expansion // line 1, pos 57
+       #2: [warning] Element (td.post-row-expansion) is overqualified, just use .post-row-expansion without element name.
+           /* nothing to see here */.yui3-skin-sam .yui3-datatable tr.row-expansion td.post-row-expansion // line 1, pos 74
+       #3: [warning] Property with star prefix found.
+           *display:inline-block; // line 11, pos 2
+    shifter [queu] writing skin file with core wrapper
+    shifter [queu] writing skin file without core wrapper
+    shifter [info] done racing, the gears are toast
+    shifter [info] finished in 0.367 seconds, pretty fast huh?
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  build complete
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  testing module now
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  prepping grover tests
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  adding tests route
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  launching xdr server on port 5003
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  listening on: http://127.0.0.1:5002
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  turning on coverage support in grover
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: red">bail</span><span style="color: white">]</span> grover returned a failure
+    
+----------  end logs from yogi.stdout.log  ----------
+
+---------- start logs from yogi.stderr.log ----------
+
+   shifter [err] /src/gallery-datatable-row-expansion/js/row-expansion.js contains 44 lint errors
+    shifter [err] /assets/skins/sam/gallery-datatable-row-expansion-skin.css contains 3 lint errors
+    Please install the phantomjs binary in your path!
+    
+----------  end logs from yogi.stderr.log  ----------
+</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,469 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/home.png" /> <a href="../../index.html">Home</a><li><img src="../../../assets/gallery/star.png" /> <a href="../../featured.html">Featured</a><li><img src="../../../assets/gallery/thumb_up.png" /> <a href="../../popular.html">Popular</a><li><img src="../../../assets/gallery/greenled.png" /> <a href="../../new.html">New</a><li><img src="../../../assets/gallery/script_code_red.png" /> <a href="../../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../../assets/gear.png" /> <a href="../../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Build Tag: <a href="../gallery-2012.09.05-20-01.html">gallery-2012.09.05-20-01</a></h2>
+									<p><a href="../../show/datatable-formatters.html">Return to DataTable Formatters</a><div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2013.01.09-23-24'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'datatable'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'gallery-datatable-formatters'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+&nbsp;
+<span style="color: #006600; font-style: italic;">//------------------   B A S I C   U S A G E   ---------------------</span>
+&nbsp;
+<span style="color: #006600; font-style: italic;">//</span>
+<span style="color: #006600; font-style: italic;">//  Use &quot;standard&quot; named formatters within a DT ...</span>
+<span style="color: #006600; font-style: italic;">//</span>
+   <span style="color: #003366; font-weight: bold;">var</span> dt1 <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">DataTable</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+      data<span style="color: #339933;">:</span> some_data<span style="color: #339933;">,</span>
+      columns<span style="color: #339933;">:</span> <span style="color: #009900;">&#91;</span>
+        <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;start_date&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Start&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;fullDate&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;end_date&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;End&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;default&quot;</span><span style="color: #339933;">,</span>
+             formatOptions<span style="color: #339933;">:</span><span style="color: #009900;">&#123;</span> type<span style="color: #339933;">:</span><span style="color: #3366CC;">'date'</span><span style="color: #339933;">,</span> formatConfig<span style="color: #339933;">:</span><span style="color: #009900;">&#123;</span> format<span style="color: #339933;">:</span><span style="color: #3366CC;">'%F'</span> <span style="color: #009900;">&#125;</span> <span style="color: #009900;">&#125;</span>    <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;qty&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Inventory Qty&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;comma&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;cost&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Carried Cost&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;currency&quot;</span><span style="color: #339933;">,</span> 
+             formatConfig<span style="color: #339933;">:</span><span style="color: #009900;">&#123;</span> prefix<span style="color: #339933;">:</span><span style="color: #3366CC;">'£'</span><span style="color: #339933;">,</span> thousandsSeparator<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;,&quot;</span><span style="color: #009900;">&#125;</span> <span style="color: #009900;">&#125;</span>
+      <span style="color: #009900;">&#93;</span>
+   <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #006600; font-style: italic;">//------------------   A D V A N C E D     U S A G E   ---------------------</span>
+&nbsp;
+<span style="color: #006600; font-style: italic;">//</span>
+<span style="color: #006600; font-style: italic;">//  Define a custom status code hash ... used on column &quot;estatus&quot;</span>
+<span style="color: #006600; font-style: italic;">// </span>
+   <span style="color: #003366; font-weight: bold;">var</span> estatusCodes <span style="color: #339933;">=</span> <span style="color: #009900;">&#123;</span>
+      <span style="color: #CC0000;">1</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;Furloughed&quot;</span><span style="color: #339933;">,</span>
+      <span style="color: #CC0000;">2</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;Sick Leave&quot;</span><span style="color: #339933;">,</span>
+      <span style="color: #CC0000;">3</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;TDY&quot;</span><span style="color: #339933;">,</span>
+      <span style="color: #CC0000;">4</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;Field Office&quot;</span><span style="color: #339933;">,</span>
+      <span style="color: #CC0000;">5</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;Headquarters&quot;</span>
+   <span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+   <span style="color: #006600; font-style: italic;">// used in a Column as;</span>
+   <span style="color: #006600; font-style: italic;">// { key:&quot;estatus&quot;, formatter:&quot;custom&quot;, formatConfig:estatusCodes  } </span>
+&nbsp;
+&nbsp;
+   <span style="color: #006600; font-style: italic;">// Add a &quot;named&quot; formatter to the standard names ... </span>
+   Y.<span style="color: #660066;">DataTable</span>.<span style="color: #660066;">Formatters</span>.<span style="color: #660066;">formatStrings</span><span style="color: #009900;">&#91;</span><span style="color: #3366CC;">'sterling'</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">=</span> <span style="color: #009900;">&#123;</span>
+      type<span style="color: #339933;">:</span><span style="color: #3366CC;">'number'</span><span style="color: #339933;">,</span>
+      formatConfig<span style="color: #339933;">:</span><span style="color: #009900;">&#123;</span> prefix<span style="color: #339933;">:</span><span style="color: #3366CC;">'£'</span><span style="color: #339933;">,</span> thousandsSeparator<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;,&quot;</span><span style="color: #009900;">&#125;</span>
+   <span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #006600; font-style: italic;">//</span>
+<span style="color: #006600; font-style: italic;">//  Define columns for a more detailed DataTable, using custom format codes ...</span>
+<span style="color: #006600; font-style: italic;">//</span>
+   <span style="color: #003366; font-weight: bold;">var</span> cols <span style="color: #339933;">=</span> <span style="color: #009900;">&#91;</span>
+     <span style="color: #006600; font-style: italic;">// four columns of same key, different Date formatting ...</span>
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;edate&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Start Date&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;shortDate&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;edate&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Start Date&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;longDate&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;edate&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Start Date&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;fullDate&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;edate&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Start Date&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;default&quot;</span><span style="color: #339933;">,</span>
+         formatOptions<span style="color: #339933;">:</span><span style="color: #009900;">&#123;</span> type<span style="color: #339933;">:</span><span style="color: #3366CC;">'date'</span><span style="color: #339933;">,</span> formatConfig<span style="color: #339933;">:</span><span style="color: #009900;">&#123;</span> format<span style="color: #339933;">:</span><span style="color: #3366CC;">'%F'</span> <span style="color: #009900;">&#125;</span> <span style="color: #009900;">&#125;</span>
+      <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+&nbsp;
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;esalary&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;esalary 1&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;currency&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;esalary&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;esalary 2&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;general2&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;esalary&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;esalary 3&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;currency&quot;</span><span style="color: #339933;">,</span> 
+         formatConfig<span style="color: #339933;">:</span><span style="color: #009900;">&#123;</span> prefix<span style="color: #339933;">:</span><span style="color: #3366CC;">'£'</span><span style="color: #339933;">,</span> thousandsSeparator<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;,&quot;</span><span style="color: #009900;">&#125;</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;esalary&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;esalary 4&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;sterling&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+&nbsp;
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;estatus&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Emp Status&quot;</span><span style="color: #339933;">,</span> formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;object&quot;</span><span style="color: #339933;">,</span> 
+       formatOptions<span style="color: #339933;">:</span>estatusCodes  <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+&nbsp;
+     <span style="color: #009900;">&#123;</span> key<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;emarried&quot;</span><span style="color: #339933;">,</span> label<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Marital Status&quot;</span><span style="color: #339933;">,</span> 
+       formatter<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;hash&quot;</span><span style="color: #339933;">,</span> 
+       formatConfig<span style="color: #339933;">:</span><span style="color: #009900;">&#123;</span> s<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Single&quot;</span><span style="color: #339933;">,</span> m<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Married&quot;</span><span style="color: #339933;">,</span> d<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Divorced&quot;</span><span style="color: #339933;">,</span>  w<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Widowed&quot;</span><span style="color: #339933;">,</span> u<span style="color: #339933;">:</span><span style="color: #3366CC;">&quot;Unknown&quot;</span> <span style="color: #009900;">&#125;</span> 
+     <span style="color: #009900;">&#125;</span>
+   <span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #006600; font-style: italic;">//</span>
+<span style="color: #006600; font-style: italic;">// Create the DataTable and render it</span>
+<span style="color: #006600; font-style: italic;">//</span>
+   <span style="color: #003366; font-weight: bold;">var</span> myDTf <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">DataTable</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+      columns<span style="color: #339933;">:</span> cols<span style="color: #339933;">,</span>
+      data<span style="color: #339933;">:</span>   jsData
+    <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">render</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;#dtable_formatted&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2013.01.09-23-24'
+}).use('datatable','gallery-datatable-formatters', function(Y) {
+
+
+
+//------------------   B A S I C   U S A G E   ---------------------
+
+
+
+//
+
+//  Use &quot;standard&quot; named formatters within a DT ...
+
+//
+
+   var dt1 = new Y.DataTable({
+
+      data: some_data,
+
+      columns: [
+
+        { key:&quot;start_date&quot;, label:&quot;Start&quot;, formatter:&quot;fullDate&quot; },
+
+        { key:&quot;end_date&quot;, label:&quot;End&quot;, formatter:&quot;default&quot;,
+
+             formatOptions:{ type:'date', formatConfig:{ format:'%F' } }    },
+
+        { key:&quot;qty&quot;, label:&quot;Inventory Qty&quot;, formatter:&quot;comma&quot; },
+
+        { key:&quot;cost&quot;, label:&quot;Carried Cost&quot;, formatter:&quot;currency&quot;, 
+
+             formatConfig:{ prefix:'&Acirc;&pound;', thousandsSeparator:&quot;,&quot;} }
+
+      ]
+
+   });
+
+
+
+//------------------   A D V A N C E D     U S A G E   ---------------------
+
+
+
+//
+
+//  Define a custom status code hash ... used on column &quot;estatus&quot;
+
+// 
+
+   var estatusCodes = {
+
+      1: &quot;Furloughed&quot;,
+
+      2: &quot;Sick Leave&quot;,
+
+      3: &quot;TDY&quot;,
+
+      4: &quot;Field Office&quot;,
+
+      5: &quot;Headquarters&quot;
+
+   };
+
+   // used in a Column as;
+
+   // { key:&quot;estatus&quot;, formatter:&quot;custom&quot;, formatConfig:estatusCodes  } 
+
+
+
+
+
+   // Add a &quot;named&quot; formatter to the standard names ... 
+
+   Y.DataTable.Formatters.formatStrings['sterling'] = {
+
+      type:'number',
+
+      formatConfig:{ prefix:'&Acirc;&pound;', thousandsSeparator:&quot;,&quot;}
+
+   };
+
+
+
+//
+
+//  Define columns for a more detailed DataTable, using custom format codes ...
+
+//
+
+   var cols = [
+
+     // four columns of same key, different Date formatting ...
+
+     { key:&quot;edate&quot;, label:&quot;Start Date&quot;, formatter:&quot;shortDate&quot; },
+
+     { key:&quot;edate&quot;, label:&quot;Start Date&quot;, formatter:&quot;longDate&quot; },
+
+     { key:&quot;edate&quot;, label:&quot;Start Date&quot;, formatter:&quot;fullDate&quot; },
+
+     { key:&quot;edate&quot;, label:&quot;Start Date&quot;, formatter:&quot;default&quot;,
+
+         formatOptions:{ type:'date', formatConfig:{ format:'%F' } }
+
+      },
+
+
+
+     { key:&quot;esalary&quot;, label:&quot;esalary 1&quot;, formatter:&quot;currency&quot; },
+
+     { key:&quot;esalary&quot;, label:&quot;esalary 2&quot;, formatter:&quot;general2&quot; },
+
+     { key:&quot;esalary&quot;, label:&quot;esalary 3&quot;, formatter:&quot;currency&quot;, 
+
+         formatConfig:{ prefix:'&Acirc;&pound;', thousandsSeparator:&quot;,&quot;} },
+
+     { key:&quot;esalary&quot;, label:&quot;esalary 4&quot;, formatter:&quot;sterling&quot; },
+
+
+
+     { key:&quot;estatus&quot;, label:&quot;Emp Status&quot;, formatter:&quot;object&quot;, 
+
+       formatOptions:estatusCodes  },
+
+
+
+     { key:&quot;emarried&quot;, label:&quot;Marital Status&quot;, 
+
+       formatter:&quot;hash&quot;, 
+
+       formatConfig:{ s:&quot;Single&quot;, m:&quot;Married&quot;, d:&quot;Divorced&quot;,  w:&quot;Widowed&quot;, u:&quot;Unknown&quot; } 
+
+     }
+
+   ];
+
+
+
+//
+
+// Create the DataTable and render it
+
+//
+
+   var myDTf = new Y.DataTable({
+
+      columns: cols,
+
+      data:   jsData
+
+    }).render(&quot;#dtable_formatted&quot;);
+
+
+
+});</textarea>
+									</div>
+									<div id="build_info">
+										<h3 id="build_output">Build Output</h3><pre class="cmd" id="build_output_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-datatable-formatters
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+     [echo] Starting Build For gallery-datatable-formatters
+
+-lint-server:
+     [echo] Starting Build For gallery-datatable-formatters
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/gallery-datatable-formatters.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/gallery-datatable-formatters.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .bind,YObject=Y.Object; ---> var  <--- data=model.toJSON(),clientId=
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol isArray is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] ){var Lang=Y.Lang, ---> isArray <--- =Lang.isArray,isNumber=Lang.isNumber
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol isNumber is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] .Lang,isArray=Lang.isArray, ---> isNumber <--- =Lang.isNumber,isString=Lang.isString
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol isString is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] .isArray,isNumber=Lang.isNumber, ---> isString <--- =Lang.isString,fromTemplate=Lang.sub
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol toArray is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] ,htmlEscape=Y.Escape.html, ---> toArray <--- =Y.Array,bind=Y.bind
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol bind is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] .html,toArray=Y.Array, ---> bind <--- =Y.bind,YObject=Y.Object
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol YObject is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] .Array,bind=Y.bind, ---> YObject <--- =Y.Object;var data=model.
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/gallery-datatable-formatters-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/gallery-datatable-formatters.js
+     [java]  
+     [java] 
+     [java] 	18, 4: Mixed spaces and tabs.
+     [java] 	columns: [
+     [java] 
+     [java] 	19, 8: Mixed spaces and tabs.
+     [java] 	{ key:"start_date", label:"Start", formatter:"fullDate" },
+     [java] 
+     [java] 	20, 12: Mixed spaces and tabs.
+     [java] 	{ key:"end_date", label:"End", formatter:"default",
+     [java] 
+     [java] 	22, 4: Mixed spaces and tabs.
+     [java] 	{ key:"qty", label:"Inventory Qty", formatter:"comma" },
+     [java] 
+     [java] 	23, 8: Mixed spaces and tabs.
+     [java] 	{ key:"cost", label:"Carried Cost", formatter:"currency",
+     [java] 
+     [java] 	25, 4: Mixed spaces and tabs.
+     [java] 	]
+     [java] 
+     [java] 	124, 12: Expected '{' and instead saw 'value'.
+     [java] 	value = Y.DataType.Date.format(o.value,fmtConf);
+     [java] 
+     [java] 	126, 12: Expected '{' and instead saw 'value'.
+     [java] 	value = Y.DataType.Number.format(o.value,fmtConf);
+     [java] 
+     [java] 	193, 25: Expected '{' and instead saw 'value'.
+     [java] 	value = Y.DataTable.Formatters.namedFormatter.call(host,col.formatter,formatterData);
+     [java] 
+     [java] 	196, 25: Expected '{' and instead saw 'value'.
+     [java] 	value = fromTemplate("{" + value + "}", col.formatConfig );
+     [java] 
+     [java] 	199, 25: Expected '{' and instead saw 'value'.
+     [java] 	value = fromTemplate(col.formatter, formatterData);
+     [java] 
+     [java] 	225, 2: Missing semicolon.
+     [java] 	}
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-datatable-formatters
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

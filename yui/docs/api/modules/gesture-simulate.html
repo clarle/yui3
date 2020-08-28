@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>gesture-simulate Module - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+        
+        
+    
+    
+    
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+        <link rel="stylesheet" href="/combo/css-main-min.css">
+    
+        <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+        <link rel="stylesheet" href="/css/apidocs-min.css">
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    
+    
+            <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29453705-2']);
+            _gaq.push(['_trackPageview']);
+            </script>
+    
+    
+            <script>
+            var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.18.1/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+            if (location.protocol.indexOf('https') > -1) {
+                YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+                YUI_config.combine = true;
+            }
+            </script>
+    
+            <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+                        method="get" role="search">
+                
+                    <input type="search" class="search-input" name="q"
+                            aria-label="Search APIs"
+                            placeholder="Search APIs">
+                
+                    <input type="hidden" name="vs" value="yuilibrary.com">
+                    <input type="hidden" name="vs" value="yuiblog.com">
+                </form>
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+                <ul class="nav hoverable-group">
+                        <li class="nav-tab hoverable ">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/yui/quick-start/">Quick Start</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/download/yui3/">Download YUI 3</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable  nav-tab-active">
+                            <a href="/yui/docs/">Documentation</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/guides/">User Guides</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/examples/">Examples</a>
+                                        </li>
+                                        <li class="nav-child  nav-child-active">
+                                                <a href="/yui/docs/api/">API Docs</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/environments/">Environments</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable nav-break">
+                            <a href="/community/">Community</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/gallery/">Gallery</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yuiblog.com/">Blog</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/forum/">Forums</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/theater/">YUI Theater</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/projects/">Other Projects</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yui2/">YUI 2</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yuitest/">YUI Test</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/phploader/">YUI PHP Loader</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                        </li>
+                                </ul>
+                        </li>
+                </ul>
+            </nav></div>
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+            <div id="breadcrumbs" class="yui3-u-1">
+                <ul class="breadcrumbs">
+                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/docs/api/">API Docs</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/docs/api/modules/gesture-simulate.html">gesture-simulate Module</a></li>
+                </ul>
+            </div>
+                <div class="project-version yui3-u">Version 3.18.1</div>
+
+
+            
+
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar apidocs">
+        <div id="api-list">
+            <h2 class="off-left">APIs</h2>
+            <div id="api-tabview" class="tabview">
+                <ul class="tabs">
+                    <li><a href="#api-classes">Classes</a></li>
+                    <li><a href="#api-modules">Modules</a></li>
+                    <li><a href="#api-everything">Everything</a></li>
+                </ul>
+        
+                <div id="api-tabview-filter">
+                    <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                </div>
+        
+                <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Anim.html">Anim</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/App.html">App</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/App.Base.html">App.Base</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/App.Content.html">App.Content</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/App.Transitions.html">App.Transitions</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/App.TransitionsNative.html">App.TransitionsNative</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AreaSeries.html">AreaSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AreaSplineSeries.html">AreaSplineSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Array.html">Array</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ArrayList.html">ArrayList</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ArraySort.html">ArraySort</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AsyncQueue.html">AsyncQueue</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Attribute.html">Attribute</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AttributeCore.html">AttributeCore</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AttributeEvents.html">AttributeEvents</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AttributeExtras.html">AttributeExtras</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AttributeLite.html">AttributeLite</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AttributeObservable.html">AttributeObservable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AutoComplete.html">AutoComplete</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AutoCompleteBase.html">AutoCompleteBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AutoCompleteFilters.html">AutoCompleteFilters</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AutoCompleteHighlighters.html">AutoCompleteHighlighters</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AutoCompleteList.html">AutoCompleteList</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Axis.html">Axis</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/AxisBase.html">AxisBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/BarSeries.html">BarSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Base.html">Base</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/BaseCore.html">BaseCore</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/BaseObservable.html">BaseObservable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/BottomAxisLayout.html">BottomAxisLayout</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Button.html">Button</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ButtonCore.html">ButtonCore</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ButtonGroup.html">ButtonGroup</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Cache.html">Cache</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CacheOffline.html">CacheOffline</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Calendar.html">Calendar</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CalendarBase.html">CalendarBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CandlestickSeries.html">CandlestickSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CanvasCircle.html">CanvasCircle</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CanvasDrawing.html">CanvasDrawing</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CanvasEllipse.html">CanvasEllipse</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CanvasGraphic.html">CanvasGraphic</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CanvasPath.html">CanvasPath</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CanvasPieSlice.html">CanvasPieSlice</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CanvasRect.html">CanvasRect</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CanvasShape.html">CanvasShape</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CartesianChart.html">CartesianChart</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CartesianSeries.html">CartesianSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CategoryAxis.html">CategoryAxis</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CategoryAxisBase.html">CategoryAxisBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CategoryImpl.html">CategoryImpl</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Chart.html">Chart</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ChartBase.html">ChartBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ChartLegend.html">ChartLegend</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Circle.html">Circle</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CircleGroup.html">CircleGroup</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ClassNameManager.html">ClassNameManager</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ClickableRail.html">ClickableRail</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Color.html">Color</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Color.Harmony.html">Color.Harmony</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Color.HSL.html">Color.HSL</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Color.HSV.html">Color.HSV</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ColumnSeries.html">ColumnSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ComboSeries.html">ComboSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ComboSplineSeries.html">ComboSplineSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/config.html">config</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Console.html">Console</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ContentEditable.html">ContentEditable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Controller.html">Controller</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Cookie.html">Cookie</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CurveUtil.html">CurveUtil</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/CustomEvent.html">CustomEvent</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSchema.Array.html">DataSchema.Array</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSchema.Base.html">DataSchema.Base</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSchema.JSON.html">DataSchema.JSON</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSchema.Text.html">DataSchema.Text</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSchema.XML.html">DataSchema.XML</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSource.Function.html">DataSource.Function</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSource.Get.html">DataSource.Get</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSource.IO.html">DataSource.IO</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSource.Local.html">DataSource.Local</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSourceArraySchema.html">DataSourceArraySchema</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSourceCache.html">DataSourceCache</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSourceCacheExtension.html">DataSourceCacheExtension</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSourceJSONSchema.html">DataSourceJSONSchema</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSourceTextSchema.html">DataSourceTextSchema</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataSourceXMLSchema.html">DataSourceXMLSchema</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.html">DataTable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Base.html">DataTable.Base</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.BodyView.html">DataTable.BodyView</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.BodyView.Formatters.html">DataTable.BodyView.Formatters</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Column.html">DataTable.Column</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.ColumnWidths.html">DataTable.ColumnWidths</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Core.html">DataTable.Core</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.HeaderView.html">DataTable.HeaderView</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Highlight.html">DataTable.Highlight</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.KeyNav.html">DataTable.KeyNav</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Message.html">DataTable.Message</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Mutable.html">DataTable.Mutable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Paginator.html">DataTable.Paginator</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Paginator.Model.html">DataTable.Paginator.Model</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Paginator.View.html">DataTable.Paginator.View</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Scrollable.html">DataTable.Scrollable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.Sortable.html">DataTable.Sortable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DataTable.TableView.html">DataTable.TableView</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Date.html">Date</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DD.DDM.html">DD.DDM</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DD.Delegate.html">DD.Delegate</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DD.Drag.html">DD.Drag</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DD.Drop.html">DD.Drop</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DD.Scroll.html">DD.Scroll</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Dial.html">Dial</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Do.html">Do</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Do.AlterArgs.html">Do.AlterArgs</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Do.AlterReturn.html">Do.AlterReturn</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Do.Error.html">Do.Error</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Do.Halt.html">Do.Halt</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Do.Method.html">Do.Method</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Do.Prevent.html">Do.Prevent</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DOM.html">DOM</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/DOMEventFacade.html">DOMEventFacade</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Drawing.html">Drawing</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Easing.html">Easing</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/EditorBase.html">EditorBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/EditorSelection.html">EditorSelection</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Ellipse.html">Ellipse</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/EllipseGroup.html">EllipseGroup</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Escape.html">Escape</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Event.html">Event</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/EventFacade.html">EventFacade</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/EventHandle.html">EventHandle</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/EventTarget.html">EventTarget</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Features.html">Features</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/File.html">File</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/FileFlash.html">FileFlash</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/FileHTML5.html">FileHTML5</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Fills.html">Fills</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Frame.html">Frame</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Get.html">Get</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Get.Transaction.html">Get.Transaction</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/GetNodeJS.html">GetNodeJS</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Graph.html">Graph</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Graphic.html">Graphic</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/GraphicBase.html">GraphicBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Gridlines.html">Gridlines</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/GroupDiamond.html">GroupDiamond</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/GroupRect.html">GroupRect</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Handlebars.html">Handlebars</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Highlight.html">Highlight</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Histogram.html">Histogram</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/HistoryBase.html">HistoryBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/HistoryHash.html">HistoryHash</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/HistoryHTML5.html">HistoryHTML5</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/HorizontalLegendLayout.html">HorizontalLegendLayout</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ImgLoadGroup.html">ImgLoadGroup</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ImgLoadImgObj.html">ImgLoadImgObj</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/InlineEditor.html">InlineEditor</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Intl.html">Intl</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/IO.html">IO</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/JSON.html">JSON</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/JSONPRequest.html">JSONPRequest</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Lang.html">Lang</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/LazyModelList.html">LazyModelList</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/LeftAxisLayout.html">LeftAxisLayout</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Lines.html">Lines</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/LineSeries.html">LineSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Loader.html">Loader</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/MarkerSeries.html">MarkerSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Matrix.html">Matrix</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/MatrixUtil.html">MatrixUtil</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Model.html">Model</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ModelList.html">ModelList</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ModelSync.Local.html">ModelSync.Local</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ModelSync.REST.html">ModelSync.REST</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Node.html">Node</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/NodeList.html">NodeList</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Number.html">Number</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/NumericAxis.html">NumericAxis</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/NumericAxisBase.html">NumericAxisBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/NumericImpl.html">NumericImpl</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Object.html">Object</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/OHLCSeries.html">OHLCSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Overlay.html">Overlay</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Paginator.html">Paginator</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Paginator.Core.html">Paginator.Core</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Paginator.Url.html">Paginator.Url</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Panel.html">Panel</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Parallel.html">Parallel</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Path.html">Path</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/PieChart.html">PieChart</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/PieSeries.html">PieSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Pjax.html">Pjax</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/PjaxBase.html">PjaxBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/PjaxContent.html">PjaxContent</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plots.html">Plots</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Align.html">Plugin.Align</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.AutoComplete.html">Plugin.AutoComplete</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Base.html">Plugin.Base</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Button.html">Plugin.Button</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Cache.html">Plugin.Cache</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.CalendarNavigator.html">Plugin.CalendarNavigator</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.ConsoleFilters.html">Plugin.ConsoleFilters</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.CreateLinkBase.html">Plugin.CreateLinkBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.DataTableDataSource.html">Plugin.DataTableDataSource</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.DDConstrained.html">Plugin.DDConstrained</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.DDNodeScroll.html">Plugin.DDNodeScroll</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.DDProxy.html">Plugin.DDProxy</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.DDWindowScroll.html">Plugin.DDWindowScroll</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Drag.html">Plugin.Drag</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Drop.html">Plugin.Drop</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.EditorBidi.html">Plugin.EditorBidi</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.EditorBR.html">Plugin.EditorBR</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.EditorLists.html">Plugin.EditorLists</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.EditorPara.html">Plugin.EditorPara</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.EditorParaBase.html">Plugin.EditorParaBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.EditorParaIE.html">Plugin.EditorParaIE</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.EditorTab.html">Plugin.EditorTab</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.ExecCommand.html">Plugin.ExecCommand</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.ExecCommand.COMMANDS.html">Plugin.ExecCommand.COMMANDS</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Flick.html">Plugin.Flick</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Host.html">Plugin.Host</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/plugin.NodeFocusManager.html">plugin.NodeFocusManager</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.NodeFX.html">Plugin.NodeFX</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/plugin.NodeMenuNav.html">plugin.NodeMenuNav</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Pjax.html">Plugin.Pjax</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Resize.html">Plugin.Resize</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.ResizeConstrained.html">Plugin.ResizeConstrained</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.ResizeProxy.html">Plugin.ResizeProxy</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.ScrollInfo.html">Plugin.ScrollInfo</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.ScrollViewList.html">Plugin.ScrollViewList</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.ScrollViewPaginator.html">Plugin.ScrollViewPaginator</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.ScrollViewScrollbars.html">Plugin.ScrollViewScrollbars</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Shim.html">Plugin.Shim</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.SortScroll.html">Plugin.SortScroll</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.Tree.Lazy.html">Plugin.Tree.Lazy</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Plugin.WidgetAnim.html">Plugin.WidgetAnim</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Pollable.html">Pollable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Promise.html">Promise</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Promise.Resolver.html">Promise.Resolver</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/QueryString.html">QueryString</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Queue.html">Queue</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/RangeSeries.html">RangeSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Record.html">Record</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Recordset.html">Recordset</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/RecordsetFilter.html">RecordsetFilter</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/RecordsetIndexer.html">RecordsetIndexer</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/RecordsetSort.html">RecordsetSort</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Rect.html">Rect</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Renderer.html">Renderer</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Resize.html">Resize</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/RightAxisLayout.html">RightAxisLayout</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Router.html">Router</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ScrollView.html">ScrollView</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Selector.html">Selector</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SeriesBase.html">SeriesBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Shape.html">Shape</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ShapeGroup.html">ShapeGroup</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Slider.html">Slider</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SliderBase.html">SliderBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SliderValueRange.html">SliderValueRange</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Sortable.html">Sortable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SplineSeries.html">SplineSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedAreaSeries.html">StackedAreaSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedAreaSplineSeries.html">StackedAreaSplineSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedAxis.html">StackedAxis</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedAxisBase.html">StackedAxisBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedBarSeries.html">StackedBarSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedColumnSeries.html">StackedColumnSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedComboSeries.html">StackedComboSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedComboSplineSeries.html">StackedComboSplineSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedImpl.html">StackedImpl</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedLineSeries.html">StackedLineSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedMarkerSeries.html">StackedMarkerSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackedSplineSeries.html">StackedSplineSeries</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StackingUtil.html">StackingUtil</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/State.html">State</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/StyleSheet.html">StyleSheet</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Subscriber.html">Subscriber</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SVGCircle.html">SVGCircle</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SVGDrawing.html">SVGDrawing</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SVGEllipse.html">SVGEllipse</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SVGGraphic.html">SVGGraphic</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SVGPath.html">SVGPath</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SVGPieSlice.html">SVGPieSlice</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SVGRect.html">SVGRect</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SVGShape.html">SVGShape</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SWF.html">SWF</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SWFDetect.html">SWFDetect</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SyntheticEvent.html">SyntheticEvent</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SyntheticEvent.Notifier.html">SyntheticEvent.Notifier</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/SynthRegistry.html">SynthRegistry</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tab.html">Tab</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/TabView.html">TabView</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Template.html">Template</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Template.Micro.html">Template.Micro</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.ArrayAssert.html">Test.ArrayAssert</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.Assert.html">Test.Assert</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.AssertionError.html">Test.AssertionError</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.ComparisonFailure.html">Test.ComparisonFailure</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.Console.html">Test.Console</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.CoverageFormat.html">Test.CoverageFormat</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.DateAssert.html">Test.DateAssert</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.EventTarget.html">Test.EventTarget</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.Mock.html">Test.Mock</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.Mock.Value.html">Test.Mock.Value</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.ObjectAssert.html">Test.ObjectAssert</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.Reporter.html">Test.Reporter</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.Results.html">Test.Results</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.Runner.html">Test.Runner</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.ShouldError.html">Test.ShouldError</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.ShouldFail.html">Test.ShouldFail</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.TestCase.html">Test.TestCase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.TestFormat.html">Test.TestFormat</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.TestNode.html">Test.TestNode</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.TestRunner.html">Test.TestRunner</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.TestSuite.html">Test.TestSuite</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.UnexpectedError.html">Test.UnexpectedError</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.UnexpectedValue.html">Test.UnexpectedValue</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Test.Wait.html">Test.Wait</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Text.AccentFold.html">Text.AccentFold</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Text.WordBreak.html">Text.WordBreak</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/TimeAxis.html">TimeAxis</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/TimeAxisBase.html">TimeAxisBase</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/TimeImpl.html">TimeImpl</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ToggleButton.html">ToggleButton</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/TopAxisLayout.html">TopAxisLayout</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Transition.html">Transition</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.html">Tree</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.Labelable.html">Tree.Labelable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.Node.html">Tree.Node</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.Node.Labelable.html">Tree.Node.Labelable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.Node.Openable.html">Tree.Node.Openable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.Node.Selectable.html">Tree.Node.Selectable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.Node.Sortable.html">Tree.Node.Sortable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.Openable.html">Tree.Openable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.Selectable.html">Tree.Selectable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Tree.Sortable.html">Tree.Sortable</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/UA.html">UA</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Uploader.html">Uploader</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Uploader.Queue.html">Uploader.Queue</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/UploaderFlash.html">UploaderFlash</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/UploaderHTML5.html">UploaderHTML5</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/ValueChange.html">ValueChange</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/VerticalLegendLayout.html">VerticalLegendLayout</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/View.html">View</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/View.NodeMap.html">View.NodeMap</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/VMLCircle.html">VMLCircle</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/VMLDrawing.html">VMLDrawing</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/VMLEllipse.html">VMLEllipse</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/VMLGraphic.html">VMLGraphic</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/VMLPath.html">VMLPath</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/VMLPieSlice.html">VMLPieSlice</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/VMLRect.html">VMLRect</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/VMLShape.html">VMLShape</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/Widget.html">Widget</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetAutohide.html">WidgetAutohide</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetButtons.html">WidgetButtons</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetChild.html">WidgetChild</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetModality.html">WidgetModality</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetParent.html">WidgetParent</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetPosition.html">WidgetPosition</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetPositionAlign.html">WidgetPositionAlign</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetPositionConstrain.html">WidgetPositionConstrain</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetStack.html">WidgetStack</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/WidgetStdMod.html">WidgetStdMod</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/XML.html">XML</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/YQL.html">YQL</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/YQLRequest.html">YQLRequest</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/YUI.html">YUI</a>
+                                </li>
+                                <li class="api-list-item class">
+                                    <a href="/yui/docs/api/classes/YUI~substitute.html">YUI~substitute</a>
+                                </li>
+                            </ul>
+        
+                        <ul id="api-modules" class="apis modules"></ul>
+        
+                        <ul id="api-everything" class="apis search">
+                            <li class="message">
+                                Begin typing in the search box above to see results.
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="yui3-u-3-4">
+    <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+    </div>
+
+    <div class="apidocs">
+        <div id="docs-main" class="content">
+            <h1>gesture-simulate Module</h1>
+            <div class="box clearfix meta">
+                
+            
+                
+                    <div class="uses">
+                        Requires
+                        <ul class="inline commas">
+                            
+                                <li><a href="../modules/event-simulate.html">event-simulate</a></li>
+                            
+                                <li><a href="../modules/async-queue.html">async-queue</a></li>
+                            
+                                <li><a href="../modules/node-screen.html">node-screen</a></li>
+                            
+                        </ul>
+                    </div>
+                
+            
+                
+                    <div class="foundat">
+                        Defined in: <a href="../files/gesture-simulate_js_gesture-simulate.js.html#l1"><code>gesture-simulate&#x2F;js&#x2F;gesture-simulate.js:1</code></a>
+                    </div>
+                
+            
+                
+            </div>
+            
+            
+            
+            <div class="box intro">
+                <p>Simulate high-level user gestures by generating a set of native DOM events.</p>
+            
+            </div>
+            
+            
+            
+            <div class="yui3-g">
+                <div class="yui3-u-1-2">
+                    
+                </div>
+            
+                <div class="yui3-u-1-2">
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js&apidocs/apidocs-min.js"></script>
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+</body>
+</html>

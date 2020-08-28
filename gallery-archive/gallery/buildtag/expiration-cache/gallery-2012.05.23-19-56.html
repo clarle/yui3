@@ -1,0 +1,248 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/home.png" /> <a href="../../index.html">Home</a><li><img src="../../../assets/gallery/star.png" /> <a href="../../featured.html">Featured</a><li><img src="../../../assets/gallery/thumb_up.png" /> <a href="../../popular.html">Popular</a><li><img src="../../../assets/gallery/greenled.png" /> <a href="../../new.html">New</a><li><img src="../../../assets/gallery/script_code_red.png" /> <a href="../../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../../assets/gear.png" /> <a href="../../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Build Tag: <a href="../gallery-2012.05.23-19-56.html">gallery-2012.05.23-19-56</a></h2>
+									<p><a href="../../show/expiration-cache.html">Return to Cache (expiration)</a><div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2012.05.23-19-56'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-expiration-cache'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+	<span style="color: #006600; font-style: italic;">// create a cache where all items expire after 1 hour (milliseconds)</span>
+	<span style="color: #003366; font-weight: bold;">var</span> time_cache <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">ExpirationCache</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span> expire<span style="color: #339933;">:</span> <span style="color: #CC0000;">3600000</span> <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	time_cache.<span style="color: #660066;">put</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'foo'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'bar'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	<span style="color: #003366; font-weight: bold;">var</span> data <span style="color: #339933;">=</span> time_cache.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'foo'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// create a cache where all items expire after 10 reads</span>
+	<span style="color: #003366; font-weight: bold;">var</span> usage_cache <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">ExpirationCache</span><span style="color: #009900;">&#40;</span>
+	<span style="color: #009900;">&#123;</span>
+		meta<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>value<span style="color: #009900;">&#41;</span>
+		<span style="color: #009900;">&#123;</span>
+			<span style="color: #000066; font-weight: bold;">return</span> <span style="color: #009900;">&#123;</span>counter<span style="color: #339933;">:</span><span style="color: #CC0000;">0</span><span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+		<span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+		expire<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>meta<span style="color: #339933;">,</span> value<span style="color: #009900;">&#41;</span>
+		<span style="color: #009900;">&#123;</span>
+			meta.<span style="color: #660066;">counter</span><span style="color: #339933;">++;</span>
+			<span style="color: #000066; font-weight: bold;">return</span> <span style="color: #009900;">&#40;</span>meta.<span style="color: #660066;">counter</span> <span style="color: #339933;">&gt;</span> <span style="color: #CC0000;">10</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+		<span style="color: #009900;">&#125;</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2012.05.23-19-56'
+}).use('gallery-expiration-cache', function(Y)
+
+{
+
+	// create a cache where all items expire after 1 hour (milliseconds)
+
+	var time_cache = new Y.ExpirationCache({ expire: 3600000 });
+
+
+
+	time_cache.put('foo', 'bar');
+
+	var data = time_cache.get('foo');
+
+
+
+	// create a cache where all items expire after 10 reads
+
+	var usage_cache = new Y.ExpirationCache(
+
+	{
+
+		meta: function(value)
+
+		{
+
+			return {counter:0};
+
+		},
+
+		expire: function(meta, value)
+
+		{
+
+			meta.counter++;
+
+			return (meta.counter &gt; 10);
+
+		}
+
+	});
+
+
+
+});</textarea>
+									</div>
+									<div id="build_info">
+										<h3 id="build_output">Build Output</h3><pre class="cmd" id="build_output_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-expiration-cache
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-expiration-cache/build_tmp
+     [echo] Starting Build For gallery-expiration-cache
+
+-lint-server:
+     [echo] Starting Build For gallery-expiration-cache
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-expiration-cache/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-expiration-cache/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-expiration-cache/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-expiration-cache/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-expiration-cache/build_tmp/gallery-expiration-cache.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-expiration-cache/build_tmp/gallery-expiration-cache-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-expiration-cache/build_tmp/gallery-expiration-cache.js
+     [java]  
+     [java] 
+     [java] 	25, 36: 'timestamp' is not defined.
+     [java] 	this._meta   = config.meta  || timestamp;
+     [java] 
+     [java] 	26, 61: 'expire' is not defined.
+     [java] 	this._expire = Y.Lang.isNumber(config.expire) ? Y.rbind(expire, null, config.expire) : config.expire;
+     [java] 
+     [java] 	27, 35: 'initStats' is not defined.
+     [java] 	this._stats  = config.stats ? initStats() : null;
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 3 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-expiration-cache
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 2 seconds</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

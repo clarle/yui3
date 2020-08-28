@@ -1,0 +1,480 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery :: Asynchronous Command Queue</title>
+		<link href="https://github.com/solmsted" rel="author" title="solmsted" />
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/home.png" /> <a href="../index.html">Home</a><li><img src="../../assets/gallery/star.png" /> <a href="../featured.html">Featured</a><li><img src="../../assets/gallery/thumb_up.png" /> <a href="../popular.html">Popular</a><li><img src="../../assets/gallery/greenled.png" /> <a href="../new.html">New</a><li><img src="../../assets/gallery/script_code_red.png" /> <a href="../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../assets/gear.png" /> <a href="../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<div class="warning"> YUI Library is not responsible for bugs or support with this module. It is available as a free service. For support please contact the module owner with the provided links. </div>
+									<h2>This module has been deprecated and is no longer supported by the module author.</h2>
+									<div class="gallery-item gallery-item-deprecated" id="gallery-item_410">
+										<div class="item-hd">
+											<h2>Asynchronous Command Queue (gallery-asynchronouscommandqueue) <span class="oncdn" title="This module is available on the CDN.">on cdn</span></h2> Last Updated: <span title="08 Feb 2012 15:35">02/8/12</span></div>
+										<div class="mod">
+											<div class="yui-gf profile">
+												<div class="yui-u first">
+													<h3><img class="medal" src="../../assets/medal_silver.png" title="CLA Signed" /> <span class="gallery-user">Steven Olmsted</span></h3>
+													<h4>YUI Contributor</h4>
+													<p><img src="http://www.gravatar.com/avatar/d49156801406cf2236d35e086149691a?s=64&d=http://yuilibrary.com/assets/gravatar-64.png" /><p><a href="../user/solmsted.html">See 42 more by this user.</a> Created: <span title="11 Mar 2011 19:54">03/11/11</span><br /> Last CDN Push: <span title="13 Apr 2011 22:39">04/13/11</span><br /> Build Tag: <a href="../buildtag/asynchronouscommandqueue/gallery-2011.04.13-22-38.html">gallery-2011.04.13-22-38</a><br /> Project: <a href="http://yuilibrary.com/projects/yui3">YUI 3</a><br /> License: <a href="http://yuilibrary.com/license/" target="_blank">YUI BSD</a><br /> YUI Version: 3.5.0pr2<br /> Free for use. </div>
+												<div class="yui-u">
+													<div class="desc"><span class="wikipage"><p>This module has been replaced by gallery-async and gallery-async-command.<p>&quot;Synchronous programming is disrespectful and should not be employed in applications which are used by people.&quot; - Douglas Crockford<p>Asynchronous events are a wonderful tool, especially for web application development. Unfortunately, they can create a couple difficult situations and many developers attempt to avoid them by using synchronous XHR or busy waiting or something worse. Asynchronous Command Queue aims to provide a clean(ish) solution for these situations, reducing spaghetti code and putting the developer in control of when things happen.<p>Any asynchronous event and callback function can be wrapped in an Asynchronous Command object. It could be an io request, YQL, JSONP, or a callback from an animation or DOM event, a user input dialog or form submit, events from web workers, or anything else.<p>Asynchronous Command Queue will primarily help in these two situations:<p>There are multiple asynchronous events that need to occur in a specific order; one cannot begin until the previous one is completed. Asynchronous Command Queue helps in this situation by defining the queue as a single array of commands. This avoids the need to nest many levels of closures and callback functions. The command function code can be read from top to bottom in order.<p>There are multiple asynchronous events that need to occur, order is unimportant, and the application needs to be informed when all of them have completed. Asynchronous Command Queue helps in this situation by executing all of the commands right away. Especially with multiple io requests, this increases front-end performance by taking advantage of parallel processing on the remote servers, instead of waiting for one response before requesting another. The application can subscribe to the complete event to be sure that all commands have finished.<p>Entire Asynchronous Command Queues can be nested to provide very fine control over the timing of complex event sequences.<p>There is only one drawback to using Asynchronous Command Queues. Every Asynchronous Command MUST be manually completed. It's easy to do: asynchronousCommand.fire('complete); but it's also easy to forget to do. If any Asynchronous Command does not complete, the Asynchronous Command Queue will stop firing events and anything in the application waiting on those events will never run.</span></div>
+												</div>
+												<div class="tags">
+													<ul>
+														<li>Tags: <li><a href="../tag/solmsted.html" title="Search by this tag: solmsted">solmsted</a><li><a href="../tag/command.html" title="Search by this tag: command">command</a><li><a href="../tag/event.html" title="Search by this tag: event">event</a><li><a href="../tag/callback.html" title="Search by this tag: callback">callback</a><li><a href="../tag/asynchronous.html" title="Search by this tag: asynchronous">asynchronous</a><li><a href="../tag/queue.html" title="Search by this tag: queue">queue</a></ul>
+												</div>
+											</div>
+										</div>
+										<ul class="gallery-links">
+											<li class="download"><a href="https://github.com/solmsted/yui3-gallery/downloads" target="_blank" title="Download">Download</a><li class="docs"><a href="asynchronouscommandqueue.html" target="_blank" title="Docs">Docs</a><li class="homepage"><a href="https://github.com/solmsted/yui3-gallery/" target="_blank" title="Homepage">Homepage</a><li class="bugs"><a href="https://github.com/solmsted/yui3-gallery/issues" target="_blank" title="Bugs">Bugs</a><li class="source"><a href="https://github.com/solmsted/yui3-gallery/tree/master/src/gallery-asynchronouscommandqueue" target="_blank" title="Source">Source</a><li class="example"><a href="http://jsfiddle.net/hzpqh/" target="_blank" title="Example">Example</a><li class="forum"><a href="../forum/asynchronouscommandqueue.html" title="Forum">Forum</a><li class="history"><a href="../history/asynchronouscommandqueue.html" title="History">History</a></ul>
+										<div class="mod"><span class="wikipage"><p>Recent Changes:<br /> Pause/Resume events and methods have been removed from Y.AsynchronousCommandQueue. It should be good enough to set the paused attribute and subscribe to its change event.<br /> Bugfix: The delay attribute on Y.AsynchronousCommand is now writeOnce: 'initOnly' instead of readOnly: true.<br /> Bugfix: Calling the startAll method on Y.AsynchronousCommandQueue will now fire the complete event if the queue is empty.<p>Y.AsynchronousCommand is an instanceable object. Its constructor function accepts an attributes object with the following members.<p>args: an array of arguments which will be applied to the command function.<br /> context: the execution context of the command function. Defaults to Y.config.win<br /> delay: optional millisecond wait time between executing the command and calling the command function. Defaults to 0<br /> fn: the command function. function (asynchronousCommand, ... (args)) {// This is where an asynchronous event and callback function are defined.} The first argument to this function is always this AsynchronousCommand object. This function MUST always complete the command: asynchronousCommand.fire('complete'); Do this in the callback of the asynchronous event.<p>Each Y.AsynchronousCommand instance has two public events.<br /> complete: fireOnce: fired by the command function when the asynchronous event is complete.<br /> start: fireOnce: fired when the command function is called (after delay)<p>Each Y.AsynchronousCommand instance has one public method.<br /> execute: waits for delay, then calls the command function. This method is chainable.<p>Each Y.AsynchronousCommand instance has two readOnly attributes.<br /> completed: boolean. Will become true on the complete event.<br /> started: boolean. Will become true on the start event.<p>Y.AsynchronousCommandQueue is an instanceable object. Its constructor function accepts an attributes object with the following member.<p>queue: an array of Y.AsynchronousCommand instances.<p>Each Y.AsynchronousCommandQueue instance has two public events.<br /> complete: fireOnce: fired when all commands have completed.<br /> start: fireOnce: fired when the first command is executed.<p>Each Y.AsynchronousCommandQueue instance has four public methods.<br /> addCommand: accepts one Y.AsynchronousCommand instance and pushes it on the queue. This method is chainable. Adding commands to the queue after the queue has been started 'should' work as long as the queue has not completed. For more control over the order in which commands are inserted into the queue, create an array of commands, perform the necessary inserts into the array, and use that array as the queue attribute in the constructor function.<br /> getCommandCount: returns the length of the queue.<br /> startAll: executes every command in the queue immediately. This method is chainable.<br /> startQueue: shifts the first command off the queue and executes it. This method is chainable. As long as there are still commands in the queue, startQueue will be called again when the command completes. If the queue is paused, startQueue does nothing.<p>Each Y.AsynchronousCommandQueue instance has three other attributes.<br /> completed: readOnly: boolean. Will become true on the complete event.<br /> paused: boolean<br /> started: readOnly: boolean. Will become true on the start event.</span><h3 id="code">Code Sample</h3>
+											<div class="syntax-highlight" id="yui-syn-1"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">script</span> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;http://yui.yahooapis.com/3.5.0pr2/build/yui/yui-min.js&quot;</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">script</span>&gt;</span></pre><textarea id="yui-syn-1-plain">&lt;script src=&quot;http://yui.yahooapis.com/3.5.0pr2/build/yui/yui-min.js&quot;&gt;&lt;/script&gt;</textarea>
+											</div>
+											<div class="syntax-highlight" id="yui-syn-2"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2011.04.13-22-38'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-asynchronouscommandqueue'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+&nbsp;
+    <span style="color: #006600; font-style: italic;">// Example 1: startQueue();</span>
+    <span style="color: #006600; font-style: italic;">// Each command depends on the previous command so they are executed</span>
+    <span style="color: #006600; font-style: italic;">// one-by-one in order.</span>
+    <span style="color: #006600; font-style: italic;">// For this example, each command is a simple Y.later with a random wait time.</span>
+&nbsp;
+    <span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+        <span style="color: #003366; font-weight: bold;">var</span> result <span style="color: #339933;">=</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommandQueue</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+            queue<span style="color: #339933;">:</span> <span style="color: #009900;">&#91;</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">1000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            result.<span style="color: #660066;">push</span><span style="color: #009900;">&#40;</span><span style="color: #CC0000;">1</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">1000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            result.<span style="color: #660066;">push</span><span style="color: #009900;">&#40;</span>result<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">0</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">+</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">1000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            result.<span style="color: #660066;">push</span><span style="color: #009900;">&#40;</span>result<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">+</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">1000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            result.<span style="color: #660066;">push</span><span style="color: #009900;">&#40;</span>result<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">2</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">+</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">1000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            result.<span style="color: #660066;">push</span><span style="color: #009900;">&#40;</span>result<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">3</span><span style="color: #009900;">&#93;</span> <span style="color: #339933;">+</span> <span style="color: #CC0000;">5</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">startQueue</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            <span style="color: #000066;">alert</span><span style="color: #009900;">&#40;</span>result<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+    <span style="color: #006600; font-style: italic;">// Example 2: startAll();</span>
+    <span style="color: #006600; font-style: italic;">// Each command is independent and does not rely upon other commands.</span>
+    <span style="color: #006600; font-style: italic;">// The commands are all executed immediately.</span>
+    <span style="color: #006600; font-style: italic;">// Once all commands have completed, the application continues and has valid</span>
+    <span style="color: #006600; font-style: italic;">// data provided by all commands.</span>
+    <span style="color: #006600; font-style: italic;">// For this example, each command is a simple Y.later with a random wait time.</span>
+&nbsp;
+    <span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+        <span style="color: #003366; font-weight: bold;">var</span> a<span style="color: #339933;">,</span> b<span style="color: #339933;">,</span> c<span style="color: #339933;">,</span> d<span style="color: #339933;">,</span> e<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommandQueue</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+            queue<span style="color: #339933;">:</span> <span style="color: #009900;">&#91;</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">5000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            a <span style="color: #339933;">=</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">5000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            b <span style="color: #339933;">=</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">5000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            c <span style="color: #339933;">=</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">5000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            d <span style="color: #339933;">=</span> <span style="color: #CC0000;">4</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">AsynchronousCommand</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                    fn<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>asynchronousCommand<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        Y.<span style="color: #660066;">later</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">5000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            e <span style="color: #339933;">=</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">;</span>
+                            asynchronousCommand.<span style="color: #660066;">fire</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            <span style="color: #009900;">&#93;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">startAll</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'complete'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            <span style="color: #000066;">alert</span><span style="color: #009900;">&#40;</span>a <span style="color: #339933;">+</span> b <span style="color: #339933;">+</span> c <span style="color: #339933;">+</span> d <span style="color: #339933;">+</span> e<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-2-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2011.04.13-22-38'
+}).use('gallery-asynchronouscommandqueue', function(Y) {
+
+
+
+    // Example 1: startQueue();
+
+    // Each command depends on the previous command so they are executed
+
+    // one-by-one in order.
+
+    // For this example, each command is a simple Y.later with a random wait time.
+
+
+
+    (function () {
+
+        var result = [];
+
+        
+
+        new Y.AsynchronousCommandQueue({
+
+            queue: [
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 1000), null, function () {
+
+                            result.push(1);
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 1000), null, function () {
+
+                            result.push(result[0] + 2);
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 1000), null, function () {
+
+                            result.push(result[1] + 3);
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 1000), null, function () {
+
+                            result.push(result[2] + 4);
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 1000), null, function () {
+
+                            result.push(result[3] + 5);
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+            ]
+
+        }).startQueue().on('complete', function () {
+
+            alert(result[4]);
+
+        });
+
+    }());
+
+    
+
+    // Example 2: startAll();
+
+    // Each command is independent and does not rely upon other commands.
+
+    // The commands are all executed immediately.
+
+    // Once all commands have completed, the application continues and has valid
+
+    // data provided by all commands.
+
+    // For this example, each command is a simple Y.later with a random wait time.
+
+    
+
+    (function () {
+
+        var a, b, c, d, e;
+
+        
+
+        new Y.AsynchronousCommandQueue({
+
+            queue: [
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 5000), null, function () {
+
+                            a = 1;
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 5000), null, function () {
+
+                            b = 2;
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 5000), null, function () {
+
+                            c = 3;
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 5000), null, function () {
+
+                            d = 4;
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+                new Y.AsynchronousCommand({
+
+                    fn: function (asynchronousCommand) {
+
+                        Y.later(Math.floor(Math.random() * 5000), null, function () {
+
+                            e = 5;
+
+                            asynchronousCommand.fire('complete');
+
+                        });
+
+                    }
+
+                }),
+
+            ]
+
+        }).startAll().on('complete', function () {
+
+            alert(a + b + c + d + e);
+
+        });
+
+    }());
+
+});</textarea>
+											</div>
+											<br />
+											<h3>Forum Posts</h3>
+											<div class="forum">
+												<table>
+													<tr>
+														<th>Subject</th>
+														<th>Author</th>
+														<th>Date</th>
+													</tr>
+													<tr class="even">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=23510.html#p23510">Good ideas here</a></td>
+														<td><span class="gallery-user">Luke Smith</span></td>
+														<td><span title="15 Mar 2011 17:04">03/15/11</span></td>
+													</tr>
+													<tr class="odd">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=23562.html#p23562">Re: Good ideas here</a></td>
+														<td><span class="gallery-user">Steven Olmsted</span></td>
+														<td><span title="17 Mar 2011 14:52">03/17/11</span></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,257 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../assets/home.png" /> <a href="index.html">Home</a><li><img src="../assets/gallery/star.png" /> <a href="featured.html">Featured</a><li><img src="../assets/gallery/thumb_up.png" /> <a href="popular.html">Popular</a><li><img src="../assets/gallery/greenled.png" /> <a href="new.html">New</a><li><img src="../assets/gallery/script_code_red.png" /> <a href="show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../assets/gear.png" /> <a href="setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<div class="yui-ge">
+										<div class="yui-u first">
+											<div class="intro" id="gallery_home">
+												<p>Gallery allows all YUI developers to extend the library rapidly, adding modules that are accessible from any YUI 3 <code>use()</code> statement.</div>
+											<div class="yui-gb" id="gallery-splash">
+												<div class="yui-u first">
+													<h2>Featured Modules</h2>
+													<ul>
+														<li class="oncdn"><a href="show/layout.html">Page Layout</a><div>
+																<h4>Page Layout<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Provides fluid-width/height layout for modules, sandwiched between (optional) page header and footer.</div>
+														<li class="oncdn"><a href="show/model-list-union.html">Model List Union</a><div>
+																<h4>Model List Union<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Creates a model list that is the union of two or more other model lists.</div>
+														<li class="oncdn"><a href="show/storage-lite.html">Storage Lite</a><div>
+																<h4>Storage Lite<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Lightweight API for persistent cross-browser local key/value storage similar to the HTML5 localStorage API. Supported browsers include IE6+, Firefox 2+, Safari 3.1+, Chrome 4+, and Opera 10.5+. No browser plugins required (not even Flash).</div>
+														<li class="oncdn"><a href="show/bitly.html">bit.ly</a><div>
+																<h4>bit.ly<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Module deals with the bit.ly api for shortening or expanding URL's.</div>
+														<li class="oncdn"><a href="show/idletimer.html">Idle Timer</a><div>
+																<h4>Idle Timer<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>The idle timer aims to determine when the user is idle (not interacting with the page) so that you can respond appropriately. </div>
+														<li class="oncdn"><a href="show/accordion.html">Accordion</a><div>
+																<h4>Accordion<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Accordion widget for YUI3.</div>
+														<li class="oncdn"><a href="show/cssbutton.html">CSSButton</a><div>
+																<h4>CSSButton<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>CSS skins containing styles for button-like elements</div>
+														<li class="oncdn"><a href="show/model-relate.html">Model Relate</a><div>
+																<h4>Model Relate<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Extension for Y.Model that allows you to define and manage relationships between models</div>
+														<li class="oncdn"><a href="show/modellist-datasource.html">ModelList DataSource Plugin</a><div>
+																<h4>ModelList DataSource Plugin<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>A plugin for attaching a DataSource to a ModelList</div>
+														<li class="oncdn"><a href="show/geo.html">Geo</a><div>
+																<h4>Geo<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>A simple geolocation API for retrieving the user's current position.</div>
+														<li class="oncdn"><a href="show/timepicker.html">Timepicker</a><div>
+																<h4>Timepicker<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Timepicker widget This is based on the very slick time picker by Maxime Haineault.</div>
+														<li class="oncdn"><a href="show/event-konami.html">Konami event</a><div>
+																<h4>Konami event<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Adds a DOM event &quot;konami&quot; that is triggered when the targeted element receives keydown strokes in the Konami code sequence.</div>
+														<li class="oncdn"><a href="show/yql.html">YQL Query</a><div>
+																<h4>YQL Query<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>This module adds a little sugar to YUI3 to make simple easy YQL queries.</div>
+														<li class="oncdn"><a href="show/node-accordion.html">Node Accordion</a><div>
+																<h4>Node Accordion<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Node Accordion Plugin is a light-weight solution (~3k) for expandable and collapsible elements.</div>
+														<li class="oncdn"><a href="show/flickr-api.html">Flickr API</a><div>
+																<h4>Flickr API<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>A Flickr API IO module.</div>
+														<li class="oncdn"><a href="show/jsonp.html">JSONP</a><div>
+																<h4>JSONP<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Deprecated. Use the official 'jsonp' module. It works more or less the same as this one, since it originated from this code. Adds a Y.JSONPRequest class and a Y.jsonp(url, callback) method.</div>
+														<li class="oncdn"><a href="show/history-lite.html">History Lite</a><div>
+																<h4>History Lite<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>History Lite is similar in purpose to the YUI Browser History module, but with a more flexible API, no initialization or markup requirements, limited IE6/7 support, and a much smaller footprint.</div>
+														<li class="oncdn"><a href="show/simple-editor.html">Simple Editor Port</a><div>
+																<h4>Simple Editor Port<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>This is a non-supported port of SimpleEditor from YUI2.x.</div>
+														<li><a href="show/nodejs.html">NodeJS YUI3</a><div>
+																<h4>NodeJS YUI3</h4>This module allow you to run the latest YUI 3.x source inside a Node.js process.</div>
+													</ul>
+												</div>
+												<div class="yui-u">
+													<h2>Popular Modules</h2>
+													<ul>
+														<li class="oncdn"><a href="show/accordion.html">Accordion</a><div>
+																<h4>Accordion<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Accordion widget for YUI3.</div>
+														<li class="oncdn"><a href="show/timepicker.html">Timepicker</a><div>
+																<h4>Timepicker<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Timepicker widget This is based on the very slick time picker by Maxime Haineault.</div>
+														<li class="oncdn"><a href="show/form.html">Form</a><div>
+																<h4>Form<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>A module for managing form interaction in a page, including client-side validation, server side error processing, and asynchronous form submission.</div>
+														<li class="oncdn"><a href="show/node-accordion.html">Node Accordion</a><div>
+																<h4>Node Accordion<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Node Accordion Plugin is a light-weight solution (~3k) for expandable and collapsible elements.</div>
+														<li class="oncdn"><a href="show/yql.html">YQL Query</a><div>
+																<h4>YQL Query<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>This module adds a little sugar to YUI3 to make simple easy YQL queries.</div>
+														<li class="oncdn"><a href="show/player.html">HTML5 Player</a><div>
+																<h4>HTML5 Player<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>YUI HTML5 Player is a YUI 3 widget that creates a video player using the HTML5 video tag and JavaScript that is based on YUI 3. It was started as entry to the YUI 3 Gallery Contest in March 2010.</div>
+														<li class="oncdn"><a href="show/simple-editor.html">Simple Editor Port</a><div>
+																<h4>Simple Editor Port<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>This is a non-supported port of SimpleEditor from YUI2.x.</div>
+														<li class="oncdn"><a href="show/storage-lite.html">Storage Lite</a><div>
+																<h4>Storage Lite<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Lightweight API for persistent cross-browser local key/value storage similar to the HTML5 localStorage API. Supported browsers include IE6+, Firefox 2+, Safari 3.1+, Chrome 4+, and Opera 10.5+. No browser plugins required (not even Flash).</div>
+														<li class="oncdn"><a href="show/event-konami.html">Konami event</a><div>
+																<h4>Konami event<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Adds a DOM event &quot;konami&quot; that is triggered when the targeted element receives keydown strokes in the Konami code sequence.</div>
+														<li class="oncdn"><a href="show/treeview.html">YUI 2 treeview port</a><div>
+																<h4>YUI 2 treeview port<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>An unsupported port of the YUI 2 treeview control</div>
+														<li class="oncdn"><a href="show/jsonp.html">JSONP</a><div>
+																<h4>JSONP<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Deprecated. Use the official 'jsonp' module. It works more or less the same as this one, since it originated from this code. Adds a Y.JSONPRequest class and a Y.jsonp(url, callback) method.</div>
+														<li class="oncdn"><a href="show/idletimer.html">Idle Timer</a><div>
+																<h4>Idle Timer<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>The idle timer aims to determine when the user is idle (not interacting with the page) so that you can respond appropriately. </div>
+														<li class="oncdn"><a href="show/layout.html">Page Layout</a><div>
+																<h4>Page Layout<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Provides fluid-width/height layout for modules, sandwiched between (optional) page header and footer.</div>
+														<li class="oncdn"><a href="show/yui3treeview.html">YUI3-Treeview</a><div>
+																<h4>YUI3-Treeview<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>This is a preview of the work-in-progress yui3 treeview.</div>
+														<li class="oncdn"><a href="show/tabby.html">Textarea Tab Control</a><div>
+																<h4>Textarea Tab Control<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>This little module adds the ability to use the tab key inside of a textarea. Currently it doesn't support Opera and it doesn't support text-selection tabbing.</div>
+														<li class="oncdn"><a href="show/badge.html">Gallery Badge</a><div>
+																<h4>Gallery Badge<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>A simple YUI 3 Gallery badge using the YQL Gallery Module.</div>
+														<li class="oncdn"><a href="show/history-lite.html">History Lite</a><div>
+																<h4>History Lite<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>History Lite is similar in purpose to the YUI Browser History module, but with a more flexible API, no initialization or markup requirements, limited IE6/7 support, and a much smaller footprint.</div>
+														<li class="oncdn"><a href="show/overlay-modal.html">Overlay Modal Plugin</a><div>
+																<h4>Overlay Modal Plugin<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>A plugin to add modality support to Overlay. Prevents interacting with elements &quot;under&quot; the Overlay by masking them.</div>
+														<li class="oncdn"><a href="show/slideshow.html">Slideshow</a><div>
+																<h4>Slideshow<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>A widget to support a simple image slideshow.</div>
+														<li class="oncdn"><a href="show/cssbutton.html">CSSButton</a><div>
+																<h4>CSSButton<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>CSS skins containing styles for button-like elements</div>
+													</ul>
+												</div>
+												<div class="yui-u">
+													<h2>More Modules</h2>
+													<ul>
+														<li class="oncdn"><a href="show/layout-cols.html">Layout (column-based)</a><div>
+																<h4>Layout (column-based)<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Plugin for Page Layout that provides fluid-width/height layout for columns of modules, stacked between (optional) page header and footer.</div>
+														<li class="oncdn"><a href="show/yui-slideshow.html">YUI Slideshow</a><div>
+																<h4>YUI Slideshow<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>YUI Slideshow lets you create customizable, animated slideshows from images or any other HTML. Lightweight and easy to use.</div>
+														<li class="oncdn"><a href="show/widget-fillviewport.html">Widget Fill Viewport</a><div>
+																<h4>Widget Fill Viewport<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Extension to maximize a Widget to fill the viewport</div>
+														<li class="oncdn"><a href="show/expiration-cache.html">Cache (expiration)</a><div>
+																<h4>Cache (expiration)<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Cache which drops items based on a user-defined expiration criterion, e.g., age.</div>
+														<li class="oncdn"><a href="show/xarno-clipboard.html">Xarno Clipboard</a><div>
+																<h4>Xarno Clipboard<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Instantiate in your body and give it a series of selectors used to activate.</div>
+														<li class="oncdn"><a href="show/animloop.html">AnimLoop</a><div>
+																<h4>AnimLoop<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>The AnimLoop helps you to do animations in the best-performing way</div>
+														<li><a href="show/jsml.html">JSML</a><div>
+																<h4>JSML</h4>JSML (javascript markup language) is a concise way of generating pieces of the DOM dynamically</div>
+														<li class="oncdn"><a href="show/event-drag.html">Node drag events</a><div>
+																<h4>Node drag events<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>node.on('drag:end', fn, config, ctx, arg1, ...argN) Adds new DOM events for &quot;drag&quot;, &quot;drag:start&quot;, &quot;drag:end&quot; and all other DD.Drag events. Full list in the docs. config obj takes Drag attributes for configuration plus supports 'proxy', 'constrained', or any other Y.Plugin.DDxxx</div>
+														<li class="oncdn"><a href="show/aui-tree-view.html">AlloyUI Tree View</a><div>
+																<h4>AlloyUI Tree View<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>A widget which displays tree structured data.</div>
+														<li class="oncdn"><a href="show/communication-layer.html">Communication Layer</a><div>
+																<h4>Communication Layer<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Provides a secure, evented communication layer for cross-domain HTML5 web applications.</div>
+														<li><a href="show/user-patch-datatable-rollup.html">gallery-user-patch-330-datatable-rollup</a><div>
+																<h4>gallery-user-patch-330-datatable-rollup</h4>A rollup of bug fixes for the YUI3 DataTable</div>
+														<li><a href="show/multiselect.html">Multiselect</a><div>
+																<h4>Multiselect</h4>Multiselect on the Web sucks. It's unfriendly to users and hard to explain. This module is an attempt to make it better.</div>
+														<li class="oncdn"><a href="show/bootstrap-popover.html">Bootstrap Popover</a><div>
+																<h4>Bootstrap Popover<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</div>
+														<li class="oncdn"><a href="show/a11ychecker-ui.html">Accessibility Checker UI</a><div>
+																<h4>Accessibility Checker UI<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Provides methods for highlighting elements in the page that have accessibility errors.</div>
+														<li><a href="show/history-check.html">History Check</a><div>
+																<h4>History Check</h4>This module gives you an easy mechanism to determine if a user's browser history contains a link.</div>
+														<li><a href="show/devtools.html">DevTools</a><div>
+																<h4>DevTools</h4>Set of modules to load to improve developer experience while implementing YUI code.</div>
+														<li class="oncdn"><a href="show/itsatoolbar.html">Itsa EditorToolbar</a><div>
+																<h4>Itsa EditorToolbar<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>GUI for the Rich Text Editor. Created by Its Asbreuk http://theinternetwizard.net</div>
+														<li class="oncdn"><a href="show/chromahash.html">chromahash</a><div>
+																<h4>chromahash<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Chromahash is a non-reversable password visualization module</div>
+														<li class="oncdn"><a href="show/handlebars-loader.html">Handlebars Loader</a><div>
+																<h4>Handlebars Loader<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Convenience module that loads and compiles Handlebars templates that are available on the page.</div>
+														<li class="oncdn"><a href="show/boxshadow-anim.html">Box-shadow Animation</a><div>
+																<h4>Box-shadow Animation<span class="oncdn" title="This module is available on the CDN.">on cdn</span></h4>Adds support for animating CSS3 box-shadow property</div>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="yui-u">
+											<div class="sidebox">
+												<div class="hd">
+													<h2>Developer Spotlight</h2>
+												</div>
+												<div class="bd">
+													<div class="profile">
+														<div class="mod devspotlight"><img src="http://www.gravatar.com/avatar/3974d5bcfbdb27cc99d10706dc5b85f7?s=64&d=http://yuilibrary.com/assets/gravatar-64.png" /><h3><img class="medal" src="../assets/medal_gold.png" title="YUI Developer" /> <a href="user/lsmith.html">Luke Smith</a></h3>
+															<h4>YUI Contributor</h4><span class="postdetails"><ul>
+																	<li><b>Username:</b> <span class="gallery-user">lsmith</span><li><b>GitHub:</b> <a href="http://github.com/lsmith">lsmith</a></ul></span><a class="more" href="user/lsmith.html">See modules by this developer.</a></div>
+													</div>
+												</div>
+											</div>
+											<div class="sidebox">
+												<div class="hd">
+													<h2>Gallery Stats</h2>
+												</div>
+												<div class="bd">
+													<ul>
+														<li>Latest CDN Push: <span title="12 Jun 2014 21:48">06/12/14</span><li>Latest Build: <a href="buildtag/gallery-2014.06.12-21-45.html">gallery-2014.06.12-21-45</a><li>Total Modules: 686<li>Modules on CDN: 546<li>Next Scheduled Build: 07/09/2014</ul>
+												</div>
+											</div>
+											<div class="sidebox">
+												<div class="hd">
+													<h2>YUI Blog Posts</h2>
+												</div>
+												<div class="bd">
+													<ul>
+														<li>
+															<h5><a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">YUI Gallery Deprecation Announcement</a></h5><cite class="author">Julien Lecomte</cite> <cite class="date">Jun 16th</cite><li>
+															<h5><a href="http://www.yuiblog.com/blog/2014/02/21/migrating-a-datetime-widget-from-yui-2-to-yui-3-a-case-study/">Migrating a Date/Time Widget from YUI 2 to YUI 3: A Case Study</a></h5><cite class="author">John Lindal</cite> <cite class="date">Feb 21st</cite><li>
+															<h5><a href="http://www.yuiblog.com/blog/2014/01/14/yuiconf-2013-stories/">YUIConf 2013 Stories</a></h5><cite class="author">Andrew Wooldridge</cite> <cite class="date">Jan 14th</cite><li>
+															<h5><a href="http://www.yuiblog.com/blog/2014/01/13/yuiconf-2013-talk-tilo-mitra-on-the-state-of-gestures/">YUIConf 2013 Talk: Tilo Mitra on The State of Gestures</a></h5><cite class="author">Andrew Wooldridge</cite> <cite class="date">Jan 13th</cite><li>
+															<h5><a href="http://www.yuiblog.com/blog/2014/01/10/yuiconf-2013-talk-clarence-leung-on-yui-and-the-new-server-side-front-end/">YUIConf 2013 Talk: Clarence Leung on YUI and the New Server-Side Front-End</a></h5><cite class="author">Andrew Wooldridge</cite> <cite class="date">Jan 10th</cite><li>
+															<h5><a href="http://www.yuiblog.com/blog/2011/12/05/bulk-edi/">In the YUI 3 Gallery: Bulk Editor Widget</a></h5><cite class="author">John Lindal</cite> <cite class="date">Dec 5th</cite></ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

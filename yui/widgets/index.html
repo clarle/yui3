@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Widgets - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+        
+        
+    
+    
+    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+        <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+        <link rel="stylesheet" href="/combo/css-main-min.css">
+    
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    
+    
+            <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29453705-2']);
+            _gaq.push(['_trackPageview']);
+            </script>
+    
+    
+            <script>
+            var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.18.1/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+            if (location.protocol.indexOf('https') > -1) {
+                YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+                YUI_config.combine = true;
+            }
+            </script>
+    
+            <script src="https://yui-s.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="https://search.yahoo.com/search"
+                        method="get" role="search">
+                
+                    <input type="search" class="search-input" name="q"
+                            aria-label="Search APIs"
+                            placeholder="Search APIs">
+                
+                    <input type="hidden" name="vs" value="yuilibrary.com">
+                    <input type="hidden" name="vs" value="yuiblog.com">
+                </form>
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+                <ul class="nav hoverable-group">
+                        <li class="nav-tab hoverable ">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/yui/quick-start/">Quick Start</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/download/yui3/">Download YUI 3</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable  nav-tab-active">
+                            <a href="/yui/docs/">Documentation</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/guides/">User Guides</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/examples/">Examples</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/api/">API Docs</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/environments/">Environments</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable nav-break">
+                            <a href="/community/">Community</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/gallery/">Gallery</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yuiblog.com/">Blog</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/forum/">Forums</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/theater/">YUI Theater</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/projects/">Other Projects</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yui2/">YUI 2</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yuitest/">YUI Test</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/phploader/">YUI PHP Loader</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                        </li>
+                                </ul>
+                        </li>
+                </ul>
+            </nav></div>
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+            <div id="breadcrumbs" class="yui3-u-1">
+                <ul class="breadcrumbs">
+                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/widgets/">Widgets</a></li>
+                </ul>
+            </div>
+                <div class="project-version yui3-u">Version 3.18.1</div>
+
+            <div class="yui3-u-1">
+                <div class="body-heading">
+                        <h1>YUI Widgets</h1>
+
+                </div>
+            </div>
+
+                <div class="yui3-u-1">
+                    <div class="content">
+                        
+<div class="component-grid">
+    <div class="yui3-g">
+                <div class="yui3-u-1-3">
+                    <div class="column">
+                        <ul class="components">
+                                <li class="component">
+                                    <a href="/yui/docs/autocomplete/">
+                                        <span class="name">AutoComplete</span>
+                                        
+                                        <p class="desc">Provides automatic input completion or suggestions for text input fields and textareas.</p>
+                                    </a>
+                                </li>
+                                <li class="component">
+                                    <a href="/yui/docs/button/">
+                                        <span class="name">Button</span>
+                                        
+                                        <p class="desc">YUI&#x27;s Button component is a mixed-module approach to providing a simple-to-use button that normalizes and enhances the Web browser&#x27;s default button component.</p>
+                                    </a>
+                                </li>
+                                <li class="component">
+                                    <a href="/yui/docs/calendar/">
+                                        <span class="name">Calendar</span>
+                                        
+                                        <p class="desc">Provides an interactive visual representation of a range of dates in one or more month grids</p>
+                                    </a>
+                                </li>
+                                <li class="component">
+                                    <a href="/yui/docs/charts/">
+                                        <span class="name">Charts</span>
+                                        
+                                        <p class="desc">The charts module provides a JavaScript API for visualizing data in a variety of formats accross all A-grade browsers.</p>
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="yui3-u-1-3">
+                    <div class="column">
+                        <ul class="components">
+                                <li class="component">
+                                    <a href="/yui/docs/datatable/">
+                                        <span class="name">DataTable</span>
+                                        
+                                        <p class="desc">The DataTable widget displays screen-reader accessible tabular data on a web page. Class extensions add functionality such as sorting and scrolling.</p>
+                                    </a>
+                                </li>
+                                <li class="component">
+                                    <a href="/yui/docs/dial/">
+                                        <span class="name">Dial</span>
+                                        
+                                        <p class="desc">The Dial widget is a circular value input control.</p>
+                                    </a>
+                                </li>
+                                <li class="component">
+                                    <a href="/yui/docs/node-menunav/">
+                                        <span class="name">MenuNav Node Plugin</span>
+                                        
+                                        <p class="desc">Easily transform a list into an accessible and customizable drop-down menu.</p>
+                                    </a>
+                                </li>
+                                <li class="component">
+                                    <a href="/yui/docs/overlay/">
+                                        <span class="name">Overlay</span>
+                                        
+                                        <p class="desc">Overlay is a positionable and stackable widget, which also provides support for the standard module format layout, with a header, body and footer section.</p>
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="yui3-u-1-3">
+                    <div class="column">
+                        <ul class="components">
+                                <li class="component">
+                                    <a href="/yui/docs/panel/">
+                                        <span class="name">Panel</span>
+                                        
+                                        <p class="desc">The Panel is a UI Control that is meant to behave similarly to an OS window. The Panel control extends the functionality of Overlay, adding support for modality, close/dismiss buttons, autohiding and autofocus. Plugins to make it draggable and resizable are supported as well. Panel includes a pre-defined stylesheet to support default look and feel characteristics.</p>
+                                    </a>
+                                </li>
+                                <li class="component">
+                                    <a href="/yui/docs/scrollview/">
+                                        <span class="name">ScrollView</span>
+                                        
+                                        <p class="desc">ScrollView provides a scrollable content widget with flick velocity based inertia for both touch and mouse.</p>
+                                    </a>
+                                </li>
+                                <li class="component">
+                                    <a href="/yui/docs/slider/">
+                                        <span class="name">Slider</span>
+                                        
+                                        <p class="desc">The Slider widget is a UI control that enables the user to adjust values in a finite range along a horizontal or vertical axis.</p>
+                                    </a>
+                                </li>
+                                <li class="component">
+                                    <a href="/yui/docs/tabview/">
+                                        <span class="name">TabView</span>
+                                        
+                                        <p class="desc">The TabView widget is a UI control that enables the user to switch between content panels.</p>
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+    </script>
+
+</body>
+</html>

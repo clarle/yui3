@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>YUI Library :: YUICONF2009</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-XRDS-Location" content="http://yuilibrary.com/xrds.xml"> 
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0/build/reset-fonts-grids/reset-fonts-grids.css">
+<link rel="stylesheet" type="text/css" href="/assets/skin/yuilib-11.30.2009.css">
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.0r4/build/yuiloader-dom-event/yuiloader-dom-event.js&3.0.0/build/yui/yui-min.js&3.0.0/build/loader/loader-min.js&3.0.0/build/oop/oop-min.js&3.0.0/build/dom/dom-min.js&3.0.0/build/event-custom/event-custom-base-min.js&3.0.0/build/event/event-base-min.js&3.0.0/build/pluginhost/pluginhost-min.js&3.0.0/build/node/node-min.js&3.0.0/build/event/event-delegate-min.js"></script>
+<script>
+var YUIConfig = {
+    baseyui2: 'http://yui.yahooapis.com/2.8.0r4/build/',
+    base: 'http://yui.yahooapis.com/3.0.0/build/',
+    debug: false,
+    filter: 'DEBUG',
+    combine: false
+};
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="doc3" class="yui-t5 gitfaq">
+		    <a name="top"></a>
+
+			<div id="hd">
+				<a href="/"><img src="/assets/skin/assets/yuilibrary-masthead.png" alt="YUILibrary - Open source JavaScript and CSS for building richly interactive software." /></a>
+				<form id="sitesearch" class="clearfix" action="http://search.yahoo.com/search" method="get">
+		            <input name="vs" type="hidden" value="developer.yahoo.com">
+			        <input name="vs" type="hidden" value="yuiblog.com">
+			        <input name="vs" type="hidden" value="yuilibrary.com">
+		            <input type="text" id="sitesearchbox" name="p">
+		            <input type="submit" name="some_name" value="Search" id="sitesearchbutton">
+		        </form>        
+				<a id="gitribbon" href="http://github.com/yui" title="Fork YUI on GitHub"><img src="/assets/skin/assets/github-ribbon-yui-purple-right-png8.png" alt="Fork YUI on GitHub" /></a>  
+        
+			</div>
+
+			<div id="navbar">
+				<ul id="projects" class="clearfix">
+	                <li><a href="/" title="Home">Home</a></li>
+	                <li><a href="/forum" title="Forums">Forums</a></li>            
+					<li><a href="/projects/yui2/wiki">YUI 2.x</a></li>
+					<li><a href="/projects/yui3/wiki">YUI 3.x</a></li>
+					<li><a href="/projects/yuicompressor/wiki">YUICompressor</a></li>
+					<li><a href="/projects/yuidoc/wiki">YUIDoc</a></li>
+                    <li><a href="/projects" class="more">More</a></li>
+				</ul>
+
+				<div id="sections" class="clearfix">
+					<ul class="clearfix">
+		    		    
+    <!-- <div id="subnav" class="navtabs clearfix">
+        <ul> -->
+            		    <li><a href="/forum/ucp.php?mode=register">Register</a></li>
+		    <li><a href="/forum/ucp.php?mode=login&redirect=/yuiconf2009/">Login</a></li>
+                    <!-- </ul>
+    </div> -->
+				    </ul>
+				</div>
+			</div>
+
+    <div id="bd">
+        <div id="yui-main">
+            <div class="yui-b main" id="gitfaq">
+
+<style type="text/css">
+
+h3 {margin-top:2em;}
+th,td {border:1px solid #000;padding:.5em;}
+th {font-weight:bold; text-align:center;background-color:#eee;width:20%;}
+.time {text-align:left;width:5em;}
+
+em, .bio {font-style:italic;}
+dt {margin-bottom:1em;}
+</style>
+
+<img src="img/yuiconf2009-logo.png" alt="YUICONF 2009">
+
+<h3 id="schedule">Schedule of Events</h3>
+
+<table>
+<thead>
+<tr>
+<th rowspan="2" class="time">Time</th>
+<th colspan="2">Wednesday, October 28</th>
+<th colspan="2">Thursday, October 29</th>
+</tr>
+<tr>
+<th>Classroom 5</th>
+<th>Classroom 4</th>
+<th>Classroom 5</th>
+<th>Classroom 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9:00 - 10:00</td>
+<td colspan="2"><a href="#welcome">Welcome Keynote</a>, Eric Miraglia with YUI Team (<a href="http://developer.yahoo.com/yui/theater/video.php?v=miraglia-yuiconf2009-yui3">video</a> | <a href="http://ericmiraglia.com/decks/yuiconf2009.pdf.zip">slides</a>)</td>
+<td><a href="#custommods">Building YUI 3 Custom Modules</a>, Caridy Patino (<a href="http://www.slideshare.net/caridy/building-yui-3-custom-modules">slides</a>)</td>
+<td><a href="#ac">Solving Problems with YUI 3 &mdash; An AutoComplete Case Study</a>, Isaac Schlueter (<a href="http://developer.yahoo.com/yui/theater/video.php?v=schlueter-yuiconf2009-yui3" title="Video: Isaac Schlueter &mdash; Solving Problems with YUI 3 (YUI Theater)">video</a> | <a href="http://www.slideshare.net/IsaacSchlueter/solving-problems-with-yui3-autocomplete">slides</a>)</td>
+</tr>
+<tr>
+<td>10:00 - 10:30</td>
+<td colspan="2">Morning Break</td>
+<td colspan="2">Morning Break</td>
+</tr>
+<tr>
+<td>10:30 - 11:30</td>
+<td><a href="#perf">YUI 3 Performance</a>, Matt Sweeney (<a href="http://developer.yahoo.com/yui/theater/video.php?v=sweeney-yuiconf2009-performance">video</a> | <a href="http://yuilibrary.com/~msweeney/yuiconf-yui3perf.pdf">slides</a>)</td>
+<td><a href="#yql">Browser MVC with YQL and YUI</a>, Jon LeBlanc</td>
+<td><a href="#debugging">Debugging in YUI 3</a>, Luke Smith (<a href="http://developer.yahoo.com/yui/theater/video.php?v=smith-yuiconf2009-debugging">video</a> | <a href="http://yuiblog.com/assets/smith-yuiconf2009-debugging.zip">slides</a>)</td>
+<td><a href="#phploader">Introducing PHP Loader</a>, Chad Auld (<a href="http://developer.yahoo.com/yui/theater/video.php?v=auld-yuiconf2009-phploader">video</a> | <a href="http://dl.getdropbox.com/u/256666/presentations/PHP_Loader_Intro_YUIConf2009.pdf">slides</a>)</td>
+</tr>
+<tr>
+<td>11:45 - 12:45</td>
+<td><a href="#events">Events Evolved</a>, Luke Smith (<a href="http://developer.yahoo.com/yui/theater/video.php?v=smith-yuiconf2009-events">video</a> | <a href="http://yuiblog.com/assets/smith-yuiconf2009-events.zip">slides</a>)</td>
+<td>Hybrid Flash Components, Tripp Bridges &amp; Allen Rabinovich (<a href="http://yuiblog.com/assets/rabinovich-yuiconf2009-hybrid.zip">slides</a>)</td>
+<td><a href="#yuidoc">Creating Beautiful Documentation with YUI Doc</a>, Stephen Woods (<a href="http://developer.yahoo.com/yui/theater/video.php?v=woods-yuiconf2009-yuidoc">video</a> | <a href="http://www.slideshare.net/ysaw/beautiful-documentation-with-yui-doc">slides</a>)</td>
+<td><a href="#appdevel">Web Application Development with YUI 3</a>, Eric Ferraiuolo (<a href="http://developer.yahoo.com/yui/theater/video.php?v=ericf-yuiconf2009-webapps">video</a> | <a href="http://925html.com/presentation/web-application-development-with-yui3/">slides</a>)</td>
+</tr>
+<tr>
+<td>12:45 - 1:45</td>
+<td colspan="2">Lunch</td>
+<td colspan="2">Lunch</td>
+</tr>
+<tr>
+<td>1:45 - 2:45</td>
+<td><a href="#storage">Introducing Storage Utility</a>, Matt Snider (<a href="http://developer.yahoo.com/yui/theater/video.php?v=snider-yuiconf2009-storage">video</a> | <a href="http://yuiblog.com/assets/snider-yuiconf2009-storage.zip">slides</a>)</td>
+<td><a href="#accessible">Building Accessible Widgets with YUI 3</a>, Todd Kloots (<a href="http://developer.yahoo.com/yui/theater/video.php?v=kloots-yuiconf2009-a11y" title="Video: Todd Kloots &mdash; Building Accessible Widgets with YUI 3 (YUI Theater)">video</a> | <a href="http://yuiblog.com/assets/kloots-yuiconf2009-a11y.zip">slides</a>)</td>
+<td><a href="#yuitest">Automated Integration Testing with YUITest, Selenium and Hudson, Ron Adams</a> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=adams-yuiconf2009-testing">video</a> | <a href="http://yuiblog.com/assets/adams-yuiconf2009-testing.zip">slides</a>)</td>
+<td>YUI Charts, Tripp Bridges &amp; Allen Rabinovich (<a href="http://developer.yahoo.com/yui/theater/video.php?v=rabinovich-yuiconf2009-charts" title="Video: Allen Rabinovich &mdash; YUI 3 Infographics (YUI Theater)">video</a> | <a href="http://yuiblog.com/assets/rabinovich-yuiconf2009-charts.zip">slides</a>)</td>
+</tr>
+<tr>
+<td>3:00 - 4:00</td>
+<td><a href="#widget">A Widget Walkthrough</a>, Satyen Desai (<a href="http://developer.yahoo.com/yui/theater/video.php?v=desai-yuiconf2009-widgets">video</a> | <a href="http://yuiblog.com/assets/desai-yuiconf2009-widgets.zip">slides</a>)</td>
+<td><a href="#yap">Building YAP Applications with YUI, Reid Burke</a> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=burke-yuiconf2009-yap" title="Video: Reid Burke &mdash; Building YAP Applications with YUI (YUI Theater)">video</a> | <a href="http://www.slideshare.net/reidburke/building-yap-applications-with-yui?awesm=4KTA">slides</a>)</td>
+<td><a href="#contributing">Contributing to YUI</a>, Dav Glass (<a href="http://developer.yahoo.com/yui/theater/video.php?v=glass-yuiconf2009-contributing">video</a> | <a href="http://www.slideshare.net/davglass/contributing-to-yui">slides</a>)</td>
+<td><a href="#sugar">YUI 3 Sugar, Todd Kloots</a> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=kloots-yuiconf2009-sugar" title="Video: Todd Kloots &mdash; YUI 3 Sugar (YUI Theater)">video</a> | <a href="http://yuiblog.com/assets/kloots-yuiconf2009-sugar.zip">slides</a>)</td>
+</tr>
+<tr>
+<td>4:00 - 4:30</td>
+<td colspan="2">Afternoon Break</td>
+<td colspan="2">Afternoon Break</td>
+</tr>
+<tr>
+<td>4:30 - 5:30</td>
+<td colspan="2">Keynote, Brendan Eich (<a href="http://developer.yahoo.com/yui/theater/video.php?v=eich-yuiconf2009-harmony">video</a>)</td>
+<td colspan="2"><a href="#douglas">Keynote</a>, Douglas Crockford (<a href="http://developer.yahoo.com/yui/theater/video.php?v=crockford-yuiconf2009-state">video</a> | <a href="http://www.yuiblog.com/assets/crockford-yuiconf2009-stateandfuture.ppt">slides</a>)</td>
+</tr>
+<tr>
+<td>5:30 - 8:00</td>
+<td colspan="2">Evening Event</td>
+<td colspan="2">Conference Ends</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="sessions">Session Descriptions</h3>
+
+<dl>
+<dt id="yuitest">Automated Integration Testing with YUITest, Selenium and Hudson, <em>Ron Adams</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=adams-yuiconf2009-testing">video</a> | <a href="http://yuiblog.com/assets/adams-yuiconf2009-testing.zip">slides</a>)</dt>
+<dd>
+<p>The push for more comprehensive and effective Frontend testing techniques has risen in the past year. Not only are developers trying to create dynamic experiences that excite and entice their users....they want to be sure their complex features don't break when introducing new libraries and enhancements. This session will explore tips and tricks to contextually test the resiliency of your key library components in an automated manner using YUITest, Selenium RC and Hudson.</p>
+<p class="bio">Ron Adams has been developing web applications for the last 8 years. He's been working on Yahoo! Media properties since 2006.  After moving from Yahoo! Broadway to OMG!, Ron moved on to the Yahoo! Sports team.  He's now making fun stuff happen and ensuring quality JS for all of Yahoo!'s Fantasy Sports games.  He's thrilled to be sharing his work at YUICONF!</p>
+</dd>
+
+<dt id="yql">Browser MVC with YQL and YUI, <em>Jonathan LeBlanc</em></dt>
+<dd>
+<p>The Yahoo! Query Language provides a rich and dynamic method for obtaining and manipulating data from any source or API on the internet &mdash; with YQL the internet becomes your database. Coupling the data backend of YQL with the extensive visualization and flow techniques of JavaScript through libraries such as YUI, a developer can build powerful widget and data systems using the simplified SQL syntax that YQL is based in. The marriage of YQL and JavaScript brings a robust MVC interface to the browser.</p><p>This talk will cover the core techniques within YQL, including server-side JavaScript with native E4X support for manipulating data, key / value pair data storage and the process of creating your own YQL tables for accessing web based content. Building upon this core, design concepts such as those of a Model View Controller pattern will be introduced to display methods for taking the base data and merging that with front-end libraries to build out production level applications.</p>
+<p class="bio">Jonathan LeBlanc works with the partner integrations group in the Yahoo! Developer Network as a senior software engineer / technology evangelist.  Focusing on partner relationships and training, as well as external developer integrations, Jonathan works with and promotes emerging technologies to aid in the adoption and utilization of new social development techniques.  As a software engineer, Jonathan works extensively with social interaction development on the web, developing new methods for linking social networks to drive the ideal of an open web.</p>
+</dd>
+
+<dt id="accessible">Building Accessible Widgets with YUI 3, <em>Todd Kloots</em> (<a href="http://yuiblog.com/assets/kloots-yuiconf2009-a11y.zip">slides</a>)</dt>
+<dd>
+<p>YUI 3 makes it easier for developers to build accessible user interfaces. This talk will focus on how to use the accessibility minded features of the library to build keyboard accessible, ARIA- enabled widgets.</p>
+<p class="bio">Todd Kloots is a frontend engineer with ten years of industry experience, seven of which have been at Yahoo! working on products such as Yahoo! Mail and, most recently, the Yahoo! User Interface (YUI) Library. Through his role at Yahoo!, Todd evangelises the use of web standards, is an advocate for accessibility, and a frequent contributor to the YUI Blog. When he's not writing code, Todd can be found working on his other passion: hunting down the perfect cup of espresso in the cafes of San Francisco.</p>
+</dd>
+
+<dt id="yap">Building YAP Applications with YUI, <em>Reid Burke</em> (<a href="http://www.slideshare.net/reidburke/building-yap-applications-with-yui?awesm=4KTA">slides</a>)</dt>
+<dd>
+<p>The Yahoo! Application Platform allows you to build apps for the new Yahoo! homepage, My Yahoo! and other Yahoo! destinations. This session will focus on leveraging YUI on YAP, addressing best practices and noting differences from a typical environment. Particular attention will be given to writing cajolable script under Caja, the source-to-source translator that secures untrusted third-party JavaScript in YAP.</p>
+<p class="bio"></p>
+</dd>
+
+<dt id="custommods">Building YUI 3 Custom Modules, <em>Caridy Patino</em> (<a href="http://www.slideshare.net/caridy/building-yui-3-custom-modules">slides</a>)</dt>
+<dd>
+<p>Learn how to leverage the YUI 3.x infrastructure to create custom code that can be loaded easily and efficiently onto any page. Also discover how these mashups can combine YUI widgets and utilities with your own code and how to reuse code between different YUI instances.</p>
+<p class="bio">Caridy is a Senior Frontend Engineer and JavaScript Nerd at Yahoo! and an active YUI contributor. He's also the creator of the Bubbling Library YUI Extension.</p>
+</dd>
+
+<dt id="yuidoc">Creating Beautiful Documentation with YUI Doc, <em>Stephen Woods</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=woods-yuiconf2009-yuidoc">video</a> | <a href="http://www.slideshare.net/ysaw/beautiful-documentation-with-yui-doc">slides</a>)</dt>
+<dd>
+<p>When creating large libraries for use by other developers, effective API documentation is essential. YUI Doc is a python-based tool which automatically generates documentation from comment blocks in your code. Unlike some analagous systems, YUI Doc is designed to work purely from comments; as a result, there is no idiom or code pattern with which the tool is incompatible.</p>
+
+<ul><li>This session will cover:YUI Doc syntax and style</li><li>Best practices for up-to-date and complete API documentation</li><li>Creating custom YUI Doc templates</li><li>Integrating documentation with your build process</li></ul>
+
+<p class="bio"></p>
+</dd>
+
+<dt id="contributing">Contributing to YUI, <em>Dav Glass</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=glass-yuiconf2009-contributing">video</a> | <a href="http://www.slideshare.net/davglass/contributing-to-yui">slides</a>)</dt>
+<dd>
+<p>Over the past year, Dav has made it his personal goal to open YUI up to external contributors. In this session he will talk about Git, GitHub, YUILibrary.com and many other ways to contribute to YUI.</p>
+<p class="bio"></p>
+</dd>
+
+<dt id="debugging">Debugging in YUI 3, <em>Luke Smith</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=smith-yuiconf2009-debugging">video</a> | <a href="http://yuiblog.com/assets/smith-yuiconf2009-debugging.zip">slides</a>)</dt>
+<dd>
+<p>YUI 3 core concepts such as sandboxing and Node wrappers create a new environment with new idioms that can be daunting when debugging your code. This session will showcase some tips and tricks for how to debug efficiently in a YUI 3 system, including</p>
+
+<ul><li>how to get the most (and least) out of the YUI logging system</li><li>how to access the raw DOM in a Node-centric world</li><li>common hurdles and various browser debuggers and debugging methods</li><li>tools that YUI makes available to help</li></ul>
+
+<p class="bio"></p>
+</dd>
+
+<dt id="events">Events Evolved, <em>Luke Smith</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=smith-yuiconf2009-events">video</a> | <a href="http://yuiblog.com/assets/smith-yuiconf2009-events.zip">slides</a>)</dt>
+<dd>
+<p>YUI 2's custom event system revolutionized web app development, and in YUI 3, we're doing it again big time. This session will preview the new </p>
+
+<ul><li>standardizing on common syntax for DOM and custom event subscription management</li><li>leveraging DOM patterns like preventable default event behaviors and bubbling</li><li>evolving beyond DOM event features with things like mutable bubble paths and event "after" moments</li><li>lots more</li></ul>
+
+<p>You'll start thinking about web development in a whole new way.</p>
+
+<p class="bio"></p>
+</dd>
+
+<dt id="flash">Hybrid Flash Components, <em>Tripp Bridges &amp; Allen Rabinovich</em> (<a href="http://yuiblog.com/assets/rabinovich-yuiconf2009-hybrid.zip">slides</a>)</dt>
+<dd>
+<p></p>
+<p class="bio"></p>
+</dd>
+
+<dt id="phploader">Introducing PHP Loader, <em>Chad Auld</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=auld-yuiconf2009-phploader">video</a> | <a href="http://dl.getdropbox.com/u/256666/presentations/PHP_Loader_Intro_YUIConf2009.pdf">slides</a>)</dt>
+<dd>
+<p>Those familiar with YUI know the benefits of the YUI Client-Side Loader well.  Recently a beta version of the new YUI PHP Loader was released.  The YUI PHP Loader Utility is a server-side utility that allows you to load specific YUI components and their dependancies into your page via PHP. YUI PHP Loader can operate as a holistic solution by loading all of your necessary YUI components, or it can be used to add one or more components to a page on which some YUI content already exists.  This session will cover managing YUI dependancies server-side with PHP, loading CSS and JavaScript resources separately, managing custom dependancies, and the Loader's intrinsic combo-handling support.</p>
+<p class="bio">Chad is a Front-End Engineer on the Yahoo! Buzz Marketing team where he uses YUI to develop many marketing programs and projects such as Yahoo! Sideline.  He is the co-developer of YUI's PHP Loader along with Adam Moore.  He holds a Masters in Information Systems, is a Zend Certified Engineer, and a Certified MySQL Professional.  He is a huge proponent of open source technology and has been heavily involved in the development of the Mambo, MiaCMS, and Aliro Content Management Systems for the last 5 years.</p>
+</dd>
+
+<dt id="storage">Introducing Storage Utility, <em>Matt Snider</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=snider-yuiconf2009-storage">video</a> | <a href="http://yuiblog.com/assets/snider-yuiconf2009-storage.zip">slides</a>)</dt>
+<dd>
+<p>Introduced in version 2.8, YUI's new Storage Utility provides a cross-browser way to support client-side storage as defined in the HTML 5 spec, even in browsers that do not support HTML 5. This talk will discuss the goals of Storage Utility, the technologies behind it, how to use it, and how to write your own storage engine.</p>
+<p class="bio">Matt Snider is a Web Application Developer currently working at Mint.com (hopefully Intuit, once the DOJ approves the sale of Mint) and managing a Web Development Blog at MattSnider.com. He has been a full-time web developer since 2003 and has contributed to YUI (and other JavaScript frameworks) for over 3 years. He has experience with most most web and mobile technologies, but is passionate about JavaScript and an advocate for building quality JavaScript driven applications. When not programming you can find him playing soccer, backpacking, or setting the high score on your favorite video game.</p>
+</dd>
+
+<dt id="brendan">Keynote, <em>Brendan Eich</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=eich-yuiconf2009-harmony">video</a>)</dt>
+<dd></dd>
+
+<dt id="douglas">Keynote, <em>Douglas Crockford</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=crockford-yuiconf2009-state">video</a> | <a href="http://www.yuiblog.com/assets/crockford-yuiconf2009-stateandfuture.ppt">slides</a>)</dt>
+<dd>
+<p>Unexpectedly, JavaScript has become the world's most popular programming language. After ten years of stasis and acrimonious controversy, a new edition of the language will be arriving soon, and there is work on further standards. There are many forces now pulling on this little language. What will the future hold for this duckling?</p>
+<p class="bio">Douglas Crockford was born in the wilds of Minnesota, but left when he was only six months old because it was just too damn cold. He turned his back on a promising career in television when he discovered computers. He has worked in learning systems, small business systems, office automation, games, interactive music, multimedia, location-based entertainment, social systems, and programming languages. He is the inventor of Tilton, the ugliest programming language that was not specifically designed to be an ugly programming language. He is best known for having discovered that there are good parts in JavaScript. This was an important and unexpected discovery. He discovered the JSON Data Interchange Format. He is currently working on making the web a secure and reliable software delivery platform. He has his work cut out for him.</p>
+</dd>
+
+<dt id="ac">Solving Problems with YUI 3 &mdash; An AutoComplete Case Study, <em>Isaac Schlueter</em> (<a href="http://www.slideshare.net/IsaacSchlueter/solving-problems-with-yui3-autocomplete">slides</a>)</dt>
+<dd>
+<p>This session presents a case study showcasing the trade offs and decisions that go into creating a new addition to the YUI toolkit to meet a variety of demanding real world use cases. We'll cover some of the basics of YUI so that you can learn more about one of the most useful JavaScript libraries created for web developers.</p>
+<p class="bio"></p>
+</dd>
+
+<dt id="appdevel">Web Application Development with YUI3, <em>Eric Ferraiuolo</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=ericf-yuiconf2009-webapps">video</a> | <a href="http://925html.com/presentation/web-application-development-with-yui3/">slides</a>)</dt>
+<dd>
+<p>This talk discusses techniques for deploying YUI 3 custom modules within a larger server application environment, using a working application as a reference. You'll learn how to streamline your development and deployment process, ways to organize your code for maximum efficiency, how to integrate with the Eclipse IDE, and some tips and tricks around build strategies and server-side tooling.</p>
+<p class="bio">Eric Ferraiuolo is web application developer focused on front-end development. As co-founder of Oddnut Software, he is currently busy building a new consumer web service. Eric can be found online at <a href="http://ericf.name">http://ericf.name</a> and <a href="http://925html.com">http://925html.com</a>.</p>
+</dd>
+
+<dt id="welcome">Welcome Keynote, <em>Eric Miraglia</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=miraglia-yuiconf2009-yui3">video</a> | <a href="http://ericmiraglia.com/decks/yuiconf2009.pdf.zip">slides</a>)</dt>
+<dd>
+<p>YUI 3 is the first ground-up redesign of the YUI Library since its creation in 2005.  In this session, we'll look at what YUI 3 means for you as you write web applications and what it means for the future of the YUI project.</p>
+<p class="bio">Eric is an engineering manager with the YUI team at Yahoo, where he has worked as a member of the frontend engineering community since 2003.</p>
+</dd>
+
+<dt id="widget">A Widget Walkthrough, <em>Satyen Desai</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=desai-yuiconf2009-widgets">video</a> | <a href="http://yuiblog.com/assets/desai-yuiconf2009-widgets.zip">slides</a>)</dt>
+<dd>
+<p>During this session, we'll take a detailed look at the YUI 3 Widget base class by walking through the construction of a basic Spinner widget. We'll cover Widget's basic set of attributes, it's API and lifecycle hooks, as well the event driven patterns we're following to separate the state of a widget from its rendered view.</p>
+<p class="bio"></p>
+</dd>
+
+<dt id="perf">YUI 3 Performance, <em>Matt Sweeney</em> (<a href="http://developer.yahoo.com/yui/theater/video.php?v=sweeney-yuiconf2009-performance">video</a> | <a href="http://yuilibrary.com/~msweeney/yuiconf-yui3perf.pdf">slides</a>)</dt>
+<dd>
+<p>This session dives under the hood to explore performance in YUI 3, including what you get for free with the new architecture, high-performance strategies to writing code, and tools for timing the speed of your code.</p>
+<p class="bio"></p>
+</dd>
+
+<dt id="sugar">YUI 3 Sugar, <em>Todd Kloots</em> (<a href="http://yuiblog.com/assets/kloots-yuiconf2009-sugar.zip">slides</a>)</dt>
+<dd>
+<p>There's a lot of sweetener in YUI 3, features that not only smooth over and augment the browsers' APIs, but enable you to do more with less code. Come learn all of the ways that developing for the browser is now sweeter with YUI3.</p>
+<p class="bio">Todd Kloots is a frontend engineer with ten years of industry experience, seven of which have been at Yahoo! working on products such as Yahoo! Mail and, most recently, the Yahoo! User Interface (YUI) Library. Through his role at Yahoo!, Todd evangelises the use of web standards, is an advocate for accessibility, and a frequent contributor to the YUI Blog. When he's not writing code, Todd can be found working on his other passion: hunting down the perfect cup of espresso in the cafes of San Francisco.</p>
+</dd>
+
+<dt id="charts">YUI Charts, <em>Tripp Bridges &amp; Allen Rabinovich</em> (<a href="http://yuiblog.com/assets/rabinovich-yuiconf2009-charts.zip">slides</a>)</dt>
+<dd>
+<p></p>
+<p class="bio"></p>
+</dd>
+</dl>
+            </div>
+          </div>
+        <div class="yui-b secondary sidebar">
+        <div class="mod">
+  <div class="hd"><h4><a href="/forum/recent.php">Recent Forums Posts</a></h4></div>
+  <div class="bd">
+      <ul>
+<li>
+<h5><a href="/forum/viewtopic.php?p=7312#p7312">how to use docs page js and css files?</a></h5>
+<cite class="author">paul m</cite> <cite class="date">Jan 1st</cite>
+</li>
+<li>
+<h5><a href="/forum/viewtopic.php?p=7311#p7311">Re: datatable in a panel with Modal and cellediting</a></h5>
+<cite class="author">Dan</cite> <cite class="date">Jan 1st</cite>
+</li>
+<li>
+<h5><a href="/forum/viewtopic.php?p=7310#p7310">Re: How is YAHOO.lang.extend supposed to work?</a></h5>
+<cite class="author">Luke Smith</cite> <cite class="date">Jan 1st</cite>
+</li>
+<li>
+<h5><a href="/forum/viewtopic.php?p=7309#p7309">Re: How is YAHOO.lang.extend supposed to work?</a></h5>
+<cite class="author">Dav Glass</cite> <cite class="date">Jan 1st</cite>
+</li>
+<li>
+<h5><a href="/forum/viewtopic.php?p=7308#p7308">Re: How is YAHOO.lang.extend supposed to work?</a></h5>
+<cite class="author">Mike Sexter</cite> <cite class="date">Jan 1st</cite>
+</li>
+<li>
+<h5><a href="/forum/viewtopic.php?p=7307#p7307">How is YAHOO.lang.extend supposed to work?</a></h5>
+<cite class="author">Mike Sexter</cite> <cite class="date">Jan 1st</cite>
+</li>
+<li>
+<h5><a href="/forum/viewtopic.php?p=7306#p7306">Re: I have doubts (a lot!) on widgets</a></h5>
+<cite class="author">Adrian Kalbarczyk</cite> <cite class="date">Dec 31st</cite>
+</li>
+<li>
+<h5><a href="/forum/viewtopic.php?p=7305#p7305">Re: What is the preferred way to prevent module caching?</a></h5>
+<cite class="author">Eric Ferraiuolo</cite> <cite class="date">Dec 31st</cite>
+</li>
+</ul>
+
+  </div>
+</div>
+<div class="mod">
+  <div class="hd"><h4>Recent <a href="http://yuiblog.com">YUI Blog</a> Posts</h4></div>
+  <div class="bd">
+      
+<!-- Auto-generated Sidebar (Sat, 02 Jan 2010 01:30:01 +0000) -->
+<ul>
+<li>
+<h5><a href="http://www.yuiblog.com/blog/2009/12/22/crockford-on-javascript/">Crockford on JavaScript: A Public Lecture Series at Yahoo!</a></h5>
+<cite class="author">Eric Miraglia</cite> <cite class="date">Dec 22nd</cite>
+</li>
+<li>
+<h5><a href="http://www.yuiblog.com/blog/2009/12/17/iphone-design-stencils-in-the-pattern-library/">iPhone Design Stencils in the Pattern Library</a></h5>
+<cite class="author">Christian Crumlish</cite> <cite class="date">Dec 17th</cite>
+</li>
+<li>
+<h5><a href="http://www.yuiblog.com/blog/2009/12/17/job-opening-on-the-yahoo-sports-team/">Job Opening on the Yahoo! Sports team</a></h5>
+<cite class="author">Andres Narvaez</cite> <cite class="date">Dec 17th</cite>
+</li>
+<li>
+<h5><a href="http://www.yuiblog.com/blog/2009/12/16/video-resig-testing-and-jquery/">YUI Theater —  John Resig: “Testing, Performance Analysis, and jQuery 1.4″</a></h5>
+<cite class="author">Eric Miraglia</cite> <cite class="date">Dec 16th</cite>
+</li>
+<li>
+<h5><a href="http://www.yuiblog.com/blog/2009/12/14/yui-2-7-0-on-insideline-com/">YUI 2.7.0 on InsideLine.com</a></h5>
+<cite class="author">Réal Deprez</cite> <cite class="date">Dec 14th</cite>
+</li>
+<li>
+<h5><a href="http://www.yuiblog.com/blog/2009/12/10/whats-new-in-yui-test-3/">What’s New in YUI Test 3.0.0</a></h5>
+<cite class="author">Nicholas C. Zakas</cite> <cite class="date">Dec 10th</cite>
+</li>
+</ul>
+
+<!-- End Auto-generated Sidebar -->
+
+  </div>
+</div>
+<div class="mod">
+  <div class="hd"><h4>Online Users</h4></div>
+  <div class="bd">
+      No Users Online
+  </div>
+</div>
+        </div>
+    </div>
+	 <div id="ft">
+		
+            <div id="trough">
+	<div class="yui-g">
+		<div class="yui-g first">
+			<div class="yui-u first">
+				<h5>YUI Projects</h5>
+				<ul>
+					<li><a href="/downloads">All YUI Downloads</a></li>
+					<li><a href="/projects/yui2">YUI 2.x</a></li>
+					<li><a href="/projects/yui3">YUI 3.x</a></li>
+					<li><a href="/projects/yuidoc">YUIDoc</a></li>
+					<li><a href="/projects/yuicompressor">YUICompressor</a></li>
+					<li class="more"><a href="/projects/yuilibrary">YUILibrary.com</a></li>
+                    <li class="more"><a href="/projects/builder">YUI Build Tool</a></li>
+                    <li class="more"><a href="/projects/phploader">YUI PHP Loader</a></li>
+				</ul>
+			</div>
+			<div class="yui-u">
+				<h5>Pages &amp; Links</h5>
+				<ul>
+					<li><a href="/downloads">All YUI Downloads</a></li>
+					<li><a href="/gitfaq">Git FAQ</a></li>
+                    <li><a href="http://developer.yahoo.com/yui/articles/gbs" class="ext-link" title="Graded Browser Support"><span class="icon">Graded Browser Support</span></a></li>
+					<li><a href="/contrib">Contribute to YUI</a></li>
+					<li><a href="/forum/stats">Forum Stats</a></li>
+					<li><a href="/gallery/stats">Gallery Stats</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="yui-g">
+			<div class="yui-u first">
+				<h5>Contribute</h5>
+				<ul>
+                    <li><a href="http://developer.yahoo.com/yui/articles/reportingbugs/" class="ext-link" title="Submit a Bug"><span class="icon">Submit a Bug</span></a></li>
+                    <li><a href="http://developer.yahoo.com/yui/articles/reportingbugs/" class="ext-link" title="Request a Feature"><span class="icon">Request a Feature</span></a></li>
+                    <li><a href="http://developer.yahoo.com/yui/community/contribute.html" class="ext-link" title="Write Code"><span class="icon">Write Code</span></a></li>
+                    <li><a href="/team">Meet the Team</a></li>
+				</ul>
+			</div>
+			<div class="yui-u">
+				<h5>Follow YUI</h5>
+				<ul>
+                    <li><a href="http://github.com/yui/" class="ext-link" title="on GitHub"><span class="icon">on GitHub</span></a></li>
+                    <li><a href="http://twitter.com/yuilibrary" class="ext-link" title="on Twitter"><span class="icon">on Twitter</span></a></li>
+                    <li><a href="http://friendfeed.com/yuilibrary?subscribe=1" class="ext-link" title="on FriendFeed"><span class="icon">on FriendFeed</span></a></li>
+                    <li><a href="http://www.facebook.com/pages/Yahoo-User-Interface-Library-YUI/15384729838" class="ext-link" title="on Facebook"><span class="icon">on Facebook</span></a></li>
+					<li><a href="/irc">on IRC</a></li>
+                    <li><a href="http://yuiblog.com" class="ext-link" title="YUI Blog"><span class="icon">YUI Blog</span></a></li>
+                    <li><a href="http://developer.yahoo.com/yui/theater" class="ext-link" title="YUI Theater"><span class="icon">YUI Theater</span></a></li>
+					<li><a href="/forum">YUI Forums</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+			
+			<p>&copy; 2010 YUI Library - <a href="/projects/yuilibrary/wiki/Credits">Site Credits</a></p>			
+			
+	    </div>
+</div>
+<script type="text/javascript" src="http://track2.mybloglog.com/js/jsserv.php?mblID=2008112513433661"></script>
+<script type="text/javascript" src="/assets/more-09.17.2009.js"></script>
+</body>
+</html>

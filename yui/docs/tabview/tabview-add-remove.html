@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Adding and Removing Tabs - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/tabview/tabview-add-remove.html">
+    <meta name="twitter:title" content="Example: Adding and Removing Tabs">
+    <meta name="twitter:description" content="This example shows how to add and remove Tabs.">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/quick-start/">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="/yui/docs/">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/widgets/">Widgets</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/tabview/">TabView</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/tabview/tabview-add-remove.html">Example: Adding and Removing Tabs</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Example: Adding and Removing Tabs</h1>
+
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <style>
+.yui3-tabview {
+    margin-bottom: 1em;
+}
+
+.yui3-skin-sam .yui3-tab {
+    position: relative;
+}
+
+.yui3-skin-sam .yui3-tabview-removeable .yui3-tab-label,
+.yui3-skin-sam .yui3-tabview-removeable .yui3-tab-selected .yui3-tab-label {
+    padding-right: 1.3em; /* make room for close link */
+}
+
+.yui3-skin-sam .yui3-tabview-removeable .yui3-tab-add {
+    padding-right: 0.75em; /* no close link for add tab link */
+}
+
+.yui3-skin-sam .yui3-tab-add {
+    color: #999;
+    font: bold 120%/1 verdana;
+    margin-left: 0.25em;
+}
+
+.yui3-tab-remove {
+    color: #999;
+    font:bold 80% verdana;
+    position: absolute;
+    right: 0.4em;
+    top: 0.4em;
+}
+
+.yui3-tab-remove:hover {
+    color: #666;
+}
+
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-remove {
+    top: 0.52em;
+}
+
+.yui3-skin-sam .yui3-tab-selected .yui3-tab-remove:hover {
+    color: #fff;
+}
+
+#main #example-canvas .yui3-tabview .yui3-tab-selected a {
+	color:white;
+}
+
+</style>
+<div class="intro">
+    <p>This example shows how to give <code>TabView</code> buttons for adding and removing tabs.</p>
+</div>
+
+<div class="example yui3-skin-sam">
+<div id="demo">
+    <ul>
+        <li><a href="#foo">foo</a></li>
+        <li><a href="#bar">bar</a></li>
+        <li><a href="#baz">baz</a></li>
+    </ul>
+    <div>
+        <div id="foo">
+            <p>foo content</p>
+        </div>
+        <div id="bar">
+            <p>bar content</p>
+        </div>
+        <div id="baz">
+            <p>baz content</p>
+        </div>
+    </div>
+</div>
+
+<div id="demo2">
+</div>
+
+<div id="demo3">
+</div>
+
+<script type="text/javascript">
+YUI().use('tabview', 'escape', 'plugin', function(Y) {
+    var Addable = function(config) {
+        Addable.superclass.constructor.apply(this, arguments);
+    };
+
+    Addable.NAME = 'addableTabs';
+    Addable.NS = 'addable';
+
+    Y.extend(Addable, Y.Plugin.Base, {
+        ADD_TEMPLATE: '<li class="yui3-tab" title="add a tab">' +
+                    '<a class="yui3-tab-label yui3-tab-add">+</a></li>',
+
+        initializer: function(config) {
+            var tabview = this.get('host');
+            tabview.after('render', this.afterRender, this);
+            tabview.get('contentBox')
+                .delegate('click', this.onAddClick, '.yui3-tab-add', this);
+        },
+
+        getTabInput: function() {
+            var tabview = this.get('host');
+            return {
+                label: Y.Escape.html(window.prompt('label:', 'new tab')),
+                content: '<p>' + Y.Escape.html(window.prompt('content:', 'new content')) + '</p>',
+                index: Number(window.prompt('index:', tabview.size()))
+            }
+        },
+
+        afterRender: function(e) {
+            var tabview = this.get('host');
+            tabview.get('contentBox').one('> ul').append(this.ADD_TEMPLATE);
+        },
+
+        onAddClick: function(e) {
+            e.stopPropagation();
+            var tabview = this.get('host'),
+                input = this.getTabInput();
+            tabview.add(input, input.index);
+        }
+    });
+
+    var Removeable = function(config) {
+        Removeable.superclass.constructor.apply(this, arguments);
+    };
+
+    Removeable.NAME = 'removeableTabs';
+    Removeable.NS = 'removeable';
+
+    Y.extend(Removeable, Y.Plugin.Base, {
+        REMOVE_TEMPLATE: '<a class="yui3-tab-remove" title="remove tab">x</a>',
+
+        initializer: function(config) {
+            var tabview = this.get('host'),
+                cb = tabview.get('contentBox');
+
+            cb.addClass('yui3-tabview-removeable');
+            cb.delegate('click', this.onRemoveClick, '.yui3-tab-remove', this);
+
+            // Tab events bubble to TabView
+            tabview.after('tab:render', this.afterTabRender, this);
+        },
+
+        afterTabRender: function(e) {
+            // boundingBox is the Tab's LI
+            e.target.get('boundingBox').append(this.REMOVE_TEMPLATE);
+        },
+
+        onRemoveClick: function(e) {
+            e.stopPropagation();
+            var tab = Y.Widget.getByNode(e.target);
+            tab.remove();
+        }
+    });
+
+    var tabview = new Y.TabView({
+        srcNode: '#demo',
+        plugins: [Addable]
+    });
+
+    var tabview2 = new Y.TabView({
+        children: [{
+            label: 'foo',
+            content: '<p>foo content</p>'
+        }, {
+            label: 'bar',
+            content: '<p>bar content</p>'
+        }, {
+            label: 'baz',
+            content: '<p>baz content</p>'
+        }],
+        plugins: [Removeable]
+    });
+
+    var tabview3 = new Y.TabView({
+        children: [{
+            label: 'foo',
+            content: '<p>foo content</p>'
+        }, {
+            label: 'bar',
+            content: '<p>bar content</p>'
+        }, {
+            label: 'baz',
+            content: '<p>bar content</p>'
+        }],
+        plugins: [Addable, Removeable]
+    });
+
+    tabview.render();
+    tabview2.render('#demo2');
+    tabview3.render('#demo3');
+});
+</script>
+
+</div>
+
+<p>
+<strong>Note:</strong> be sure to add the <code>yui3-skin-sam</code> classname to the
+page's <code>&lt;body&gt;</code> element or to a parent element of the widget in order to apply
+the default CSS skin. See <a href="http://yuilibrary.com/yui/docs/tutorials/skins/">Understanding Skinning</a>.
+</p>
+<pre class="code prettyprint">&lt;body class=&quot;yui3-skin-sam&quot;&gt; &lt;!-- You need this skin class --&gt;</pre>
+
+
+<h2>Plugin Template</h2>
+
+<p>In order to make these addons reusable, we can build them as plugins.  This
+allows the option for multiple tabviews that mix and match functionality.
+To get started, we will first fill in a basic <code>Plugin</code> template.
+The <code>NAME</code> property is required to prefix events, classNames, et cetera.
+The <code>NS</code> is the namespace where the plugin will live on the
+<code>host</code>.  This is where its API can be accessed (e.g. "node.addable.destroy()").
+Adding the <code>this._host</code> alias provides a convenient way to get back to the TabView
+instance. Calling the superclass constructor kicks off the <code>Base</code> lifecycle,
+which will call the <code>initializer</code>.
+
+</p>
+
+<pre class="code prettyprint">var Addable = function(config) {
+    this._host = config.host;
+    Addable.superclass.constructor.apply(this, arguments);
+};
+
+Addable.NAME = &#x27;addableTabs&#x27;;
+Addable.NS = &#x27;addable&#x27;;
+
+Y.extend(Addable, Y.Plugin.Base, {
+    initializer: function(config) {
+    }
+});</pre>
+
+
+<h2>Addable Tab Plugin</h2>
+
+<p>To simplify adding new tabs, we are going to add a button that
+users can click and that will prompt them for some details regarding the new tab.
+The main task we are trying to accomplish is to add some HTML to the
+<code>TabView</code>, listen for clicks on the button, prompt the user for input,
+and update the tabs accordingly.</p>
+
+<h3>HTML Template</h3>
+<p>The first thing we need is a template for the markup to be generated.  Adding
+this to the prototype allows separate customization for each <code>TabView</code>
+instance. For this example, we want it to look and feel like another <code>Tab</code>
+without actually being one.</p> 
+
+<pre class="code prettyprint">Y.extend(Addable, Y.Plugin.Base, {
+    ADD_TEMPLATE: &#x27;&lt;li class=&quot;yui3-tab&quot; title=&quot;add a tab&quot;&gt;&#x27; +
+                &#x27;&lt;a class=&quot;yui3-tab-label yui3-tab-add&quot;&gt;+&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&#x27;,
+
+    initializer: function(config) {
+    }
+});</pre>
+
+
+<h3>Adding the HTML</h3>
+<p>Now that we have a markup template, we will need to add it to the <code>TabView</code>
+somehow.  The <code>render</code> phase is the appropriate moment to do so.  Listening
+for the <code>render</code> event will give us access to that moment.  Listening
+for <code>after('render')</code> ensure that the rendering has actually happened. Then
+we just need to find the tab list and, using the template, add the new item.
+The <code>contentBox</code> provides a <code>Node</code> that can be used to manage
+the <code>TabView</code> HTML.</p> 
+
+<pre class="code prettyprint">Y.extend(Addable, Y.Plugin.Base, {
+    ADD_TEMPLATE: &#x27;&lt;li class=&quot;yui3-tab&quot; title=&quot;add a tab&quot;&gt;&#x27; +
+                &#x27;&lt;a class=&quot;yui3-tab-label yui3-tab-add&quot;&gt;+&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&#x27;,
+
+    initializer: function(config) {
+        var tabview = this.get(&#x27;host&#x27;);
+        tabview.after(&#x27;render&#x27;, this.afterRender, this);
+    },
+
+    afterRender: function(e) {
+        var tabview = this.get(&#x27;host&#x27;);
+        tabview.get(&#x27;contentBox&#x27;).one(&#x27;&gt; ul&#x27;).append(this.ADD_TEMPLATE);
+    }
+});</pre>
+
+
+<h3>Handling the Click</h3>
+<p>All that remains is to listen for clicks on the add button and prompt
+the user for the relevant <code>Tab</code> data.  Again we can leverage
+the <code>Node</code> API, this time to delegate clicks on the add button.
+Stopping event propagation in our handler ensures that the event does
+not bubble any further, preventing the <code>TabView</code> from trying
+to handle it. To keep the example simple, a basic <code>prompt</code> is
+used to get the user input.  This could be refined to use an
+<code>Overlay</code> or other custom control.  The data is then handed off
+to <code>TabView</code>'s <code>add</code> method.</p> 
+
+<pre class="code prettyprint">Y.extend(Addable, Y.Plugin.Base, {
+    ADD_TEMPLATE: &#x27;&lt;li class=&quot;yui3-tab&quot; title=&quot;add a tab&quot;&gt;&#x27; +
+                &#x27;&lt;a class=&quot;yui3-tab-label yui3-tab-add&quot;&gt;+&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&#x27;,
+
+    initializer: function(config) {
+        var tabview = this.get(&#x27;host&#x27;);
+        tabview.after(&#x27;render&#x27;, this.afterRender, this);
+
+        tabview.get(&#x27;contentBox&#x27;)
+            .delegate(&#x27;click&#x27;, this.onAddClick, &#x27;.yui3-tab-add&#x27;, this);
+    },
+
+    afterRender: function(e) {
+        this.get(&#x27;host&#x27;).get(&#x27;contentBox&#x27;).one(&#x27;&gt; ul&#x27;).append(this.ADD_TEMPLATE);
+    },
+
+    getTabInput: function() {
+        return {
+            label: window.prompt(&#x27;label:&#x27;, &#x27;new tab&#x27;),
+            content: window.prompt(&#x27;content:&#x27;, &#x27;&lt;p&gt;new content&lt;&#x2F;p&gt;&#x27;),
+            index: Number(window.prompt(&#x27;index:&#x27;, this._host.size()))
+        }
+    },
+
+    onAddClick: function(e) {
+        e.stopPropagation();
+        var tabview = this.get(&#x27;host&#x27;);
+            input = this.getTabInput();
+        tabview.add(input, input.index);
+    }
+});</pre>
+
+
+<h3>Using the Plugin</h3>
+<p>Now we can go ahead and plug in our functionality.  This can be during
+construction with the <code>plugins</code> attribute, or subsequently
+via the <code>plug</code> method.</p> 
+
+<pre class="code prettyprint">var tabview = new Y.TabView({
+    children: [{
+        label: &#x27;foo&#x27;,
+        content: &#x27;&lt;p&gt;foo content&lt;&#x2F;p&gt;&#x27;
+    }, {
+        label: &#x27;bar&#x27;,
+        content: &#x27;&lt;p&gt;bar content&lt;&#x2F;p&gt;&#x27;
+    }, {
+        label: &#x27;baz&#x27;,
+        content: &#x27;&lt;p&gt;baz content&lt;&#x2F;p&gt;&#x27;
+    }],
+    plugins: [Addable]
+});
+
+&#x2F;&#x2F; or
+&#x2F;&#x2F; tabview.plug(Addable);</pre>
+
+
+<h2>Removeable Tabs Plugin</h2>
+<p>The process for creating a removeable plugin for <code>TabView</code>
+is very similar.  The full source is provided below.</p>
+
+<pre class="code prettyprint">var Removeable = function(config) {
+    Removeable.superclass.constructor.apply(this, arguments);
+};
+
+Removeable.NAME = &#x27;removeableTabs&#x27;;
+Removeable.NS = &#x27;removeable&#x27;;
+
+Y.extend(Removeable, Y.Plugin.Base, {
+    REMOVE_TEMPLATE: &#x27;&lt;a class=&quot;yui3-tab-remove&quot; title=&quot;remove tab&quot;&gt;x&lt;&#x2F;a&gt;&#x27;,
+
+    initializer: function(config) {
+        var tabview = this.get(&#x27;host&#x27;),
+            cb = tabview.get(&#x27;contentBox&#x27;);
+
+        cb.addClass(&#x27;yui3-tabview-removeable&#x27;);
+        cb.delegate(&#x27;click&#x27;, this.onRemoveClick, &#x27;.yui3-tab-remove&#x27;, this);
+
+        &#x2F;&#x2F; Tab events bubble to TabView
+        tabview.after(&#x27;tab:render&#x27;, this.afterTabRender, this);
+    },
+
+    afterTabRender: function(e) {
+        &#x2F;&#x2F; boundingBox is the Tab&#x27;s LI
+        e.target.get(&#x27;boundingBox&#x27;).append(this.REMOVE_TEMPLATE);
+    },
+
+    onRemoveClick: function(e) {
+        e.stopPropagation();
+        var tab = Y.Widget.getByNode(e.target);
+        tab.remove();
+    }
+});</pre>
+
+<h2>Complete Example Source</h2>
+<p>
+<strong>Note:</strong> be sure to add the <code>yui3-skin-sam</code> classname to the
+page's <code>&lt;body&gt;</code> element or to a parent element of the widget in order to apply
+the default CSS skin. See <a href="http://yuilibrary.com/yui/docs/tutorials/skins/">Understanding Skinning</a>.
+</p>
+<pre class="code prettyprint">&lt;body class=&quot;yui3-skin-sam&quot;&gt; &lt;!-- You need this skin class --&gt;</pre>
+
+
+<pre class="code prettyprint">&lt;div id=&quot;demo&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#foo&quot;&gt;foo&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;a href=&quot;#bar&quot;&gt;bar&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;a href=&quot;#baz&quot;&gt;baz&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+    &lt;div&gt;
+        &lt;div id=&quot;foo&quot;&gt;
+            &lt;p&gt;foo content&lt;&#x2F;p&gt;
+        &lt;&#x2F;div&gt;
+        &lt;div id=&quot;bar&quot;&gt;
+            &lt;p&gt;bar content&lt;&#x2F;p&gt;
+        &lt;&#x2F;div&gt;
+        &lt;div id=&quot;baz&quot;&gt;
+            &lt;p&gt;baz content&lt;&#x2F;p&gt;
+        &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+&lt;div id=&quot;demo2&quot;&gt;
+&lt;&#x2F;div&gt;
+
+&lt;div id=&quot;demo3&quot;&gt;
+&lt;&#x2F;div&gt;
+
+&lt;script type=&quot;text&#x2F;javascript&quot;&gt;
+YUI().use(&#x27;tabview&#x27;, &#x27;escape&#x27;, &#x27;plugin&#x27;, function(Y) {
+    var Addable = function(config) {
+        Addable.superclass.constructor.apply(this, arguments);
+    };
+
+    Addable.NAME = &#x27;addableTabs&#x27;;
+    Addable.NS = &#x27;addable&#x27;;
+
+    Y.extend(Addable, Y.Plugin.Base, {
+        ADD_TEMPLATE: &#x27;&lt;li class=&quot;yui3-tab&quot; title=&quot;add a tab&quot;&gt;&#x27; +
+                    &#x27;&lt;a class=&quot;yui3-tab-label yui3-tab-add&quot;&gt;+&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&#x27;,
+
+        initializer: function(config) {
+            var tabview = this.get(&#x27;host&#x27;);
+            tabview.after(&#x27;render&#x27;, this.afterRender, this);
+            tabview.get(&#x27;contentBox&#x27;)
+                .delegate(&#x27;click&#x27;, this.onAddClick, &#x27;.yui3-tab-add&#x27;, this);
+        },
+
+        getTabInput: function() {
+            var tabview = this.get(&#x27;host&#x27;);
+            return {
+                label: Y.Escape.html(window.prompt(&#x27;label:&#x27;, &#x27;new tab&#x27;)),
+                content: &#x27;&lt;p&gt;&#x27; + Y.Escape.html(window.prompt(&#x27;content:&#x27;, &#x27;new content&#x27;)) + &#x27;&lt;&#x2F;p&gt;&#x27;,
+                index: Number(window.prompt(&#x27;index:&#x27;, tabview.size()))
+            }
+        },
+
+        afterRender: function(e) {
+            var tabview = this.get(&#x27;host&#x27;);
+            tabview.get(&#x27;contentBox&#x27;).one(&#x27;&gt; ul&#x27;).append(this.ADD_TEMPLATE);
+        },
+
+        onAddClick: function(e) {
+            e.stopPropagation();
+            var tabview = this.get(&#x27;host&#x27;),
+                input = this.getTabInput();
+            tabview.add(input, input.index);
+        }
+    });
+
+    var Removeable = function(config) {
+        Removeable.superclass.constructor.apply(this, arguments);
+    };
+
+    Removeable.NAME = &#x27;removeableTabs&#x27;;
+    Removeable.NS = &#x27;removeable&#x27;;
+
+    Y.extend(Removeable, Y.Plugin.Base, {
+        REMOVE_TEMPLATE: &#x27;&lt;a class=&quot;yui3-tab-remove&quot; title=&quot;remove tab&quot;&gt;x&lt;&#x2F;a&gt;&#x27;,
+
+        initializer: function(config) {
+            var tabview = this.get(&#x27;host&#x27;),
+                cb = tabview.get(&#x27;contentBox&#x27;);
+
+            cb.addClass(&#x27;yui3-tabview-removeable&#x27;);
+            cb.delegate(&#x27;click&#x27;, this.onRemoveClick, &#x27;.yui3-tab-remove&#x27;, this);
+
+            &#x2F;&#x2F; Tab events bubble to TabView
+            tabview.after(&#x27;tab:render&#x27;, this.afterTabRender, this);
+        },
+
+        afterTabRender: function(e) {
+            &#x2F;&#x2F; boundingBox is the Tab&#x27;s LI
+            e.target.get(&#x27;boundingBox&#x27;).append(this.REMOVE_TEMPLATE);
+        },
+
+        onRemoveClick: function(e) {
+            e.stopPropagation();
+            var tab = Y.Widget.getByNode(e.target);
+            tab.remove();
+        }
+    });
+
+    var tabview = new Y.TabView({
+        srcNode: &#x27;#demo&#x27;,
+        plugins: [Addable]
+    });
+
+    var tabview2 = new Y.TabView({
+        children: [{
+            label: &#x27;foo&#x27;,
+            content: &#x27;&lt;p&gt;foo content&lt;&#x2F;p&gt;&#x27;
+        }, {
+            label: &#x27;bar&#x27;,
+            content: &#x27;&lt;p&gt;bar content&lt;&#x2F;p&gt;&#x27;
+        }, {
+            label: &#x27;baz&#x27;,
+            content: &#x27;&lt;p&gt;baz content&lt;&#x2F;p&gt;&#x27;
+        }],
+        plugins: [Removeable]
+    });
+
+    var tabview3 = new Y.TabView({
+        children: [{
+            label: &#x27;foo&#x27;,
+            content: &#x27;&lt;p&gt;foo content&lt;&#x2F;p&gt;&#x27;
+        }, {
+            label: &#x27;bar&#x27;,
+            content: &#x27;&lt;p&gt;bar content&lt;&#x2F;p&gt;&#x27;
+        }, {
+            label: &#x27;baz&#x27;,
+            content: &#x27;&lt;p&gt;bar content&lt;&#x2F;p&gt;&#x27;
+        }],
+        plugins: [Addable, Removeable]
+    });
+
+    tabview.render();
+    tabview2.render(&#x27;#demo2&#x27;);
+    tabview3.render(&#x27;#demo3&#x27;);
+});
+&lt;&#x2F;script&gt;</pre>
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+        
+
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="This example shows how to create a TabView wigdet from existing HTML.">
+                                        <a href="tabview-basic.html">TabView from Existing Markup</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="This example shows how to create a TabView wigdet from JavaScript.">
+                                        <a href="tabview-fromjs.html">Dynamic TabView from JavaScript</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="This example shows how to add and remove Tabs.">
+                                        <a href="tabview-add-remove.html">Adding and Removing Tabs</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="This example shows how to load tab content remotely using a YQL plugin.">
+                                        <a href="tabview-yql.html">Loading Tab Content</a>
+                                    </li>
+                                
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Related Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li data-description="Demonstrates how to add browser history support to a TabView widget using the History Utility.">
+                                        <a href="../history/history-tabview.html">History + TabView</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

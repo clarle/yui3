@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery :: joup</title>
+		<link href="https://github.com/jgw" rel="author" title="jgw" />
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/home.png" /> <a href="../index.html">Home</a><li><img src="../../assets/gallery/star.png" /> <a href="../featured.html">Featured</a><li><img src="../../assets/gallery/thumb_up.png" /> <a href="../popular.html">Popular</a><li><img src="../../assets/gallery/greenled.png" /> <a href="../new.html">New</a><li><img src="../../assets/gallery/script_code_red.png" /> <a href="../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../assets/gear.png" /> <a href="../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<div class="warning"> YUI Library is not responsible for bugs or support with this module. It is available as a free service. For support please contact the module owner with the provided links. </div>
+									<div class="gallery-item" id="gallery-item_497">
+										<div class="item-hd">
+											<h2>joup (gallery-joup) </h2> Last Updated: <span title="18 Oct 2011 13:22">10/18/11</span><div class="votes"><a class="up" href="#" title="Vote this item up.">+</a> <span>0</span> <a class="down" href="#" title="Vote this item down.">-</a></div>
+										</div>
+										<div class="mod">
+											<div class="yui-gf profile">
+												<div class="yui-u first">
+													<h3><span class="gallery-user">John George Wright</span></h3>
+													<h4>
+													</h4>
+													<p><img src="http://www.gravatar.com/avatar/2ad6ebafae880b4bedcadb214c558caa?s=64&d=http://yuilibrary.com/assets/gravatar-64.png" /> Created: <span title="18 Oct 2011 13:22">10/18/11</span><br /> Project: <a href="http://yuilibrary.com/projects/yui3">YUI 3</a><br /> License: <a href="http://yuilibrary.com/license/" target="_blank">YUI BSD</a><br /> YUI Version: 3.4.1<br /> Free for use. </div>
+												<div class="yui-u">
+													<div class="desc"><span class="wikipage"><p>The Joup img plugin creates a constrained hover status for img tags.<p>To use the Joup plugin, simply pass the reference to the plugin, a &quot;altImage&quot; parameter and any other optional parameters to the node's plug method.<p><pre class="wikicode"><br />
+&lt;script&gt;<br />
+  YUI().use(&quot;gallery-joup&quot;, function(Y)<br />
+  {<br />
+    Y.one(&quot;img#joup&quot;).plug(Y.Joup, {<br />
+      altImage: &quot;/images/large-image.jpg&quot;<br />
+    });<br />
+  });<br />
+&lt;script&gt;<br />
+</pre><p>The Joup plugin has several configuration properties that can be set via an object literal that is passed as a second argument to a Node instance's &lt;code&gt;plug&lt;/code&gt; method.<p><pre class="wikicode"><br />
+&lt;script&gt;<br />
+  YUI().use(&quot;gallery-joup&quot;, function(Y)<br />
+  {<br />
+    Y.one(&quot;img#joup&quot;).plug(Y.Joup, {<br />
+      altImage: &quot;/images/large-image.jpg&quot;,<br />
+      offsetLeft: 10,<br />
+      offsetRight: 40,<br />
+    });<br />
+  });<br />
+&lt;script&gt;<br />
+</pre></span></div>
+												</div>
+												<div class="tags">
+													<ul>
+														<li>Tags: <li><a href="../tag/johngeorgewright.html" title="Search by this tag: johngeorgewright">johngeorgewright</a><li><a href="../tag/loup.html" title="Search by this tag: loup">loup</a><li><a href="../tag/joup.html" title="Search by this tag: joup">joup</a><li><a href="../tag/image.html" title="Search by this tag: image">image</a></ul>
+												</div>
+											</div>
+										</div>
+										<ul class="gallery-links">
+											<li class="download"><a href="https://github.com/jgw/yui3-gallery/downloads" target="_blank" title="Download">Download</a><li class="docs empty">Docs<li class="homepage"><a href="https://github.com/jgw/yui3-gallery/" target="_blank" title="Homepage">Homepage</a><li class="bugs"><a href="https://github.com/jgw/yui3-gallery/issues" target="_blank" title="Bugs">Bugs</a><li class="source"><a href="https://github.com/jgw/yui3-gallery/tree/master/src/gallery-joup" target="_blank" title="Source">Source</a><li class="example empty">Example<li class="forum empty">Forum<li class="history"><a href="../history/joup.html" title="History">History</a></ul>
+										<div class="mod"><span class="wikipage"><p>The Joup img plugin creates a constrained hover status for img tags.<p>To use the Joup plugin, simply pass the reference to the plugin, a &quot;largeImage&quot; parameter and any other optional parameters to the node's plug method.</span><h3 id="code">Code Sample</h3>
+											<div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;gallery-joup&quot;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+  Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;img#joup&quot;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">plug</span><span style="color: #009900;">&#40;</span>Y.<span style="color: #660066;">Joup</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span>
+    altImage<span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;/images/large-image.jpg&quot;</span><span style="color: #339933;">,</span>
+    offsetLeft<span style="color: #339933;">:</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">,</span>
+    offsetRight<span style="color: #339933;">:</span> <span style="color: #CC0000;">40</span><span style="color: #339933;">,</span>
+  <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI().use(&quot;gallery-joup&quot;, function(Y)
+
+{
+
+  Y.one(&quot;img#joup&quot;).plug(Y.Joup, {
+
+    altImage: &quot;/images/large-image.jpg&quot;,
+
+    offsetLeft: 10,
+
+    offsetRight: 40,
+
+  });
+
+});</textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

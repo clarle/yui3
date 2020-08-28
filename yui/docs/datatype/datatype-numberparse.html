@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Y.Number.parse() - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/datatype/datatype-numberparse.html">
+    <meta name="twitter:title" content="Example: Y.Number.parse()">
+    <meta name="twitter:description" content="Parsing data into numbers.">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/quick-start/">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="/yui/docs/">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/utilities/">Utilities</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/datatype/">DataType</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/datatype/datatype-numberparse.html">Example: Y.Number.parse()</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Example: Y.Number.parse()</h1>
+
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <style>
+/* custom styles for this example */
+#demo label {display:block;}
+#demo fieldset {margin:1em;}
+</style>
+
+<div class="intro">
+    <p>The Number module of the DataType Utility allows you to take a data value and convert it to a number.</p>
+</div>
+
+<div class="example yui3-skin-sam">
+    <div class="yui3-g">
+    <div class="yui3-u-1-2">
+      <form id="demo">
+        <fieldset>
+           <label for="demo_input">Value to parse: <input type="text" id="demo_input"></label>
+           <input type="button" id="demo_btn" value="Report parsed number">
+        </fieldset>
+      </form>
+    </div>
+    <div class="yui3-u-1-2">
+        The parsed number is: <span id="parsed_number"></span>
+    </div>
+</div>
+
+<script>
+YUI().use("node", "datatype-number", function (Y) {
+    Y.on("click", function(e){
+        
+        var input = Y.one("#demo_input").get("value"),
+            output = Y.Number.parse(input);
+                
+        if(output === "") {
+            output += "(Invalid value)"
+        }
+        
+        if (output == null) {
+            output = "null";
+        }
+
+        Y.one("#parsed_number").set("text", output);
+    }, "#demo_btn");
+});
+</script>
+
+</div>
+
+<p>To convert a data value to a number, simply call the <code>parse()</code> function of the Y.Number class:</p>
+
+<pre class="code prettyprint">YUI().use(&quot;datatype-number&quot;, function(Y) {
+    var output = Y.Number.parse(&quot;123123.123&quot;);
+    &#x2F;&#x2F; output is the number 123123.123
+});</pre>
+
+
+<p>Under the hood, the data value is converted to a number via <code>+data</code>, not <code>parseInt()</code>. When the resulting value is <code>NaN</code>, then null is returned:</p>
+
+<pre class="code prettyprint">YUI().use(&quot;datatype-number&quot;, function(Y) {
+    var output = Y.Number.parse(&quot;$100&quot;);
+    &#x2F;&#x2F; output is null
+
+    output = Y.Number.parse(&quot;20 dollars&quot;);
+    &#x2F;&#x2F; output is null
+
+    output = Y.Number.parse(&quot;3,000,000.12&quot;);
+    &#x2F;&#x2F; output is null (it&#x27;s the commas)
+
+    output = Y.Number.parse(new Date(&quot;Jan 1, 2000&quot;));
+    &#x2F;&#x2F; output is 946713600000
+
+});</pre>
+
+<p>A configuration argument can be added to deal with these numbers.</p>
+<pre class="code prettyprint">YUI().use(&quot;datatype-number&quot;, function(Y) {
+    var output = Y.Number.parse(&quot;$100&quot;, {
+        prefix:&#x27;$&#x27;
+    });
+    &#x2F;&#x2F; output is 100
+
+    output = Y.Number.parse(&quot;20 dollars&quot;, {
+        suffix: &#x27;dollars&#x27;
+    });
+    &#x2F;&#x2F; output is 20
+
+    output = Y.Number.parse(&quot;3,000,000.12&quot; ,{
+        thousandsSeparator: &#x27;,&#x27;
+    });
+    &#x2F;&#x2F; output is 3000000.12
+
+    output = Y.Number.parse(new Date(&quot;Jan 1, 2000&quot;));
+    &#x2F;&#x2F; output is 946713600000
+
+});</pre>
+
+<p>
+The following example uses the following configuration:
+</p>
+<pre class="code prettyprint">{
+    decimalSeparator: &#x27;,&#x27;,
+    thousandsSeparator: &#x27;.&#x27;,
+    prefix: &#x27;€&#x27;,
+    suffix: &#x27;(EUR)&#x27;
+}</pre>
+
+<div class="example yui3-skin-sam">
+    
+
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+      <form>
+        <fieldset>
+           <label for="demo_config_input">Value to parse: <input type="text" id="demo_config_input" value="€123.456,78 (EUR)"></label>
+           <input type="button" id="demo_config_btn" value="Report parsed number">
+        </fieldset>
+      </form>
+    </div>
+    <div class="yui3-u-1-2">
+        The parsed number is: <span id="parsed_config_number"></span>
+    </div>
+</div>
+
+<script>
+YUI().use("node", "datatype-number", function (Y) {
+    Y.on("click", function(e){
+
+        var input = Y.one("#demo_config_input").get("value"),
+            output = Y.Number.parse(input, {
+                decimalSeparator: ',',
+                thousandsSeparator: '.',
+                prefix: '€',
+                suffix: '(EUR)'
+            });
+
+        if(output === "") {
+            output += "(Invalid value)"
+        }
+
+        if (output == null) {
+            output = "null";
+        }
+
+        Y.one("#parsed_config_number").set("text", output);
+    }, "#demo_config_btn");
+});
+</script>
+
+</div>
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+        
+
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Formatting dates into strings using pre-packaged language resource bundles.">
+                                        <a href="datatype-dateformat-lang.html">Formatting Dates Using Language Resource Bundles</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Parsing data into dates.">
+                                        <a href="datatype-dateparse.html">Y.Date.parse()</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Formatting numbers into strings.">
+                                        <a href="datatype-numberformat.html">Y.Number.format()</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Parsing data into numbers.">
+                                        <a href="datatype-numberparse.html">Y.Number.parse()</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Formatting XML documents into strings.">
+                                        <a href="datatype-xmlformat.html">Y.XML.format()</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Parsing strings into XML documents.">
+                                        <a href="datatype-xmlparse.html">Y.XML.parse()</a>
+                                    </li>
+                                
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Related Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li data-description="Using DataTable&#x27;s recordType attribute to create calculated, sortable columns.">
+                                        <a href="../datatable/datatable-recordtype.html">Sortable generated columns</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

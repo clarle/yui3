@@ -1,0 +1,17 @@
+/** additional CSS rules for YUI Archived Forums **/
+
+.yuiforum-membername {
+	color: #356de4;
+}
+
+.yuiforum-header ul li{
+	float: left;
+	padding: 4px;
+}
+
+.yuiforum-tags {
+	text-decoration: none;
+	color: #000;
+	background-color: #ddd;
+	padding: 3px;
+}

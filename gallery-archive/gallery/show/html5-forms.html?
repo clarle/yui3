@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery :: HTML 5 Forms</title>
+		<link href="https://github.com/mattsnider" rel="author" title="mattsnider" />
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/home.png" /> <a href="../index.html">Home</a><li><img src="../../assets/gallery/star.png" /> <a href="../featured.html">Featured</a><li><img src="../../assets/gallery/thumb_up.png" /> <a href="../popular.html">Popular</a><li><img src="../../assets/gallery/greenled.png" /> <a href="../new.html">New</a><li><img src="../../assets/gallery/script_code_red.png" /> <a href="../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../assets/gear.png" /> <a href="../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<div class="warning"> YUI Library is not responsible for bugs or support with this module. It is available as a free service. For support please contact the module owner with the provided links. </div>
+									<div class="gallery-item" id="gallery-item_357">
+										<div class="item-hd">
+											<h2>HTML 5 Forms (gallery-html5-forms) </h2> Last Updated: <span title="03 Sep 2012 23:50">09/3/12</span><div class="votes"><a class="up" href="#" title="Vote this item up.">+</a> <span>1</span> <a class="down" href="#" title="Vote this item down.">-</a></div>
+										</div>
+										<div class="mod">
+											<div class="yui-gf profile">
+												<div class="yui-u first">
+													<h3><img class="medal" src="../../assets/medal_gold.png" title="YUI Developer" /> <span class="gallery-user">Matt Snider</span></h3>
+													<h4>YUI Contributor</h4>
+													<p><img src="http://www.gravatar.com/avatar/ea69517363a0aabf9bf09ed7ce1c5ea3?s=64&d=http://yuilibrary.com/assets/gravatar-64.png" /><p><a href="../user/matt.snider.html">See 2 more by this user.</a> Created: <span title="14 Nov 2010 07:26">11/14/10</span><br /> Project: <a href="http://yuilibrary.com/projects/yui3">YUI 3</a><br /> License: <a href="http://yuilibrary.com/license/" target="_blank">YUI BSD</a><br /> YUI Version: 3.7.0pr1<br /> Free for use. </div>
+												<div class="yui-u">
+													<div class="desc"><span class="wikipage"><p>The HTML 5 forms project emulates the new attributes and input types available in HTML 5 for legacy browsers.<p>It current supports the attributes: autofocus, min, max, pattern, placeholder, and required<br /> And the new types: email and url<p>More information is available at:<br /><a href="http://mattsnider.com/legacy-support-for-html-5-forms/">http://mattsnider.com/legacy-support-for-html-5-forms/</a></span></div>
+												</div>
+												<div class="tags">
+													<ul>
+														<li>Tags: <li><a href="../tag/matt.snider.html" title="Search by this tag: matt.snider">matt.snider</a></ul>
+												</div>
+											</div>
+										</div>
+										<ul class="gallery-links">
+											<li class="download"><a href="http://github.com/mattsnider/yui3-gallery/downloads" target="_blank" title="Download">Download</a><li class="docs empty">Docs<li class="homepage"><a href="http://github.com/mattsnider/yui3-gallery/" target="_blank" title="Homepage">Homepage</a><li class="bugs empty">Bugs<li class="source"><a href="http://github.com/mattsnider/yui3-gallery/" target="_blank" title="Source">Source</a><li class="example"><a href="http://mattsnider.com/legacy-support-for-html-5-forms/?demo=1" target="_blank" title="Example">Example</a><li class="forum"><a href="../forum/html5-forms.html" title="Forum">Forum</a><li class="history"><a href="../history/html5-forms.html" title="History">History</a></ul>
+										<div class="mod"><span class="wikipage"><p>To use the HTML 5 Forms gallery, simply include the module, create a new instance, and render it. You may also provide an 'aftervalidationfx' function which will be called each time any field is validated.</span><h3 id="code">Code Sample</h3>
+											<div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-html5-forms'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+&nbsp;
+	<span style="color: #003366; font-weight: bold;">function</span> aftervalidationfx<span style="color: #009900;">&#40;</span>elNode<span style="color: #339933;">,</span> boolValid<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+		<span style="color: #006600; font-style: italic;">// do something after a field validates or not</span>
+	<span style="color: #009900;">&#125;</span>
+&nbsp;
+	<span style="color: #003366; font-weight: bold;">var</span> html5Form <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">HTML5FormSupport</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+                boundingBox<span style="color: #339933;">:</span> <span style="color: #3366CC;">'#id_form_test'</span><span style="color: #339933;">,</span>
+                aftervalidationfx<span style="color: #339933;">:</span> aftervalidationfx
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	html5Form.<span style="color: #660066;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI().use('gallery-html5-forms', function(Y) {
+
+
+
+	function aftervalidationfx(elNode, boolValid) {
+
+		// do something after a field validates or not
+
+	}
+
+
+
+	var html5Form = new Y.HTML5FormSupport({
+
+                boundingBox: '#id_form_test',
+
+                aftervalidationfx: aftervalidationfx
+
+        });
+
+	html5Form.render();
+
+
+
+});</textarea>
+											</div>
+											<br />
+											<h3>Forum Posts</h3>
+											<div class="forum">
+												<p><i>No forum posts for this module.</i></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

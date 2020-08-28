@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Constrain Support - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/overlay/overlay-constrain.html">
+    <meta name="twitter:title" content="Example: Constrain Support">
+    <meta name="twitter:description" content="Shows how to use Overlay&#x27;s constrainment support, to limit the XY value which can be set for an Overlay.">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/quick-start/">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="/yui/docs/">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/widgets/">Widgets</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/overlay/">Overlay</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/overlay/overlay-constrain.html">Example: Constrain Support</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Example: Constrain Support</h1>
+
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <style>
+
+/* Overlay Look/Feel */
+.yui3-overlay-content {
+    background-color: #ECEFFB;  
+    border: 1px solid #9EA8C6;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.yui3-overlay-content .yui3-widget-hd {
+    background-color: #B6BFDA;  
+    color: #30418C;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 0.2em 0.5em 0.3em;
+    border-radius: 2px 2px 0 0;
+}
+
+.yui3-overlay-content .yui3-widget-bd {
+    padding: 0.4em 0.6em 0.5em;
+}
+
+.yui3-overlay-content .yui3-widget-ft {
+    background-color:#DFE3F5;
+    padding: 0.4em 0.6em 0.5em;
+    border-radius: 0 0 2px 2px;
+}
+
+
+/* Example Layout CSS */
+.overlay-example {
+    position: relative;
+    height: 450px;
+    width: 550px;
+}
+
+#constrain-box {
+    background-color: #F0F7F0;
+    border: 1px solid #DBE3DB;
+
+    position: relative;
+
+    top: 80px;
+    left: 80px;
+
+    width: 350px;
+    height: 300px;
+}
+
+.yui3-slider {
+    position: absolute;
+    background-color: transparent;
+}
+
+#x {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+#y {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+
+</style>
+
+<div class="intro">
+    <p>
+    This example shows how you can use Overlay's constrained positioning support to constrain the XY position of the overlay so that it remains within another node on the page (or within the viewport).
+    </p>
+</div>
+
+<div class="example">
+    <div class="overlay-example yui3-skin-sam" id="overlay-example">
+    <div id="constrain-box"></div>
+</div>
+
+<script type="text/javascript">
+YUI().use("overlay", "slider", function (Y) {
+
+    var constrainRegion = Y.one("#constrain-box").get("region"),
+        overlay, sx, yx, checkbox;
+
+    // Create Overlay from script.
+    overlay = new Y.Overlay({
+        id: "overlay",
+
+        width : "150px",
+        height: "120px",
+
+        headerContent: "Constrained",
+        bodyContent  : "Use the sliders to move the overlay",
+        footerContent: '<label><input type="checkbox" id="constrain"> Constrain </label>',
+
+        constrain: "#constrain-box",
+        align    : {
+            node  : "#constrain-box",
+            points: ["cc", "cc"]
+        },
+
+        render: "#overlay-example"
+    });
+
+    // Create horizontal Slider.
+    sx = new Y.Slider({
+        id    : "x",
+        length: "450px",
+        min   : constrainRegion.left - 50,
+        max   : constrainRegion.right + 50,
+        value : overlay.get("x"),
+        render: "#overlay-example"
+    });
+
+    // Create vertical Slider.
+    sy = new Y.Slider({
+        id    : "y",
+        axis  : 'y',
+        length: "400px",
+        min   : constrainRegion.top - 50, 
+        max   : constrainRegion.bottom + 50,
+        value : overlay.get("y"),
+        render: "#overlay-example"
+    });
+
+    sx.after("valueChange", function (e) {
+        overlay.set("x", e.newVal);
+    });
+
+    sy.after("valueChange", function (e) {
+        overlay.set("y", e.newVal);
+    });
+
+    function enableConstraints (constrain) {
+        if (constrain) {
+            overlay.set("constrain", "#constrain-box");
+            overlay.set("headerContent", "Constrained");
+        } else {
+            overlay.set("constrain", false);
+            overlay.set("headerContent", "Unconstrained");
+        }
+
+        // Sync the current values of the sliders to the overlay.
+        overlay.set("xy", [sx.get("value"), sy.get("value")]);
+    }
+
+    // Reference <code>&lt;input type=&quot;checkbox&quot; &#x2F;&gt;</code> from the Overlay's footer.
+    checkbox = Y.one("#constrain");
+    checkbox.set("checked", true);
+    checkbox.on("click", function (e) {
+        enableConstraints(this.get("checked"));
+    });
+
+    // Enable constraints by default.
+    enableConstraints(true);
+
+});
+</script>
+
+</div>
+
+<h2>Overlay Constrained XY Positioning</h2>
+
+<h3>Setting Up The YUI Instance</h3>
+
+<p>
+As with the <a href="overlay-xy.html">"Basic XY Positioning"</a> example, to create an instance of an Overlay on your page, the only module you need to request is the <code>overlay</code> module. The <code>overlay</code> module will pull in the <code>widget</code>, <code>widget-stack</code>, <code>widget-position</code>, <code>widget-position-align</code>, <code>widget-position-constrain</code> and <code>widget-stdmod</code> extensions it uses.
+</p>
+
+<pre class="code prettyprint lang-javascript">YUI({...}).use(&quot;overlay&quot;, function (Y) {
+    &#x2F;&#x2F; We&#x27;ll write example code here, where we have a Y.Overlay class 
+    &#x2F;&#x2F; available, which is bundled with XY positioning, align and 
+    &#x2F;&#x2F; constrain support.
+});</pre>
+
+
+<p>
+Using the <code>overlay</code> module, will also pull down the default CSS required for overlay, on top of which we only need to add our required look/feel CSS for the example.
+</p>
+
+<p>
+<strong>Note:</strong> be sure to add the <code>yui3-skin-sam</code> classname to the
+page's <code>&lt;body&gt;</code> element or to a parent element of the widget in order to apply
+the default CSS skin. See <a href="http://yuilibrary.com/yui/docs/tutorials/skins/">Understanding Skinning</a>.
+</p>
+<pre class="code prettyprint">&lt;body class=&quot;yui3-skin-sam&quot;&gt; &lt;!-- You need this skin class --&gt;</pre>
+
+
+<h3>Instantiating The Overlay</h3>
+
+<p>
+For this example, we'll instantiate an Overlay from script, as we did for the <a href="overlay-align.html">"Alignment Support"</a> example, but use the <code>render</code> attribute to specify the node under which we want the Overlay to be rendered in the DOM, and to indicate that we want it rendered on construction. The <code>render</code> attribute is a sugar attribute for the <code>render()</code> method:
+</p>
+
+<pre class="code prettyprint lang-javascript">&#x2F;&#x2F; Create Overlay from script.
+overlay = new Y.Overlay({
+    id: &quot;overlay&quot;,
+
+    width : &quot;140px&quot;,
+    height: &quot;120px&quot;,
+
+    headerContent: &quot;Constrained&quot;,
+    bodyContent  : &quot;Use the sliders to move the overlay&quot;,
+    footerContent: &#x27;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;constrain&quot;&gt; Constrain &lt;&#x2F;label&gt;&#x27;,
+
+    constrain: &quot;#constrain-box&quot;,
+    align    : {
+        node  : &quot;#constrain-box&quot;,
+        points: [&quot;cc&quot;, &quot;cc&quot;]
+    },
+
+    render: &quot;#overlay-example&quot;
+});</pre>
+
+
+<p>
+We align the overlay to the center of the <code>#constrain-box</code> node, which we're also using as the constraining node for the overlay. The <code>constrain</code> attribute accepts a node reference (either an actual Node instance, or a string selector reference), or it can simply be set to <code>true</code> to constrain the overlay to the Viewport.
+</p>
+
+<h3>Demonstrating Constrained Support</h3>
+
+<p>
+For this example, we set up a couple of Slider instances which can be used to set the Overlay's <code>x</code> and <code>y</code> attribute values. 
+</p>
+
+<pre class="code prettyprint lang-javascript">&#x2F;&#x2F; Get the region for the constraining box.
+var constrainRegion = Y.one(&quot;#constrain-box&quot;).get(&quot;region&quot;);
+
+&#x2F;&#x2F; Use the Overlay&#x27;s current &#x60;x&#x60; and &#x60;y&#x60; to set the initial Slider values.
+
+&#x2F;&#x2F; Create horizontal Slider.
+sx = new Y.Slider({
+    id    : &quot;x&quot;,
+    length: &quot;450px&quot;,
+    min   : constrainRegion.left - 50,
+    max   : constrainRegion.right + 50,
+    value : overlay.get(&quot;x&quot;),
+    render: &quot;#overlay-example&quot;
+});
+
+&#x2F;&#x2F; Create vertical Slider.
+sy = new Y.Slider({
+    id    : &quot;y&quot;,
+    axis  : &#x27;y&#x27;,
+    length: &quot;400px&quot;,
+    min   : constrainRegion.top - 50, 
+    max   : constrainRegion.bottom + 50,
+    value : overlay.get(&quot;y&quot;),
+    render: &quot;#overlay-example&quot;
+});</pre>
+
+
+<p>
+We set the <code>min</code> and <code>max</code> values of the slider instances to allow the overlay to be moved beyond the edge of the constraining region, and set the initial <code>value</code> of the sliders to reflect the current centered position of the overlay.
+</p>
+
+<p>
+Finally, we set up <code>valueChange</code> listeners for the sliders, when attempt to set the corresponding axis position of the overlay:
+</p>
+
+<pre class="code prettyprint lang-javascript">&#x2F;&#x2F; Set the Overlay&#x27;s &#x60;x&#x60; attribute value.
+sx.after(&quot;valueChange&quot;, function (e) {
+    overlay.set(&quot;x&quot;, e.newVal);
+});
+
+&#x2F;&#x2F; Set the Overlay&#x27;s &#x60;y&#x60; attribute value.
+sy.after(&quot;valueChange&quot;, function (e) {
+    overlay.set(&quot;y&quot;, e.newVal);
+});</pre>
+
+
+<h3>CSS: Overlay Look/Feel</h3>
+
+<p>
+As mentioned in the <a href="overlay-xy.html">"Basic XY Positioning"</a> example, the overlay.css Sam Skin file (build/overlay/assets/skins/sam/overlay.css) provides the default functional CSS for the overlay. Namely the CSS rules to hide the overlay, and position it absolutely. However there's no default out-of-the-box look/feel applied to the Overlay widget.
+</p>
+
+<p>
+The example provides it's own look and feel for the Overlay, by defining rules for the content box, header and body sections:
+</p>
+
+<pre class="code prettyprint">&#x2F;* Overlay Look&#x2F;Feel *&#x2F;
+.yui3-overlay-content {
+    background-color: #ECEFFB;  
+    border: 1px solid #9EA8C6;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.yui3-overlay-content .yui3-widget-hd {
+    background-color: #B6BFDA;  
+    color: #30418C;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 0.2em 0.5em 0.3em;
+    border-radius: 2px 2px 0 0;
+}
+
+.yui3-overlay-content .yui3-widget-bd {
+    padding: 0.4em 0.6em 0.5em;
+}
+
+.yui3-overlay-content .yui3-widget-ft {
+    background-color:#DFE3F5;
+    padding: 0.4em 0.6em 0.5em;
+    border-radius: 0 0 2px 2px;
+}</pre>
+
+
+<h2>Complete Example Source</h2>
+
+<pre class="code prettyprint">&lt;div class=&quot;overlay-example yui3-skin-sam&quot; id=&quot;overlay-example&quot;&gt;
+    &lt;div id=&quot;constrain-box&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+&lt;script type=&quot;text&#x2F;javascript&quot;&gt;
+YUI().use(&quot;overlay&quot;, &quot;slider&quot;, function (Y) {
+
+    var constrainRegion = Y.one(&quot;#constrain-box&quot;).get(&quot;region&quot;),
+        overlay, sx, yx, checkbox;
+
+    &#x2F;&#x2F; Create Overlay from script.
+    overlay = new Y.Overlay({
+        id: &quot;overlay&quot;,
+
+        width : &quot;150px&quot;,
+        height: &quot;120px&quot;,
+
+        headerContent: &quot;Constrained&quot;,
+        bodyContent  : &quot;Use the sliders to move the overlay&quot;,
+        footerContent: &#x27;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;constrain&quot;&gt; Constrain &lt;&#x2F;label&gt;&#x27;,
+
+        constrain: &quot;#constrain-box&quot;,
+        align    : {
+            node  : &quot;#constrain-box&quot;,
+            points: [&quot;cc&quot;, &quot;cc&quot;]
+        },
+
+        render: &quot;#overlay-example&quot;
+    });
+
+    &#x2F;&#x2F; Create horizontal Slider.
+    sx = new Y.Slider({
+        id    : &quot;x&quot;,
+        length: &quot;450px&quot;,
+        min   : constrainRegion.left - 50,
+        max   : constrainRegion.right + 50,
+        value : overlay.get(&quot;x&quot;),
+        render: &quot;#overlay-example&quot;
+    });
+
+    &#x2F;&#x2F; Create vertical Slider.
+    sy = new Y.Slider({
+        id    : &quot;y&quot;,
+        axis  : &#x27;y&#x27;,
+        length: &quot;400px&quot;,
+        min   : constrainRegion.top - 50, 
+        max   : constrainRegion.bottom + 50,
+        value : overlay.get(&quot;y&quot;),
+        render: &quot;#overlay-example&quot;
+    });
+
+    sx.after(&quot;valueChange&quot;, function (e) {
+        overlay.set(&quot;x&quot;, e.newVal);
+    });
+
+    sy.after(&quot;valueChange&quot;, function (e) {
+        overlay.set(&quot;y&quot;, e.newVal);
+    });
+
+    function enableConstraints (constrain) {
+        if (constrain) {
+            overlay.set(&quot;constrain&quot;, &quot;#constrain-box&quot;);
+            overlay.set(&quot;headerContent&quot;, &quot;Constrained&quot;);
+        } else {
+            overlay.set(&quot;constrain&quot;, false);
+            overlay.set(&quot;headerContent&quot;, &quot;Unconstrained&quot;);
+        }
+
+        &#x2F;&#x2F; Sync the current values of the sliders to the overlay.
+        overlay.set(&quot;xy&quot;, [sx.get(&quot;value&quot;), sy.get(&quot;value&quot;)]);
+    }
+
+    &#x2F;&#x2F; Reference &#x60;&lt;input type=&quot;checkbox&quot; &#x2F;&gt;&#x60; from the Overlay&#x27;s footer.
+    checkbox = Y.one(&quot;#constrain&quot;);
+    checkbox.set(&quot;checked&quot;, true);
+    checkbox.on(&quot;click&quot;, function (e) {
+        enableConstraints(this.get(&quot;checked&quot;));
+    });
+
+    &#x2F;&#x2F; Enable constraints by default.
+    enableConstraints(true);
+
+});
+&lt;&#x2F;script&gt;</pre>
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+        
+
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Shows how to instantiate a basic Overlay instance, and use the Overlay&#x27;s basic XY positioning support.">
+                                        <a href="overlay-xy.html">Basic XY Positioning</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to create a simple tooltip incorporating the overlay shim feature.">
+                                        <a href="overlay-tooltip.html">Simple Tooltip</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to use the Overlay&#x27;s XY alignment support, to align the Overlay relative to another element, or to the viewport.">
+                                        <a href="overlay-align.html">Alignment Support</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to use the Overlay&#x27;s zindex and shim support when positioning Overlays above other elements on the page.">
+                                        <a href="overlay-stack.html">Stack Support</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to modify content in the Overlay&#x27;s header, body and footer sections.">
+                                        <a href="overlay-stdmod.html">Standard Module Support</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to use Overlay&#x27;s constrainment support, to limit the XY value which can be set for an Overlay.">
+                                        <a href="overlay-constrain.html">Constrain Support</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to create a simple plugin to retrieve content for the Overlay using the io utility.">
+                                        <a href="overlay-io-plugin.html">IO Plugin</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to create a simple plugin to animate the Overlay&#x27;s movement and visibility.">
+                                        <a href="overlay-anim-plugin.html">Animation Plugin</a>
+                                    </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Related Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li data-description="Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.">
+                                        <a href="../node-focusmanager/node-focusmanager-button.html">Accessible Menu Button</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Use StyleSheet to adjust the CSS rules applying a page theme from user input">
+                                        <a href="../stylesheet/stylesheet-theme.html">Adjusting a Page Theme on the Fly</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

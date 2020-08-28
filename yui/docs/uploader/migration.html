@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Uploader - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+        
+        
+    
+    
+    
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+        <link rel="stylesheet" href="/combo/css-main-min.css">
+    
+        <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+        <link rel="stylesheet" href="/css/docs-min.css">
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    
+    
+            <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29453705-2']);
+            _gaq.push(['_trackPageview']);
+            </script>
+    
+    
+            <script>
+            var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.18.1/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+            if (location.protocol.indexOf('https') > -1) {
+                YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+                YUI_config.combine = true;
+            }
+            </script>
+    
+            <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+                        method="get" role="search">
+                
+                    <input type="search" class="search-input" name="q"
+                            aria-label="Search APIs"
+                            placeholder="Search APIs">
+                
+                    <input type="hidden" name="vs" value="yuilibrary.com">
+                    <input type="hidden" name="vs" value="yuiblog.com">
+                </form>
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+                <ul class="nav hoverable-group">
+                        <li class="nav-tab hoverable ">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/yui/quick-start/">Quick Start</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/download/yui3/">Download YUI 3</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable  nav-tab-active">
+                            <a href="/yui/docs/">Documentation</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/guides/">User Guides</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/examples/">Examples</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/api/">API Docs</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/environments/">Environments</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable nav-break">
+                            <a href="/community/">Community</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/gallery/">Gallery</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yuiblog.com/">Blog</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/forum/">Forums</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/theater/">YUI Theater</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/projects/">Other Projects</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yui2/">YUI 2</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yuitest/">YUI Test</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/phploader/">YUI PHP Loader</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                        </li>
+                                </ul>
+                        </li>
+                </ul>
+            </nav></div>
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+            <div id="breadcrumbs" class="yui3-u-1">
+                <ul class="breadcrumbs">
+                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/utilities/">Utilities</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/docs/uploader/migration.html">Uploader</a></li>
+                </ul>
+            </div>
+                <div class="project-version yui3-u">Version 3.18.1</div>
+
+
+            
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Uploader</h1>
+
+        
+            <a href="#docs-toc" class="jump" tabindex="1">Jump to Table of Contents</a>
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <style>
+#docs-main li {
+    margin: 1ex 0;
+}
+
+li code,
+td code {
+    white-space: nowrap;
+    background: #fcfbfa;
+    border: 1px solid #d0d5ec;
+    padding: 0 3px;
+}
+li code {
+    border-color: #efeeed;
+}
+.yui3-skin-sam table {
+    width: auto;
+}
+.yui3-skin-sam td,
+.yui3-skin-sam th {
+    border: 0 none;
+}
+
+.demo    { width: 40%; }
+.details { width: 60%; }
+.before, .after { width: 47%; }
+.after {
+    margin-left: 5%;
+}
+
+#quickref code em {
+    color: #900;
+}
+#quickref code strong {
+    color: #090;
+}
+#quickref pre.code {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.spendy {
+    color: #b00;
+}
+</style>
+<div class="intro">
+    <p>
+        Uploader has been rebuilt in version 3.5.0, and a number of additional
+        supporting modules (<code>UploaderFlash</code>, <code>UploaderHTML5</code>, <code>Uploader.Queue</code>
+        and <code>File</code>) have been added.  The new architecture is <strong>not fully
+        backward-compatible</strong> with versions 3.4.1 and prior.  This guide
+        is to help answer questions that may come up when upgrading to the latest
+        version.
+    </p>
+
+    <p>
+        This guide focuses on 3.4.1 API compatibility.  It <strong>does not
+        describe new features added in 3.5.0</strong>.
+        Refer to the updated <a href="index.html">Uploader user guide</a> for
+        that.
+    </p>
+
+    <p>
+        If you are unable to upgrade due to unresolvable issues, you can use the
+        <a href="../uploader-deprecated/index.html"><code>uploader-deprecated</code></a>
+        module, which is equivalent to the 3.4.1 implementation.  But be
+        aware that this module will be removed in a future version of YUI.
+    </p>
+</div>
+
+<h2 id="overview">Overview of API changes from 3.4.1</h2>
+
+<p>
+    The architectural changes resulted in the deprecation, replacement, or
+    removal of some of the attributes, properties, methods and events from
+    3.4.1 version of the Uploader. Here is a quick list of the changes most
+    likely to affect your upgrade:
+</p>
+
+<h3 id="attribute-changes">Attribute changes</h3>
+<table>
+    <tr>
+        <th>Attribute in 3.4.1</th>
+        <th>Change in 3.5.0</th>
+    </tr>
+    <tr>
+        <td><code>buttonSkin</code></td>
+        <td><strong>No longer exists.</strong> The Uploader in Flash mode is now always rendered
+            as transparent, overlaying a "Select Files" button that can be replaced
+            with any control (with any skin) using the <code>selectFilesButton</code> attribute.
+        </td>
+    </tr>
+    <tr>
+        <td><code>fileFilters</code></td>
+        <td>Only available when the Uploader is in <strong>Flash mode</strong>, and has no effect
+            when the Uploader is in HTML5 mode. If filtering by extension is needed
+            across all Uploader modes, it is best to implement it post-selection,
+            by validating individual elements in the <code>fileList</code>.
+        </td>
+    </tr>
+    <tr>
+        <td><code>log</code></td>
+        <td><strong>No longer exists.</strong> All necessary uploader information is transmitted via
+            events.
+        </td>
+    </tr>
+    <tr>
+        <td><code>multiFiles</code></td>
+        <td>Renamed to <code>multipleFiles</code></td>
+    </tr>
+    <tr>
+        <td><code>transparent</code></td>
+        <td><strong>No longer exists.</strong> The Uploader in Flash mode is now always rendered as
+            a transparent overlay over a "Select Files" button that can be customized
+            or replaced with any control using the <code>selectFilesButton</code> attribute.</td>
+    </tr>
+</table>
+
+
+<h3 id="method-changes">Method changes</h3>
+<table>
+    <tr>
+        <th>Method in 3.4.1</th>
+        <th>Change in 3.5.0</th>
+    </tr>
+    <tr>
+        <td><code>cancel</code></td>
+        <td><strong>No longer exists</strong> on the Uploader instance. Instead, a <code>cancelUpload()</code> method is present on the instance of Uploader's queue, stored in <code>uploaderInstance.queue</code>.
+            (See the <a href="/yui/docs/api/classes/Uploader.Queue.html#method_cancelUpload">API Docs</a> for more information).
+        </td>
+    </tr>
+    <tr>
+        <td><code>clearFileList</code></td>
+        <td><strong>No longer exists</strong>. Instead, you can directly manipulate the <code>fileList</code>
+            attribute.</td>
+    </tr>
+    <tr>
+        <td><code>enable</code></td>
+        <td><strong>No longer exists</strong>. Instead, set the <code>enabled</code> attribute to either <code>true</code> or <code>false</code>.</td>
+    </tr>
+    <tr>
+        <td><code>disable</code></td>
+        <td><strong>No longer exists</strong>. Instead, set the <code>enabled</code> attribute to either <code>true</code> or <code>false</code>.</td>
+    </tr>
+    <tr>
+        <td><code>removeFile</code></td>
+        <td><strong>No longer exists</strong>. Instead, you can directly manipulate the <code>fileList</code>
+            attribute.</td>
+    </tr>
+    <tr>
+        <td><code>upload</code></td>
+        <td><strong>The method signature has changed</strong>. The new <code>upload()</code> method takes
+            <code>file</code>, <code>url</code>, and <code>postVars</code> as arguments, where <code>file</code> is a references to an instance
+            of <code>Y.File</code> (can be obtained from the <code>fileList</code> attribute), <code>url</code> is the target URL
+            to upload the file to, and <code>postVars</code> is a set of key-value pairs specifying the variables
+            that should be POSTed along with the file upload. The old <code>method</code> argument has been removed since file upload requests are always POSTed. The old <code>postFileVarName</code> argument has been replaced with an instance-level <code>fileFieldName</code> attribute. (See the <a href="/yui/docs/api/classes/UploaderFlash.html#method_upload">API Docs</a> for more information).</td>
+    </tr>
+    <tr>
+        <td><code>uploadAll</code></td>
+        <td><strong>The method signature has changed</strong>. The new <code>uploadAll()</code> method takes
+            <code>url</code>, and <code>postVars</code> as arguments, where <code>url</code> is the target URL to upload the files to, and <code>postVars</code> is a set of key-value pairs specifying the variables that should be POSTed along with the file upload. If POST variables need to be specified per file, you can use the <code>postVarsPerFile</code> attribute instead of specifying the third argument. The old <code>method</code> argument has been removed since file upload requests are always POSTed. The old <code>postFileVarName</code> argument has been replaced with an instance-level <code>fileFieldName</code> attribute. (See the <a href="/yui/docs/api/classes/UploaderFlash.html#method_uploadAll">API Docs</a> for more information).</td>
+    </tr>
+    <tr>
+        <td><code>uploadThese</code></td>
+        <td><strong>The method signature has changed</strong>. The new <code>uploadThese()</code> method takes
+            <code>files</code>, <code>url</code>, and <code>postVars</code> as arguments, where <code>files</code> is an array of <code>Y.File</code> instances (can be obtained as a subset of <code>fileList</code> attribute), <code>url</code> is the target URL to upload the files to, and <code>postVars</code> is a set of key-value pairs specifying the variables that should be POSTed along with the file upload. If POST variables need to be specified per file, you can use the <code>postVarsPerFile</code> attribute instead of specifying the third argument. The old <code>method</code> argument has been removed since file upload requests are always POSTed. The old <code>postFileVarName</code> argument has been replaced with an instance-level <code>fileFieldName</code> attribute. (See the <a href="/yui/docs/api/classes/UploaderFlash.html#method_uploadThese">API Docs</a> for more information).</td>
+    </tr>
+</table>
+<h2 id="progressive-enhancement">Improved Progressive Enhancement</h2>
+
+The progressive enhancement scenario has been improved in 3.5.0 Uploader. The Uploader now keeps a static <code>TYPE</code> property (<code>Y.Uploader.TYPE</code>), which you can check before creating an instance of Uploader or modifying its configuration settings. We recommend the following pattern for using Uploader on your pages:
+
+<pre class="code prettyprint">if (Y.Uploader.TYPE != &quot;none&quot;) {
+
+    var uploaderInstance = new Y.Uploader(....); &#x2F;&#x2F; Common configuration settings.
+
+    if (Y.Uploader.TYPE == &quot;html5&quot;) {
+      &#x2F;&#x2F; Additional configuration settings for an HTML5 uploader,
+      &#x2F;&#x2F; e.g. a drag-and-drop area specification, etc.
+    }
+
+    else if (Y.Uploader.TYPE == &quot;flash&quot;) {
+      &#x2F;&#x2F; Flash-specific configuration settings,
+      &#x2F;&#x2F; e.g. a fileFilters setting, etc.
+   }
+
+   &#x2F;&#x2F; Render the uploader
+   uploaderInstance.render(&quot;#selectFilesButtonContainer&quot;);
+}
+
+else {
+
+    &#x2F;&#x2F; Don&#x27;t render the uploader and use predefined basic functionality
+    &#x2F;&#x2F; instead (e.g. a simple upload form field).
+
+}</pre>
+
+
+<h2 id="backend-setup">Backend Setup</h2>
+
+The backend requirements for the Flash version of the Uploader have not changed. However, the XMLHttpRequest Level 2 cross-domain request security model is different from that in Flash, and needs a different type of verification from the backend that receives POST requests with uploaded files. See the <a href="index.html#backend-setup">Backend Setup</a> section in the User Guide for more information, or read more about it on the <a href="http://www.html5rocks.com/en/tutorials/cors/#toc-handling-a-not-so-simple-request">HTML5Rocks website.</a>
+
+<h2 id="help-me">What Did We Miss?</h2>
+
+<p>
+    Obviously, there were quite a few changes to Uploader from 3.4.1 to 3.5.0.
+    It's likely that we missed something here.  If you experience trouble with
+    your upgrade and find this migration guide is missing something important,
+    please <a href="/projects/yui3/newticket">file a ticket</a> and we'll update
+    it as soon as possible.
+</p>
+
+<p>
+    Additional resources to help with the upgrade include the <a href="/forum">forums</a>,
+    and the #yui IRC channel on freenode.net.
+</p>
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+                
+                    
+                        <a class="button link-apidocs" href="/yui/docs/api/modules/uploader.html">
+                            API Docs
+                        </a>
+                    
+                
+            
+        
+
+        
+            <div id="docs-toc" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Table of Contents</h2>
+                </div>
+
+                <div class="bd">
+                    <ul class="toc">
+<li>
+<a href="#overview">Overview of API changes from 3.4.1</a>
+<ul class="toc">
+<li>
+<a href="#attribute-changes">Attribute changes</a>
+</li>
+<li>
+<a href="#method-changes">Method changes</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#progressive-enhancement">Improved Progressive Enhancement</a>
+</li>
+<li>
+<a href="#backend-setup">Backend Setup</a>
+</li>
+<li>
+<a href="#help-me">What Did We Miss?</a>
+</li>
+</ul>
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="A simple multiple file uploader with progress tracking">
+                                        <a href="uploader-multiple.html">Simple Multiple Files Uploader with Progress Tracking</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="A multiple file uploader with HTML5 Drag-and-Drop Support">
+                                        <a href="uploader-dd.html">Multiple Files Uploader with HTML5 Drag-and-Drop Support</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="A multiple file uploader that submits additional POST vars with each file and receives data from the server">
+                                        <a href="uploader-data.html">Multiple Files Uploader with POST Variables and Server Data Retrieval</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+</body>
+</html>

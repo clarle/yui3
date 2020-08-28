@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Multiple Lists - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/sortable/sortable-multi.html">
+    <meta name="twitter:title" content="Example: Multiple Lists">
+    <meta name="twitter:description" content="Multiple Sortable Lists that are separate from one another.">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/quick-start/">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="/yui/docs/">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/utilities/">Utilities</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/sortable/">Sortable</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/sortable/sortable-multi.html">Example: Multiple Lists</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Example: Multiple Lists</h1>
+
+        
+            <a href="#docs-toc" class="jump" tabindex="1">Jump to Table of Contents</a>
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <div class="intro">
+<p>This example makes multiple sortable lists that are separate from one another and do not interact with each other.</p>
+</div>
+
+<div class="example">
+    <style>
+    #demo h4 {
+    margin: 10px auto;
+    width: 165px;
+    text-align: center;
+}
+#demo ul {
+    margin: 0 auto;
+    width: 165px;
+    padding: 0;
+}
+#demo li {
+    list-style-type: none;
+    padding: 3px;
+    width: 150px;
+    margin: 6px;
+    font-size: 114%;
+    -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    cursor: move;
+}
+#demo li.one {
+    background-color: #B6BFDA;
+    border: 1px solid #7E869D;
+}
+#demo li.two {
+    background-color: #F2C89F;
+    border: 1px solid #B19C87;
+    text-align: center;
+}
+
+    #demo .indent1{
+    text-indent:0.8em;
+}
+#demo .indent2{
+    text-indent:1.6em;
+}
+#demo .indent3{
+    text-indent:2.4em;
+}
+#demo .indent4{
+    text-indent:3.2em;
+}
+#demo .indent5{
+    text-indent:4.0em;
+}
+#demo .indent6{
+    text-indent:4.8em;
+}
+#demo .indent7{
+    text-indent:5.6em;
+}
+#demo .indent8{
+    text-indent:6.4em;
+}
+#demo .indent9{
+    text-indent:7.2em;
+}
+#demo .indent10{
+    text-indent:8.0em;
+}
+
+    </style>
+    
+    <div id="demo" class="yui3-g">
+    <div class="yui3-u-1-2">
+        <h4 class="no-toc">List 1</h4>
+        <ul id="list1">
+            <li class="one indent1">1</li>
+            <li class="one indent2">2</li>
+            <li class="one indent3">3</li>
+            <li class="one indent4">4</li>
+            <li class="one indent5">5</li>
+            <li class="one indent6">6</li>
+            <li class="one indent7">7</li>
+            <li class="one indent8">8</li>
+            <li class="one indent9">9</li>
+            <li class="one indent10">10</li>
+        </ul>
+	</div>
+    <div class="yui3-u-1-2">
+        <h4 class="no-toc">List 2</h4>
+        <ul id="list2">
+            <li class="two">A</li>
+            <li class="two">B</li>
+            <li class="two">C</li>
+            <li class="two">D</li>
+            <li class="two">E</li>
+            <li class="two">F</li>
+            <li class="two">G</li>
+            <li class="two">H</li>
+            <li class="two">I</li>
+            <li class="two">J</li>
+        </ul>
+    </div>
+</div>
+
+    
+    <script>
+    YUI().use('dd-constrain', 'sortable', function(Y) {
+    var list1 = new Y.Sortable({
+        container: '#list1',
+        nodes: 'li',
+        opacity: '.1'
+    });
+
+    var list2 = new Y.Sortable({
+        container: '#list2',
+        nodes: 'li',
+        opacity: '.1'
+    });
+
+    });
+
+    </script>
+</div>
+
+
+<h3 id="setting-up-the-list">Setting Up the List</h3>
+<p>First we need to create the HTML structure for the lists. Since <code>Sortable</code> uses <code>Y.DD.Delegate</code>, we need to set up the delegation containers (<code>#list1, #lists2</code>) and the list items (<code>li</code>).</p>
+
+<pre class="code prettyprint">&lt;div id=&quot;demo&quot; class=&quot;yui3-g&quot;&gt;
+    &lt;div class=&quot;yui3-u-1-2&quot;&gt;
+        &lt;h4 class=&quot;no-toc&quot;&gt;List 1&lt;&#x2F;h4&gt;
+        &lt;ul id=&quot;list1&quot;&gt;
+            &lt;li class=&quot;one&quot;&gt;1&lt;&#x2F;li&gt;
+            &lt;li class=&quot;one&quot;&gt;2&lt;&#x2F;li&gt;
+            &lt;li class=&quot;one&quot;&gt;3&lt;&#x2F;li&gt;
+            &lt;li class=&quot;one&quot;&gt;4&lt;&#x2F;li&gt;
+            &lt;li class=&quot;one&quot;&gt;5&lt;&#x2F;li&gt;
+            &lt;li class=&quot;one&quot;&gt;6&lt;&#x2F;li&gt;
+            &lt;li class=&quot;one&quot;&gt;7&lt;&#x2F;li&gt;
+            &lt;li class=&quot;one&quot;&gt;8&lt;&#x2F;li&gt;
+            &lt;li class=&quot;one&quot;&gt;9&lt;&#x2F;li&gt;
+            &lt;li class=&quot;one&quot;&gt;10&lt;&#x2F;li&gt;
+        &lt;&#x2F;ul&gt;
+	&lt;&#x2F;div&gt;
+    &lt;div class=&quot;yui3-u-1-2&quot;&gt;
+        &lt;h4 class=&quot;no-toc&quot;&gt;List 2&lt;&#x2F;h4&gt;
+        &lt;ul id=&quot;list2&quot;&gt;
+            &lt;li class=&quot;two&quot;&gt;A&lt;&#x2F;li&gt;
+            &lt;li class=&quot;two&quot;&gt;B&lt;&#x2F;li&gt;
+            &lt;li class=&quot;two&quot;&gt;C&lt;&#x2F;li&gt;
+            &lt;li class=&quot;two&quot;&gt;D&lt;&#x2F;li&gt;
+            &lt;li class=&quot;two&quot;&gt;E&lt;&#x2F;li&gt;
+            &lt;li class=&quot;two&quot;&gt;F&lt;&#x2F;li&gt;
+            &lt;li class=&quot;two&quot;&gt;G&lt;&#x2F;li&gt;
+            &lt;li class=&quot;two&quot;&gt;H&lt;&#x2F;li&gt;
+            &lt;li class=&quot;two&quot;&gt;I&lt;&#x2F;li&gt;
+            &lt;li class=&quot;two&quot;&gt;J&lt;&#x2F;li&gt;
+        &lt;&#x2F;ul&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;</pre>
+
+
+<p>Now we give the lists some CSS to make them visible.</p>
+
+<pre class="code prettyprint">#demo h4 {
+    margin: 10px auto;
+    width: 165px;
+    text-align: center;
+}
+#demo ul {
+    margin: 0 auto;
+    width: 165px;
+    padding: 0;
+}
+#demo li {
+    list-style-type: none;
+    padding: 3px;
+    width: 150px;
+    margin: 6px;
+    font-size: 114%;
+    -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+    cursor: move;
+}
+#demo li.one {
+    background-color: #B6BFDA;
+    border: 1px solid #7E869D;
+}
+#demo li.two {
+    background-color: #F2C89F;
+    border: 1px solid #B19C87;
+    text-align: center;
+}</pre>
+
+
+<h3 id="setting-up-the-yui-instance">Setting Up the YUI Instance</h3>
+<p>Now we need to create our YUI instance and tell it to load the <code>sortable</code> module.</p>
+<p>In this example we are also going to attach a <code>DD</code> plugin to the <code>Sortable</code> instances.</p>
+
+<pre class="code prettyprint">YUI().use(&#x27;dd-constrain&#x27;, &#x27;sortable&#x27;, function (Y) {
+    &#x2F;&#x2F; Code here.
+});</pre>
+
+
+<h3 id="making-the-lists-draggable">Making the Lists Draggable</h3>
+<p>Now that we have a YUI instance with the <code>sortable</code> module, we need to instantiate a <code>Sortable</code> instance on each of the lists.</p>
+
+<pre class="code prettyprint">YUI().use(&#x27;dd-constrain&#x27;, &#x27;sortable&#x27;, function(Y) {
+    var list1 = new Y.Sortable({
+        container: &#x27;#list1&#x27;,
+        nodes: &#x27;li&#x27;,
+        opacity: &#x27;.1&#x27;
+    });
+
+    var list2 = new Y.Sortable({
+        container: &#x27;#list2&#x27;,
+        nodes: &#x27;li&#x27;,
+        opacity: &#x27;.1&#x27;
+    });
+
+});</pre>
+
+
+<h3 id="applying-a-dd-plugin">Applying a DD Plugin</h3>
+<p>Since <code>Sortable</code> uses <code>DD.Delegate</code>, there is a dd instance available after instantiation.</p>
+<p>The <code>DD.Delegate</code> reference is found on the <code>.delegate</code> property of the <code>Sortable</code>.
+This <code>DD.Delegate</code> instance has a <code>DD.Drag</code> instance bound to the <code>dd</code> property on the <code>DD.Delegate</code>
+</p>
+
+<pre class="code prettyprint">list1.delegate.dd.plug(Y.Plugin.DDConstrained, {
+    constrain2node: &#x27;#demo&#x27;
+});
+list2.delegate.dd.plug(Y.Plugin.DDConstrained, {
+    constrain2node: &#x27;#demo&#x27;
+});</pre>
+
+<p>Applying the <code>Plugin.DDConstrained</code> to the <code>Sortable</code> instance.</p>
+
+<pre class="code prettyprint">YUI().use(&#x27;dd-constrain&#x27;, &#x27;sortable&#x27;, function(Y) {
+    var list1 = new Y.Sortable({
+        container: &#x27;#list1&#x27;,
+        nodes: &#x27;li&#x27;,
+        opacity: &#x27;.1&#x27;
+    });
+
+    var list2 = new Y.Sortable({
+        container: &#x27;#list2&#x27;,
+        nodes: &#x27;li&#x27;,
+        opacity: &#x27;.1&#x27;
+    });
+
+    list1.delegate.dd.plug(Y.Plugin.DDConstrained, {
+        constrain2node: &#x27;#demo&#x27;
+    });
+    list2.delegate.dd.plug(Y.Plugin.DDConstrained, {
+        constrain2node: &#x27;#demo&#x27;
+    });
+
+});</pre>
+
+
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+        
+
+        
+            <div id="docs-toc" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Table of Contents</h2>
+                </div>
+
+                <div class="bd">
+                    <ul class="toc">
+<li>
+<a href="#setting-up-the-list">Setting Up the List</a>
+</li>
+<li>
+<a href="#setting-up-the-yui-instance">Setting Up the YUI Instance</a>
+</li>
+<li>
+<a href="#making-the-lists-draggable">Making the Lists Draggable</a>
+</li>
+<li>
+<a href="#applying-a-dd-plugin">Applying a DD Plugin</a>
+</li>
+</ul>
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Create a simple sortable list.">
+                                        <a href="simple-sortable.html">Simple Sortable List</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Sortable list example with floated nodes.">
+                                        <a href="sortable-float.html">Floated List</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Multiple Sortable Lists that are separate from one another.">
+                                        <a href="sortable-multi.html">Multiple Lists</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Multiple Sortable Lists that are fully joined together.">
+                                        <a href="sortable-multi-full.html">Multiple Lists - Full Join</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Multiple Sortable Lists that are outer joined together.">
+                                        <a href="sortable-multi-out.html">Multiple Lists - Outer Join</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Multiple Sortable Lists that are inner joined together.">
+                                        <a href="sortable-multi-in.html">Multiple Lists - Inner Join</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="A fish sorting example. Multiple sortable lists with floated nodes that are outer joined together.">
+                                        <a href="sortable-fish.html">Fish Sort - Multi Outer Join</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Create a sortable list with drag-and-drop notifications.">
+                                        <a href="sortable-events.html">Sortable Events</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,703 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/home.png" /> <a href="../../index.html">Home</a><li><img src="../../../assets/gallery/star.png" /> <a href="../../featured.html">Featured</a><li><img src="../../../assets/gallery/thumb_up.png" /> <a href="../../popular.html">Popular</a><li><img src="../../../assets/gallery/greenled.png" /> <a href="../../new.html">New</a><li><img src="../../../assets/gallery/script_code_red.png" /> <a href="../../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../../assets/gear.png" /> <a href="../../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Build Tag: <a href="../gallery-2012.09.05-20-01.html">gallery-2012.09.05-20-01</a></h2>
+									<p><a href="../../show/md-model.html">Return to Model</a><div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2012.09.05-20-01'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-md-model'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'json'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    <span style="color: #003366; font-weight: bold;">var</span> MyModel <span style="color: #339933;">=</span> Y.<span style="color: #660066;">Base</span>.<span style="color: #660066;">create</span><span style="color: #009900;">&#40;</span>
+        <span style="color: #3366CC;">'my-model'</span><span style="color: #339933;">,</span>
+        Y.<span style="color: #660066;">GalleryModel</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#123;</span>
+            sync<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>action<span style="color: #339933;">,</span> options<span style="color: #339933;">,</span> callback<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                <span style="color: #000066; font-weight: bold;">switch</span> <span style="color: #009900;">&#40;</span>action<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                    <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'read'</span><span style="color: #339933;">:</span>
+                        callback<span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">null</span><span style="color: #339933;">,</span> Y.<span style="color: #660066;">merge</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>fieldOne<span style="color: #339933;">:</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> fieldTwo<span style="color: #339933;">:</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span> options<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+                    <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'create'</span><span style="color: #339933;">:</span>
+                    <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'update'</span><span style="color: #339933;">:</span>
+                    <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'delete'</span><span style="color: #339933;">:</span>
+                        callback<span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">null</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+                    <span style="color: #003366; font-weight: bold;">default</span><span style="color: #339933;">:</span>
+                        callback<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'operation not allowed'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">&#125;</span>
+            <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+            <span style="color: #006600; font-style: italic;">// Method toJSON() is originally set to call method getValues()</span>
+            <span style="color: #006600; font-style: italic;">// Having toJSON() separate from getValues() allows redefining toJSON()</span>
+            <span style="color: #006600; font-style: italic;">// without messing up getValues()</span>
+            toJSON<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                <span style="color: #000066; font-weight: bold;">return</span> <span style="color: #009900;">&#123;</span>
+                    <span style="color: #006600; font-style: italic;">// getPKValues() (PK: primary key) returns an object with the values for the primary key(s)</span>
+                    keys<span style="color: #339933;">:</span> <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">getPKValues</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                    <span style="color: #006600; font-style: italic;">// getChangeValues() returns an object with the previous and new values </span>
+                    <span style="color: #006600; font-style: italic;">// for all fields changed since last synched with the remote source</span>
+                    values<span style="color: #339933;">:</span> <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">getChangedValues</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+            <span style="color: #009900;">&#125;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+        <span style="color: #009900;">&#123;</span>
+            ATTRS<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+                <span style="color: #006600; font-style: italic;">// primaryKeys is now an attribute and can take multiple fields</span>
+                <span style="color: #006600; font-style: italic;">// If only one, a single string (not an array) can be provided</span>
+                primaryKeys<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+                    value<span style="color: #339933;">:</span> <span style="color: #009900;">&#91;</span><span style="color: #3366CC;">'primaryKey1'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'primaryKey2'</span><span style="color: #009900;">&#93;</span>
+                <span style="color: #009900;">&#125;</span>
+            <span style="color: #009900;">&#125;</span>
+        <span style="color: #009900;">&#125;</span>
+    <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #003366; font-weight: bold;">var</span> myModel <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> MyModel<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+    <span style="color: #006600; font-style: italic;">// isNew and isModified are now attributes</span>
+    console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'new model'</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isNew'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isModified'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #006600; font-style: italic;">// should show: &quot;new model true false&quot;</span>
+&nbsp;
+    myModel.<span style="color: #660066;">load</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>primaryKey1<span style="color: #339933;">:</span> <span style="color: #CC0000;">12</span><span style="color: #339933;">,</span> primaryKey2<span style="color: #339933;">:</span> <span style="color: #CC0000;">34</span><span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>err<span style="color: #339933;">,</span> response<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'loaded model'</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isNew'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isModified'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// should show: &quot;loaded model false false&quot;</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// Field values are read/set via getValue/setValue methods</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldOne: '</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">getValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldOne'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// should show: &quot;fieldOne: 1&quot;</span>
+&nbsp;
+        myModel.<span style="color: #660066;">setValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldOne'</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// You can query the status of individual fields or the whole record</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldOne status: '</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isNew.fieldOne'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isModified.fieldOne'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// should show: &quot;fieldOne status: false true&quot;</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldTwo status: '</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isNew.fieldTwo'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isModified.fieldTwo'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// should show: &quot;fieldTwo status: false false&quot;</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'record status: '</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isNew'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'isModified'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// should show: &quot;record status: false true&quot;</span>
+&nbsp;
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Stringified record'</span><span style="color: #339933;">,</span> Y.<span style="color: #660066;">JSON</span>.<span style="color: #660066;">stringify</span><span style="color: #009900;">&#40;</span>myModel<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>                    
+        <span style="color: #006600; font-style: italic;">// should show: &quot;Stringified record {&quot;keys&quot;:{&quot;primaryKey1&quot;:12,&quot;primaryKey2&quot;:34},&quot;values&quot;:{&quot;fieldOne&quot;:{&quot;prevVal&quot;:1,&quot;newVal&quot;:3}}}&quot;</span>
+        <span style="color: #006600; font-style: italic;">/*
+        Having the previous value for the changed field allows for building SQL statements such as:
+            UPDATE myTable set fieldOne = 3 where primaryKey1 = 12 and primaryKey2 = 34 and fieldOne = 1
+        The last conditional ensures that the modification is applied 
+        only if the field to be changed has not been modified by other user
+        */</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// The following will fail:</span>
+        myModel.<span style="color: #660066;">setValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'primaryKey1'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'whatever'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// primary keys cannot be modified</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// The change event listener can serve to reject or modify a value being set</span>
+        myModel.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'change'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>ev<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            <span style="color: #000066; font-weight: bold;">switch</span> <span style="color: #009900;">&#40;</span>ev.<span style="color: #000066;">name</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                <span style="color: #006600; font-style: italic;">// fieldOne will have its values doubled</span>
+                <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'fieldOne'</span><span style="color: #339933;">:</span>
+                    ev.<span style="color: #660066;">newVal</span> <span style="color: #339933;">*=</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">;</span>
+                    <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+                <span style="color: #006600; font-style: italic;">// fieldTwo will reject even values</span>
+                <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'fieldTwo'</span><span style="color: #339933;">:</span>
+                     <span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>ev.<span style="color: #660066;">newVal</span> <span style="color: #339933;">===</span> Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>ev.<span style="color: #660066;">newVal</span> <span style="color: #339933;">/</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                         ev.<span style="color: #660066;">halt</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                     <span style="color: #009900;">&#125;</span>
+                    <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+            <span style="color: #009900;">&#125;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        myModel.<span style="color: #660066;">setValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldOne'</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">7</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldOne=7 doubled: '</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">getValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldOne'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// should show: &quot;fieldOne=7 doubled: 14&quot;</span>
+        myModel.<span style="color: #660066;">setValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldTwo'</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">7</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldTwo=7 accepted: '</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">getValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldTwo'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// should show: &quot;fieldTwo=7 accepted: 7&quot;</span>
+        myModel.<span style="color: #660066;">setValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldTwo'</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">6</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldTwo=6 rejected: '</span><span style="color: #339933;">,</span> myModel.<span style="color: #660066;">getValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldTwo'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// should show: &quot;fieldTwo=6 rejected: 7&quot;</span>
+&nbsp;
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// There is also a multiple record extension with optiona sorting</span>
+        <span style="color: #003366; font-weight: bold;">var</span> MultiRecordModel <span style="color: #339933;">=</span> Y.<span style="color: #660066;">Base</span>.<span style="color: #660066;">create</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'multi-record'</span><span style="color: #339933;">,</span> Y.<span style="color: #660066;">GalleryModel</span><span style="color: #339933;">,</span> 
+              <span style="color: #009900;">&#91;</span>Y.<span style="color: #660066;">GalleryModelMultiRecord</span><span style="color: #339933;">,</span> Y.<span style="color: #660066;">GalleryModelSortedMultiRecord</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            multiModel <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> MultiRecordModel<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>primaryKeys<span style="color: #339933;">:</span> <span style="color: #3366CC;">'primaryKeyField'</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            i<span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #000066; font-weight: bold;">for</span> <span style="color: #009900;">&#40;</span>i <span style="color: #339933;">=</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> <span style="color: #CC0000;">20</span><span style="color: #339933;">;</span> i <span style="color: #339933;">+=</span> <span style="color: #CC0000;">1</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            multiModel.<span style="color: #660066;">add</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>primaryKeyField<span style="color: #339933;">:</span> Math.<span style="color: #660066;">floor</span><span style="color: #009900;">&#40;</span>Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #CC0000;">9999</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> fieldOne<span style="color: #339933;">:</span>i<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Values should show in ascending order'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// Method each makes each record current and provides the index for it</span>
+        <span style="color: #006600; font-style: italic;">// By default the first primary key field is the sort field, in ascending order</span>
+        multiModel.<span style="color: #660066;">each</span><span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>index<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span>index<span style="color: #339933;">,</span> multiModel.<span style="color: #660066;">getValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'primaryKeyField'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Values should now show in descending order'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        multiModel.<span style="color: #660066;">set</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'sortDir'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'desc'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        multiModel.<span style="color: #660066;">each</span><span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>index<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span>index<span style="color: #339933;">,</span> multiModel.<span style="color: #660066;">getValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'primaryKeyField'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// The sort field needs not be the primary key</span>
+        multiModel.<span style="color: #660066;">setAttrs</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>sortField<span style="color: #339933;">:</span><span style="color: #3366CC;">'fieldOne'</span><span style="color: #339933;">,</span> sortDir<span style="color: #339933;">:</span><span style="color: #3366CC;">'asc'</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// As you can guess, the records would now show sorted by field one</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// You can go to any record</span>
+        multiModel.<span style="color: #660066;">set</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'index'</span><span style="color: #339933;">,</span><span style="color: #CC0000;">5</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// if you modify a sorted field, it will relocate itself to its proper place</span>
+        multiModel.<span style="color: #660066;">setValue</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'fieldOne'</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1.5</span> <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// Now, it should no longer be at position 5 (the sixth counting from zero) but at position 2</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'The current record is now: '</span><span style="color: #339933;">,</span> multiModel.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'index'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// lets pretend we save the records at odd indexes</span>
+        multiModel.<span style="color: #660066;">each</span><span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>index<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            <span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>index <span style="color: #339933;">&amp;</span> <span style="color: #CC0000;">1</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                 multiModel.<span style="color: #660066;">save</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+             <span style="color: #009900;">&#125;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// Though there are no provisions to save batches of records</span>
+        <span style="color: #006600; font-style: italic;">// if the load() method gets an array of records instead of a single record</span>
+        <span style="color: #006600; font-style: italic;">// it will load them each in its own shelf</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// You can also loop only through modified records (makes it easy to save them)</span>
+        <span style="color: #006600; font-style: italic;">// Only even ones should remain modified</span>
+        multiModel.<span style="color: #660066;">eachModified</span><span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>index<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Modified record at:'</span><span style="color: #339933;">,</span> index<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #006600; font-style: italic;">// You can search a record by the value, on sorted columns </span>
+        <span style="color: #006600; font-style: italic;">// The find method returns the index at which a particular value is found</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Record with value 2 is now at position: '</span><span style="color: #339933;">,</span> multiModel.<span style="color: #660066;">find</span><span style="color: #009900;">&#40;</span><span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">false</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #006600; font-style: italic;">// By adding the second, false, argument, the model will not be positioned at that record.</span>
+        <span style="color: #006600; font-style: italic;">// The default is to get positioned.</span>
+&nbsp;
+&nbsp;
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'The model contains: '</span><span style="color: #339933;">,</span> multiModel.<span style="color: #660066;">size</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        multiModel.<span style="color: #660066;">empty</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        console.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'The model contains none: '</span><span style="color: #339933;">,</span> multiModel.<span style="color: #660066;">size</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+&nbsp;
+    <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2012.09.05-20-01'
+}).use('gallery-md-model','json', function(Y) {
+
+    var MyModel = Y.Base.create(
+
+        'my-model',
+
+        Y.GalleryModel,
+
+        [],
+
+        {
+
+            sync: function (action, options, callback) {
+
+                switch (action) {
+
+                    case 'read':
+
+                        callback(null, Y.merge({fieldOne: 1, fieldTwo: 2}, options));
+
+                        break;
+
+                    case 'create':
+
+                    case 'update':
+
+                    case 'delete':
+
+                        callback(null);
+
+                        break;
+
+                    default:
+
+                        callback('operation not allowed');
+
+                        break;
+
+                }
+
+            },
+
+            // Method toJSON() is originally set to call method getValues()
+
+            // Having toJSON() separate from getValues() allows redefining toJSON()
+
+            // without messing up getValues()
+
+            toJSON: function() {
+
+                return {
+
+                    // getPKValues() (PK: primary key) returns an object with the values for the primary key(s)
+
+                    keys: this.getPKValues(),
+
+                    // getChangeValues() returns an object with the previous and new values 
+
+                    // for all fields changed since last synched with the remote source
+
+                    values: this.getChangedValues()
+
+                };
+
+            }
+
+        },
+
+        {
+
+            ATTRS: {
+
+                // primaryKeys is now an attribute and can take multiple fields
+
+                // If only one, a single string (not an array) can be provided
+
+                primaryKeys: {
+
+                    value: ['primaryKey1', 'primaryKey2']
+
+                }
+
+            }
+
+        }
+
+    );
+
+    var myModel = new MyModel();
+
+    
+
+    // isNew and isModified are now attributes
+
+    console.log('new model', myModel.get('isNew'), myModel.get('isModified'));
+
+    // should show: &quot;new model true false&quot;
+
+    
+
+    myModel.load({primaryKey1: 12, primaryKey2: 34}, function(err, response) {
+
+        console.log('loaded model', myModel.get('isNew'), myModel.get('isModified'));
+
+        // should show: &quot;loaded model false false&quot;
+
+        
+
+        // Field values are read/set via getValue/setValue methods
+
+        console.log('fieldOne: ', myModel.getValue('fieldOne'));
+
+        // should show: &quot;fieldOne: 1&quot;
+
+        
+
+        myModel.setValue('fieldOne', 3);
+
+        
+
+        // You can query the status of individual fields or the whole record
+
+        console.log('fieldOne status: ', myModel.get('isNew.fieldOne'),myModel.get('isModified.fieldOne'));
+
+        // should show: &quot;fieldOne status: false true&quot;
+
+        console.log('fieldTwo status: ', myModel.get('isNew.fieldTwo'),myModel.get('isModified.fieldTwo'));
+
+        // should show: &quot;fieldTwo status: false false&quot;
+
+        console.log('record status: ', myModel.get('isNew'), myModel.get('isModified'));
+
+        // should show: &quot;record status: false true&quot;
+
+        
+
+        console.log('Stringified record', Y.JSON.stringify(myModel));                    
+
+        // should show: &quot;Stringified record {&quot;keys&quot;:{&quot;primaryKey1&quot;:12,&quot;primaryKey2&quot;:34},&quot;values&quot;:{&quot;fieldOne&quot;:{&quot;prevVal&quot;:1,&quot;newVal&quot;:3}}}&quot;
+
+        /*
+
+        Having the previous value for the changed field allows for building SQL statements such as:
+
+            UPDATE myTable set fieldOne = 3 where primaryKey1 = 12 and primaryKey2 = 34 and fieldOne = 1
+
+        The last conditional ensures that the modification is applied 
+
+        only if the field to be changed has not been modified by other user
+
+        */
+
+        
+
+        // The following will fail:
+
+        myModel.setValue('primaryKey1', 'whatever');
+
+        // primary keys cannot be modified
+
+        
+
+        // The change event listener can serve to reject or modify a value being set
+
+        myModel.on('change', function (ev) {
+
+            switch (ev.name) {
+
+                // fieldOne will have its values doubled
+
+                case 'fieldOne':
+
+                    ev.newVal *= 2;
+
+                    break;
+
+                // fieldTwo will reject even values
+
+                case 'fieldTwo':
+
+                     if (ev.newVal === Math.floor(ev.newVal / 2) * 2) {
+
+                         ev.halt();
+
+                     }
+
+                    break;
+
+            }
+
+        });
+
+        myModel.setValue('fieldOne', 7);
+
+        console.log('fieldOne=7 doubled: ', myModel.getValue('fieldOne'));
+
+        // should show: &quot;fieldOne=7 doubled: 14&quot;
+
+        myModel.setValue('fieldTwo', 7);
+
+        console.log('fieldTwo=7 accepted: ', myModel.getValue('fieldTwo'));
+
+        // should show: &quot;fieldTwo=7 accepted: 7&quot;
+
+        myModel.setValue('fieldTwo', 6);
+
+        console.log('fieldTwo=6 rejected: ', myModel.getValue('fieldTwo'));
+
+        // should show: &quot;fieldTwo=6 rejected: 7&quot;
+
+
+
+
+
+        // There is also a multiple record extension with optiona sorting
+
+        var MultiRecordModel = Y.Base.create('multi-record', Y.GalleryModel, 
+
+              [Y.GalleryModelMultiRecord, Y.GalleryModelSortedMultiRecord]),
+
+            multiModel = new MultiRecordModel({primaryKeys: 'primaryKeyField'}),
+
+            i;
+
+        
+
+        for (i = 0; i &lt; 20; i += 1) {
+
+            multiModel.add({primaryKeyField: Math.floor(Math.random() * 9999), fieldOne:i});
+
+        }
+
+        console.log('Values should show in ascending order');
+
+        // Method each makes each record current and provides the index for it
+
+        // By default the first primary key field is the sort field, in ascending order
+
+        multiModel.each(function(index) {
+
+            console.log(index, multiModel.getValue('primaryKeyField'));
+
+        });
+
+
+
+        console.log('Values should now show in descending order');
+
+        multiModel.set('sortDir', 'desc');
+
+        multiModel.each(function(index) {
+
+            console.log(index, multiModel.getValue('primaryKeyField'));
+
+        });
+
+        // The sort field needs not be the primary key
+
+        multiModel.setAttrs({sortField:'fieldOne', sortDir:'asc'});
+
+
+
+        // As you can guess, the records would now show sorted by field one
+
+
+
+        // You can go to any record
+
+        multiModel.set('index',5);
+
+        // if you modify a sorted field, it will relocate itself to its proper place
+
+        multiModel.setValue('fieldOne', 1.5 );
+
+        // Now, it should no longer be at position 5 (the sixth counting from zero) but at position 2
+
+        console.log('The current record is now: ', multiModel.get('index'));
+
+
+
+        // lets pretend we save the records at odd indexes
+
+        multiModel.each(function (index) {
+
+            if (index &amp; 1) {
+
+                 multiModel.save();
+
+             }
+
+        });
+
+
+
+        // Though there are no provisions to save batches of records
+
+        // if the load() method gets an array of records instead of a single record
+
+        // it will load them each in its own shelf
+
+         
+
+        // You can also loop only through modified records (makes it easy to save them)
+
+        // Only even ones should remain modified
+
+        multiModel.eachModified(function (index) {
+
+            console.log('Modified record at:', index);
+
+        });
+
+
+
+        // You can search a record by the value, on sorted columns 
+
+        // The find method returns the index at which a particular value is found
+
+        console.log('Record with value 2 is now at position: ', multiModel.find(2, false));
+
+        // By adding the second, false, argument, the model will not be positioned at that record.
+
+        // The default is to get positioned.
+
+
+
+
+
+        console.log('The model contains: ', multiModel.size());
+
+        multiModel.empty();
+
+        console.log('The model contains none: ', multiModel.size());
+
+        
+
+    
+
+    });
+
+});</textarea>
+									</div>
+									<div id="build_info">
+										<h3 id="build_output">Build Output</h3><pre class="cmd" id="build_output_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-md-model
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+     [echo] Starting Build For gallery-md-model
+
+-lint-server:
+     [echo] Starting Build For gallery-md-model
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/gallery-md-model.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/gallery-md-model.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Invalid hint syntax: use strict
+[yuicompressor] add("gallery-md-model",function(Y){ ---> "use strict" <--- ;var Lang=Y.Lang,YArray=
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] );}returnthis;}}; ---> var  <--- INDEX="index",MR=function(){
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] }};Y.GalleryModelMultiRecord=MR; ---> var  <--- SFIELD="sortField",SDIR="sortDir",ASC=
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] }};Y.GalleryModelSortedMultiRecord=SMR; ---> var  <--- PKI=function(){};PKI.
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/gallery-md-model-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/gallery-md-model.js
+     [java]  
+     [java] 
+     [java] 	49, 9: 'NAME' is not defined.
+     [java] 	NAME,
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-md-model
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 4 seconds</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

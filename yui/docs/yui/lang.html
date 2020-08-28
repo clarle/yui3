@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Y.Lang - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/yui/lang.html">
+    <meta name="twitter:title" content="Y.Lang">
+    <meta name="twitter:description" content="The YUI module is the single core dependency for all YUI 3 implementations.  It must be included on all pages that use YUI &amp;mdash; and it is the only dependency required to start writing YUI code.  The YUI module contains loader functionality and a dependency calculator, allowing it to serve as a &#x60;seed&#x60; for your implementation.  You provide the YUI module list you&#x27;re using and the code that makes use of those modules; YUI will fetch all necessary components in a single, optimized HTTP request before executing your dependent code.  While you may use some of the script- and CSS-loading facilities of the YUI module in your own implementation, this module&#x27;s core purpose is to serve as a small seed from which complex, highly modular implementations can grow.">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/quick-start/">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="/yui/docs/">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/core">Core</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/yui/lang.html">YUI Global Object</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Y.Lang</h1>
+
+        
+            <a href="#docs-toc" class="jump" tabindex="1">Jump to Table of Contents</a>
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <p><code>Y.Lang</code> contains JavaScript language utilities and extensions that are used in the core library.
+
+
+<h2 id="array">Array</h2>
+<p>Testing for an actual <code>Array</code>, this helps fight against false positives from <code>arguments</code> and <code>getElementsBy*</code> array-like structures.</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; true, an array literal is an array
+Y.Lang.isArray([1, 2]);
+
+&#x2F;&#x2F; false, an object literal is not an array
+Y.Lang.isArray({&quot;one&quot;: &quot;two&quot;});
+
+&#x2F;&#x2F; however, when declared as an array, it is true
+function() {
+    var a = new Array();
+    a[&quot;one&quot;] = &quot;two&quot;;
+    return Y.Lang.isArray(a);
+}();
+
+&#x2F;&#x2F; false, a collection of elements is like an array, but isn&#x27;t
+Y.Lang.isArray(document.getElementsByTagName(&quot;body&quot;));</pre>
+
+
+<h2 id="object">Object</h2>
+
+<p>Checking for <code>Objects</code>, since <code>new Object()</code>, '{}', '[]' and <code>function(){}</code> are all technically Objects.</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; true, objects, functions, and arrays are objects
+Y.Lang.isObject({});
+Y.Lang.isObject(function(){});
+Y.Lang.isObject([1,2]);
+
+&#x2F;&#x2F; false, primitives are not objects
+Y.Lang.isObject(1);
+Y.Lang.isObject(true);
+Y.Lang.isObject(&quot;{}&quot;);</pre>
+
+
+<h2 id="function">Function</h2>
+
+<p>Checking for <code>Function</code>, since a <code>function</code> is a <code>function</code>, but an <code>Object</code> is not a function.</p>
+
+<pre class="code prettyprint">Y.Lang.isFunction(function(){}); &#x2F;&#x2F; true
+Y.Lang.isFunction({foo: &quot;bar&quot;}); &#x2F;&#x2F; false</pre>
+
+
+<h2 id="number-string">Number &amp; String</h2>
+
+<p>Making sure that <code>Strings</code> are really <code>Strings</code> and <code>Numbers</code> are really <code>Numbers</code>.</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; true, ints and floats are numbers
+Y.Lang.isNumber(0);
+Y.Lang.isNumber(123.123);
+
+&#x2F;&#x2F; false, strings that can be cast to numbers aren&#x27;t really numbers
+Y.Lang.isNumber(&quot;123.123&quot;);
+
+&#x2F;&#x2F; false, undefined numbers and infinity are not numbers we want to use
+Y.Lang.isNumber(1&#x2F;0);
+
+&#x2F;&#x2F; strings
+Y.Lang.isString(&quot;{}&quot;); &#x2F;&#x2F; true
+Y.Lang.isString({foo: &quot;bar&quot;}); &#x2F;&#x2F; false
+Y.Lang.isString(123); &#x2F;&#x2F; false
+Y.Lang.isString(true); &#x2F;&#x2F; false</pre>
+
+
+<h2 id="boolean">Boolean</h2>
+
+<p>Making sure that a <code>Boolean</code> is really a <code>Boolean</code>.</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; true, false is a boolean
+Y.Lang.isBoolean(false);
+
+&#x2F;&#x2F; false, 1 and the string &quot;true&quot; are not booleans
+Y.Lang.isBoolean(1);
+Y.Lang.isBoolean(&quot;true&quot;);</pre>
+
+
+<h2 id="null-undefined">Null &amp; Undefined</h2>
+
+<p><code>null</code> is <code>null</code>, but <code>false</code>, <code>undefined</code> and <code>&quot;&quot;</code> are not.</p>
+
+<pre class="code prettyprint">Y.Lang.isNull(null); &#x2F;&#x2F; true
+Y.Lang.isNull(undefined); &#x2F;&#x2F; false
+Y.Lang.isNull(&quot;&quot;); &#x2F;&#x2F; false
+
+&#x2F;&#x2F; undefined is undefined, but null and false are not
+Y.Lang.isUndefined(undefined); &#x2F;&#x2F; true
+Y.Lang.isUndefined(false); &#x2F;&#x2F; false
+Y.Lang.isUndefined(null); &#x2F;&#x2F; false</pre>
+
+
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+                
+            
+        
+
+        
+            <div id="docs-toc" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Table of Contents</h2>
+                </div>
+
+                <div class="bd">
+                    <ul class="toc">
+<li>
+<a href="#array">Array</a>
+</li>
+<li>
+<a href="#object">Object</a>
+</li>
+<li>
+<a href="#function">Function</a>
+</li>
+<li>
+<a href="#number-string">Number &amp; String</a>
+</li>
+<li>
+<a href="#boolean">Boolean</a>
+</li>
+<li>
+<a href="#null-undefined">Null &amp; Undefined</a>
+</li>
+</ul>
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Setting up a YUI Instance">
+                                        <a href="yui-core.html">YUI Core</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Working with multiple YUI instances.">
+                                        <a href="yui-multi.html">Multiple Instances</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="On-demand loading of YUI and non-YUI assets">
+                                        <a href="yui-loader-ext.html">YUI Loader - Dynamically Adding YUI and External Modules</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Create Class Hierarchies with &#x60;extend&#x60;">
+                                        <a href="yui-extend.html">Create Class Hierarchies with &#x60;extend&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Creating a composition-based class structure using &#x60;augment&#x60;">
+                                        <a href="yui-augment.html">Compose Classes of Objects with &#x60;augment&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Add behaviors to objects or static classes with &#x60;mix&#x60;">
+                                        <a href="yui-mix.html">Add Behaviors to Objects with &#x60;mix&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Combine data sets and create shallow copies of objects with &#x60;merge&#x60;">
+                                        <a href="yui-merge.html">Combine Data Sets with &#x60;merge&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Check data types with the &#x60;Lang Utilities&#x60;">
+                                        <a href="yui-isa.html">Check Data Types with &#x60;Lang&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Get information about the current user agent with &#x60;UA&#x60;">
+                                        <a href="yui-ua.html">Browser Detection with &#x60;UA&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Working with YUI 2 in 3">
+                                        <a href="yui-yui2.html">Working with YUI 2 in 3</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Natively use YUI Gallery Modules">
+                                        <a href="yui-gallery.html">Natively use YUI Gallery Modules</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Programatically use Loader">
+                                        <a href="loader-resolve.html">Programatically use Loader</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Executing functions in parallel">
+                                        <a href="parallel.html">Using Y.Parallel</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

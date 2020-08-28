@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Loading Images Below the Fold - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/imageloader/below-fold.html">
+    <meta name="twitter:title" content="Example: Loading Images Below the Fold">
+    <meta name="twitter:description" content="Loading images above the fold immediately while deferring the loading of images below the fold.">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/quick-start/">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="/yui/docs/">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/utilities/">Utilities</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/imageloader/">ImageLoader</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/imageloader/below-fold.html">Example: Loading Images Below the Fold</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Example: Loading Images Below the Fold</h1>
+
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <div class="intro">
+
+  <p>
+    Often pages will have a number of images below the fold, hidden from the user's view. 
+    These are prime candidates to load with the <a href="http://developer.yahoo.com/yui/imageloader/">ImageLoader Utility</a>.
+  </p>
+
+  <p>
+    All the images in this example belong to the same group, and each loads immediately only when it appears above, 
+    or within the specified distance (25px) of, the page fold.
+  </p>
+
+</div>
+
+<div class="example">
+  <!--BEGIN SOURCE CODE FOR EXAMPLE ===============================-->
+
+  <style>
+  .everything .cont { border:1px solid #888; width:100px; margin:75px 50px; }
+  .everything .rightCol { margin-left:300px; }
+  #img1Cont { height:75px; margin-top:25px; }
+  #img2Cont { height:67px; }
+  #img3Cont { height:53px; }
+  #img4Cont { height:72px; }
+  #img5Cont { height:75px; margin-bottom:25px; }
+  </style>
+
+
+  <div class='everything' id='everything'>
+  	<div class='cont' id='img1Cont'>
+  		<img id='img1' />
+  	</div>
+  	<div class='cont rightCol' id='img2Cont'>
+  		<img id='img2' />
+  	</div>
+  	<div class='cont' id='img3Cont'>
+  		<img id='img3' />
+
+  	</div>
+  	<div class='cont rightCol' id='img4Cont'>
+  		<img id='img4' />
+  	</div>
+  	<div class='cont' id='img5Cont'>
+  		<img id='img5' />
+  	</div>
+  </div>
+
+
+  <script>
+
+  YUI({filter:"debug", logInclude: {"imageloader":true, "example":true}}).use("imageloader", function(Y) {
+
+  	var foldGroup = new Y.ImgLoadGroup({ name: 'fold group', foldDistance: 25 });
+  	foldGroup.registerImage({ domId: 'img1', srcUrl: 'http://yui.yahooapis.com/testassets/museum.jpg' });
+  	foldGroup.registerImage({ domId: 'img2', srcUrl: 'http://yui.yahooapis.com/testassets/uluru.jpg' });
+  	foldGroup.registerImage({ domId: 'img3', srcUrl: 'http://yui.yahooapis.com/testassets/katatjuta.jpg' });
+  	foldGroup.registerImage({ domId: 'img4', srcUrl: 'http://yui.yahooapis.com/testassets/morraine.jpg' });
+  	foldGroup.registerImage({ domId: 'img5', srcUrl: 'http://yui.yahooapis.com/testassets/japan.jpg' });
+
+  /*
+  var foldGroup = new YAHOO.util.ImageLoader.group(window, 'scroll');
+  foldGroup.foldConditional = true;
+  //foldGroup.addTrigger(window, 'resize');
+  foldGroup.name = 'fold_group';
+  */
+
+  /*
+   * This uncustomary wait before adding the resize trigger is done specifically to cater to IE for this example.
+   * In IE and with the Logger enabled, IE fires an immediate resize event while rendering the Logger module, consequently loading all the images in the example.
+   * This 200 ms delay allows IE to render the Logger without interference.
+   * In your code, you would add the resize trigger in a straightforward fashion, as is documented in the example.
+   */
+  //YAHOO.util.Event.addListener(window, 'load', function() { setTimeout("foldGroup.addTrigger(window, 'resize')", 200); });
+
+  });
+
+  </script>
+
+  <!--END SOURCE CODE FOR EXAMPLE =============================== -->
+
+</div>
+
+<h2>Loading Images Below the Fold</h2>
+
+<p>
+  You can easily have images load immediately if they are above the fold while delaying the load of images below the fold. 
+  This saves you from loading any images that the user can't see because they are beyond her browser's viewable area.
+</p>
+
+<p>
+  All we need is one group, and we specify its <code>foldDistance</code> attribute to <code>25</code> (25px). 
+  Any group with this attribute set will, at the DOM ready state, examine the page coordinates of all images registered 
+  to that group. Any images located above the fold, or no farther than the specified distance below the fold, will load immediately. 
+  The rest will be checked again at any <code>scroll</code> or <code>resize</code> event and be loaded only when they're near enough 
+  to the fold.
+</p>
+
+<pre class="code prettyprint">var foldGroup = new Y.ImgLoadGroup({ name: &#x27;fold group&#x27;, foldDistance: 25 });
+foldGroup.registerImage({ domId: &#x27;img1&#x27;, srcUrl: &#x27;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;testassets&#x2F;museum.jpg&#x27; });
+foldGroup.registerImage({ domId: &#x27;img2&#x27;, srcUrl: &#x27;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;testassets&#x2F;uluru.jpg&#x27; });
+foldGroup.registerImage({ domId: &#x27;img3&#x27;, srcUrl: &#x27;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;testassets&#x2F;katatjuta.jpg&#x27; });
+foldGroup.registerImage({ domId: &#x27;img4&#x27;, srcUrl: &#x27;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;testassets&#x2F;morraine.jpg&#x27; });
+foldGroup.registerImage({ domId: &#x27;img5&#x27;, srcUrl: &#x27;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;testassets&#x2F;japan.jpg&#x27; });</pre>
+
+
+<p>
+  When you specify a <code>foldDistance</code> value, <code>scroll</code> and <code>resize</code> triggers are added to the 
+  group automatically. Thus you will typically not need to set any triggers for the group explicitly.
+</p>
+
+<p>
+  How do you know that the images below the fold are, in fact, not loaded immediately? There are several tools available to 
+  monitor the HTTP requests of your browser, including Firebug for Firefox and HTTPWatch for IE. With these tools you can 
+  monitor precisely when each image on a page is loaded.
+</p>
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+        
+
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Demonstrates the basic features and operation of the ImageLoader Utility, deferring the loading of images until specific events happen or specific time limits expire.">
+                                        <a href="basic-features.html">Basic Features of the ImageLoader Utility</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Loading images above the fold immediately while deferring the loading of images below the fold.">
+                                        <a href="below-fold.html">Loading Images Below the Fold</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Using CSS class names to target specific images for deferred loading.">
+                                        <a href="imageloader-class-names.html">Using ImageLoader with CSS Class Names</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

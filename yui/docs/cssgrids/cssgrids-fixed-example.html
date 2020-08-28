@@ -1,0 +1,93 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>YUI 3.x: CSS Grids Fixed Example</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.17.2/build/cssreset/cssreset.css" type="text/css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.17.2/build/cssfonts/cssfonts.css" type="text/css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.17.2/build/cssgrids/cssgrids.css" type="text/css">
+    <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+
+<style>
+/* everything below is custom styling to demonstrate how to create a page layout using yui grid units */
+#doc {
+    margin:auto; /* center in viewport */
+    width: 970px; /* fix page width */
+}
+
+/* arbitrary content styling */
+#hd, .yui3-g .content, #ft {
+    border: 5px solid #ccc;
+    height: 400px; 
+    margin-right: 10px; /* gutter between columns */
+}
+
+#hd, #ft {
+    height: 40px;
+}
+</style>
+
+</head>
+<body id="doc">
+    <div id="hd">
+        <h1>Fixed Layout Template</h1>
+    </div>
+
+    <div class="yui3-g">
+        <div class="yui3-u-1-5">
+            <div class="content"></div>
+        </div>
+
+        <div class="yui3-u-2-5">
+            <div class="content"></div>
+        </div>
+
+        <div class="yui3-u-2-5">
+            <div class="content"></div>
+        </div>
+    </div>
+
+    <div id="ft"></div>
+</body>
+</html>
+
+
+
+
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+

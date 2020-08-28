@@ -1,0 +1,210 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery :: Patch: 3.3.0 Y.delegate('cat|type',...)</title>
+		<link href="https://github.com/lsmith" rel="author" title="lsmith" />
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/home.png" /> <a href="../index.html">Home</a><li><img src="../../assets/gallery/star.png" /> <a href="../featured.html">Featured</a><li><img src="../../assets/gallery/thumb_up.png" /> <a href="../popular.html">Popular</a><li><img src="../../assets/gallery/greenled.png" /> <a href="../new.html">New</a><li><img src="../../assets/gallery/script_code_red.png" /> <a href="../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../assets/gear.png" /> <a href="../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<div class="warning"> YUI Library is not responsible for bugs or support with this module. It is available as a free service. For support please contact the module owner with the provided links. </div>
+									<div class="gallery-item" id="gallery-item_381">
+										<div class="item-hd">
+											<h2>Patch: 3.3.0 Y.delegate('cat|type',...) (gallery-patch-330-delegate-cat) <span class="oncdn" title="This module is available on the CDN.">on cdn</span></h2> Last Updated: <span title="09 Feb 2011 00:08">02/9/11</span><div class="votes"><a class="up" href="#" title="Vote this item up.">+</a> <span>0</span> <a class="down" href="#" title="Vote this item down.">-</a></div>
+										</div>
+										<div class="mod">
+											<div class="yui-gf profile">
+												<div class="yui-u first">
+													<h3><img class="medal" src="../../assets/medal_gold.png" title="YUI Developer" /> <span class="gallery-user">Luke Smith</span></h3>
+													<h4>YUI Contributor</h4>
+													<p><img src="http://www.gravatar.com/avatar/3974d5bcfbdb27cc99d10706dc5b85f7?s=64&d=http://yuilibrary.com/assets/gravatar-64.png" /><p><a href="../user/lsmith.html">See 19 more by this user.</a> Created: <span title="25 Jan 2011 01:47">01/25/11</span><br /> Last CDN Push: <span title="26 Jan 2011 20:35">01/26/11</span><br /> Build Tag: <a href="../buildtag/patch-330-delegate-cat/gallery-2011.01.26-20-33.html">gallery-2011.01.26-20-33</a><br /> Project: <a href="http://yuilibrary.com/projects/yui3">YUI 3</a><br /> License: <a href="http://yuilibrary.com/license/" target="_blank">YUI BSD</a><br /> YUI Version: 3.3.0<br /> Free for use. </div>
+												<div class="yui-u">
+													<div class="desc"><span class="wikipage"><p>This patch corrects a bug in YUI 3.3.0's Y.delegate and node.delegate methods that caused the use of a detach category to result in no subscription being made. delegate('cat|click',...) would do nothing.<p>This patch module is only necessary for version 3.3.0.<p>See ticket <a href="http://yuilibrary.com/projects/yui3/ticket/2529827">http://yuilibrary.com/projects/yui3/ticket/2529827</a> for full details.</span></div>
+												</div>
+												<div class="tags">
+													<ul>
+														<li>Tags: <li><a href="../tag/delegate.html" title="Search by this tag: delegate">delegate</a><li><a href="../tag/bug.html" title="Search by this tag: bug">bug</a><li><a href="../tag/patch.html" title="Search by this tag: patch">patch</a><li><a href="../tag/lsmith.html" title="Search by this tag: lsmith">lsmith</a><li><a href="../tag/event.html" title="Search by this tag: event">event</a></ul>
+												</div>
+											</div>
+										</div>
+										<ul class="gallery-links">
+											<li class="download"><a href="http://github.com/lsmith/yui3-gallery/downloads" target="_blank" title="Download">Download</a><li class="docs empty">Docs<li class="homepage"><a href="http://github.com/lsmith/yui3-gallery/" target="_blank" title="Homepage">Homepage</a><li class="bugs"><a href="http://github.com/lsmith/yui3-gallery/issues" target="_blank" title="Bugs">Bugs</a><li class="source"><a href="http://github.com/lsmith/yui3-gallery/tree/master/build/gallery-patch-330-delegate-cat/gallery-patch-330-delegate-cat-debug.js" target="_blank" title="Source">Source</a><li class="example empty">Example<li class="forum empty">Forum<li class="history"><a href="../history/patch-330-delegate-cat.html" title="History">History</a></ul>
+										<div class="mod"><span class="wikipage"><p>Apply the patch in the use() statement as long as version 3.3.0 is in use. Remove from the use() statement after upgrading to the subsequent version.<p>This patch is also applicable to simpleYUI use cases.</span><h3 id="code">Code Sample</h3>
+											<div class="syntax-highlight" id="yui-syn-1"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">script</span> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js&quot;</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">script</span>&gt;</span></pre><textarea id="yui-syn-1-plain">&lt;script src=&quot;http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js&quot;&gt;&lt;/script&gt;</textarea>
+											</div>
+											<div class="syntax-highlight" id="yui-syn-2"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2011.01.26-20-33'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'node-event-delegate'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'gallery-patch-330-delegate-cat'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+&nbsp;
+    Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#container'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">delegate</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;foo|click&quot;</span><span style="color: #339933;">,</span> callback<span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;.bar&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    Y.<span style="color: #660066;">delegate</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;foo|click&quot;</span><span style="color: #339933;">,</span> callback<span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;#container&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;.bar&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+&nbsp;
+<span style="color: #006600; font-style: italic;">// Or with simpleYUI</span>
+<span style="color: #006600; font-style: italic;">// version #1, include the script on the page via combo</span>
+<span style="color: #006600; font-style: italic;">// &lt;script src=&quot;http://yui.yahooapis.com/combo?3.3.0/build/simpleyui/simpleyui-min.js&amp;....gallery-patch-330-delegate-cat.js&quot;&gt;&lt;/script&gt;</span>
+<span style="color: #006600; font-style: italic;">// &lt;script&gt;</span>
+Y.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-patch-330-delegate-cat'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#container'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">delegate</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;foo|click&quot;</span><span style="color: #339933;">,</span> callback<span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;.bar&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+Y.<span style="color: #660066;">delegate</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;foo|click&quot;</span><span style="color: #339933;">,</span> callback<span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;#container&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;.bar&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+&nbsp;
+<span style="color: #006600; font-style: italic;">// version #2, include the patch script as a separate &lt;script&gt;</span>
+<span style="color: #006600; font-style: italic;">// &lt;script src=&quot;http://yui.yahooapis.com/3.3.0/build/simpleyui/simpleyui-min.js&quot;&gt;&lt;/script&gt;</span>
+<span style="color: #006600; font-style: italic;">// &lt;script src=&quot;http://yui.yahooapis.com/.....gallery-patch-330-delegate-cat.js&quot;&gt;&lt;/script&gt;</span>
+Y.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-patch-330-delegate-cat'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#container'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">delegate</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;foo|click&quot;</span><span style="color: #339933;">,</span> callback<span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;.bar&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+Y.<span style="color: #660066;">delegate</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;foo|click&quot;</span><span style="color: #339933;">,</span> callback<span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;#container&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;.bar&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #006600; font-style: italic;">// version #3, don't include the patch script on the page, and wrap calling code in a Y.use() callback</span>
+Y.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-patch-330-delegate-cat'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+&nbsp;
+    Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#container'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">delegate</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;foo|click&quot;</span><span style="color: #339933;">,</span> callback<span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;.bar&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    Y.<span style="color: #660066;">delegate</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;foo|click&quot;</span><span style="color: #339933;">,</span> callback<span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;#container&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;.bar&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-2-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2011.01.26-20-33'
+}).use('node-event-delegate', 'gallery-patch-330-delegate-cat', function (Y) {
+
+
+
+    Y.one('#container').delegate(&quot;foo|click&quot;, callback, &quot;.bar&quot;);
+
+    Y.delegate(&quot;foo|click&quot;, callback, &quot;#container&quot;, &quot;.bar&quot;);
+
+
+
+});
+
+ 
+
+
+
+// Or with simpleYUI
+
+// version #1, include the script on the page via combo
+
+// &lt;script src=&quot;http://yui.yahooapis.com/combo?3.3.0/build/simpleyui/simpleyui-min.js&amp;....gallery-patch-330-delegate-cat.js&quot;&gt;&lt;/script&gt;
+
+// &lt;script&gt;
+
+Y.use('gallery-patch-330-delegate-cat');
+
+ 
+
+Y.one('#container').delegate(&quot;foo|click&quot;, callback, &quot;.bar&quot;);
+
+Y.delegate(&quot;foo|click&quot;, callback, &quot;#container&quot;, &quot;.bar&quot;);
+
+
+
+ 
+
+// version #2, include the patch script as a separate &lt;script&gt;
+
+// &lt;script src=&quot;http://yui.yahooapis.com/3.3.0/build/simpleyui/simpleyui-min.js&quot;&gt;&lt;/script&gt;
+
+// &lt;script src=&quot;http://yui.yahooapis.com/.....gallery-patch-330-delegate-cat.js&quot;&gt;&lt;/script&gt;
+
+Y.use('gallery-patch-330-delegate-cat');
+
+ 
+
+Y.one('#container').delegate(&quot;foo|click&quot;, callback, &quot;.bar&quot;);
+
+Y.delegate(&quot;foo|click&quot;, callback, &quot;#container&quot;, &quot;.bar&quot;);
+
+ 
+
+// version #3, don't include the patch script on the page, and wrap calling code in a Y.use() callback
+
+Y.use('gallery-patch-330-delegate-cat', function () {
+
+ 
+
+    Y.one('#container').delegate(&quot;foo|click&quot;, callback, &quot;.bar&quot;);
+
+    Y.delegate(&quot;foo|click&quot;, callback, &quot;#container&quot;, &quot;.bar&quot;);
+
+ 
+
+});</textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

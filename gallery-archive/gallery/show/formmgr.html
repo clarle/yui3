@@ -1,0 +1,352 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery :: Form Manager</title>
+		<link href="https://github.com/jafl" rel="author" title="jafl" />
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/home.png" /> <a href="../index.html">Home</a><li><img src="../../assets/gallery/star.png" /> <a href="../featured.html">Featured</a><li><img src="../../assets/gallery/thumb_up.png" /> <a href="../popular.html">Popular</a><li><img src="../../assets/gallery/greenled.png" /> <a href="../new.html">New</a><li><img src="../../assets/gallery/script_code_red.png" /> <a href="../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../assets/gear.png" /> <a href="../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<div class="warning"> YUI Library is not responsible for bugs or support with this module. It is available as a free service. For support please contact the module owner with the provided links. </div>
+									<div class="gallery-item" id="gallery-item_38">
+										<div class="item-hd">
+											<h2>Form Manager (gallery-formmgr) <span class="oncdn" title="This module is available on the CDN.">on cdn</span></h2> Last Updated: <span title="07 Apr 2013 20:35">04/7/13</span><div class="votes"><a class="up" href="#" title="Vote this item up.">+</a> <span>5</span> <a class="down" href="#" title="Vote this item down.">-</a></div>
+										</div>
+										<div class="mod">
+											<div class="yui-gf profile">
+												<div class="yui-u first">
+													<h3><img class="medal" src="../../assets/medal_silver.png" title="CLA Signed" /> <span class="gallery-user">John Lindal</span></h3>
+													<h4>YUI Contributor</h4>
+													<p><img src="http://www.gravatar.com/avatar/38f9e2bde80f6645036885d233609d69?s=64&d=http://yuilibrary.com/assets/gravatar-64.png" /><p><a href="../user/jafl.html">See 50 more by this user.</a> Created: <span title="04 Dec 2009 21:15">12/4/09</span><br /> Last CDN Push: <span title="20 Feb 2014 23:56">02/20/14</span><br /> Build Tag: <a href="../buildtag/formmgr/gallery-2014.02.20-23-55.html">gallery-2014.02.20-23-55</a><br /> Project: <a href="http://yuilibrary.com/projects/yui3">YUI 3</a><br /> License: <a href="http://yuilibrary.com/license/" target="_blank">YUI BSD</a><br /> YUI Version: 3.5.1<br /> Free for use. </div>
+												<div class="yui-u">
+													<div class="desc"><span class="wikipage"><p>HTML forms are complex beasts, requiring insertion of default values when the form is first displayed, possible auto-saving of unvalidated input to protect against connection loss, client-side pre-validation of user input, synchronous/asynchronous submission of user input to the server, and processing and display of the results returned by the server (success or errors). When combined with YUI3 IO, FormMgr supports all of this.<p>This module is lightweight because it does not instantiate a separate JavaScript object for each form element. Instead, basic pre-validation configuration is stored in each element's class. Custom pre-validations can be added either by registering a regular expression and/or function for a particular element or by overriding postValidateForm().<p>This approach is ideal when implementing progressive enhancement: the form is defined via markup, and FormManager is then used to add functionality when JavaScript is enabled. Even then error message containers are in the markup, and this allows the server to populate them for non-JavaScript clients.<p>We refer to client-side checks as &quot;pre-validation&quot; because JavaScript is relatively easy to subvert -- or it might be turned off completely by the user. Only the server can truly validate that the data is acceptable.<p>More information is provided in the YUI Blog post: <a href="http://www.yuiblog.com/blog/2010/03/23/gallery-form-manager/">http://www.yuiblog.com/blog/2010/03/23/gallery-form-manager/</a></span></div>
+												</div>
+												<div class="tags">
+													<ul>
+														<li>Tags: <li><a href="../tag/jafl.html" title="Search by this tag: jafl">jafl</a><li><a href="../tag/validation.html" title="Search by this tag: validation">validation</a><li><a href="../tag/form.html" title="Search by this tag: form">form</a></ul>
+												</div>
+											</div>
+										</div>
+										<ul class="gallery-links">
+											<li class="download"><a href="http://github.com/jafl/yui-modules/downloads" target="_blank" title="Download">Download</a><li class="docs"><a href="http://jafl.github.com/yui-modules/yuidoc/modules/gallery-formmgr.html" target="_blank" title="Docs">Docs</a><li class="homepage"><a href="http://github.com/jafl/yui-modules/" target="_blank" title="Homepage">Homepage</a><li class="bugs"><a href="http://github.com/jafl/yui-modules/issues" target="_blank" title="Bugs">Bugs</a><li class="source"><a href="https://github.com/jafl/yui-modules/tree/master/src/gallery-formmgr" target="_blank" title="Source">Source</a><li class="example"><a href="http://jafl.github.com/yui-modules/formmgr/" target="_blank" title="Example">Example</a><li class="forum"><a href="../forum/formmgr.html" title="Forum">Forum</a><li class="history"><a href="../history/formmgr.html" title="History">History</a></ul>
+										<div class="mod"><span class="wikipage"><p>Example of creating a FormManager and adding custom validations. Basic validations like required, min/max length, integer, and decimal are encoded in the markup.</span><h3 id="code">Code Sample</h3>
+											<div class="syntax-highlight" id="yui-syn-1"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">script</span> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js&quot;</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">script</span>&gt;</span></pre><textarea id="yui-syn-1-plain">&lt;script src=&quot;http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js&quot;&gt;&lt;/script&gt;</textarea>
+											</div>
+											<div class="syntax-highlight" id="yui-syn-2"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2014.02.20-23-55'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-formmgr'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#123;</span>
+	<span style="color: #003366; font-weight: bold;">var</span> f <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">FormManager</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'test_form'</span><span style="color: #339933;">,</span>
+	<span style="color: #009900;">&#123;</span>
+		status_node<span style="color: #339933;">:</span> <span style="color: #3366CC;">'#form-status'</span><span style="color: #339933;">,</span>
+		default_value_map<span style="color: #339933;">:</span>		<span style="color: #006600; font-style: italic;">// overrides values in markup</span>
+		<span style="color: #009900;">&#123;</span>
+			s1<span style="color: #339933;">:</span> <span style="color: #3366CC;">'abc'</span><span style="color: #339933;">,</span>
+			b1<span style="color: #339933;">:</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span>
+			b2<span style="color: #339933;">:</span> <span style="color: #CC0000;">0</span>
+		<span style="color: #009900;">&#125;</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	f.<span style="color: #660066;">prepareForm</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	f.<span style="color: #660066;">initFocus</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>		<span style="color: #006600; font-style: italic;">// only do this for one form on a page</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// validations</span>
+&nbsp;
+	f.<span style="color: #660066;">setErrorMessages</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'email'</span><span style="color: #339933;">,</span>
+	<span style="color: #009900;">&#123;</span>
+		required<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Please tell us how to spam you.  (Just kidding!)'</span><span style="color: #339933;">,</span>
+		regex<span style="color: #339933;">:</span>    <span style="color: #3366CC;">'Please enter a valid email address.'</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	f.<span style="color: #660066;">setRegex</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'email'</span><span style="color: #339933;">,</span> <span style="color: #009966; font-style: italic;">/@.+\..+/</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>		<span style="color: #006600; font-style: italic;">// not trying very hard</span>
+&nbsp;
+	f.<span style="color: #660066;">setErrorMessages</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'zip'</span><span style="color: #339933;">,</span>
+	<span style="color: #009900;">&#123;</span>
+		regex<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Please enter a valid US ZIP Code.'</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	f.<span style="color: #660066;">setRegex</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'zip'</span><span style="color: #339933;">,</span> <span style="color: #009966; font-style: italic;">/^[0-9]{5}(?:-[0-9]{4})?$/</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	f.<span style="color: #660066;">setFunction</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'pw'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>form<span style="color: #009900;">&#41;</span>
+	<span style="color: #009900;">&#123;</span>
+		<span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>form.<span style="color: #660066;">pw</span>.<span style="color: #660066;">value</span> <span style="color: #339933;">!=</span> form.<span style="color: #660066;">pw2</span>.<span style="color: #660066;">value</span><span style="color: #009900;">&#41;</span>
+		<span style="color: #009900;">&#123;</span>
+			f.<span style="color: #660066;">displayMessage</span><span style="color: #009900;">&#40;</span>form.<span style="color: #660066;">pw</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'Your password entries did not match.'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'error'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+			f.<span style="color: #660066;">displayMessage</span><span style="color: #009900;">&#40;</span>form.<span style="color: #660066;">pw2</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">''</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'error'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+			<span style="color: #000066; font-weight: bold;">return</span> <span style="color: #003366; font-weight: bold;">false</span><span style="color: #339933;">;</span>
+		<span style="color: #009900;">&#125;</span>
+&nbsp;
+		<span style="color: #000066; font-weight: bold;">return</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">;</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	f.<span style="color: #660066;">postValidateForm</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>form<span style="color: #009900;">&#41;</span>
+	<span style="color: #009900;">&#123;</span>
+		<span style="color: #003366; font-weight: bold;">var</span> count <span style="color: #339933;">=</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span>
+		Y.<span style="color: #660066;">each</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>form.<span style="color: #660066;">b1</span><span style="color: #339933;">,</span> form.<span style="color: #660066;">b2</span><span style="color: #339933;">,</span> form.<span style="color: #660066;">b3</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>b<span style="color: #009900;">&#41;</span>
+		<span style="color: #009900;">&#123;</span>
+			<span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>b.<span style="color: #660066;">checked</span><span style="color: #009900;">&#41;</span> count<span style="color: #339933;">++;</span>
+		<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+		<span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>count <span style="color: #339933;">&lt;</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span>
+		<span style="color: #009900;">&#123;</span>
+			f.<span style="color: #660066;">displayMessage</span><span style="color: #009900;">&#40;</span>form.<span style="color: #660066;">b1</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'Please select at least two checkboxes.'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'warn'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+			<span style="color: #000066; font-weight: bold;">return</span> <span style="color: #003366; font-weight: bold;">false</span><span style="color: #339933;">;</span>
+		<span style="color: #009900;">&#125;</span>
+&nbsp;
+		<span style="color: #000066; font-weight: bold;">return</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">;</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-2-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2014.02.20-23-55'
+}).use('gallery-formmgr', function(Y)
+
+{
+
+	var f = new Y.FormManager('test_form',
+
+	{
+
+		status_node: '#form-status',
+
+		default_value_map:		// overrides values in markup
+
+		{
+
+			s1: 'abc',
+
+			b1: 1,
+
+			b2: 0
+
+		}
+
+	});
+
+
+
+	f.prepareForm();
+
+	f.initFocus();		// only do this for one form on a page
+
+
+
+	// validations
+
+
+
+	f.setErrorMessages('email',
+
+	{
+
+		required: 'Please tell us how to spam you.  (Just kidding!)',
+
+		regex:    'Please enter a valid email address.'
+
+	});
+
+	f.setRegex('email', /@.+\..+/);		// not trying very hard
+
+
+
+	f.setErrorMessages('zip',
+
+	{
+
+		regex: 'Please enter a valid US ZIP Code.'
+
+	});
+
+	f.setRegex('zip', /^[0-9]{5}(?:-[0-9]{4})?$/);
+
+
+
+	f.setFunction('pw', function(form)
+
+	{
+
+		if (form.pw.value != form.pw2.value)
+
+		{
+
+			f.displayMessage(form.pw, 'Your password entries did not match.', 'error');
+
+			f.displayMessage(form.pw2, '', 'error');
+
+			return false;
+
+		}
+
+
+
+		return true;
+
+	});
+
+
+
+	f.postValidateForm = function(form)
+
+	{
+
+		var count = 0;
+
+		Y.each([form.b1, form.b2, form.b3], function(b)
+
+		{
+
+			if (b.checked) count++;
+
+		});
+
+
+
+		if (count &lt; 2)
+
+		{
+
+			f.displayMessage(form.b1, 'Please select at least two checkboxes.', 'warn');
+
+			return false;
+
+		}
+
+
+
+		return true;
+
+	};
+
+});</textarea>
+											</div>
+											<br />
+											<h3>Forum Posts</h3>
+											<div class="forum">
+												<table>
+													<tr>
+														<th>Subject</th>
+														<th>Author</th>
+														<th>Date</th>
+													</tr>
+													<tr class="even">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=10693.html#p10693">Introduction to Form Manager by John Lindal on YUIBlog</a></td>
+														<td><span class="gallery-user">Eric Miraglia</span></td>
+														<td><span title="25 Mar 2010 16:08">03/25/10</span></td>
+													</tr>
+													<tr class="odd">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=11316.html#p11316">override default pre-validation strings</a></td>
+														<td><span class="gallery-user">Roman Stachura</span></td>
+														<td><span title="12 Apr 2010 09:23">04/12/10</span></td>
+													</tr>
+													<tr class="even">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=11322.html#p11322">Re: override default pre-validation strings</a></td>
+														<td><span class="gallery-user">Roman Stachura</span></td>
+														<td><span title="12 Apr 2010 12:54">04/12/10</span></td>
+													</tr>
+													<tr class="odd">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=11364.html#p11364">Add Canadian Postal Code regEx. Comment only.</a></td>
+														<td><span class="gallery-user">Huey Brantley</span></td>
+														<td><span title="13 Apr 2010 16:38">04/13/10</span></td>
+													</tr>
+													<tr class="even">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=22400.html#p22400">Re: Add Canadian Postal Code regEx. Comment only.</a></td>
+														<td><span class="gallery-user">darlenehill19</span></td>
+														<td><span title="08 Feb 2011 10:30">02/8/11</span></td>
+													</tr>
+													<tr class="odd">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=34566.html#p34566">Passing in a config object post construction</a></td>
+														<td><span class="gallery-user">ispyinternet</span></td>
+														<td><span title="31 Aug 2012 12:02">08/31/12</span></td>
+													</tr>
+													<tr class="even">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=34572.html#p34572">Re: Passing in a config object post construction</a></td>
+														<td><span class="gallery-user">John Lindal</span></td>
+														<td><span title="31 Aug 2012 17:42">08/31/12</span></td>
+													</tr>
+													<tr class="odd">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=34609.html#p34609">Re: Passing in a config object post construction</a></td>
+														<td><span class="gallery-user">ispyinternet</span></td>
+														<td><span title="03 Sep 2012 21:46">09/3/12</span></td>
+													</tr>
+													<tr class="even">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=34611.html#p34611">Re: Passing in a config object post construction</a></td>
+														<td><span class="gallery-user">John Lindal</span></td>
+														<td><span title="03 Sep 2012 23:39">09/3/12</span></td>
+													</tr>
+													<tr class="odd">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=34991.html#p34991">displayFormMessage</a></td>
+														<td><span class="gallery-user">ispyinternet</span></td>
+														<td><span title="24 Sep 2012 15:30">09/24/12</span></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

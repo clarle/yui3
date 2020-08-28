@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Using ES6 modules with YUI - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+        
+        
+    
+    
+    
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+        <link rel="stylesheet" href="/combo/css-main-min.css">
+    
+        <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+        <link rel="stylesheet" href="/css/docs-min.css">
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    
+    
+            <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29453705-2']);
+            _gaq.push(['_trackPageview']);
+            </script>
+    
+    
+            <script>
+            var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.18.1/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+            if (location.protocol.indexOf('https') > -1) {
+                YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+                YUI_config.combine = true;
+            }
+            </script>
+    
+            <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+                        method="get" role="search">
+                
+                    <input type="search" class="search-input" name="q"
+                            aria-label="Search APIs"
+                            placeholder="Search APIs">
+                
+                    <input type="hidden" name="vs" value="yuilibrary.com">
+                    <input type="hidden" name="vs" value="yuiblog.com">
+                </form>
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+                <ul class="nav hoverable-group">
+                        <li class="nav-tab hoverable ">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/yui/quick-start/">Quick Start</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/download/yui3/">Download YUI 3</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable  nav-tab-active">
+                            <a href="/yui/docs/">Documentation</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/guides/">User Guides</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/examples/">Examples</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/api/">API Docs</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/environments/">Environments</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable nav-break">
+                            <a href="/community/">Community</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/gallery/">Gallery</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yuiblog.com/">Blog</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/forum/">Forums</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/theater/">YUI Theater</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/projects/">Other Projects</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yui2/">YUI 2</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yuitest/">YUI Test</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/phploader/">YUI PHP Loader</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                        </li>
+                                </ul>
+                        </li>
+                </ul>
+            </nav></div>
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+            <div id="breadcrumbs" class="yui3-u-1">
+                <ul class="breadcrumbs">
+                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/core">Core</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/docs/yui/es6-modules.html">YUI Global Object</a></li>
+                </ul>
+            </div>
+                <div class="project-version yui3-u">Version 3.18.1</div>
+
+
+            
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Using ES6 modules with YUI</h1>
+
+        
+            <a href="#docs-toc" class="jump" tabindex="1">Jump to Table of Contents</a>
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <div class="intro">
+    <p>
+    The new version of JavaScript, known as <b>EcmaScript 6</b> or simply
+    <b>ES6</b>, introduces the notion of modules and new syntax specific for
+    them. This guide explores a combination of tools and conventions that help
+    you author your code using these new primitives on top of the YUI
+    infrastructure.
+    </p>
+</div>
+
+<h2 id="es6-module-syntax">ES6 module syntax</h2>
+
+<p>
+Modules in EcmaScript 6 are based on two main keywords: <code>import</code> and <code>export</code>.
+This contrasts to YUI modules because in ES6 the export side is composed of a
+series of exports instead of additions made to a common object, the <code>Y</code> object.
+Modules also introduce the concept of "default" exports as the main entry point
+to a module.
+</p>
+
+<h3 id="export-declarations">Export declarations</h3>
+
+<p>
+<code>export</code> is followed by one of:
+</p>
+
+<ul>
+    <li>A variable declaration, ie: <code>export var foo = bar</code>.</li>
+    <li>A function declaration, ie: <code>export function foo() {}</code>.</li>
+    <li>A list of named exports wrapped in curly brackets. Each export may be
+    bound with a new name using <code>as</code>. For example: <code>export { foo as bar, baz }</code>.
+    </li>
+</ul>
+
+<p>
+A module without imports would look like this:
+</p>
+
+<pre class="code prettyprint">var initialCount = 2;
+var counter = initialCount;
+
+function count() {
+    return counter++;
+}
+
+export var isCounting = true;
+export { initialCount as startValue };
+export default count;</pre>
+
+
+<h3 id="import-declarations">Import declarations</h3>
+
+<p>
+Importing works in a similar fashion. <code>import</code> must be followed by one of:
+</p>
+
+<ul>
+    <li>A name for the default export of the imported module, ie:
+    <code>import foo from &#x27;my-module&#x27;</code>.</li>
+    <li>A list of named imports wrapped in curly brackets. Each import may be
+    bound with a new name using <code>as</code>. For example:
+    <code>import { foo as bar, baz } from &#x27;my-module&#x27;</code>.</li>
+</ul>
+
+<p>Both types of import declaration can be combined to import the default export
+of a module alongside other named exports by separating them with a comma:</p>
+
+<pre class="code prettyprint">import count from &#x27;counter&#x27;;
+import { startValue as initValue, isCounting } from &#x27;counter&#x27;;
+
+export function countPixels() {
+    if (!isCounting) {
+        throw new Error(&#x27;Counter is not working&#x27;);
+    }
+    return count() + &#x27;px&#x27;;
+};</pre>
+
+
+<h2 id="pros-and-cons-of-using-es6-modules">Pros and cons of using ES6 modules</h2>
+
+<p>
+Authoring code using the ES6 module syntax brings several new advantages and
+disadvantages:
+</p>
+
+<ul>
+    <li>It requires a build step for your project. If you are already using
+    tools to build your project's files, then using ES6 syntax should easily tie
+    into the process you already have to get your application running.</li>
+    <li>It allows you to write your code in one format and transpile it to
+    different module formats including
+    <a href="http://nodejs.org/api/modules.html">CommonJS</a>,
+    <a href="http://know.cujojs.com/tutorials/modules/authoring-amd-modules">
+    AMD</a> and YUI modules.</li>
+    <li>
+    <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">
+    Sourcemaps</a> allow you to debug using the new syntax, so the difference
+    between all the different underlying module systems is hidden by the
+    developer tools.</li>
+    <li>ES6 modules use special syntax for exporting members of the module and
+    other modules have mirror syntax for importing those exports. The collection
+    of exports is then not a mutable object. This allows tools to more easily
+    analyze which exports of a module are actually being used in order to do
+    analytics on the code or to remove unused parts of the application.</li>
+</ul>
+
+<h2 id="using-transpiled-modules-in-a-yui-application">Using transpiled modules in a YUI application</h2>
+
+<p>
+Since YUI 3.15.0 supports loading ES6 modules transpiled to YUI modules that
+look slightly different from traditional YUI modules. Instead of adding
+properties to the <code>Y</code> object, the return value of the module factory
+function is stored as the module exports.
+</p>
+
+<p>
+Here is the result of transpiling one of the previous examples:
+</p>
+
+<pre class="code prettyprint">YUI.add(&quot;pixel-counter&quot;, function(Y, NAME, __imports__, __exports__) {
+    &quot;use strict&quot;;
+    &#x2F;*jslint esnext: true*&#x2F;
+    var count = __imports__[&quot;counter&quot;][&quot;default&quot;];
+
+    var initValue = __imports__[&quot;counter&quot;].startValue;
+    var isCounting = __imports__[&quot;counter&quot;].isCounting;
+
+
+    function countPixels() {
+        if (!isCounting) {
+            throw new Error(&#x27;Counter is not working&#x27;);
+        }
+        return count() + &#x27;px&#x27;;
+    };
+    __exports__.countPixels = countPixels;
+    return __exports__;
+}, &quot;@VERSION@&quot;, {&quot;es&quot;:true,&quot;requires&quot;:[&quot;counter&quot;]});</pre>
+
+
+<p>
+Imports are received inside an object as a parameter of the factory function.
+As a convenience, an object for storing the exports is also created, but the
+actual exports of the module are the ones in the value returned by the factory
+function.
+</p>
+
+<h3 id="using-the-es6-module-transpiler">Using the ES6 module transpiler</h3>
+
+<p>
+The <code>es6-module-transpiler</code> is
+<a href="https://www.npmjs.org/package/es6-module-transpiler">a Node
+application</a> that parses modules written using the ES6 module syntax and
+compiles them to other JavaScript source files using Node's module system, AMD
+modules or YUI modules.
+</p>
+
+<p>
+You can install it with <strong>npm</strong> globally and use it as a command line tool called
+<code>compile-modules</code>
+</p>
+
+<pre class="code prettyprint">$ npm install -g es6-module-transpiler
+$ compile-modules .&#x2F;src-dir --to .&#x2F;build-dir --type=yui</pre>
+
+
+<p>
+Since the ES6 syntax does not have a way to specify the name of the module,
+the transpiler must either receive the name beforehand or infer it from the
+file name. Both options are available from the command line:
+</p>
+
+<pre class="code prettyprint">$ compile-modules .&#x2F;es6-mod.js --to .&#x2F;build-dir --type=yui --module-name=foo
+$ compile-modules .&#x2F;src-dir --to .&#x2F;build-dir --type=yui --infer-name</pre>
+
+
+<h3 id="starting-up-your-application-with-yrequire">Starting up your application with Y.require()</h3>
+
+<p>
+Since these transpiled modules are not traditional YUI modules,
+<code>YUI().use()</code> would not work for loading them into a page. Instead,
+use <a href="/yui/docs/api/classes/YUI.html#method_require"><code>YUI().require()
+</code></a> which has a similar signature but also passes a
+second argument to the callback that contains all the ES6 required modules.
+</p>
+
+<pre class="code prettyprint lang-js">YUI().require(&#x27;pixel-counter&#x27;, function (Y, __imports__) {
+    var countPixels = __imports__[&#x27;pixel-counter&#x27;].countPixels;
+    &#x2F;&#x2F; Use countPixels...
+});</pre>
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+                
+            
+        
+
+        
+            <div id="docs-toc" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Table of Contents</h2>
+                </div>
+
+                <div class="bd">
+                    <ul class="toc">
+<li>
+<a href="#es6-module-syntax">ES6 module syntax</a>
+<ul class="toc">
+<li>
+<a href="#export-declarations">Export declarations</a>
+</li>
+<li>
+<a href="#import-declarations">Import declarations</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#pros-and-cons-of-using-es6-modules">Pros and cons of using ES6 modules</a>
+</li>
+<li>
+<a href="#using-transpiled-modules-in-a-yui-application">Using transpiled modules in a YUI application</a>
+<ul class="toc">
+<li>
+<a href="#using-the-es6-module-transpiler">Using the ES6 module transpiler</a>
+</li>
+<li>
+<a href="#starting-up-your-application-with-yrequire">Starting up your application with Y.require()</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Setting up a YUI Instance">
+                                        <a href="yui-core.html">YUI Core</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Working with multiple YUI instances.">
+                                        <a href="yui-multi.html">Multiple Instances</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="On-demand loading of YUI and non-YUI assets">
+                                        <a href="yui-loader-ext.html">YUI Loader - Dynamically Adding YUI and External Modules</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Create Class Hierarchies with &#x60;extend&#x60;">
+                                        <a href="yui-extend.html">Create Class Hierarchies with &#x60;extend&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Creating a composition-based class structure using &#x60;augment&#x60;">
+                                        <a href="yui-augment.html">Compose Classes of Objects with &#x60;augment&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Add behaviors to objects or static classes with &#x60;mix&#x60;">
+                                        <a href="yui-mix.html">Add Behaviors to Objects with &#x60;mix&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Combine data sets and create shallow copies of objects with &#x60;merge&#x60;">
+                                        <a href="yui-merge.html">Combine Data Sets with &#x60;merge&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Check data types with the &#x60;Lang Utilities&#x60;">
+                                        <a href="yui-isa.html">Check Data Types with &#x60;Lang&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Get information about the current user agent with &#x60;UA&#x60;">
+                                        <a href="yui-ua.html">Browser Detection with &#x60;UA&#x60;</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Working with YUI 2 in 3">
+                                        <a href="yui-yui2.html">Working with YUI 2 in 3</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Natively use YUI Gallery Modules">
+                                        <a href="yui-gallery.html">Natively use YUI Gallery Modules</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Programatically use Loader">
+                                        <a href="loader-resolve.html">Programatically use Loader</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Executing functions in parallel">
+                                        <a href="parallel.html">Using Y.Parallel</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+</body>
+</html>

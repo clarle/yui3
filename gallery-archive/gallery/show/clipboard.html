@@ -1,0 +1,369 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery :: Clipboard Support</title>
+		<link href="https://github.com/rmsguhan" rel="author" title="rmsguhan" />
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/home.png" /> <a href="../index.html">Home</a><li><img src="../../assets/gallery/star.png" /> <a href="../featured.html">Featured</a><li><img src="../../assets/gallery/thumb_up.png" /> <a href="../popular.html">Popular</a><li><img src="../../assets/gallery/greenled.png" /> <a href="../new.html">New</a><li><img src="../../assets/gallery/script_code_red.png" /> <a href="../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../assets/gear.png" /> <a href="../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<div class="warning"> YUI Library is not responsible for bugs or support with this module. It is available as a free service. For support please contact the module owner with the provided links. </div>
+									<div class="gallery-item" id="gallery-item_476">
+										<div class="item-hd">
+											<h2>Clipboard Support (gallery-clipboard) <span class="oncdn" title="This module is available on the CDN.">on cdn</span></h2> Last Updated: <span title="10 Sep 2011 00:53">09/10/11</span><div class="votes"><a class="up" href="#" title="Vote this item up.">+</a> <span>3</span> <a class="down" href="#" title="Vote this item down.">-</a></div>
+										</div>
+										<div class="mod">
+											<div class="yui-gf profile">
+												<div class="yui-u first">
+													<h3><img class="medal" src="../../assets/medal_silver.png" title="CLA Signed" /> <span class="gallery-user">Subramanyan Murali</span></h3>
+													<h4>YUI Contributor</h4>
+													<p><img src="http://www.gravatar.com/avatar/6eca3b2ce429ad43382d19f59cc22e73?s=64&d=http://yuilibrary.com/assets/gravatar-64.png" /> Created: <span title="23 Aug 2011 01:24">08/23/11</span><br /> Last CDN Push: <span title="14 Sep 2011 20:42">09/14/11</span><br /> Build Tag: <a href="../buildtag/clipboard/gallery-2011.09.14-20-40.html">gallery-2011.09.14-20-40</a><br /> Project: <a href="http://yuilibrary.com/projects/yui3">YUI 3</a><br /> License: <a href="http://yuilibrary.com/license/" target="_blank">YUI BSD</a><br /> YUI Version: 3.4.0<br /> Free for use. </div>
+												<div class="yui-u">
+													<div class="desc"><span class="wikipage"><h2 id="toc1">About</h2>
+															<br /> The ClipBoard class is designed to be a node plugin and a wrapper over the flash movie to copy text contents to the OS clipboard. The class will place the flash movie below the given node so that a user action can trigger the copy of contents to the OS clip board using Flash's 'System.setClipboard' method. Starting from flash 10, the clipboard can be set only off a user initiated event. So the JS class shall only set the string to be copied and will allow the flash movie's event to capture the user action and set the clipboard contents. <h2 id="toc2">Note</h2>
+															<br /><em>The swf file will NOT be hosted part of the YUI CDN. Please download the .as file and generate the swf file on your own and place it in your web root or you can download the swf file from <a href="https://github.com/rmsguhan/gallery-clipboard/tree/master/assets">https://github.com/rmsguhan/gallery-clipboard/tree/master/assets</a> and point your scripts to it</em><h2 id="toc3">Known Issues</h2>
+															<br />
+															<ul>
+																<li> For the 'enter' event to work, we need to explicitly set focus on the overlay flash movie. Need to find a better focus mechanism for this </ul>
+															<h2 id="toc4">Future Enhancements</h2>
+															<br />
+															<ul>
+																<li> Use 'on' method to attach events on the flash movie instead of setEvent. Flash movie events need to be prefixed with &quot;clipboard:&quot;, e.g mouseOver event on flash movie should be attachable using node.on(&quot;clipboard:mouseOver&quot;, function() {}); </ul></span></div>
+												</div>
+												<div class="tags">
+													<ul>
+														<li>Tags: <li><a href="../tag/rmsguhan.html" title="Search by this tag: rmsguhan">rmsguhan</a><li><a href="../tag/flash.html" title="Search by this tag: flash">flash</a><li><a href="../tag/javascript.html" title="Search by this tag: javascript">javascript</a><li><a href="../tag/copy.html" title="Search by this tag: copy">copy</a><li><a href="../tag/paste.html" title="Search by this tag: paste">paste</a><li><a href="../tag/clipboard.html" title="Search by this tag: clipboard">clipboard</a></ul>
+												</div>
+											</div>
+										</div>
+										<ul class="gallery-links">
+											<li class="download"><a href="https://github.com/rmsguhan/yui3-gallery/downloads" target="_blank" title="Download">Download</a><li class="docs"><a href="http://rmsguhan.github.com/yui3-gallery/docs/ClipBoard.html" target="_blank" title="Docs">Docs</a><li class="homepage"><a href="https://github.com/rmsguhan/yui3-gallery/" target="_blank" title="Homepage">Homepage</a><li class="bugs"><a href="https://github.com/rmsguhan/yui3-gallery/issues" target="_blank" title="Bugs">Bugs</a><li class="source"><a href="https://github.com/rmsguhan/yui3-gallery/tree/master/src/gallery-clipboard" target="_blank" title="Source">Source</a><li class="example"><a href="http://rmsguhan.github.com/gallery-clipboard/demo/demo_1.html" target="_blank" title="Example">Example</a><li class="forum empty">Forum<li class="history"><a href="../history/clipboard.html" title="History">History</a></ul>
+										<div class="mod"><span class="wikipage"><h2 id="toc0">Setting up the Plugin</h2>
+												<p><pre class="wikicode"><br />
+    <br />
+       node.plug(Y.ClipBoard, {<br />
+            page : Y.one(&quot;.container&quot;),<br />
+            moviepath : &quot;../assets/&quot;<br />
+        }).on(&quot;clipboard:load&quot;, function(e){<br />
+              /* Clipboard ready, your code goes in here */    <br />
+        });</pre><p>
+												<p>In the above code snippet, <em><strong>moviepath</strong></em> is the path to the ClipBoardCopy.swf file on your server. This can be a URL or a relative path. Since swf files are not allowed on the YUI CDN, please download the .as file and generate the swf movie or download the movie from <em><strong>github.com/rmsguhan/gallery-clipboard/tree/master/assets</strong></em></span><h3 id="code">Code Sample</h3>
+											<div class="syntax-highlight" id="yui-syn-1"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">script</span> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;http://yui.yahooapis.com/3.4.0/build/yui/yui-min.js&quot;</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">script</span>&gt;</span></pre><textarea id="yui-syn-1-plain">&lt;script src=&quot;http://yui.yahooapis.com/3.4.0/build/yui/yui-min.js&quot;&gt;&lt;/script&gt;</textarea>
+											</div>
+											<div class="syntax-highlight" id="yui-syn-2"><pre class="javascript" style="font-family:monospace;">    <span style="color: #003366; font-weight: bold;">var</span> MOVIE_PATH <span style="color: #339933;">=</span> <span style="color: #3366CC;">'../../../build/gallery-clipboard/assets/'</span><span style="color: #339933;">;</span>
+    YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2011.09.14-20-40'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-clipboard'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+&nbsp;
+        <span style="color: #003366; font-weight: bold;">var</span> logit <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>str<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            <span style="color: #003366; font-weight: bold;">var</span> log <span style="color: #339933;">=</span> Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;#log&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                m   <span style="color: #339933;">=</span> Y.<span style="color: #660066;">Node</span>.<span style="color: #660066;">create</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;&lt;div&gt;&quot;</span><span style="color: #339933;">+</span>str<span style="color: #339933;">+</span><span style="color: #3366CC;">&quot;&lt;/div&gt;&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            log.<span style="color: #660066;">appendChild</span><span style="color: #009900;">&#40;</span>m<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            log.<span style="color: #660066;">set</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;scrollTop&quot;</span><span style="color: #339933;">,</span> log.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;offsetHeight&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">+</span><span style="color: #CC0000;">10</span><span style="color: #009900;">&#41;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #003366; font-weight: bold;">var</span> node1 <span style="color: #339933;">=</span> Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;.b1&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            node2 <span style="color: #339933;">=</span> Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;.b2&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #009966; font-style: italic;">/* Make sure that the flash interface callback is within a known global name space */</span>
+        window.<span style="color: #660066;">My</span> <span style="color: #339933;">=</span> <span style="color: #009900;">&#123;</span>
+            Global <span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+                foo <span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;bar&quot;</span>
+            <span style="color: #009900;">&#125;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+        Y.<span style="color: #660066;">ClipBoard</span>.<span style="color: #660066;">setCallBackGlobal</span><span style="color: #009900;">&#40;</span> <span style="color: #3366CC;">&quot;My.Global&quot;</span> <span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>            
+&nbsp;
+        <span style="color: #009966; font-style: italic;">/* Set up Copy on Node 1 */</span>
+        node1.<span style="color: #660066;">plug</span><span style="color: #009900;">&#40;</span>Y.<span style="color: #660066;">ClipBoard</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span>
+            page <span style="color: #339933;">:</span> Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;.container&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            moviepath <span style="color: #339933;">:</span> MOVIE_PATH
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;clipboard:load&quot;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>e<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+            logit<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;Flash Movie Loaded for :&quot;</span><span style="color: #339933;">+</span>e.<span style="color: #660066;">currentTarget</span>.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;className&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;mouseover&quot;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>ev<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">setAttribute</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;copy&quot;</span><span style="color: #339933;">,</span> <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;innerHTML&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                logit<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;String set for copy &quot;</span> <span style="color: #339933;">+</span> <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">getAttribute</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;copy&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">clipboard</span>.<span style="color: #660066;">setEvent</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;enter&quot;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>ev<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                logit<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;Clipboard set for : &quot;</span><span style="color: #339933;">+</span><span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;className&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">+</span><span style="color: #3366CC;">&quot;:'&quot;</span><span style="color: #339933;">+</span>ev.<span style="color: #660066;">clipboard</span><span style="color: #339933;">+</span><span style="color: #3366CC;">&quot;'&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">clipboard</span>.<span style="color: #660066;">hide</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        Y.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;clipboard:error&quot;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>e<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            logit<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;ERROR :&quot;</span><span style="color: #339933;">+</span>e.<span style="color: #660066;">error</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009966; font-style: italic;">/* Set up Copy on Node 2 */</span>
+        node2.<span style="color: #660066;">plug</span><span style="color: #009900;">&#40;</span>Y.<span style="color: #660066;">ClipBoard</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span>
+            page <span style="color: #339933;">:</span> Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;.container&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            moviepath <span style="color: #339933;">:</span> MOVIE_PATH
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;clipboard:load&quot;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>e<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#123;</span>
+            logit<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;Flash Movie Loaded for :&quot;</span><span style="color: #339933;">+</span>e.<span style="color: #660066;">currentTarget</span>.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;className&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;mouseover&quot;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>ev<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">setAttribute</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;copy&quot;</span><span style="color: #339933;">,</span> <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;innerHTML&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                logit<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;String set for copy &quot;</span> <span style="color: #339933;">+</span> <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">getAttribute</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;copy&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">clipboard</span>.<span style="color: #660066;">setEvent</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;click&quot;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>ev<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">clipboard</span>.<span style="color: #660066;">hide</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                logit<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;Clipboard set for : &quot;</span><span style="color: #339933;">+</span><span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;className&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">+</span><span style="color: #3366CC;">&quot;:'&quot;</span><span style="color: #339933;">+</span>ev.<span style="color: #660066;">clipboard</span><span style="color: #339933;">+</span><span style="color: #3366CC;">&quot;'&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+            <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #009966; font-style: italic;">/* Set up actions */</span>
+        Y.<span style="color: #660066;">all</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;.control input&quot;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;click&quot;</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>e<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            <span style="color: #003366; font-weight: bold;">var</span> tr <span style="color: #339933;">=</span> e.<span style="color: #660066;">target</span><span style="color: #339933;">,</span>nd<span style="color: #339933;">,</span>cl<span style="color: #339933;">,</span>event<span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">if</span><span style="color: #009900;">&#40;</span>tr.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;type&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">===</span> <span style="color: #3366CC;">&quot;button&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                nd <span style="color: #339933;">=</span> Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;.&quot;</span><span style="color: #339933;">+</span>tr.<span style="color: #660066;">getAttribute</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;node&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                cl <span style="color: #339933;">=</span> tr.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;className&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #000066; font-weight: bold;">if</span><span style="color: #009900;">&#40;</span>cl <span style="color: #339933;">===</span> <span style="color: #3366CC;">&quot;set-text&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                    nd.<span style="color: #660066;">set</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;innerHTML&quot;</span><span style="color: #339933;">,</span> Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;#copy-text&quot;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;value&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">&#125;</span> <span style="color: #000066; font-weight: bold;">else</span> <span style="color: #000066; font-weight: bold;">if</span><span style="color: #009900;">&#40;</span>cl <span style="color: #339933;">===</span> <span style="color: #3366CC;">&quot;clear&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                    Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;#log&quot;</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">set</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;innerHTML&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">&#125;</span> <span style="color: #000066; font-weight: bold;">else</span> <span style="color: #000066; font-weight: bold;">if</span><span style="color: #009900;">&#40;</span>cl.<span style="color: #660066;">indexOf</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;-&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">&lt;</span> <span style="color: #CC0000;">0</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                    nd.<span style="color: #660066;">clipboard</span>.<span style="color: #660066;">setEvent</span><span style="color: #009900;">&#40;</span>cl<span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>ev<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                        logit<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;Flash '&quot;</span><span style="color: #339933;">+</span>ev.<span style="color: #660066;">event</span><span style="color: #339933;">+</span><span style="color: #3366CC;">&quot;' fired for node &quot;</span><span style="color: #339933;">+</span>
+                              Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;#&quot;</span><span style="color: #339933;">+</span>ev.<span style="color: #660066;">transaction</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;className&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">&#125;</span> <span style="color: #000066; font-weight: bold;">else</span> <span style="color: #009900;">&#123;</span>
+                    <span style="color: #009966; font-style: italic;">/* Remove case */</span>
+                    event <span style="color: #339933;">=</span> cl.<span style="color: #660066;">substring</span><span style="color: #009900;">&#40;</span>cl.<span style="color: #660066;">indexOf</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;-&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">+</span><span style="color: #CC0000;">1</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    nd.<span style="color: #660066;">clipboard</span>.<span style="color: #660066;">removeEvent</span><span style="color: #009900;">&#40;</span>event<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    logit<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;Flash '&quot;</span><span style="color: #339933;">+</span>event<span style="color: #339933;">+</span><span style="color: #3366CC;">&quot;' removed for &quot;</span><span style="color: #339933;">+</span>nd.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;className&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">&#125;</span>
+&nbsp;
+            <span style="color: #009900;">&#125;</span>
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-2-plain">    var MOVIE_PATH = '../../../build/gallery-clipboard/assets/';
+
+    YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2011.09.14-20-40'
+}).use('gallery-clipboard', function(Y) {
+
+        
+
+        var logit = function(str) {
+
+            var log = Y.one(&quot;#log&quot;),
+
+                m   = Y.Node.create(&quot;&lt;div&gt;&quot;+str+&quot;&lt;/div&gt;&quot;);
+
+            log.appendChild(m);
+
+            log.set(&quot;scrollTop&quot;, log.get(&quot;offsetHeight&quot;)+10)
+
+        };
+
+        
+
+        var node1 = Y.one(&quot;.b1&quot;),
+
+            node2 = Y.one(&quot;.b2&quot;);
+
+
+
+        /* Make sure that the flash interface callback is within a known global name space */
+
+        window.My = {
+
+            Global : {
+
+                foo : &quot;bar&quot;
+
+            }
+
+        };
+
+        Y.ClipBoard.setCallBackGlobal( &quot;My.Global&quot; );            
+
+
+
+        /* Set up Copy on Node 1 */
+
+        node1.plug(Y.ClipBoard, {
+
+            page : Y.one(&quot;.container&quot;),
+
+            moviepath : MOVIE_PATH
+
+        }).on(&quot;clipboard:load&quot;, function(e){
+
+            logit(&quot;Flash Movie Loaded for :&quot;+e.currentTarget.get(&quot;className&quot;));
+
+            this.on(&quot;mouseover&quot;, function(ev) {
+
+                this.setAttribute(&quot;copy&quot;, this.get(&quot;innerHTML&quot;));
+
+                logit(&quot;String set for copy &quot; + this.getAttribute(&quot;copy&quot;));
+
+            });
+
+            this.clipboard.setEvent(&quot;enter&quot;, function(ev) {
+
+                logit(&quot;Clipboard set for : &quot;+this.get(&quot;className&quot;)+&quot;:'&quot;+ev.clipboard+&quot;'&quot;);
+
+                this.clipboard.hide();
+
+            }, true);
+
+        });
+
+        Y.on(&quot;clipboard:error&quot;, function(e) {
+
+            logit(&quot;ERROR :&quot;+e.error);
+
+        });
+
+        /* Set up Copy on Node 2 */
+
+        node2.plug(Y.ClipBoard, {
+
+            page : Y.one(&quot;.container&quot;),
+
+            moviepath : MOVIE_PATH
+
+        }).on(&quot;clipboard:load&quot;, function(e){
+
+            logit(&quot;Flash Movie Loaded for :&quot;+e.currentTarget.get(&quot;className&quot;));
+
+            this.on(&quot;mouseover&quot;, function(ev) {
+
+                this.setAttribute(&quot;copy&quot;, this.get(&quot;innerHTML&quot;));
+
+                logit(&quot;String set for copy &quot; + this.getAttribute(&quot;copy&quot;));
+
+            });
+
+            this.clipboard.setEvent(&quot;click&quot;, function(ev) {
+
+                this.clipboard.hide();
+
+                logit(&quot;Clipboard set for : &quot;+this.get(&quot;className&quot;)+&quot;:'&quot;+ev.clipboard+&quot;'&quot;);
+
+            }, true);
+
+        });
+
+        
+
+        /* Set up actions */
+
+        Y.all(&quot;.control input&quot;).on(&quot;click&quot;, function(e) {
+
+            var tr = e.target,nd,cl,event;
+
+            if(tr.get(&quot;type&quot;) === &quot;button&quot;) {
+
+                nd = Y.one(&quot;.&quot;+tr.getAttribute(&quot;node&quot;));
+
+                cl = tr.get(&quot;className&quot;);
+
+                if(cl === &quot;set-text&quot;) {
+
+                    nd.set(&quot;innerHTML&quot;, Y.one(&quot;#copy-text&quot;).get(&quot;value&quot;));
+
+                } else if(cl === &quot;clear&quot;) {
+
+                    Y.one(&quot;#log&quot;).set(&quot;innerHTML&quot;, &quot;&quot;);
+
+                } else if(cl.indexOf(&quot;-&quot;) &lt; 0) {
+
+                    nd.clipboard.setEvent(cl, function(ev) {
+
+                        logit(&quot;Flash '&quot;+ev.event+&quot;' fired for node &quot;+
+
+                              Y.one(&quot;#&quot;+ev.transaction).get(&quot;className&quot;));
+
+                    });
+
+                } else {
+
+                    /* Remove case */
+
+                    event = cl.substring(cl.indexOf(&quot;-&quot;)+1);
+
+                    nd.clipboard.removeEvent(event);
+
+                    logit(&quot;Flash '&quot;+event+&quot;' removed for &quot;+nd.get(&quot;className&quot;));
+
+                }
+
+                
+
+            }
+
+        });
+
+    });</textarea>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

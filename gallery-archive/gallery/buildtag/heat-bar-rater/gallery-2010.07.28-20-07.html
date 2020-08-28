@@ -1,0 +1,363 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/home.png" /> <a href="../../index.html">Home</a><li><img src="../../../assets/gallery/star.png" /> <a href="../../featured.html">Featured</a><li><img src="../../../assets/gallery/thumb_up.png" /> <a href="../../popular.html">Popular</a><li><img src="../../../assets/gallery/greenled.png" /> <a href="../../new.html">New</a><li><img src="../../../assets/gallery/script_code_red.png" /> <a href="../../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../../assets/gear.png" /> <a href="../../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Build Tag: <a href="../gallery-2010.07.28-20-07.html">gallery-2010.07.28-20-07</a></h2>
+									<p><a href="../../show/heat-bar-rater.html">Return to Heat Bar Rater</a><div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;"><span style="color: #339933;">&lt;!--</span> <span style="color: #003366; font-weight: bold;">default</span> styling <span style="color: #000066; font-weight: bold;">for</span> <span style="color: #000066; font-weight: bold;">this</span> widget <span style="color: #339933;">--&gt;</span>
+<span style="color: #339933;">&lt;</span>link rel<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;stylesheet&quot;</span> type<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;text/css&quot;</span> 
+href<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;http://github.com/amrishk/yui3-gallery/raw/master/build/gallery-heat-bar-rater/assets/heat-bar-rater-core.css&quot;</span> <span style="color: #339933;">/&gt;</span>
+&nbsp;
+YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2010.07.28-20-07'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-heat-bar-rater'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+             <span style="color: #006600; font-style: italic;">/*
+              * Create a new instance of heat bar rater from #myRatingParam1
+              * Widget would be initialized to 'selected' value i.e 5
+              * Widget will have its 'default' colors and rating legends
+              */</span>
+	      <span style="color: #003366; font-weight: bold;">var</span> myHeatBarRater1 <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">HeatBarRater</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+		                                      srcNode<span style="color: #339933;">:</span> <span style="color: #3366CC;">'#myRatingParam1'</span>
+	      <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	      <span style="color: #006600; font-style: italic;">/*
+	       * render the widget
+	       */</span>
+	      myHeatBarRater1.<span style="color: #660066;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	      <span style="color: #006600; font-style: italic;">/*
+	       * get current rating value
+	       */</span>
+	      Y.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'Current rating myHeatBarRater1: '</span> <span style="color: #339933;">+</span> myHeatBarRater1.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'rating'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// 5</span>
+&nbsp;
+&nbsp;
+	      <span style="color: #006600; font-style: italic;">/*
+               * Create a new instance of heat bar rater from #myRatingParam2
+               * Widget would be initialized to 'selected' value i.e 0
+               * Give widget its 'custom' colors and rating legends
+               */</span>
+	      <span style="color: #003366; font-weight: bold;">var</span> myHeatBarRater2 <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Y.<span style="color: #660066;">HeatBarRater</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+		                           srcNode<span style="color: #339933;">:</span> <span style="color: #3366CC;">'#myRatingParam2'</span>
+		                           <span style="color: #339933;">,</span> valueMap<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+					           <span style="color: #CC0000;">1</span><span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>color<span style="color: #339933;">:</span> <span style="color: #3366CC;">'0e0'</span><span style="color: #339933;">,</span> legend<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Awful'</span><span style="color: #009900;">&#125;</span>
+					        <span style="color: #339933;">,</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>color<span style="color: #339933;">:</span> <span style="color: #3366CC;">'0c0'</span><span style="color: #339933;">,</span> legend<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Poor'</span><span style="color: #009900;">&#125;</span>
+					       <span style="color: #339933;">,</span> <span style="color: #CC0000;">15</span><span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>color<span style="color: #339933;">:</span> <span style="color: #3366CC;">'0a0'</span><span style="color: #339933;">,</span> legend<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Average'</span><span style="color: #009900;">&#125;</span>
+					      <span style="color: #339933;">,</span> <span style="color: #CC0000;">50</span><span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>color<span style="color: #339933;">:</span> <span style="color: #3366CC;">'080'</span><span style="color: #339933;">,</span> legend<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Good'</span><span style="color: #009900;">&#125;</span>
+					   <span style="color: #339933;">,</span> <span style="color: #CC0000;">500</span><span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>color<span style="color: #339933;">:</span> <span style="color: #3366CC;">'060'</span><span style="color: #339933;">,</span> legend<span style="color: #339933;">:</span> <span style="color: #3366CC;">'Excellent'</span><span style="color: #009900;">&#125;</span>						
+					 <span style="color: #009900;">&#125;</span>
+	                           <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	      myHeatBarRater2.<span style="color: #660066;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	      <span style="color: #006600; font-style: italic;">/*
+	       * listen to ratingChange events
+	       */</span>
+	      myHeatBarRater1.<span style="color: #660066;">after</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'ratingChange'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>e<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+		        Y.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'myHeatBarRater1 rating value: '</span> <span style="color: #339933;">+</span> e.<span style="color: #660066;">newVal</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	      <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	      <span style="color: #006600; font-style: italic;">/*
+	       * listen to ratingChange events through YUI instance
+	       */</span>
+	      Y.<span style="color: #660066;">after</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'heatbarrater:ratingChange'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>e<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+		        Y.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'ratingChange subscribed to YUI instance: '</span> <span style="color: #339933;">+</span> e.<span style="color: #660066;">newVal</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	      <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">&lt;!-- default styling for this widget --&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; 
+
+href=&quot;http://github.com/amrishk/yui3-gallery/raw/master/build/gallery-heat-bar-rater/assets/heat-bar-rater-core.css&quot; /&gt;
+
+
+
+YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2010.07.28-20-07'
+}).use('gallery-heat-bar-rater', function(Y) {
+
+             /*
+
+              * Create a new instance of heat bar rater from #myRatingParam1
+
+              * Widget would be initialized to 'selected' value i.e 5
+
+              * Widget will have its 'default' colors and rating legends
+
+              */
+
+	      var myHeatBarRater1 = new Y.HeatBarRater({
+
+		                                      srcNode: '#myRatingParam1'
+
+	      });
+
+
+
+	      /*
+
+	       * render the widget
+
+	       */
+
+	      myHeatBarRater1.render();
+
+	
+
+	      /*
+
+	       * get current rating value
+
+	       */
+
+	      Y.log('Current rating myHeatBarRater1: ' + myHeatBarRater1.get('rating')); // 5
+
+	
+
+	
+
+	      /*
+
+               * Create a new instance of heat bar rater from #myRatingParam2
+
+               * Widget would be initialized to 'selected' value i.e 0
+
+               * Give widget its 'custom' colors and rating legends
+
+               */
+
+	      var myHeatBarRater2 = new Y.HeatBarRater({
+
+		                           srcNode: '#myRatingParam2'
+
+		                           , valueMap: {
+
+					           1: {color: '0e0', legend: 'Awful'}
+
+					        , 5: {color: '0c0', legend: 'Poor'}
+
+					       , 15: {color: '0a0', legend: 'Average'}
+
+					      , 50: {color: '080', legend: 'Good'}
+
+					   , 500: {color: '060', legend: 'Excellent'}						
+
+					 }
+
+	                           });
+
+	      myHeatBarRater2.render();
+
+	      
+
+	      /*
+
+	       * listen to ratingChange events
+
+	       */
+
+	      myHeatBarRater1.after('ratingChange', function(e) {
+
+		        Y.log('myHeatBarRater1 rating value: ' + e.newVal);
+
+	      });
+
+	
+
+	      /*
+
+	       * listen to ratingChange events through YUI instance
+
+	       */
+
+	      Y.after('heatbarrater:ratingChange', function(e) {
+
+		        Y.log('ratingChange subscribed to YUI instance: ' + e.newVal);
+
+	      });
+
+
+
+});</textarea>
+									</div>
+									<div id="build_info">
+										<h3 id="build_output">Build Output</h3><pre class="cmd" id="build_output_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-heat-bar-rater
+     [echo] Ant Properties
+     [echo]     Home : /home/y/libexec/ant
+     [echo]     Ant Version : Apache Ant version 1.7.1 compiled on June 27 2008
+     [echo]     Build File : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build.xml
+     [echo] Local Build Properties
+     [echo]     version : 3
+     [echo]     srcdir : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery
+     [echo]     builddir : ../../../builder/componentbuild
+     [echo]     component : gallery-heat-bar-rater
+     [echo]     component.basefilename : gallery-heat-bar-rater
+     [echo]     component.basedir : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater
+     [echo]     component.builddir : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp
+     [echo] Global Build Properties
+     [echo]     global.build.base : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build
+     [echo]     global.build.component : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-heat-bar-rater
+     [echo]     global.build.component.assets : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-heat-bar-rater/assets
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp
+
+-concatdebug:
+     [echo] Concatenating
+     [echo]     Source Files : heat-bar-rater.js
+     [echo]     In Source Dir : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/js
+     [echo]     To : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater-debug.js
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/ant
+
+-registerdebug:
+     [echo] Wrapping /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater-debug.js in YUI.add module
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp
+
+-loggerregex:
+     [echo] Replacing Logger Statements in /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater.js
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+minify:
+     [echo] Running yuicompressor on /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater.js
+     [java] 
+     [java] [WARNING] Found an undeclared symbol: YUI
+     [java]  ---> YUI <--- .add("gallery-heat-bar-rater",function(Y){
+
+lint:
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater-debug.js
+     [java] - OK
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater-min.js
+     [java] - OK
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 3 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-heat-bar-rater
+     [copy] Copying /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater-min.js to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-heat-bar-rater/gallery-heat-bar-rater-min.js
+     [copy] Copying /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater.js to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-heat-bar-rater/gallery-heat-bar-rater.js
+     [copy] Copying /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/build_tmp/gallery-heat-bar-rater-debug.js to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-heat-bar-rater/gallery-heat-bar-rater-debug.js
+
+deployassets:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-heat-bar-rater/assets
+     [copy] Copying /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-heat-bar-rater/assets/heat-bar-rater-core.css to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-heat-bar-rater/assets/heat-bar-rater-core.css
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

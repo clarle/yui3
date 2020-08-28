@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Two-Pane Calendar with Custom Rendering and Multiple Selection - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/calendar/calendar-multipane.html">
+    <meta name="twitter:title" content="Example: Two-Pane Calendar with Custom Rendering and Multiple Selection">
+    <meta name="twitter:description" content="How to create a multi-pane calendar with custom-rendered cells and multiple date selection.">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/quick-start/">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="/yui/docs/">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/widgets/">Widgets</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/calendar/">Calendar</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/calendar/calendar-multipane.html">Example: Two-Pane Calendar with Custom Rendering and Multiple Selection</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Example: Two-Pane Calendar with Custom Rendering and Multiple Selection</h1>
+
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <style>
+.example {
+	font-size:15px;
+}
+
+.example h4 {
+	border: none;
+	text-transform: none;
+}
+
+.example th {
+	background: none;
+	color: #000;
+	text-transform: none;
+	border: none;
+}
+
+</style>
+
+<div class="intro">
+<p>
+This example demonstrates how to instantiate a Calendar, switch its template to a double-pane, and create custom renderers for its header and certain cells (based on rules), as well as turn on multiple date selection and disable certain dates from being selected.
+</p>
+<p><strong>The <code>selectionMode</code> in this example is set to <code>multiple</code></strong>, which allows additional dates to be selected if a <strong>Shift</strong> or <strong>Ctrl/Meta</strong> key is held down. This selection mode does not allow multiple selection on touchscreen devices; for such devices, use the <code>multiple-sticky</code> selection mode instead.
+</p>
+
+<p>
+<strong>There are two custom filtering rules provided in the example code.</strong> One matches all Saturdays and Sundays (weekends in the United States), and the other matches Tuesdays and Fridays. The first rule is used in conjunction with a custom renderer to set the corresponding date cell text color to red. The second rule is used to disable matching dates from selection and interaction.
+</p>
+</div>
+
+<div class="example yui3-skin-sam">
+    <style>
+.yui3-skin-sam .redtext {
+  color:#ff0000;
+}
+</style>
+<div id="demo" class="yui3-skin-sam"> <!-- You need this skin class -->
+  <div id="mycalendar"></div>
+</div>
+<script type="text/javascript">
+YUI().use('calendar', 'datatype-date', 'datatype-date-math', function(Y) {
+
+
+ // Switch the calendar main template to the included two pane template
+ Y.CalendarBase.CONTENT_TEMPLATE = Y.CalendarBase.TWO_PANE_TEMPLATE;
+
+ // Create a new instance of calendar, setting the showing of previous
+ // and next month's dates to true, and the selection mode to multiple
+ // selected dates. Additionally, set the disabledDatesRule to a name of
+ // the rule which, when matched, will force the date to be excluded
+ // from being selected. Also configure the initial date on the calendar
+ // to be July of 2011.
+ var calendar = new Y.Calendar({
+   contentBox: "#mycalendar",
+   width: "700px",
+   showPrevMonth: true,
+   showNextMonth: true,
+   selectionMode: 'multiple',
+   disabledDatesRule: "tuesdays_and_fridays",
+   date: new Date(2011, 6, 1)
+ }).render();
+
+// Create a set of rules to match specific dates. In this case,
+// the "tuesdays_and_fridays" rule will match any Tuesday or Friday,
+// whereas the "all_weekends" rule will match any Saturday or Sunday.
+ var rules = {
+   "all": {
+     "all": {
+       "all": {
+         "2,5": "tuesdays_and_fridays",
+         "0,6": "all_weekends"
+       }
+     }
+   }
+ };
+
+// Set the calendar customRenderer, provides the rules defined above,
+// as well as a filter function. The filter function receives a reference
+// to the node corresponding to the DOM element of the date that matched
+// one or more rule, along with the list of rules. Check if one of the
+// rules is "all_weekends", and if so, apply a custom CSS class to the
+// node.
+ calendar.set("customRenderer", {
+   rules: rules,
+   filterFunction: function (date, node, rules) {
+     if (Y.Array.indexOf(rules, 'all_weekends') >= 0) {
+       node.addClass("redtext");
+     }
+   }
+ });
+
+// Set a custom header renderer with a callback function,
+// which receives the current date and outputs a string.
+// use the Y.Datatype.Date format to format the date, and
+// the Datatype.Date math to add one month to the current
+// date, so both months can appear in the header (since 
+// this is a two-pane calendar).
+ calendar.set("headerRenderer", function (curDate) {
+   var ydate = Y.DataType.Date,
+       output = ydate.format(curDate, {
+       format: "%B %Y"
+     }) + " &mdash; " + ydate.format(ydate.addMonths(curDate, 1), {
+       format: "%B %Y"
+     });
+   return output;
+ }); 
+
+// When selection changes, output the fired event to the
+// console. the newSelection attribute in the event facade
+// will contain the list of currently selected dates (or be
+// empty if all dates have been deselected).
+ calendar.on("selectionChange", function (ev) {
+   Y.log(ev);
+ });
+ 
+ });
+
+</script>
+
+</div>
+
+<h2>Complete Example Source</h2>
+<p>
+<strong>Note:</strong> be sure to add the <code>yui3-skin-sam</code> classname to the
+page's <code>&lt;body&gt;</code> element or to a parent element of the widget in order to apply
+the default CSS skin. See <a href="http://yuilibrary.com/yui/docs/tutorials/skins/">Understanding Skinning</a>.
+</p>
+<pre class="code prettyprint">&lt;style&gt;
+.yui3-skin-sam .redtext {
+  color:#ff0000;
+}
+&lt;&#x2F;style&gt;
+&lt;div id=&quot;demo&quot; class=&quot;yui3-skin-sam&quot;&gt; &lt;!-- You need this skin class --&gt;
+  &lt;div id=&quot;mycalendar&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+&lt;script type=&quot;text&#x2F;javascript&quot;&gt;
+YUI().use(&#x27;calendar&#x27;, &#x27;datatype-date&#x27;, &#x27;datatype-date-math&#x27;, function(Y) {
+
+
+ &#x2F;&#x2F; Switch the calendar main template to the included two pane template
+ Y.CalendarBase.CONTENT_TEMPLATE = Y.CalendarBase.TWO_PANE_TEMPLATE;
+
+ &#x2F;&#x2F; Create a new instance of calendar, setting the showing of previous
+ &#x2F;&#x2F; and next month&#x27;s dates to true, and the selection mode to multiple
+ &#x2F;&#x2F; selected dates. Additionally, set the disabledDatesRule to a name of
+ &#x2F;&#x2F; the rule which, when matched, will force the date to be excluded
+ &#x2F;&#x2F; from being selected. Also configure the initial date on the calendar
+ &#x2F;&#x2F; to be July of 2011.
+ var calendar = new Y.Calendar({
+   contentBox: &quot;#mycalendar&quot;,
+   width: &quot;700px&quot;,
+   showPrevMonth: true,
+   showNextMonth: true,
+   selectionMode: &#x27;multiple&#x27;,
+   disabledDatesRule: &quot;tuesdays_and_fridays&quot;,
+   date: new Date(2011, 6, 1)
+ }).render();
+
+&#x2F;&#x2F; Create a set of rules to match specific dates. In this case,
+&#x2F;&#x2F; the &quot;tuesdays_and_fridays&quot; rule will match any Tuesday or Friday,
+&#x2F;&#x2F; whereas the &quot;all_weekends&quot; rule will match any Saturday or Sunday.
+ var rules = {
+   &quot;all&quot;: {
+     &quot;all&quot;: {
+       &quot;all&quot;: {
+         &quot;2,5&quot;: &quot;tuesdays_and_fridays&quot;,
+         &quot;0,6&quot;: &quot;all_weekends&quot;
+       }
+     }
+   }
+ };
+
+&#x2F;&#x2F; Set the calendar customRenderer, provides the rules defined above,
+&#x2F;&#x2F; as well as a filter function. The filter function receives a reference
+&#x2F;&#x2F; to the node corresponding to the DOM element of the date that matched
+&#x2F;&#x2F; one or more rule, along with the list of rules. Check if one of the
+&#x2F;&#x2F; rules is &quot;all_weekends&quot;, and if so, apply a custom CSS class to the
+&#x2F;&#x2F; node.
+ calendar.set(&quot;customRenderer&quot;, {
+   rules: rules,
+   filterFunction: function (date, node, rules) {
+     if (Y.Array.indexOf(rules, &#x27;all_weekends&#x27;) &gt;= 0) {
+       node.addClass(&quot;redtext&quot;);
+     }
+   }
+ });
+
+&#x2F;&#x2F; Set a custom header renderer with a callback function,
+&#x2F;&#x2F; which receives the current date and outputs a string.
+&#x2F;&#x2F; use the Y.Datatype.Date format to format the date, and
+&#x2F;&#x2F; the Datatype.Date math to add one month to the current
+&#x2F;&#x2F; date, so both months can appear in the header (since 
+&#x2F;&#x2F; this is a two-pane calendar).
+ calendar.set(&quot;headerRenderer&quot;, function (curDate) {
+   var ydate = Y.DataType.Date,
+       output = ydate.format(curDate, {
+       format: &quot;%B %Y&quot;
+     }) + &quot; &amp;mdash; &quot; + ydate.format(ydate.addMonths(curDate, 1), {
+       format: &quot;%B %Y&quot;
+     });
+   return output;
+ }); 
+
+&#x2F;&#x2F; When selection changes, output the fired event to the
+&#x2F;&#x2F; console. the newSelection attribute in the event facade
+&#x2F;&#x2F; will contain the list of currently selected dates (or be
+&#x2F;&#x2F; empty if all dates have been deselected).
+ calendar.on(&quot;selectionChange&quot;, function (ev) {
+   Y.log(ev);
+ });
+ 
+ });
+
+&lt;&#x2F;script&gt;</pre>
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+        
+
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="How to create a single-pane calendar with selectable dates">
+                                        <a href="calendar-simple.html">Simple Calendar with Selection</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="How to create a multi-pane calendar with custom-rendered cells and multiple date selection.">
+                                        <a href="calendar-multipane.html">Two-Pane Calendar with Custom Rendering and Multiple Selection</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

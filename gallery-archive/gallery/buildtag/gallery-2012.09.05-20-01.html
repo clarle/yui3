@@ -1,0 +1,2196 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/home.png" /> <a href="../index.html">Home</a><li><img src="../../assets/gallery/star.png" /> <a href="../featured.html">Featured</a><li><img src="../../assets/gallery/thumb_up.png" /> <a href="../popular.html">Popular</a><li><img src="../../assets/gallery/greenled.png" /> <a href="../new.html">New</a><li><img src="../../assets/gallery/script_code_red.png" /> <a href="../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../assets/gear.png" /> <a href="../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Showing Buildtag: gallery-2012.09.05-20-01</h2>
+									<h3>Module Loading</h3>
+									<div id="module_loading">
+										<div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+	gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2012.09.05-20-01'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-bottle'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'gallery-contextmenu-view'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'gallery-datatable-formatters'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'gallery-datatable-paginator'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'gallery-datatable-selection'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'gallery-formmgr'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'gallery-google-maps-loader'</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'gallery-md-model'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+&nbsp;
+ <span style="color: #006600; font-style: italic;">//Your Code Here</span>
+&nbsp;
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI({
+	gallery: 'gallery-2012.09.05-20-01'
+}).use('gallery-bottle', 'gallery-contextmenu-view', 'gallery-datatable-formatters', 'gallery-datatable-paginator', 'gallery-datatable-selection', 'gallery-formmgr', 'gallery-google-maps-loader', 'gallery-md-model', function(Y) {
+
+ //Your Code Here
+
+});</textarea>
+										</div>
+									</div>
+									<div id="build_info">
+										<h2>Modules in this build</h2>
+										<h3 id="build_645"><a href="bottle/gallery-2012.09.05-20-01.html">Bottle - Mobile UI Library</a></h3><pre class="cmd" id="build_645_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+
+all:
+     [echo] Starting Build For gallery-bottle
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bottle
+
+-lint-server:
+     [echo] Starting Build For gallery-bottle
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bottle.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bottle.js
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol unused is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] .each(function(srcNode){var  ---&gt; unused &lt;--- =new cls({srcNode:srcNode,render
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bottle-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bottle.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bottle
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-carousel
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-carousel
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-carousel
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-carousel.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-carousel.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-carousel-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-carousel.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-carousel
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-container
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-container
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-container
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-container.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-container.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-container-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-container.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-container
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-css
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-css
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-css
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+buildcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+build:
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-css.css
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-css-min.css
+
+lint:
+
+local:
+
+deploybuild:
+     [copy] Copying 2 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-css
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-device
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-device
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-device
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-device.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-device.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-device-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-device.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-device
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-overlay
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-overlay
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-overlay
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-overlay.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-overlay.js
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol pageDir is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] ,selfDir=show?0:1, ---&gt; pageDir &lt;--- =show?-1:0,posData=
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol F is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] ,setter:function(V){var  ---&gt; F &lt;--- ,B=this.get(&quot;contentBox&quot;),
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol B is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] :function(V){var F, ---&gt; B &lt;--- =this.get(&quot;contentBox&quot;),fwh=
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol fwh is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] B=this.get(&quot;contentBox&quot;), ---&gt; fwh &lt;--- =POSITIONS[V][1];if
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-overlay-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-overlay.js
+     [java]  
+     [java] 
+     [java] 	63, 18: Unexpected dangling '_' in '_bscEventHandlers'.
+     [java] 	this._bscEventHandlers = new Y.EventHandle([
+     [java] 
+     [java] 	64, 47: Unexpected dangling '_' in '_updatePositionShow'.
+     [java] 	this.after(WIDTH_CHANGE, this._updatePositionShow),
+     [java] 
+     [java] 	65, 48: Unexpected dangling '_' in '_updatePositionShow'.
+     [java] 	this.after(HEIGHT_CHANGE, this._updatePositionShow),
+     [java] 
+     [java] 	66, 49: Unexpected dangling '_' in '_doShowHide'.
+     [java] 	this.after(VISIBLE_CHANGE, this._doShowHide)
+     [java] 
+     [java] 	74, 18: Unexpected dangling '_' in '_bscEventHandlers'.
+     [java] 	this._bscEventHandlers.detach();
+     [java] 
+     [java] 	75, 25: Unexpected dangling '_' in '_bscEventHandlers'.
+     [java] 	delete this._bscEventHandlers;
+     [java] 
+     [java] 	112, 18: Unexpected dangling '_' in '_updateFullSize'.
+     [java] 	this._updateFullSize();
+     [java] 
+     [java] 	113, 18: Unexpected dangling '_' in '_updatePositionShow'.
+     [java] 	this._updatePositionShow();
+     [java] 
+     [java] 	122, 9: Unexpected dangling '_' in '_updateFullSize'.
+     [java] 	_updateFullSize: function () {
+     [java] 
+     [java] 	135, 9: Unexpected dangling '_' in '_updatePositionShow'.
+     [java] 	_updatePositionShow: function (E) {
+     [java] 
+     [java] 	161, 9: Unexpected dangling '_' in '_updatePositionHide'.
+     [java] 	_updatePositionHide: function (E) {
+     [java] 
+     [java] 	177, 9: Unexpected dangling '_' in '_displayMask'.
+     [java] 	_displayMask: function (show) {
+     [java] 
+     [java] 	191, 9: Unexpected dangling '_' in '_doTransition'.
+     [java] 	_doTransition: function (node, left, top, done) {
+     [java] 
+     [java] 	212, 9: Unexpected dangling '_' in '_doneShowHide'.
+     [java] 	_doneShowHide: function () {
+     [java] 
+     [java] 	217, 22: Unexpected dangling '_' in '_displayMask'.
+     [java] 	this._displayMask(show);
+     [java] 
+     [java] 	235, 9: Unexpected dangling '_' in '_doShowHide'.
+     [java] 	_doShowHide: function (E) {
+     [java] 
+     [java] 	247, 22: Unexpected dangling '_' in '_updateFullSize'.
+     [java] 	this._updateFullSize();
+     [java] 
+     [java] 	248, 22: Unexpected dangling '_' in '_updatePositionHide'.
+     [java] 	this._updatePositionHide({visible: false});
+     [java] 
+     [java] 	251, 22: Unexpected dangling '_' in '_updatePositionShow'.
+     [java] 	this._updatePositionShow({visible: true});
+     [java] 
+     [java] 	253, 26: Unexpected dangling '_' in '_displayMask'.
+     [java] 	this._displayMask(false);
+     [java] 
+     [java] 	261, 22: Unexpected dangling '_' in '_doTransition'.
+     [java] 	this._doTransition(node, posData[4] * pageNode.get('offsetWidth') + (selfDir * posData[1] - posData[4]) * this.get('width'), posData[5] * pageNode.get('offsetHeight') + (selfDir * posData[2] - posData[5]) * this.get('height'), this._doneShowHide);
+     [java] 
+     [java] 	261, 249: Unexpected dangling '_' in '_doneShowHide'.
+     [java] 	this._doTransition(node, posData[4] * pageNode.get('offsetWidth') + (selfDir * posData[1] - posData[4]) * this.get('width'), posData[5] * pageNode.get('offsetHeight') + (selfDir * posData[2] - posData[5]) * this.get('height'), this._doneShowHide);
+     [java] 
+     [java] 	281, 32: Expected a 'break' statement before 'default'.
+     [java] 	case 'left':
+     [java] 
+     [java] 	288, 22: Unexpected dangling '_' in '_doTransition'.
+     [java] 	this._doTransition(node, nodeX, nodeY, this._doneShowHide);
+     [java] 
+     [java] 	288, 61: Unexpected dangling '_' in '_doneShowHide'.
+     [java] 	this._doTransition(node, nodeX, nodeY, this._doneShowHide);
+     [java] 
+     [java] 	328, 26: Unexpected dangling '_' in '_updatePositionShow'.
+     [java] 	this._updatePositionShow({showFrom: V});
+     [java] 
+     [java] 	346, 30: Unexpected dangling '_' in '_displayMask'.
+     [java] 	this._displayMask(V);
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-overlay
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-page
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-page
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-page
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-page.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-page.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-page-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-page.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-page
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-photogrid
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-photogrid
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-photogrid
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-photogrid.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-photogrid.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-photogrid-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-photogrid.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-photogrid
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-pushpop
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-pushpop
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-pushpop
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-pushpop.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-pushpop.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-pushpop-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-pushpop.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-pushpop
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-shortcut
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-shortcut
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-shortcut
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-shortcut.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-shortcut.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-shortcut-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-shortcut.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-shortcut
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-slidetab
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-slidetab
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-slidetab
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-slidetab.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-slidetab.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-slidetab-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-slidetab.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-slidetab
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+     [echo] Starting Build For gallery-bt-syncscroll
+
+clean:
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [echo] Starting Build For gallery-bt-syncscroll
+
+-lint-server:
+     [echo] Starting Build For gallery-bt-syncscroll
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-syncscroll.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-syncscroll.js
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-syncscroll-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-bottle/build_tmp/gallery-bt-syncscroll.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-bt-syncscroll
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 26 seconds</pre><h3 id="build_667"><a href="contextmenu-view/gallery-2012.09.05-20-01.html">ContextMenu View</a></h3><pre class="cmd" id="build_667_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-contextmenu-view
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp
+     [echo] Starting Build For gallery-contextmenu-view
+
+-lint-server:
+     [echo] Starting Build For gallery-contextmenu-view
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+     [copy] Copying 2 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/ant
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/assets/skins/sam/gallery-contextmenu-view.css
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/assets/skins/sam/gallery-contextmenu-view.css
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/gallery-contextmenu-view.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/gallery-contextmenu-view.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] false;}cont.empty(); ---&gt; var  &lt;--- overlay=new Y.Overlay({srcNode:
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] :99,constrain:true}); ---&gt; var  &lt;--- bodyHTML=&quot;&quot;;Y.Array.each(
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/gallery-contextmenu-view-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-contextmenu-view/build_tmp/gallery-contextmenu-view.js
+     [java]  
+     [java] 
+     [java] 	62, 44: ['node'] is better written in dot notation.
+     [java] 	var triggerC = this.get('trigger')['node'],
+     [java] 
+     [java] 	63, 44: ['target'] is better written in dot notation.
+     [java] 	triggerT = this.get('trigger')['target'];
+     [java] 
+     [java] 	93, 13: Expected '{' and instead saw 'this'.
+     [java] 	this.get('overlay').destroy();
+     [java] 
+     [java] 	114, 34: Expected '{' and instead saw 'return'.
+     [java] 	if(!this.get('overlay')) return;
+     [java] 
+     [java] 	132, 19: Expected '{' and instead saw 'return'.
+     [java] 	if(!cont) return false;
+     [java] 
+     [java] 	198, 13: Expected '{' and instead saw 'this'.
+     [java] 	this.set('selectedMenu', {
+     [java] 
+     [java] 	215, 33: Expected '{' and instead saw 'sel'.
+     [java] 	if ( sel &amp;&amp; sel.empty ) sel.empty();    // works on chrome
+     [java] 
+     [java] 	216, 43: Expected '{' and instead saw 'sel'.
+     [java] 	if ( sel &amp;&amp; sel.removeAllRanges ) sel.removeAllRanges();    // works on FireFox
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-contextmenu-view
+
+deployassets:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-contextmenu-view/assets
+
+deployskins:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-contextmenu-view/assets/skins/sam
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-contextmenu-view/assets/skins/sam
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds</pre><h3 id="build_666"><a href="datatable-formatters/gallery-2012.09.05-20-01.html">DataTable Formatters</a></h3><pre class="cmd" id="build_666_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-datatable-formatters
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+     [echo] Starting Build For gallery-datatable-formatters
+
+-lint-server:
+     [echo] Starting Build For gallery-datatable-formatters
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/gallery-datatable-formatters.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/gallery-datatable-formatters.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .bind,YObject=Y.Object; ---&gt; var  &lt;--- data=model.toJSON(),clientId=
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol isArray is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] ){var Lang=Y.Lang, ---&gt; isArray &lt;--- =Lang.isArray,isNumber=Lang.isNumber
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol isNumber is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] .Lang,isArray=Lang.isArray, ---&gt; isNumber &lt;--- =Lang.isNumber,isString=Lang.isString
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol isString is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] .isArray,isNumber=Lang.isNumber, ---&gt; isString &lt;--- =Lang.isString,fromTemplate=Lang.sub
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol toArray is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] ,htmlEscape=Y.Escape.html, ---&gt; toArray &lt;--- =Y.Array,bind=Y.bind
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol bind is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] .html,toArray=Y.Array, ---&gt; bind &lt;--- =Y.bind,YObject=Y.Object
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol YObject is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] .Array,bind=Y.bind, ---&gt; YObject &lt;--- =Y.Object;var data=model.
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/gallery-datatable-formatters-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-formatters/build_tmp/gallery-datatable-formatters.js
+     [java]  
+     [java] 
+     [java] 	18, 4: Mixed spaces and tabs.
+     [java] 	columns: [
+     [java] 
+     [java] 	19, 8: Mixed spaces and tabs.
+     [java] 	{ key:&quot;start_date&quot;, label:&quot;Start&quot;, formatter:&quot;fullDate&quot; },
+     [java] 
+     [java] 	20, 12: Mixed spaces and tabs.
+     [java] 	{ key:&quot;end_date&quot;, label:&quot;End&quot;, formatter:&quot;default&quot;,
+     [java] 
+     [java] 	22, 4: Mixed spaces and tabs.
+     [java] 	{ key:&quot;qty&quot;, label:&quot;Inventory Qty&quot;, formatter:&quot;comma&quot; },
+     [java] 
+     [java] 	23, 8: Mixed spaces and tabs.
+     [java] 	{ key:&quot;cost&quot;, label:&quot;Carried Cost&quot;, formatter:&quot;currency&quot;,
+     [java] 
+     [java] 	25, 4: Mixed spaces and tabs.
+     [java] 	]
+     [java] 
+     [java] 	124, 12: Expected '{' and instead saw 'value'.
+     [java] 	value = Y.DataType.Date.format(o.value,fmtConf);
+     [java] 
+     [java] 	126, 12: Expected '{' and instead saw 'value'.
+     [java] 	value = Y.DataType.Number.format(o.value,fmtConf);
+     [java] 
+     [java] 	193, 25: Expected '{' and instead saw 'value'.
+     [java] 	value = Y.DataTable.Formatters.namedFormatter.call(host,col.formatter,formatterData);
+     [java] 
+     [java] 	196, 25: Expected '{' and instead saw 'value'.
+     [java] 	value = fromTemplate(&quot;{&quot; + value + &quot;}&quot;, col.formatConfig );
+     [java] 
+     [java] 	199, 25: Expected '{' and instead saw 'value'.
+     [java] 	value = fromTemplate(col.formatter, formatterData);
+     [java] 
+     [java] 	225, 2: Missing semicolon.
+     [java] 	}
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-datatable-formatters
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds</pre><h3 id="build_647"><a href="datatable-paginator/gallery-2012.09.05-20-01.html">DataTable Paginator</a></h3><pre class="cmd" id="build_647_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-datatable-paginator
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp
+     [echo] Starting Build For gallery-datatable-paginator
+
+-lint-server:
+     [echo] Starting Build For gallery-datatable-paginator
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp/gallery-datatable-paginator.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp/gallery-datatable-paginator.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] rpp=pagm.get(&quot;itemsPerPage&quot;); ---&gt; var  &lt;--- istart,iend,nitem;if(pag_state)
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] if(this._pagDataSrc!==&quot;local&quot;){ ---&gt; var  &lt;--- url_obj={},prop_istart=this._srvPagMapObj
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] (this._pagDataSrc){case&quot;ds&quot;: ---&gt; var  &lt;--- rqst_str=this.get(&quot;requestStringTemplate&quot;)||&quot;&quot;
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] load(url_obj);break;default: ---&gt; var  &lt;--- data_new=rdata.slice(istart,iend)
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol prop_nitems is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] prop_istart=this._srvPagMapObj(&quot;itemIndexStart&quot;), ---&gt; prop_nitems &lt;--- =this._srvPagMapObj(&quot;totalItems&quot;),prop_ipp=
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp/gallery-datatable-paginator-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-paginator/build_tmp/gallery-datatable-paginator.js
+     [java]  
+     [java] 
+     [java] 	22, 12: Mixed spaces and tabs.
+     [java] 	model: 		new PaginatorModel({itemsPerPage:50, page:3}),
+     [java] 
+     [java] 	263, 17: Expected '{' and instead saw 'this'.
+     [java] 	this._setLocalData();
+     [java] 
+     [java] 	348, 21: ['sortBy'] is better written in dot notation.
+     [java] 	url_obj['sortBy']    = Y.JSON.stringify( this.get('sortBy') || {} ) || null;
+     [java] 
+     [java] 	354, 21: ['page'] is better written in dot notation.
+     [java] 	url_obj['page']  = this.pagModel.get('page');
+     [java] 
+     [java] 	375, 53: 'url_obj' used out of scope.
+     [java] 	request:    Y.Lang.sub(rqst_str,url_obj)
+     [java] 
+     [java] 	385, 32: 'url_obj' used out of scope.
+     [java] 	this.data.load(url_obj);
+     [java] 
+     [java] 	412, 54: Expected '{' and instead saw 'return'.
+     [java] 	if ( this.get('paginatorResize') !== true )  return;
+     [java] 
+     [java] 	471, 57: Expected '{' and instead saw 'rprop'.
+     [java] 	if ( rprop &amp;&amp; dir == 'to' &amp;&amp; rprop.toServer )   rprop = rprop.toServer;
+     [java] 
+     [java] 	472, 57: Expected '{' and instead saw 'rprop'.
+     [java] 	if ( rprop &amp;&amp; dir != 'to' &amp;&amp; rprop.fromServer ) rprop = rprop.fromServer;
+     [java] 
+     [java] 	487, 33: Expected '{' and instead saw 'this'.
+     [java] 	if ( !this._pagDataSrc) this._dataChange({});
+     [java] 
+     [java] 	500, 33: Expected '{' and instead saw 'return'.
+     [java] 	if ( this._pagDataSrc ) return;
+     [java] 
+     [java] 	503, 71: Expected '{' and instead saw 'this'.
+     [java] 	if ( !this.datasource &amp;&amp; this.data.url &amp;&amp; !this._pagDataSrc ) this._pagDataSrc = 'mlist';
+     [java] 
+     [java] 	562, 61: ['totalItems'] is better written in dot notation.
+     [java] 	totalItemProp = this.get('serverPaginationMap')['totalItems'] || null;
+     [java] 
+     [java] 	588, 61: ['totalItems'] is better written in dot notation.
+     [java] 	var totalItemProp = this.get('serverPaginationMap')['totalItems'] || null;
+     [java] 
+     [java] 	621, 25: Expected '{' and instead saw 'return'.
+     [java] 	if ( !tblCont ) return false;
+     [java] 
+     [java] 	697, 13: Expected '{' and instead saw 'delete'.
+     [java] 	delete val.initialized;
+     [java] 
+     [java] 	699, 13: Expected '{' and instead saw 'this'.
+     [java] 	this.set('sortBy',val.sortBy);
+     [java] 
+     [java] 	701, 30: Expected '{' and instead saw 'this'.
+     [java] 	if ( this.pagModel ) this.pagModel.setAttrs(val);
+     [java] 
+     [java] 	716, 21: Expected '{' and instead saw 'return'.
+     [java] 	if ( !val ) return;
+     [java] 
+     [java] 	733, 13: Expected '{' and instead saw 'this'.
+     [java] 	this.resizePaginator();
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-datatable-paginator
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds</pre><h3 id="build_659"><a href="datatable-selection/gallery-2012.09.05-20-01.html">Datatable Selection</a></h3><pre class="cmd" id="build_659_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-datatable-selection
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp
+     [echo] Starting Build For gallery-datatable-selection
+
+-lint-server:
+     [echo] Starting Build For gallery-datatable-selection
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+     [copy] Copying 2 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/ant
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/assets/skins/sam/gallery-datatable-selection.css
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/assets/skins/sam/gallery-datatable-selection.css
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/gallery-datatable-selection.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/gallery-datatable-selection.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .getClassName(&quot;col&quot;)+&quot;-(.*)&quot;); ---&gt; var  &lt;--- colName;Y.Array.some(classes,
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] ._processRange(o);}else{ ---&gt; var  &lt;--- tar=this._processNodeAction(o,&quot;select&quot;,
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] null;if(tarNew&amp;&amp;tarPrev){ ---&gt; var  &lt;--- newRec=this.getRecord(tarNew),newRecI
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] (this.getColumn(prevCol)); ---&gt; var  &lt;--- delCol=newColI-prevColI,delRow=newRecI-
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .get(&quot;selectionMode&quot;)===&quot;cell&quot;){ ---&gt; var  &lt;--- coldir=(delCol&lt;0)?-1
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] :1,cell=tarPrev;for( ---&gt; var  &lt;--- j=0;j&lt;=Math.abs(
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] delRow);j++){for( ---&gt; var  &lt;--- i=0;i&lt;=Math.abs(
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .get(&quot;selectionMode&quot;)===&quot;row&quot;){ ---&gt; var  &lt;--- rowdir=(delRow&lt;0)?-1
+[yuicompressor] 
+[yuicompressor] [WARNING] The variable rowdir has already been declared in the same scope...
+[yuicompressor] get(&quot;selectionMode&quot;)===&quot;row&quot;){var  ---&gt; rowdir &lt;--- =(delRow&lt;0)?-1:
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] this.getRow(prevRecI);for( ---&gt; var  &lt;--- j=0;j&lt;=Math.abs(
+[yuicompressor] 
+[yuicompressor] [WARNING] The variable j has already been declared in the same scope...
+[yuicompressor] .getRow(prevRecI);for(var  ---&gt; j &lt;--- =0;j&lt;=Math.abs(delRow
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] ;}if(row&amp;&amp;col){ ---&gt; var  &lt;--- ckey=col.key||col.name;
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] {return;}var tr,td; ---&gt; var  &lt;--- buffer=[];Y.Array.each
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol tar is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] ,_highlightChange:function(o){var  ---&gt; tar &lt;--- =this._processNodeAction(o,&quot;highlight&quot;,true
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol tr is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] cells=this.get(&quot;selectedCells&quot;), ---&gt; tr &lt;--- ,td;this._selections=[];
+[yuicompressor] 
+[yuicompressor] [WARNING] The symbol td is declared but is apparently never used.
+[yuicompressor] This code can probably be written in a more compact way.
+[yuicompressor] this.get(&quot;selectedCells&quot;),tr, ---&gt; td &lt;--- ;this._selections=[];this.
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/gallery-datatable-selection-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-datatable-selection/build_tmp/gallery-datatable-selection.js
+     [java]  
+     [java] 
+     [java] 	67, 38: Expected '{' and instead saw 'return'.
+     [java] 	if (!Y.Lang.isString(v)) return false;
+     [java] 
+     [java] 	84, 38: Expected '{' and instead saw 'return'.
+     [java] 	if (!Y.Lang.isString(v)) return false;
+     [java] 
+     [java] 	301, 17: Expected '{' and instead saw 'tds'.
+     [java] 	tds.push( item );
+     [java] 
+     [java] 	305, 21: Expected '{' and instead saw 'tdNodes'.
+     [java] 	tdNodes.each(function(item){ tds.push( item )});
+     [java] 
+     [java] 	305, 66: Missing semicolon.
+     [java] 	tdNodes.each(function(item){ tds.push( item )});
+     [java] 
+     [java] 	359, 13: Expected '{' and instead saw 'this'.
+     [java] 	this._eventHandles.selectorSelect.detach();
+     [java] 
+     [java] 	422, 13: Expected '{' and instead saw 'keepPrev'.
+     [java] 	keepPrev =  this.get('selectionMulti') === true &amp;&amp; this._clickModifiers.metaKey === true;
+     [java] 
+     [java] 	424, 13: Expected '{' and instead saw 'keepPrev'.
+     [java] 	keepPrev =  this.get('selectionMulti') === true &amp;&amp; this._clickModifiers.ctrlKey === true;
+     [java] 
+     [java] 	432, 69: Expected '{' and instead saw 'this'.
+     [java] 	if ( !keepPrev &amp;&amp; !keepRange &amp;&amp; this._selections.length&gt;1 ) this.clearSelections();
+     [java] 
+     [java] 	443, 30: Expected '{' and instead saw 'this'.
+     [java] 	if ( !keepPrev ) this._selections = [];
+     [java] 
+     [java] 	495, 25: Expected '{' and instead saw 'for'.
+     [java] 	for(var i=0; i&lt;=Math.abs(delCol); i++) {
+     [java] 
+     [java] 	505, 32: 'rowdir' is already defined.
+     [java] 	var rowdir = (delRow&lt;0) ? -1 : 1,
+     [java] 
+     [java] 	508, 30: 'j' is already defined.
+     [java] 	for(var j=0; j&lt;=Math.abs(delRow); j++) {
+     [java] 
+     [java] 	592, 24: Expected '{' and instead saw 'return'.
+     [java] 	if (!item) return;
+     [java] 
+     [java] 	643, 36: Expected '{' and instead saw 'row'.
+     [java] 	if ( item.record ) row = this.getRow( item.record );
+     [java] 
+     [java] 	644, 36: Expected '{' and instead saw 'col'.
+     [java] 	if ( item.column ) col = this.getColumn(item.column);
+     [java] 
+     [java] 	693, 66: Expected '{' and instead saw 'return'.
+     [java] 	if( !this._selections || this._selections.length === 0 ) return;
+     [java] 
+     [java] 	715, 21: Expected '{' and instead saw 'this'.
+     [java] 	this._selections.push( r.record );
+     [java] 
+     [java] 	723, 21: Expected '{' and instead saw 'this'.
+     [java] 	this._selections.push({record:r.record, colIndex:r.columnIndex});
+     [java] 
+     [java] 	741, 66: Expected '{' and instead saw 'return'.
+     [java] 	if( !this._selections || this._selections.length === 0 ) return;
+     [java] 
+     [java] 	755, 46: Missing semicolon.
+     [java] 	tr = this.getRow(item.record),
+     [java] 
+     [java] 	755, 46: Expected an identifier and instead saw ','.
+     [java] 	tr = this.getRow(item.record),
+     [java] 
+     [java] 	755, 46: Stopping, unable to continue. (83% scanned).
+     [java] 	
+     [java] 
+     [java]  
+     [java] 
+     [java] js: &quot;/home/y/var/builds/workspace/gallery/build_tmp/src/builder/componentbuild/lib/jslint/jslint-console.js&quot;, line 50: exception from uncaught JavaScript throw: [object Error]
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-datatable-selection
+
+deployassets:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-datatable-selection/assets
+
+deployskins:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-datatable-selection/assets/skins/sam
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-datatable-selection/assets/skins/sam
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 4 seconds</pre><h3 id="build_38"><a href="formmgr/gallery-2012.09.05-20-01.html">Form Manager</a></h3><pre class="cmd" id="build_38_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-formmgr
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp
+     [echo] Starting Build For gallery-formmgr
+
+-lint-server:
+     [echo] Starting Build For gallery-formmgr
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp/gallery-formmgr.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp/gallery-formmgr.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Invalid hint syntax: use strict
+[yuicompressor] add(&quot;gallery-formmgr&quot;,function(Y){ ---&gt; &quot;use strict&quot; &lt;--- ;functionFormManager(form_name,config){config
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] FormManager.row_status_prefix=&quot;formmgr-has&quot;;var cached_status_pattern; ---&gt; var  &lt;--- cached_row_status_pattern;var cached_row_status_regex;functionstatusPattern(){
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] =&quot;formmgr-has&quot;;var cached_status_pattern;var cached_row_status_pattern; ---&gt; var  &lt;--- cached_row_status_regex;functionstatusPattern(){if(!
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] button_list.length===0);for( ---&gt; var  &lt;--- i=0;i&lt;this.form.
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .elements.length;i++){ ---&gt; var  &lt;--- e=this.form.elements[i]
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] this.form.elements[i]; ---&gt; var  &lt;--- name=e.tagName.toLowerCase();
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] =e.tagName.toLowerCase(); ---&gt; var  &lt;--- type=(e.type?e.type
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] !e.name){continue;} ---&gt; var  &lt;--- v=this.default_value_map[e.name]
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] name==&quot;input&quot;&amp;&amp;type==&quot;radio&quot;){ ---&gt; var  &lt;--- rb=this.form[e.name]
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] rb[0].value;for( ---&gt; var  &lt;--- j=0;j&lt;rb.length;
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] getElementStatus(p),type)){ ---&gt; var  &lt;--- f=p.all(&quot;.&quot;+FormManager.
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .set(&quot;innerHTML&quot;,msg);} ---&gt; var  &lt;--- new_class=FormManager.row_status_prefix+type;p.
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] (rowStatusPattern(),new_class);} ---&gt; var  &lt;--- fieldset=e.getAncestorByTagName(&quot;fieldset&quot;);if
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .elements.length;i++){ ---&gt; var  &lt;--- e=this.form.elements[i]
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] !e.name){continue;} ---&gt; var  &lt;--- type=(e.type?e.type
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] type.toLowerCase():null); ---&gt; var  &lt;--- name=e.tagName.toLowerCase();
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] =e.tagName.toLowerCase(); ---&gt; var  &lt;--- v=this.default_value_map[e.name]
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] ==&quot;checkbox&quot;||type==&quot;radio&quot;)){ ---&gt; var  &lt;--- checked=(e.value==v);
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .elements.length;i++){ ---&gt; var  &lt;--- e=this.form.elements[i]
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .offsetHeight===0){continue;} ---&gt; var  &lt;--- name=e.tagName.toLowerCase();
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] =e.tagName.toLowerCase(); ---&gt; var  &lt;--- type=(e.type?e.type
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] clearMessages();var status=true; ---&gt; var  &lt;--- e=this.form.elements;this.
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] FormManager.cleanValues(e);for( ---&gt; var  &lt;--- i=0;i&lt;e.length;
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] &lt;e.length;i++){ ---&gt; var  &lt;--- e_id=e[i].id;var 
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] e_id=e[i].id; ---&gt; var  &lt;--- msg_list=this.validation_msgs[e_id];var 
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] msg_list=this.validation_msgs[e_id]; ---&gt; var  &lt;--- info=FormManager.validateFromCSSData(e[i]
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] ;status=false;continue;}} ---&gt; var  &lt;--- f=this.validation.fn[e_id]
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] this.validation.fn[e_id]; ---&gt; var  &lt;--- scope=this;if(Y.Lang.
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] ;var disabled=!enabled;for( ---&gt; var  &lt;--- i=0;i&lt;this.button_list.
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .user_button_list.length;i++){ ---&gt; var  &lt;--- info=this.user_button_list[i];info
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] =e.tagName.toLowerCase(); ---&gt; var  &lt;--- type=(e.type?e.type
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp/gallery-formmgr-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-formmgr/build_tmp/gallery-formmgr.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-formmgr
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 4 seconds</pre><h3 id="build_407"><a href="google-maps-loader/gallery-2012.09.05-20-01.html">Google Maps Loader</a></h3><pre class="cmd" id="build_407_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-google-maps-loader
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp
+     [echo] Starting Build For gallery-google-maps-loader
+
+-lint-server:
+     [echo] Starting Build For gallery-google-maps-loader
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp/gallery-google-maps-loader.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp/gallery-google-maps-loader.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Invalid hint syntax: use strict
+[yuicompressor] {(function(Y,moduleName){ ---&gt; &quot;use strict&quot; &lt;--- ;var _Base=Y.Base,_isArray=
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp/gallery-google-maps-loader-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-google-maps-loader/build_tmp/gallery-google-maps-loader.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-google-maps-loader
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds</pre><h3 id="build_561"><a href="md-model/gallery-2012.09.05-20-01.html">Model</a></h3><pre class="cmd" id="build_561_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-md-model
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+     [echo] Starting Build For gallery-md-model
+
+-lint-server:
+     [echo] Starting Build For gallery-md-model
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+build-coverage:
+     [echo] Creating coverage file for: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/gallery-md-model.js
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+     [move] Moving 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/gallery-md-model.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Invalid hint syntax: use strict
+[yuicompressor] add(&quot;gallery-md-model&quot;,function(Y){ ---&gt; &quot;use strict&quot; &lt;--- ;var Lang=Y.Lang,YArray=
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] );}returnthis;}}; ---&gt; var  &lt;--- INDEX=&quot;index&quot;,MR=function(){
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] }};Y.GalleryModelMultiRecord=MR; ---&gt; var  &lt;--- SFIELD=&quot;sortField&quot;,SDIR=&quot;sortDir&quot;,ASC=
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] }};Y.GalleryModelSortedMultiRecord=SMR; ---&gt; var  &lt;--- PKI=function(){};PKI.
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/gallery-md-model-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-md-model/build_tmp/gallery-md-model.js
+     [java]  
+     [java] 
+     [java] 	49, 9: 'NAME' is not defined.
+     [java] 	NAME,
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-md-model
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 4 seconds</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

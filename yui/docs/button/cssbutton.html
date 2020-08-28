@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Styling elements with cssbutton - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/button/cssbutton.html">
+    <meta name="twitter:title" content="Example: Styling elements with cssbutton">
+    <meta name="twitter:description" content="This example shows how you can easily style button and non-button DOM elements to appear as buttons">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/quick-start/">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="/yui/docs/">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/widgets/">Widgets</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/button/">Button</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui/docs/button/cssbutton.html">Example: Styling elements with cssbutton</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Example: Styling elements with cssbutton</h1>
+
+        
+            <a href="#docs-toc" class="jump" tabindex="1">Jump to Table of Contents</a>
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <!-- Include the cssbutton stylesheet -->
+<link rel="stylesheet" href='http://yui.yahooapis.com/3.17.2/build/cssbutton/cssbutton.css'>
+<style>.yui3-button {
+    margin:3px;
+}
+
+.warning{
+    background-color:#FAF55F;
+}
+
+.success{
+    background-color:#57A957;
+    color:white;
+}
+
+.error{
+    background-color:#C43C35;
+    color:white;
+}
+
+.notice{
+    background-color:#1B7AE0;
+    color:white;
+}
+
+.yui3-button-icon {
+    background-image: url("../assets/button/icon-sprite-dark-and-light-24.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.yui3-button-icon-bold {
+    background-position: 1px 1px;
+}
+
+.yui3-button-icon-italic {
+    background-position: 1px -35px;
+}
+
+.yui3-button-icon-underline {
+    background-position: 1px -71px;
+}</style>
+
+<div class="intro">
+    <p>In this example, we'll look at a few ways to use the <code>&#x27;cssbutton&#x27;</code> module to enhance the look &amp; feel of the default browser buttons.</p>
+</div>
+
+<div class="example">
+    <h4 id="button-tags">Button Tags</h4>
+<button class='yui3-button'>&lt;button&gt;</button>
+<input type='button' class='yui3-button' value='&lt;input type="button"&gt;'>
+<input type='submit' class='yui3-button' value='&lt;input type="submit"&gt;'>
+
+<h4 id="other-tags">Other Tags</h4>
+<div class='yui3-button'>&lt;div&gt;</div>
+<span class='yui3-button'>&lt;span&gt;</span>
+<a class='yui3-button'>&lt;a&gt;</a>
+
+<h4 id="colors">Colors</h4>
+<button class='yui3-button success'>.success <br> #57A957</button>
+<button class='yui3-button warning'>.warning <br> #FAF55F</button>
+<button class='yui3-button error'>.error <br> #C43C35</button>
+<button class='yui3-button notice'>.notice <br> #1B7AE0</button>
+
+<h4 id="icon-buttons">Icon Buttons</h4>
+<button class='yui3-button'>
+    <span class='yui3-button-icon yui3-button-icon-bold'></span>
+</button>
+
+<button class='yui3-button'>
+    <span class='yui3-button-icon yui3-button-icon-italic'></span>
+</button>
+
+<button class='yui3-button'>
+    <span class='yui3-button-icon yui3-button-icon-underline'></span>
+</button>
+
+<h4 id="image-button">Image Button</h4>
+<input type='image' id='imageButton' class='yui3-button' src="../assets/button/yui-logo.png"></input>
+
+</div>
+
+
+<p>YUI's Button component was designed with the idea in mind that sometimes you may only want button styles, without the need for any JavaScript functionality.  Instead of <code>use(&#x27;button&#x27;, ...)</code>, you can just include the <code>cssbutton</code> module.  This can be done dynamically with <code>use(&#x27;cssbutton&#x27;)</code>, or statically with a <code>link</code> tag.</p>
+<pre class="code prettyprint">&lt;link rel=&quot;stylesheet&quot; href=&quot;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.17.2&#x2F;build&#x2F;cssbutton&#x2F;cssbutton.css&quot;&gt;</pre>
+
+
+
+
+
+<h4 id="source-html">Source: HTML</h4>
+<pre class="code prettyprint">&lt;h4&gt;Button Tags&lt;&#x2F;h4&gt;
+&lt;button class=&#x27;yui3-button&#x27;&gt;&amp;lt;button&amp;gt;&lt;&#x2F;button&gt;
+&lt;input type=&#x27;button&#x27; class=&#x27;yui3-button&#x27; value=&#x27;&amp;lt;input type=&quot;button&quot;&amp;gt;&#x27;&gt;
+&lt;input type=&#x27;submit&#x27; class=&#x27;yui3-button&#x27; value=&#x27;&amp;lt;input type=&quot;submit&quot;&amp;gt;&#x27;&gt;
+
+&lt;h4&gt;Other Tags&lt;&#x2F;h4&gt;
+&lt;div class=&#x27;yui3-button&#x27;&gt;&amp;lt;div&amp;gt;&lt;&#x2F;div&gt;
+&lt;span class=&#x27;yui3-button&#x27;&gt;&amp;lt;span&amp;gt;&lt;&#x2F;span&gt;
+&lt;a class=&#x27;yui3-button&#x27;&gt;&amp;lt;a&amp;gt;&lt;&#x2F;a&gt;
+
+&lt;h4&gt;Colors&lt;&#x2F;h4&gt;
+&lt;button class=&#x27;yui3-button success&#x27;&gt;.success &lt;br&gt; #57A957&lt;&#x2F;button&gt;
+&lt;button class=&#x27;yui3-button warning&#x27;&gt;.warning &lt;br&gt; #FAF55F&lt;&#x2F;button&gt;
+&lt;button class=&#x27;yui3-button error&#x27;&gt;.error &lt;br&gt; #C43C35&lt;&#x2F;button&gt;
+&lt;button class=&#x27;yui3-button notice&#x27;&gt;.notice &lt;br&gt; #1B7AE0&lt;&#x2F;button&gt;
+
+&lt;h4&gt;Icon Buttons&lt;&#x2F;h4&gt;
+&lt;button class=&#x27;yui3-button&#x27;&gt;
+    &lt;span class=&#x27;yui3-button-icon yui3-button-icon-bold&#x27;&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;button&gt;
+
+&lt;button class=&#x27;yui3-button&#x27;&gt;
+    &lt;span class=&#x27;yui3-button-icon yui3-button-icon-italic&#x27;&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;button&gt;
+
+&lt;button class=&#x27;yui3-button&#x27;&gt;
+    &lt;span class=&#x27;yui3-button-icon yui3-button-icon-underline&#x27;&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;button&gt;
+
+&lt;h4&gt;Image Button&lt;&#x2F;h4&gt;
+&lt;input type=&#x27;image&#x27; id=&#x27;imageButton&#x27; class=&#x27;yui3-button&#x27; src=&quot;..&#x2F;assets&#x2F;button&#x2F;yui-logo.png&quot;&gt;&lt;&#x2F;input&gt;</pre>
+
+
+<h4 id="source-css">Source: CSS</h4>
+<pre class="code prettyprint">.yui3-button {
+    margin:3px;
+}
+
+.warning{
+    background-color:#FAF55F;
+}
+
+.success{
+    background-color:#57A957;
+    color:white;
+}
+
+.error{
+    background-color:#C43C35;
+    color:white;
+}
+
+.notice{
+    background-color:#1B7AE0;
+    color:white;
+}
+
+.yui3-button-icon {
+    background-image: url(&quot;..&#x2F;assets&#x2F;button&#x2F;icon-sprite-dark-and-light-24.png&quot;);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.yui3-button-icon-bold {
+    background-position: 1px 1px;
+}
+
+.yui3-button-icon-italic {
+    background-position: 1px -35px;
+}
+
+.yui3-button-icon-underline {
+    background-position: 1px -71px;
+}</pre>
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+        
+
+        
+            <div id="docs-toc" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Table of Contents</h2>
+                </div>
+
+                <div class="bd">
+                    <ul class="toc">
+<li>
+<a href="#button-tags">Button Tags</a>
+</li>
+<li>
+<a href="#other-tags">Other Tags</a>
+</li>
+<li>
+<a href="#colors">Colors</a>
+</li>
+<li>
+<a href="#icon-buttons">Icon Buttons</a>
+</li>
+<li>
+<a href="#image-button">Image Button</a>
+</li>
+<li>
+<a href="#source-html">Source: HTML</a>
+</li>
+<li>
+<a href="#source-css">Source: CSS</a>
+</li>
+</ul>
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="This example shows how you can easily style button and non-button DOM elements to appear as buttons">
+                                        <a href="cssbutton.html">Styling elements with cssbutton</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="This example shows a simple, light solution to enhance &lt;button&gt; nodes">
+                                        <a href="button-plugin.html">Enhancing &lt;button&gt; nodes with button-plugin</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="This example demonstrates how to create button widgets">
+                                        <a href="button-basic.html">Basic button widgets</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="This example demonstrates how to create a widget containing a group of buttons">
+                                        <a href="button-group.html">Managing groups of buttons with button-group</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

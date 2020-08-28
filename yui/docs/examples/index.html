@@ -1,0 +1,3366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>YUI Examples</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+        
+        
+    
+    
+    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+        <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+        <link rel="stylesheet" href="/combo/css-main-min.css">
+    
+        <link rel="stylesheet" href="/css/example-index-min.css">
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    
+    
+            <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29453705-2']);
+            _gaq.push(['_trackPageview']);
+            </script>
+    
+    
+            <script>
+            var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.18.1/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+            if (location.protocol.indexOf('https') > -1) {
+                YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+                YUI_config.combine = true;
+            }
+            </script>
+    
+            <script src="https://yui-s.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="https://search.yahoo.com/search"
+                        method="get" role="search">
+                
+                    <input type="search" class="search-input" name="q"
+                            aria-label="Search APIs"
+                            placeholder="Search APIs">
+                
+                    <input type="hidden" name="vs" value="yuilibrary.com">
+                    <input type="hidden" name="vs" value="yuiblog.com">
+                </form>
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+                <ul class="nav hoverable-group">
+                        <li class="nav-tab hoverable ">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/yui/quick-start/">Quick Start</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/download/yui3/">Download YUI 3</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable  nav-tab-active">
+                            <a href="/yui/docs/">Documentation</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/guides/">User Guides</a>
+                                        </li>
+                                        <li class="nav-child  nav-child-active">
+                                                <a href="/yui/docs/examples/">Examples</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/api/">API Docs</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/environments/">Environments</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable nav-break">
+                            <a href="/community/">Community</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/gallery/">Gallery</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yuiblog.com/">Blog</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/forum/">Forums</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/theater/">YUI Theater</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/projects/">Other Projects</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yui2/">YUI 2</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yuitest/">YUI Test</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/phploader/">YUI PHP Loader</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                        </li>
+                                </ul>
+                        </li>
+                </ul>
+            </nav></div>
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+                <div class="project-version yui3-u">Version 3.18.1</div>
+
+            <div class="yui3-u-1">
+                <div class="body-heading">
+                        <h1>YUI Examples</h1>
+
+                </div>
+            </div>
+
+                <div class="yui3-u-1">
+                    <div class="content">
+                                        <div id="subnav" class="yui3-u-1"><nav>
+                                            <ul class="subnav">
+                                                    <li><a href="/yui/docs/guides/">User Guides</a></li>
+                                                    <li class="subnav-active"><a href="/yui/docs/examples/">Examples</a></li>
+                                                    <li><a href="/yui/docs/api/">API Docs</a></li>
+                                                    <li><a href="/yui/environments/">Environments</a></li>
+                                                    <li><a href="/yui/docs/tutorials/">Tutorials</a></li>
+                                                    <li><a href="/yui/docs/tutorials/faq/">FAQ</a></li>
+                                            </ul>
+                                        </nav></div>
+                        
+
+
+
+        <h2>Core</h2>
+
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-event">Event</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../event/basic-example.html">
+                                            Simple DOM Events
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use the Event Utility to attach simple DOM event handlers.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../event/synth-example.html">
+                                            Creating an Arrow Event for DOM Subscription
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using the synthetic event API to create a DOM event that fires in response to arrow keys being pressed.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../event/swipe-example.html">
+                                            Supporting A Swipe Left Gesture
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Supporting cross-device swipe gestures, using the event-move gesture events
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-node">Node</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/properties.html">
+                                            Set and Get Properties
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using selectors and property accessors with Node.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/dom-node.html">
+                                            DOM Methods
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using DOM methods with Node.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/store.html">
+                                            DOM Methods - Store
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Building a simple store and shopping cart.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/events.html">
+                                            Handling DOM Events
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Listening for DOM events with Node instances.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/nodelist.html">
+                                            Using NodeList - Simple
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        NodeList provides Node functionality for manipulating multiple nodes at once.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/ducks.html">
+                                            Using NodeList - Ducks Game
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to use multiple NodeList features to build a simple game.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/node-evt-delegation.html">
+                                            Delegating Node Events
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using a single event listener to handle events on multiple nodes.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/node-xy.html">
+                                            Node Positioning
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example demonstrates how to position an element in page coordinates.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/node-style.html">
+                                            Node Styling
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example demonstrates how to set styles and get style information.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/node-insert.html">
+                                            Adding Node Content - Burger Builder
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example demonstrates how to insert content into a Node.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node/node-view.html">
+                                            Showing and Hiding
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example demonstrates how to show and hide a Node.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-yui">YUI Global Object</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-core.html">
+                                            YUI Core
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Setting up a YUI Instance
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-multi.html">
+                                            Multiple Instances
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Working with multiple YUI instances.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-loader-ext.html">
+                                            YUI Loader - Dynamically Adding YUI and External Modules
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        On-demand loading of YUI and non-YUI assets
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-extend.html">
+                                            Create Class Hierarchies with &#x60;extend&#x60;
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Create Class Hierarchies with &#x60;extend&#x60;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-augment.html">
+                                            Compose Classes of Objects with &#x60;augment&#x60;
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Creating a composition-based class structure using &#x60;augment&#x60;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-mix.html">
+                                            Add Behaviors to Objects with &#x60;mix&#x60;
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Add behaviors to objects or static classes with &#x60;mix&#x60;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-merge.html">
+                                            Combine Data Sets with &#x60;merge&#x60;
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Combine data sets and create shallow copies of objects with &#x60;merge&#x60;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-isa.html">
+                                            Check Data Types with &#x60;Lang&#x60;
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Check data types with the &#x60;Lang Utilities&#x60;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-ua.html">
+                                            Browser Detection with &#x60;UA&#x60;
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Get information about the current user agent with &#x60;UA&#x60;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-yui2.html">
+                                            Working with YUI 2 in 3
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Working with YUI 2 in 3
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/yui-gallery.html">
+                                            Natively use YUI Gallery Modules
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Natively use YUI Gallery Modules
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/loader-resolve.html">
+                                            Programatically use Loader
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Programatically use Loader
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yui/parallel.html">
+                                            Using Y.Parallel
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Executing functions in parallel
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+        <h2>CSS</h2>
+
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-cssbase">CSS Base</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssbase/cssbase-basic.html">
+                                            Global (Page-Level) Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        When CSS Base is included in a page it provides consistent and basic cross-browser styling for HTML elements.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssbase/cssbase-context.html">
+                                            Contextual Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        CSS Base applied to a portion of a page based on the location of a class value.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-cssfonts">CSS Fonts</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssfonts/cssfonts-basic.html">
+                                            Global (Page-Level) Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        When CSS Fonts is included in a page, it applies a baseline font treatment to all HTML elements. This baseline is Arial at the equivalent of 13px size and 16px line-height.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssfonts/cssfonts-context.html">
+                                            Contextual Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use the alternate contextual version of YUI Fonts to have precise control over which regions of the page are targeted.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssfonts/cssfonts-size.html">
+                                            Setting Font Size
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Define all non-baseline sizes in percentages when using YUI Fonts.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-cssgrids">CSS Grids</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssgrids/cssgrids-units.html">
+                                            Using Grid Units
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Each unit has a className that provides its percentage width.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssgrids/cssgrids-fixed.html">
+                                            Fixed Page Template
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This is a template for creating fixed-width layouts.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssgrids/cssgrids-fluid.html">
+                                            Fluid Page Template
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This is a template for creating fluid layouts.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssgrids/cssgrids-align.html">
+                                            Aligning Grid Units
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Basic CSS properties are leveraged to horizontally and vertically align units.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssgrids/cssgrids-magazine.html">
+                                            Responsive Newspaper Layout
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        A responsive layout that looks like a newspaper
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-cssnormalize">Normalize.css</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssnormalize/normalize-basic.html">
+                                            Applying normalize.css to a basic page
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        When CSS Base is included in a page it provides consistent and basic cross-browser styling for HTML elements.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-cssreset">CSS Reset</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssreset/cssreset-basic.html">
+                                            Global (Page-Level) Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        When CSS Reset is included in a page, it removes the browser-provided styling for HTML elements.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cssreset/cssreset-context.html">
+                                            Contextual Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        CSS Reset applied to a portion of a page based on the location of a class value.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+        <h2>Developer Tools</h2>
+
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-console">Console</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../console/console-basic.html">
+                                            Creating a Console for Debugging
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The basics of setting up a Console
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../console/console-yui-config.html">
+                                            YUI Configuration to Filter Log Messages
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using your YUI instance configuration to filter which messages are reported in the Console
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../console/console-global.html">
+                                            Creating a Universal Console
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using the Console&#x27;s logSource attribute to consolidate log messages from multiple YUI instances into one Console
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-console-filters">ConsoleFilters Plugin</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../console-filters/console-filters-intro.html">
+                                            Using the ConsoleFilters Plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Adding the ConsoleFilters plugin to a Console instance for more granular run time log message filtering
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-test">Test</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../test/test-simple-example.html">
+                                            Simple Testing Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates basic usage of YUI Test for setting up and running tests.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../test/test-advanced-test-options.html">
+                                            Advanced Test Options
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates how to use advanced testing features such as defining tests that should fail, tests that should be ignored, and tests that should throw an error.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../test/test-array-tests.html">
+                                            Array Processing
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates how to use the ArrayAssert object to test array data.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../test/test-async-test.html">
+                                            Asynchronous Testing
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates basic asynchronous tests.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../test/test-async-event-tests.html">
+                                            Asynchronous Event Testing
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates using events with asynchronous tests.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+        <h2>Infrastructure</h2>
+
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-app">App Framework</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../app/app-todo.html">
+                                            Todo List
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        A basic todo list built with the Model, Model List, and View components.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../app/app-contributors.html">
+                                            GitHub Contributors
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        An application to browse through the contributors of a GitHub project.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-attribute">Attribute</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../attribute/attribute-basic.html">
+                                            Basic Attribute Configuration
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use the Attribute API to define, set and get attribute values.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../attribute/attribute-rw.html">
+                                            Read-Only and Write-Once Attributes
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Configure attributes to be readOnly or writeOnce.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../attribute/attribute-event.html">
+                                            Attribute Change Events
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to listen for changes in attribute values.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../attribute/attribute-basic-speeddate.html">
+                                            Attribute Based Speed Dating
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Create a basic SpeedDater class, with Attribute support.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../attribute/attribute-event-speeddate.html">
+                                            Attribute Event Based Speed Dating
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Refactors the basic Speed Dating example, to use attribute change events to update rendered elements, and have two instances react to another.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../attribute/attribute-getset.html">
+                                            Attribute Getters, Setters and Validators
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Add custom methods to get and set attribute values and provide validation support.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-event-custom">EventTarget</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../event-custom/flow-example.html">
+                                            Custom Event Bubbling and Behaviors
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Publish an event with a default behavior, as well as behaviors for reacting to preventing the default or stopping bubbling.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-widget">Widget</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../widget/widget-extend.html">
+                                            Extending the Base Widget Class
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to extend the base widget class, to create your own Widgets.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../widget/widget-build.html">
+                                            Creating Custom Widget Classes With Extensions
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to use Base.create and mix/match extensions to create custom Widget classes.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../widget/widget-plugin.html">
+                                            Creating a Widget Plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create an IO plugin for Widget.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../widget/widget-tooltip.html">
+                                            Creating a Simple Tooltip Widget With Extensions
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to extend the Widget class, and add WidgetPosition and WidgetStack to create a Tooltip widget class.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../widget/widget-parentchild-listbox.html">
+                                            Creating a Hierarchical ListBox Widget
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to extend the Widget class, and add WidgetParent and WidgetChild to create a simple ListBox widget.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+        <h2>Utilities</h2>
+
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-anim">Anim</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../anim/basic.html">
+                                            Basic Animation
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Creating and using a simple animation.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../anim/easing.html">
+                                            Easing Effects
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The Animation Utility allows you to implement &#x27;easing effects&#x27; &amp;mdash; for example, when an animation gradually slows down as it nears completion, that&#x27;s an easing effect known as &#x27;ease-in&#x27;.  This example shows you how to use easing effects with your animations.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../anim/colors.html">
+                                            Animating Colors
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Color animations can be effective indicators of state during the lifespan of a dynamic page.  This example shows you how to animate color attributes of an element.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../anim/alt-iterations.html">
+                                            Alternating Iterations
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The direction attribute can be used to reverse the animation on alternate iterations.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../anim/anim-xy.html">
+                                            Animating XY Position
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows you how to animate the xy coordinates of an element.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../anim/curve.html">
+                                            Animating Along a Curved Path
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example demonstrates animating an element along a curved path using bezier control points.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../anim/reverse.html">
+                                            Reversing an Animation
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The reverse attribute allows you to change the run direction of an animation.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../anim/end-event.html">
+                                            Using the End Event
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example demonstrates how to use the end event.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-async-queue">AsyncQueue</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../async-queue/queue-app.html">
+                                            Building a UI with AsyncQueue
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example employs AsyncQueue to incrementally construct an application interface; this illustrates the approach you&#x27;d take to allow chunked rendering of the UI in a process-intensive application.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-cache">Cache</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cache/cache-basic.html">
+                                            Basic Caching
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Basic caching functionality with the Cache Utility.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cache/cache-offline.html">
+                                            Offline Caching
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Offline caching implements HTML 5 localStorage when available, to allow data to persist across browser sessions.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-color">Color</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../color/rgb-slider.html">
+                                            RGB Slider
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use three sliders to control RGB values and update Hex and HSL strings.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../color/hsl-picker.html">
+                                            HSL Color Picker
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use the HSL color picker to select a new color. Then chose the color type you like best.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../color/hsl-harmony.html">
+                                            HSL Harmony
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use the HSL color picker to create harmony colors.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-cookie">Cookie Utility</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cookie/cookie-simple-example.html">
+                                            Simple Cookie Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates basic usage of the Cookie utility for reading and writing cookies.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cookie/cookie-advanced-example.html">
+                                            Advanced Cookie Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates using the Cookie utility to get, set and remove cookies.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../cookie/cookie-subcookie-example.html">
+                                            Subcookie Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates using the Cookie utility to get and set subcookies.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-dataschema">DataSchema</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dataschema/dataschema-array.html">
+                                            DataSchema.Array
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Schema parsing a JavaScript array.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dataschema/dataschema-json.html">
+                                            DataSchema.JSON
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Schema parsing JSON data.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dataschema/dataschema-xml.html">
+                                            DataSchema.XML for XML Data
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Schema parsing XML data.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dataschema/dataschema-table.html">
+                                            DataSchema.XML for HTML Tables
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Schema parsing data held in TABLE elements.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dataschema/dataschema-text.html">
+                                            DataSchema.Text
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Schema parsing delimited plain-text data.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dataschema/dataschema-parsing.html">
+                                            Enforcing DataTypes
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Parsing data into specified types as the schema is being applied.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-datasource">DataSource</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datasource/datasource-local.html">
+                                            DataSource.Local
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The Local DataSource manages retrieval of in-page data, from JavaScript arrays and objects to DOM elements.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datasource/datasource-get.html">
+                                            DataSource.Get
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The Get DataSource, which manages retrieval of data from remote sources via the Get Utility, can be useful for accessing data from cross-domain servers without the need for a proxy.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datasource/datasource-io.html">
+                                            DataSource.IO
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The IO DataSource manages retrieval of data from remote sources, via the IO Utility.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datasource/datasource-function.html">
+                                            DataSource.Function
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The Function DataSource, which manages retrieval of data from a JavaScript function, provides a highly customizeable mechanism for implementer-defined data retrieval algorithms
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datasource/datasource-caching.html">
+                                            DataSource with Caching
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use the DataSourceCache plugin to enable caching and reduce server calls to remote sources.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datasource/datasource-offlinecache.html">
+                                            DataSource with Offline Cache
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The DataSourceCache plugin supports offline caching so that cached data persists across browser sessions.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datasource/datasource-polling.html">
+                                            DataSource with Polling
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use the Pollable extension to enable polling in your DataSource.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-datatype">DataType</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatype/datatype-dateformat-lang.html">
+                                            Formatting Dates Using Language Resource Bundles
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Formatting dates into strings using pre-packaged language resource bundles.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatype/datatype-dateparse.html">
+                                            Y.Date.parse()
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Parsing data into dates.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatype/datatype-numberformat.html">
+                                            Y.Number.format()
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Formatting numbers into strings.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatype/datatype-numberparse.html">
+                                            Y.Number.parse()
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Parsing data into numbers.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatype/datatype-xmlformat.html">
+                                            Y.XML.format()
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Formatting XML documents into strings.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatype/datatype-xmlparse.html">
+                                            Y.XML.parse()
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Parsing strings into XML documents.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-dd">Drag and Drop</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/simple-drag.html">
+                                            Simple Drag
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        A simple drag interaction that doesn&#x27;t require a drop interaction.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/drag-plugin.html">
+                                            Drag - Node plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to apply the Drag Plugin to a node.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/proxy-drag.html">
+                                            Drag - Proxy
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        A simple proxy drag interaction that doesn&#x27;t require a drop interaction.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/constrained-drag.html">
+                                            Drag - Constrained to a Region
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to constrain a draggable Node to another Node&#x27;s region.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/groups-drag.html">
+                                            Drag - Interaction Groups
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using interaction groups, this example demonstrates how to tie into the Drag &amp; Drop Utility&#x27;s interesting moments to provide visual affordances for the current drag operation.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/panel-drag.html">
+                                            Drag - Handles on an Panel
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using drag handles on a Panel, this example demonstrates how to use drag handles to allow dragging of a Panel with content by the Panel title area.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/shim-drag.html">
+                                            Using the Drag Shim
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The use of the drag shim when dragging nodes over other troublesome nodes.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/drop-code.html">
+                                            Using Drop Based Coding
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to use the Drop Target events to code your application.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/winscroll.html">
+                                            Window Scrolling
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How you can use the DD Scroll plugin to scroll the browser window as you drag.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/delegate.html">
+                                            Drag Delegation
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to use DD.Delegate to create a scalable solution which supports multiple draggable items.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/delegate-drop.html">
+                                            Drag Delegation with a Drop Target
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using DD.Delegate to support dragging multiple items and dropping them onto a Drop Target.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/delegate-plugins.html">
+                                            Using Drag Plugins with Delegate
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to use Drag plugins with a DD Delegate based solution.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/list-drag.html">
+                                            List Reorder w/Bubbling
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows how to make a sortable list using Custom Event Bubbling.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/scroll-list.html">
+                                            List Reorder w/Scrolling
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows how to make a sortable list using Custom Event Bubbling and Node Scrolling.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/anim-drop.html">
+                                            Animated Drop Targets
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to make an animated node a Drop target.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/photo-browser.html">
+                                            Photo Browser
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Example Photo Browser application.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dd/portal-drag.html">
+                                            Portal Style Example
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Portal style example using Drag &amp; Drop Event Bubbling and Animation.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-editor">Rich Text Editor</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-graphics">Graphics</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../graphics/graphics-simple.html">
+                                            Basic Graphics Implementation
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a Graphic instance and add shapes.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../graphics/graphics-path.html">
+                                            Basic Path
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to draw lines and polygons.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../graphics/graphics-gradients.html">
+                                            Create Gradient Fills
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create linear and radial gradient fills.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../graphics/graphics-drag.html">
+                                            Basic drag with graphic object
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to add drag to a shape.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../graphics/graphics-transforms.html">
+                                            Using Transforms
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to apply transforms to shape.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../graphics/graphics-customshape.html">
+                                            Custom Shape
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to use a custom shape with the Graphics module.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../graphics/graphics-muddyglass.html">
+                                            Transparent Glass with Shadow
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows to use the graphics api to draw a realistic glass.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../graphics/graphics-violin.html">
+                                            Complex Drawing: Violin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows to use the graphics api to draw a violin.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-history">History</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../history/history-tabview.html">
+                                            History + TabView
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates how to add browser history support to a TabView widget using the History Utility.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-imageloader">ImageLoader</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../imageloader/basic-features.html">
+                                            Basic Features of the ImageLoader Utility
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates the basic features and operation of the ImageLoader Utility, deferring the loading of images until specific events happen or specific time limits expire.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../imageloader/below-fold.html">
+                                            Loading Images Below the Fold
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Loading images above the fold immediately while deferring the loading of images below the fold.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../imageloader/imageloader-class-names.html">
+                                            Using ImageLoader with CSS Class Names
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using CSS class names to target specific images for deferred loading.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-intl">Internationalization</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../intl/intl-basic.html">
+                                            Language Resource Bundles
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to create components which use language resource bundles.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-io">IO Utility</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../io/get.html">
+                                            HTTP GET to request data
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use IO to request data over HTTP.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../io/weather.html">
+                                            Request XML data from Yahoo! Weather
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use IO to request XML data from a remote web service.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../io/xdr.html">
+                                            Request JSON using Yahoo! Pipes
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use IO to make a cross-domain request to Yahoo! Pipes, returning data from disparate sources.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-json">JSON</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../json/json-connect.html">
+                                            JSON with Y.io
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use JSON to parse data received via XMLHttpRequest via Y.io calls — a simple JSON use case.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../json/json-freeze-thaw.html">
+                                            Rebuilding Class Instances from JSON Data
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use the replacer and reviver parameters to reconstitute object instances that have been serialized to JSON.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../json/json-convert-values.html">
+                                            Adding New Object Members During Parsing
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use a currency conversion calculation to add a new price member to a JSON response, demonstrating how JSON data, once retrieved, can be transformed during parsing.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-jsonp">JSONP</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../jsonp/jsonp-github.html">
+                                            Getting Cross Domain JSON Data Using Y.jsonp()
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Get basic GitHub user info using a Y.jsonp(url, callback).
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../jsonp/jsonp-gallery.html">
+                                            Reusing a JSONPRequest Instance to Poll a Remote Server
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Create a reusable JSONPRequest object to poll the YUILibrary.com Gallery web service, fetching info on a random Gallery module.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-node-focusmanager">FocusManager Node Plugin</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node-focusmanager/node-focusmanager-toolbar.html">
+                                            Accessible Toolbar
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Creating an accessible toolbar using the Focus Manager Node Plugin and Node&#x27;s support for the WAI-ARIA Roles and States.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node-focusmanager/node-focusmanager-button.html">
+                                            Accessible Menu Button
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-paginator">Paginator</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../paginator/slideshow.html">
+                                            Slideshow
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example illustrates how to create a slideshow using paginator to control the slides.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../paginator/table.html">
+                                            Tables
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        An HTML table containing 50 states and their population with an attached paginator to view the information in small sections.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../paginator/search.html">
+                                            Search Results
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        An application using the Flickr API to display images with a paginator control to step through the results.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-promise">Promise</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../promise/basic-example.html">
+                                            Wrapping async transactions with promises
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Wrapping async transactions with promises
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../promise/subclass-example.html">
+                                            Subclassing Y.Promise
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Extend Y.Promise to create classes that encapsulate standard transaction logic in descriptive method names
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../promise/plugin-example.html">
+                                            Creating a Node Plugin that chains transitions
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Extend the Promise class to create your own Node plugin that chains transitions
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-recordset">Recordset</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../recordset/recordset-basic.html">
+                                            Basic Recordset
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to instantiate and interact with a standard Recordset by adding, removing and updating records/objects. Explains the events that are fired, and shows how to access the built-in hash table that stores records by their YUIDs.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../recordset/recordset-sort.html">
+                                            Recordset Sort Plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to sort a Recordset using the default sorter, or a custom sort function. Additionally, demonstrates how convenience attributes help in determining when Recordset is in a sorted state, and what the last sort parameters were.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../recordset/recordset-filter.html">
+                                            Recordset Filter Plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to use filtering methods to Recordset. Key-value filtering, and filtering by providing a custom function are covered.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../recordset/recordset-indexer.html">
+                                            Recordset Indexer Plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create and access hash tables on Recordset. Tables are kept in sync through events fired by Recordset.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-resize">Resize</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../resize/simple-resize.html">
+                                            Simple Resize
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Resize a node.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../resize/constrain-resize.html">
+                                            Constrain a Resize
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        A simple resize implementation that utilizes the ResizeConstrained plugin to set min/max dimensions and to lock in the resized element&#x27;s aspect ratio.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../resize/image-resize.html">
+                                            8-way Image Resize
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows an 8-way image resize, providing the CSS needed for a common image-resize visual treatment.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../resize/simple-resize-plugin.html">
+                                            Widget with simple Resize Plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Plugs a widget with resize functionality.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../resize/constrain-resize-plugin.html">
+                                            Widget with Resize Plugin under constraints
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Plugs a widget with resize functionality, and implements ResizeConstrained
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-sortable">Sortable</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../sortable/simple-sortable.html">
+                                            Simple Sortable List
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Create a simple sortable list.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../sortable/sortable-float.html">
+                                            Floated List
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Sortable list example with floated nodes.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../sortable/sortable-multi.html">
+                                            Multiple Lists
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Multiple Sortable Lists that are separate from one another.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../sortable/sortable-multi-full.html">
+                                            Multiple Lists - Full Join
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Multiple Sortable Lists that are fully joined together.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../sortable/sortable-multi-out.html">
+                                            Multiple Lists - Outer Join
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Multiple Sortable Lists that are outer joined together.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../sortable/sortable-multi-in.html">
+                                            Multiple Lists - Inner Join
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Multiple Sortable Lists that are inner joined together.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../sortable/sortable-fish.html">
+                                            Fish Sort - Multi Outer Join
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        A fish sorting example. Multiple sortable lists with floated nodes that are outer joined together.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../sortable/sortable-events.html">
+                                            Sortable Events
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Create a sortable list with drag-and-drop notifications.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-stylesheet">StyleSheet</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../stylesheet/stylesheet-theme.html">
+                                            Adjusting a Page Theme on the Fly
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use StyleSheet to adjust the CSS rules applying a page theme from user input
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-transition">Transition</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../transition/transition-basic.html">
+                                            Basic Node Transitions
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates the basic usage of Transitions.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../transition/transition-usage.html">
+                                            Using Transitions
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates more advanced usage of Transitions.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../transition/transition-view.html">
+                                            Showing and Hiding with Transitions
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Demonstrates how to animate Node&#x27;s show and hide methods.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-uploader">Uploader</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../uploader/uploader-multiple.html">
+                                            Simple Multiple Files Uploader with Progress Tracking
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        A simple multiple file uploader with progress tracking
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../uploader/uploader-dd.html">
+                                            Multiple Files Uploader with HTML5 Drag-and-Drop Support
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        A multiple file uploader with HTML5 Drag-and-Drop Support
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../uploader/uploader-data.html">
+                                            Multiple Files Uploader with POST Variables and Server Data Retrieval
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        A multiple file uploader that submits additional POST vars with each file and receives data from the server
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-yql">YQL Query</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yql/simple-yql.html">
+                                            Simple YQL Query
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Create a simple YQL Query to retrieve data from the Yahoo! Weather YQL table.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../yql/yql-requery.html">
+                                            Reusing a YQL query
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use the Flickr Recent Photos YQL table to pull in a small set of recent Flickr images every 8 seconds.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+        <h2>Widgets</h2>
+
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-autocomplete">AutoComplete</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../autocomplete/ac-local.html">
+                                            Basic Local Data
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to provide autocomplete suggestions from a local array.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../autocomplete/ac-jsonp.html">
+                                            Remote Data via JSONP
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to provide autocomplete suggestions using a remote JSONP source.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../autocomplete/ac-yql.html">
+                                            Remote Data via YQL
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to provide autocomplete suggestions using a YQL query source.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../autocomplete/ac-datasource.html">
+                                            Remote Data via DataSource
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to provide autocomplete suggestions using a DataSource instance.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../autocomplete/ac-tagging.html">
+                                            Tag Completion Using Query Delimiters
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to implement delimited tag completion.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../autocomplete/ac-flickr.html">
+                                            Find Photos on Flickr (Custom Formatting, YQL Source)
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to find and select Flickr photos using a YQL source and a custom autocomplete result formatter.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../autocomplete/ac-filter.html">
+                                            Filter a Set of Existing Items on a Page
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to use autocomplete-base to filter a set of existing items on a page.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../autocomplete/ac-geocode.html">
+                                            Address Completion on Google&#x27;s Geocoding Service
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to find an address using a YQL source calling Google&#x27;s Geocoding Service
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-button">Button</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../button/cssbutton.html">
+                                            Styling elements with cssbutton
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows how you can easily style button and non-button DOM elements to appear as buttons
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../button/button-plugin.html">
+                                            Enhancing &lt;button&gt; nodes with button-plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows a simple, light solution to enhance &lt;button&gt; nodes
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../button/button-basic.html">
+                                            Basic button widgets
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example demonstrates how to create button widgets
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../button/button-group.html">
+                                            Managing groups of buttons with button-group
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example demonstrates how to create a widget containing a group of buttons
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-calendar">Calendar</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../calendar/calendar-simple.html">
+                                            Simple Calendar with Selection
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to create a single-pane calendar with selectable dates
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../calendar/calendar-multipane.html">
+                                            Two-Pane Calendar with Custom Rendering and Multiple Selection
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        How to create a multi-pane calendar with custom-rendered cells and multiple date selection.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-charts">Charts</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-simple.html">
+                                            Basic Charts Implementation
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to use Charts to create a basic chart.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-multiseries.html">
+                                            Chart with Multiple Series
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a chart with multiple series.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-column.html">
+                                            Specify Chart Type
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a column chart with multiple series.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-stackedcolumn.html">
+                                            Create Stacked Chart
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a column chart with a stacked numeric axis.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-timeaxis.html">
+                                            Create a Chart with a Time Axis
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a chart with a time axis.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-gridlines.html">
+                                            Add Gridlines to a Chart
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to add gridlines to a chart.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-stackedarea.html">
+                                            Create a Stacked Area Chart with Planar Based Events
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a chart with planar based events.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-globalstyles.html">
+                                            Customize a Chart
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to use a chart&#x27;s styles attribute to customize a chart.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-customizedtooltip.html">
+                                            Customize a Chart&#x27;s Tooltip
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to customize the default tooltip of a chart.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-objectstyles.html">
+                                            Define a Chart&#x27;s Axes and Series
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to explicitly define the axes and series for a chart.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-pie.html">
+                                            Pie Chart
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to use charts to create a pie chart.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-dualaxes.html">
+                                            Dual Axes Chart
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a chart with multiple value axes.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-axisupdate.html">
+                                            Update Chart Axis
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to access a chart instance&#x27;s value axis after the chart has rendered.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-seriesupdate.html">
+                                            Update Chart Series
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to access a chart instance&#x27;s seriesCollection after the chart has rendered.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-legend.html">
+                                            Create Chart with a Legend
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to add a legend to a chart.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../charts/charts-groupmarkers.html">
+                                            Group Marker Chart
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to render multiple data points in a singe marker.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-datatable">DataTable</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-basic.html">
+                                            Basic DataTable
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example illustrates simple DataTable use cases.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-dsget.html">
+                                            DataTable + DataSource.Get + JSON Data
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        DataTable loaded with JSON data from a remote webservice via DataSource.Get
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-dsio.html">
+                                            DataTable + DataSource.IO + XML Data
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        DataTable loaded with XML data from a remote webservice via DataSource.IO.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-formatting.html">
+                                            Formatting Row Data for Display
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Custom format data for display.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-nestedcols.html">
+                                            Nested Column Headers
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        DataTable with nested column headers.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-sort.html">
+                                            Column Sorting
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        DataTable with column sorting.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-colorsort.html">
+                                            Color Sorting and Filtering
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Color Sorting with DataTable and Y.Color.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-scroll.html">
+                                            Scrolling DataTable
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        DataTable with vertical and/or horizontal scrolling rows.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-recordtype.html">
+                                            Sortable generated columns
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using DataTable&#x27;s recordType attribute to create calculated, sortable columns.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-masterdetail.html">
+                                            Master and detail tables
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Populating one DataTable from details in the data of another.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-chkboxselect.html">
+                                            Checkbox select column
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Checkbox column that retains checked state when sorting.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../datatable/datatable-paginator.html">
+                                            DataTable with Paginator
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Using the paginator.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-dial">Dial</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dial/dial-basic.html">
+                                            Basic Dial
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Create a Dial from existing markup on the page - a simple use case.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dial/dial-text-input.html">
+                                            Dial Linked With Text Input
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Link a Dial with a text input field.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dial/dial-image-background.html">
+                                            Dial With Image Background
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use image backgrounds to control the visual display of a Dial.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dial/dial-image-surrounding.html">
+                                            Dial With a Surrounding Image
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Use images to surround a Dial instance and provide additional styling.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dial/dial-interactive.html">
+                                            Dial With Interactive UI
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example employs Dial to drive an interactive UI.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../dial/duck.html">
+                                            Image Sprite Animation with Dial
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows how to use Dial to animate an image sprite.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-node-menunav">MenuNav Node Plugin</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node-menunav/menunav-leftnav.html">
+                                            Basic Left Nav
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Creating left navigation using the MenuNav Node Plugin.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node-menunav/node-menunav-2.html">
+                                            Basic Top Nav
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Creating top navigation using the MenuNav Node Plugin
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node-menunav/node-menunav-3.html">
+                                            Menu Button Top Nav
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Creating menu button navigation using the MenuNav Node Plugin
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node-menunav/node-menunav-4.html">
+                                            Split Button Top Nav
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Creating split button navigation using the MenuNav Node Plugin
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node-menunav/node-menunav-5.html">
+                                            Left Nav with Submenus with Shadows
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Adding shadows to submenus of a left nav using the MenuNav Node Plugin
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node-menunav/node-menunav-6.html">
+                                            Left Nav With Submenus With Rounded Corners
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Adding rounded corners to submenus of a left nav using the MenuNav Node Plugin
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../node-menunav/node-menunav-7.html">
+                                            Skinning Menus Created Using the MenuNav Node Plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Skining a menu built using the MenuNav Node Plugin to look like the menus on Flickr
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-overlay">Overlay</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../overlay/overlay-xy.html">
+                                            Basic XY Positioning
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to instantiate a basic Overlay instance, and use the Overlay&#x27;s basic XY positioning support.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../overlay/overlay-tooltip.html">
+                                            Simple Tooltip
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a simple tooltip incorporating the overlay shim feature.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../overlay/overlay-align.html">
+                                            Alignment Support
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to use the Overlay&#x27;s XY alignment support, to align the Overlay relative to another element, or to the viewport.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../overlay/overlay-stack.html">
+                                            Stack Support
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to use the Overlay&#x27;s zindex and shim support when positioning Overlays above other elements on the page.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../overlay/overlay-stdmod.html">
+                                            Standard Module Support
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to modify content in the Overlay&#x27;s header, body and footer sections.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../overlay/overlay-constrain.html">
+                                            Constrain Support
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to use Overlay&#x27;s constrainment support, to limit the XY value which can be set for an Overlay.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../overlay/overlay-io-plugin.html">
+                                            IO Plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a simple plugin to retrieve content for the Overlay using the io utility.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../overlay/overlay-anim-plugin.html">
+                                            Animation Plugin
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a simple plugin to animate the Overlay&#x27;s movement and visibility.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-panel">Panel</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../panel/panel-form.html">
+                                            Creating a Modal Form
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to instantiate multiple Panel instances, and use nested modality to interact with a Datatable.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../panel/panel-animate.html">
+                                            Creating an Animated Panel
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a panel that animates as it is shown and hidden
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../panel/dialog.html">
+                                            Creating a Reusable Dialog
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Shows how to create a dialog instance that can be reused for multiple messages and confirmations.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-scrollview">ScrollView</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../scrollview/scrollview-base.html">
+                                            Basic ScrollView Without a Scroll Indicator
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example creates a basic ScrollView which doesn&#x27;t include a scrollbar indicator.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../scrollview/scrollview-scroll.html">
+                                            ScrollView with Scroll Indicator and Link Suppression Behavior
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows the classic Scrollview implementation, including scroll indicators (bars) and including code to suppress link navigation while scrolling.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../scrollview/scrollview-horiz.html">
+                                            Horizontal ScrollView
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example creates a horizontal ScrollView.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../scrollview/scrollview-paging.html">
+                                            ScrollView With Pagination
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example creates a horizontal ScrollView with pagination support.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-slider">Slider</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../slider/slider-basic.html">
+                                            Basic Sliders
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        The basics of setting up a horizontal and vertical Slider
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../slider/slider-from-markup.html">
+                                            Creating a Slider from Existing Markup
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Creating a vertical Slider from existing markup
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../slider/slider-skin.html">
+                                            Alternate Skins
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        Specifying an alternate skin for a Slider instance
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+                <table class="example-index">
+                    <thead>
+                        <tr>
+                            <th class="title" colspan="2">
+                                <h3 id="component-tabview">TabView</h3>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../tabview/tabview-basic.html">
+                                            TabView from Existing Markup
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows how to create a TabView wigdet from existing HTML.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../tabview/tabview-fromjs.html">
+                                            Dynamic TabView from JavaScript
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows how to create a TabView wigdet from JavaScript.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../tabview/tabview-add-remove.html">
+                                            Adding and Removing Tabs
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows how to add and remove Tabs.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="name">
+                                        <a href="../tabview/tabview-yql.html">
+                                            Loading Tab Content
+                                        </a>
+                                    </td>
+                                    <td class="description">
+                                        This example shows how to load tab content remotely using a YQL plugin.
+                                    </td>
+                                </tr>
+                    </tbody>
+                </table>
+
+                    </div>
+                </div>
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,452 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/home.png" /> <a href="../../index.html">Home</a><li><img src="../../../assets/gallery/star.png" /> <a href="../../featured.html">Featured</a><li><img src="../../../assets/gallery/thumb_up.png" /> <a href="../../popular.html">Popular</a><li><img src="../../../assets/gallery/greenled.png" /> <a href="../../new.html">New</a><li><img src="../../../assets/gallery/script_code_red.png" /> <a href="../../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../../assets/gear.png" /> <a href="../../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Build Tag: <a href="../gallery-2012.04.18-20-14.html">gallery-2012.04.18-20-14</a></h2>
+									<p><a href="../../show/model-relate.html">Return to Model Relate</a><div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2012.04.18-20-14'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-model-relate'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+	<span style="color: #003366; font-weight: bold;">var</span> CompanyModel<span style="color: #339933;">,</span> EmployeeModel<span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// example company model that has a toMany relationship 'employees' to EmployeeModel</span>
+	CompanyModel <span style="color: #339933;">=</span> Y.<span style="color: #660066;">Base</span>.<span style="color: #660066;">create</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'companyModel'</span><span style="color: #339933;">,</span> Y.<span style="color: #660066;">Model</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span>Y.<span style="color: #660066;">ModelRelate</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span>
+		ATTRS<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+			<span style="color: #000066;">name</span><span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#125;</span>
+		<span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+		RELATIONSHIPS<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+			employees<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+				type<span style="color: #339933;">:</span> <span style="color: #3366CC;">'toMany'</span><span style="color: #339933;">,</span>
+				key<span style="color: #339933;">:</span> <span style="color: #3366CC;">'id'</span><span style="color: #339933;">,</span>
+				relatedModel<span style="color: #339933;">:</span> <span style="color: #3366CC;">'EmployeeModel'</span><span style="color: #339933;">,</span>
+				relatedKey<span style="color: #339933;">:</span> <span style="color: #3366CC;">'companyId'</span>
+			<span style="color: #009900;">&#125;</span>
+		<span style="color: #009900;">&#125;</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// example employee model that has a toOne relationship 'company' to CompanyModel</span>
+	EmployeeModel <span style="color: #339933;">=</span> Y.<span style="color: #660066;">Base</span>.<span style="color: #660066;">create</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'employeeModel'</span><span style="color: #339933;">,</span> Y.<span style="color: #660066;">Model</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span>Y.<span style="color: #660066;">ModelRelate</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span>
+		ATTRS<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+			<span style="color: #000066;">name</span><span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+			companyId<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span><span style="color: #009900;">&#125;</span>
+		<span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+		RELATIONSHIPS<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+			company<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+				type<span style="color: #339933;">:</span> <span style="color: #3366CC;">'toOne'</span><span style="color: #339933;">,</span>
+				key<span style="color: #339933;">:</span> <span style="color: #3366CC;">'companyId'</span><span style="color: #339933;">,</span>
+				relatedModel<span style="color: #339933;">:</span> <span style="color: #3366CC;">'CompanyModel'</span><span style="color: #339933;">,</span>
+				relatedKey<span style="color: #339933;">:</span> <span style="color: #3366CC;">'id'</span>
+			<span style="color: #009900;">&#125;</span>
+		<span style="color: #009900;">&#125;</span>
+	<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// creating an instance of a model extended with ModelRelate</span>
+	<span style="color: #006600; font-style: italic;">// automatically registers it with the ModelStore</span>
+	<span style="color: #003366; font-weight: bold;">var</span> foo <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> CompanyModel<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>id<span style="color: #339933;">:</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #000066;">name</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">'Foo Inc.'</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+	<span style="color: #003366; font-weight: bold;">var</span> joe <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> EmployeeModel<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>id<span style="color: #339933;">:</span> <span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #000066;">name</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">'Joe Foo'</span><span style="color: #339933;">,</span> companyId<span style="color: #339933;">:</span> <span style="color: #CC0000;">1</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// use the getRelated method to return models matching the</span>
+	<span style="color: #006600; font-style: italic;">// 'employees' relationship defined on CompanyModel.  In</span>
+	<span style="color: #006600; font-style: italic;">// this case, a ModelList instance since 'employees' is defined</span>
+	<span style="color: #006600; font-style: italic;">// as a 'toMany' relationship</span>
+	<span style="color: #003366; font-weight: bold;">var</span> fooEmployees <span style="color: #339933;">=</span> foo.<span style="color: #660066;">getRelated</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'employees'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// fooEmployees is a modelList containing the joe model</span>
+&nbsp;
+	<span style="color: #003366; font-weight: bold;">var</span> larry <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> EmployeeModel<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>id<span style="color: #339933;">:</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #000066;">name</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">'Larry Bar'</span><span style="color: #339933;">,</span> companyId<span style="color: #339933;">:</span> <span style="color: #CC0000;">1</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// fooEmployees now contains 2 employee models, joe and larry</span>
+&nbsp;
+	<span style="color: #003366; font-weight: bold;">var</span> joeCompany <span style="color: #339933;">=</span> joe.<span style="color: #660066;">getRelated</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'company'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// joeCompany is the Foo Inc. company model</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// aww, larry switched jobs</span>
+	larry.<span style="color: #660066;">set</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'companyId'</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// since we updated the companyId on the larry model, it no longer matches the companyId</span>
+        <span style="color: #006600; font-style: italic;">// on the fooEmployees relationship.  larry has been removed from the fooEmployees</span>
+        <span style="color: #006600; font-style: italic;">// relationship which now contains only the joe model.  larry still exists, just not as</span>
+        <span style="color: #006600; font-style: italic;">// part of the fooEmployees relationship</span>
+&nbsp;
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// note:  Relationships are not actually created until the first call to 'getRelated'</span>
+	<span style="color: #006600; font-style: italic;">//        so defining a relationship and adding a bunch of related models prior to</span>
+	<span style="color: #006600; font-style: italic;">//        the first call to 'getRelated' does not incur any overhead</span>
+&nbsp;
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// Now, lets say larry starts his own business</span>
+	<span style="color: #003366; font-weight: bold;">var</span> larryCo <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> CompanyModel<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span><span style="color: #000066;">name</span><span style="color: #339933;">:</span> <span style="color: #3366CC;">'LarryCo Ltd.'</span><span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	larry.<span style="color: #660066;">set</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'companyId'</span><span style="color: #339933;">,</span> larryCo.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'id'</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// model-relate changes the definition of a 'new' model.  Instead of setting id=null</span>
+	<span style="color: #006600; font-style: italic;">// new models have id=clientId so we always have a valid id for the relationship</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// now when we save larryCo to our database</span>
+	larryCo.<span style="color: #660066;">save</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// the relationship knows to update all the related models to the new id</span>
+	larryCo.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'id'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// == 5768 as assigned by the database</span>
+	larry.<span style="color: #660066;">get</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'companyId'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// == 5678</span>
+	larryCo.<span style="color: #660066;">getRelated</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'employees'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// modelList containing the larry model</span>
+	larry.<span style="color: #660066;">getRelated</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'company'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// the larryCo model</span>
+&nbsp;
+	<span style="color: #006600; font-style: italic;">// if a related key changes not as the result of a new model being created, the relationship</span>
+	<span style="color: #006600; font-style: italic;">// is broken and will be refreshed with models in the store matching the new key</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2012.04.18-20-14'
+}).use('gallery-model-relate', function(Y) {
+
+	var CompanyModel, EmployeeModel;
+
+	
+
+	// example company model that has a toMany relationship 'employees' to EmployeeModel
+
+	CompanyModel = Y.Base.create('companyModel', Y.Model, [Y.ModelRelate], {}, {
+
+		ATTRS: {
+
+			name: {}
+
+		},
+
+		RELATIONSHIPS: {
+
+			employees: {
+
+				type: 'toMany',
+
+				key: 'id',
+
+				relatedModel: 'EmployeeModel',
+
+				relatedKey: 'companyId'
+
+			}
+
+		}
+
+	});
+
+	
+
+	// example employee model that has a toOne relationship 'company' to CompanyModel
+
+	EmployeeModel = Y.Base.create('employeeModel', Y.Model, [Y.ModelRelate], {}, {
+
+		ATTRS: {
+
+			name: {},
+
+			companyId: {}
+
+		},
+
+		RELATIONSHIPS: {
+
+			company: {
+
+				type: 'toOne',
+
+				key: 'companyId',
+
+				relatedModel: 'CompanyModel',
+
+				relatedKey: 'id'
+
+			}
+
+		}
+
+	});
+
+	
+
+	// creating an instance of a model extended with ModelRelate
+
+	// automatically registers it with the ModelStore
+
+	var foo = new CompanyModel({id: 1, name: 'Foo Inc.'});
+
+	var joe = new EmployeeModel({id: 1, name: 'Joe Foo', companyId: 1});
+
+
+
+	// use the getRelated method to return models matching the
+
+	// 'employees' relationship defined on CompanyModel.  In
+
+	// this case, a ModelList instance since 'employees' is defined
+
+	// as a 'toMany' relationship
+
+	var fooEmployees = foo.getRelated('employees');
+
+
+
+	// fooEmployees is a modelList containing the joe model
+
+	
+
+	var larry = new EmployeeModel({id: 2, name: 'Larry Bar', companyId: 1});
+
+	
+
+	// fooEmployees now contains 2 employee models, joe and larry
+
+	
+
+	var joeCompany = joe.getRelated('company');
+
+	
+
+	// joeCompany is the Foo Inc. company model
+
+	
+
+	// aww, larry switched jobs
+
+	larry.set('companyId', 2);
+
+	
+
+	// since we updated the companyId on the larry model, it no longer matches the companyId
+
+        // on the fooEmployees relationship.  larry has been removed from the fooEmployees
+
+        // relationship which now contains only the joe model.  larry still exists, just not as
+
+        // part of the fooEmployees relationship
+
+	
+
+	
+
+	// note:  Relationships are not actually created until the first call to 'getRelated'
+
+	//        so defining a relationship and adding a bunch of related models prior to
+
+	//        the first call to 'getRelated' does not incur any overhead
+
+	
+
+	
+
+	// Now, lets say larry starts his own business
+
+	var larryCo = new CompanyModel({name: 'LarryCo Ltd.'});
+
+	
+
+	larry.set('companyId', larryCo.get('id'));
+
+	
+
+	// model-relate changes the definition of a 'new' model.  Instead of setting id=null
+
+	// new models have id=clientId so we always have a valid id for the relationship
+
+	
+
+	// now when we save larryCo to our database
+
+	larryCo.save();
+
+	
+
+	// the relationship knows to update all the related models to the new id
+
+	larryCo.get('id'); // == 5768 as assigned by the database
+
+	larry.get('companyId'); // == 5678
+
+	larryCo.getRelated('employees'); // modelList containing the larry model
+
+	larry.getRelated('company'); // the larryCo model
+
+	
+
+	// if a related key changes not as the result of a new model being created, the relationship
+
+	// is broken and will be refreshed with models in the store matching the new key
+
+});</textarea>
+									</div>
+									<div id="build_info">
+										<h3 id="build_output">Build Output</h3><pre class="cmd" id="build_output_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-model-relate
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-model-relate/build_tmp
+     [echo] Starting Build For gallery-model-relate
+
+-lint-server:
+     [echo] Starting Build For gallery-model-relate
+
+-node:
+     [echo] For faster builds, install Node.js.
+
+-concatdebug:
+     [copy] Copying 4 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-model-relate/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-model-relate/build_tmp/ant
+
+-registerdebug:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-model-relate/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-model-relate/build_tmp
+
+-loggerregex:
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+minify:
+[yuicompressor] Compressing /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-model-relate/build_tmp/gallery-model-relate.js
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] .preventDefault();}}}; ---> var  <--- ToOneRelationship={type:"toOne",_initRelated:function
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] (e);}}}}; ---> var  <--- store=Y.ModelStore;functionModelRelationshp(config
+[yuicompressor] 
+[yuicompressor] [WARNING] Try to use a single 'var' statement per scope.
+[yuicompressor] augment(ModelRelationshp,Y.EventTarget); ---> var  <--- RELS="relationships",REL_PREFIX="_rel_";functionModelRelate
+[yuicompressor] Compressed to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-model-relate/build_tmp/gallery-model-relate-min.js
+
+lint:
+     [echo] Using Rhino. Install nodejs to improve jslint speed, or skip with -Dlint.skip=true
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-model-relate/build_tmp/gallery-model-relate.js
+     [java]  
+     [java] 
+     [java] 	239, 62: Expected an assignment or function call and instead saw an expression.
+     [java] 	this.related && this.related.set(name, value, options);
+     [java] 
+     [java] 	1096, 59: Expected an assignment or function call and instead saw an expression.
+     [java] 	callback && callback.apply(null, arguments);
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 3 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-model-relate
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

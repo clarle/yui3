@@ -1,0 +1,229 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/home.png" /> <a href="../../index.html">Home</a><li><img src="../../../assets/gallery/star.png" /> <a href="../../featured.html">Featured</a><li><img src="../../../assets/gallery/thumb_up.png" /> <a href="../../popular.html">Popular</a><li><img src="../../../assets/gallery/greenled.png" /> <a href="../../new.html">New</a><li><img src="../../../assets/gallery/script_code_red.png" /> <a href="../../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../../assets/gear.png" /> <a href="../../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Build Tag: <a href="../gallery-2010.03.10-18.html">gallery-2010.03.10-18</a></h2>
+									<p><a href="../../show/number.html">Return to Number</a><div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2010.03.10-18'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-number'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+    Y.<span style="color: #660066;">Number</span>.<span style="color: #660066;">format</span><span style="color: #009900;">&#40;</span><span style="color: #CC0000;">1000</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// will be &quot;1,000.00&quot;</span>
+    Y.<span style="color: #660066;">Number</span>.<span style="color: #660066;">format</span><span style="color: #009900;">&#40;</span><span style="color: #CC0000;">1000</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'0,0'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> <span style="color: #006600; font-style: italic;">// will be &quot;1,000&quot;</span>
+    Y.<span style="color: #660066;">Number</span>.<span style="color: #660066;">format</span><span style="color: #009900;">&#40;</span><span style="color: #CC0000;">1000000</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;0&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #006600; font-style: italic;">// will be &quot;1000000&quot;</span>
+    Y.<span style="color: #660066;">Number</span>.<span style="color: #660066;">format</span><span style="color: #009900;">&#40;</span><span style="color: #CC0000;">1000000</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;$0,0&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #006600; font-style: italic;">// will be &quot;$1,000,000&quot;</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2010.03.10-18'
+}).use('gallery-number', function(Y) {
+
+    Y.Number.format(1000); // will be &quot;1,000.00&quot;
+
+    Y.Number.format(1000, '0,0'); // will be &quot;1,000&quot;
+
+    Y.Number.format(1000000, &quot;0&quot;) // will be &quot;1000000&quot;
+
+    Y.Number.format(1000000, &quot;$0,0&quot;) // will be &quot;$1,000,000&quot;
+
+});</textarea>
+									</div>
+									<div id="build_info">
+										<h3 id="build_output">Build Output</h3><pre class="cmd" id="build_output_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-number
+     [echo] Ant Properties
+     [echo]     Home : /home/y/libexec/ant
+     [echo]     Ant Version : Apache Ant version 1.7.1 compiled on June 27 2008
+     [echo]     Build File : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build.xml
+     [echo] Local Build Properties
+     [echo]     version : 3
+     [echo]     srcdir : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery
+     [echo]     builddir : ../../../builder/componentbuild
+     [echo]     component : gallery-number
+     [echo]     component.basefilename : gallery-number
+     [echo]     component.basedir : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number
+     [echo]     component.builddir : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp
+     [echo] Global Build Properties
+     [echo]     global.build.base : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build
+     [echo]     global.build.component : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-number
+     [echo]     global.build.component.assets : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-number/assets
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp
+
+-concatdebug:
+     [echo] Concatenating
+     [echo]     Source Files : number.js
+     [echo]     In Source Dir : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/js
+     [echo]     To : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp/gallery-number-debug.js
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp/ant
+
+-registerdebug:
+     [echo] Wrapping /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp/gallery-number-debug.js in YUI.add module
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp
+
+-loggerregex:
+     [echo] Replacing Logger Statements in /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp/gallery-number.js
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+-buildlangs:
+
+-rolluplangs:
+
+buildlangs:
+
+build:
+
+minify:
+     [echo] Running yuicompressor on /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp/gallery-number.js
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] n.toFixed(0);}} ---> var  <--- fnum=n.toString();if(
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] psplit=fnum.split("."); ---> var  <--- cnum=psplit[0],parr=[
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] length%3)||3;for( ---> var  <--- i=0;i YUI <--- .add("gallery-number",function(Y){
+
+lint:
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp/gallery-number-debug.js
+     [java]  
+     [java] 
+     [java] 	14, 17: Expected an identifier and instead saw 'NaN' (a reserved word).
+     [java] 	nan = Number.NaN,
+     [java] 
+     [java]  
+     [java] 
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp/gallery-number-min.js
+     [java]  
+     [java] 
+     [java] 	0, 109: Expected an identifier and instead saw 'NaN' (a reserved word).
+     [java] 	[Code Evidence Omitted: Greater than 500 chars]
+     [java] 
+     [java]  
+     [java] 
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/src/gallery-number/build_tmp/gallery-number.js
+     [java]  
+     [java] 
+     [java] 	14, 17: Expected an identifier and instead saw 'NaN' (a reserved word).
+     [java] 	nan = Number.NaN,
+     [java] 
+     [java]  
+     [java] 
+
+local:
+
+deploybuild:
+     [copy] Copying 3 files to /home/y/var/builds/workspace/gallery/build_tmp/src/yui3-gallery/build/gallery-number
+
+deployassets:
+
+deployskins:
+
+deploylang:
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

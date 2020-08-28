@@ -1,0 +1,162 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/home.png" /> <a href="../../index.html">Home</a><li><img src="../../../assets/gallery/star.png" /> <a href="../../featured.html">Featured</a><li><img src="../../../assets/gallery/thumb_up.png" /> <a href="../../popular.html">Popular</a><li><img src="../../../assets/gallery/greenled.png" /> <a href="../../new.html">New</a><li><img src="../../../assets/gallery/script_code_red.png" /> <a href="../../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../../assets/gear.png" /> <a href="../../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Build Tag: <a href="../gallery-2013.05.15-21-12.html">gallery-2013.05.15-21-12</a></h2>
+									<p><a href="../../show/debounce.html">Return to Debounce</a><div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2013.05.15-21-12'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-debounce'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+&nbsp;
+    <span style="color: #006600; font-style: italic;">// You'll only get notified if the user stops typing (or types really slow)</span>
+    Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'input'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'keypress'</span><span style="color: #339933;">,</span> Y.<span style="color: #660066;">debounce</span><span style="color: #009900;">&#40;</span><span style="color: #CC0000;">500</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+        <span style="color: #000066;">alert</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'The user stopped typing'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-1-plain">YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2013.05.15-21-12'
+}).use('gallery-debounce', function(Y) {
+
+
+
+    // You'll only get notified if the user stops typing (or types really slow)
+
+    Y.one('input').on('keypress', Y.debounce(500, function () {
+
+        alert('The user stopped typing');
+
+    }));
+
+
+
+});</textarea>
+									</div>
+									<div id="build_info">
+										<h3 id="build_output">Build Output</h3><pre class="cmd" id="build_output_cmd" style="background-color: black; color: white;">---------- start logs from yogi.stdout.log ----------
+
+   <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  using yogi@0.1.9 on node@0.8.23
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  using module: gallery-debounce
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  running with shifter
+    shifter [info] racing to find the closest .shifter.json file
+    shifter [info] revving up
+    shifter [info] looking for build.json file
+    shifter [info] found build.json file, shifting
+    shifter [info] putting the hammer down, let's build this thing!
+    shifter [info] munging in loader meta data into build.json
+    shifter [info] putting the hammer down
+    shifter [info] shifting into gear for gallery-debounce
+    shifter [queu] writing RAW file
+    shifter [queu] compressing gallery-debounce/gallery-debounce.js with UglifyJS
+    shifter [queu] writing -min file
+    shifter [info] shifting for coverage
+    shifter [queu] coverage file read, starting coverage for: gallery-debounce/gallery-debounce.js
+    shifter [info] istanbul providing coverage
+    shifter [queu] instrumenting with istanbul
+    shifter [queu] writing coverage file to gallery-debounce/gallery-debounce-coverage.js
+    shifter [info] done racing, the gears are toast
+    shifter [info] finished in 0.034 seconds, pretty fast huh?
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  build complete
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  testing module now
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  prepping grover tests
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  adding tests route
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  turning on coverage support in grover
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  launching xdr server on port 5001
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  listening on: http://127.0.0.1:5000
+    Starting Grover on 1 files with PhantomJS@1.7.0
+      Running 15 concurrent tests at a time.
+      Using a 120 second timeout per test.
+    ✔ [debounce]: Passed: 3 Failed: 0 Total: 3 (ignored 0) (0.529 seconds)
+    Writing files in JSON format to: /src/gallery-debounce/logs/tests.json
+    ┌─────────┬─────────┬────────┬─────────────┬────────┐
+    │[34m  path   │[34m  lines  │[34m     %  │[34m  functions  │[34m     %  │
+    ├─────────┼─────────┼────────┼─────────────┼────────┤
+    │  total  │    0/0  │  NaN%  │        0/0  │  NaN%  │
+    └─────────┴─────────┴────────┴─────────────┴────────┘
+    ----------------------------------------------------------------
+    ✔ [Total]: Passed: 3 Failed: 0 Total: 3 (ignored 0) (0.529 seconds)
+      [Grover Execution Timer] 3.331 seconds
+    <span style="color: purple">yogi</span> <span style="color: white">[</span><span style="color: white">info</span><span style="color: white">]</span>  <span style="color: green">grover tests complete</span>
+    
+----------  end logs from yogi.stdout.log  ----------
+
+---------- start logs from yogi.stderr.log ----------
+
+         no data logged  
+    
+----------  end logs from yogi.stderr.log  ----------
+</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

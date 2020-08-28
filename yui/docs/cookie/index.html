@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cookie Utility - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+        
+        
+    
+    
+    
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+        <link rel="stylesheet" href="/combo/css-main-min.css">
+    
+        <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+        <link rel="stylesheet" href="/css/docs-min.css">
+    
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+    
+    
+            <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-29453705-2']);
+            _gaq.push(['_trackPageview']);
+            </script>
+    
+    
+            <script>
+            var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.18.1/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+            if (location.protocol.indexOf('https') > -1) {
+                YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+                YUI_config.combine = true;
+            }
+            </script>
+    
+            <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+                        method="get" role="search">
+                
+                    <input type="search" class="search-input" name="q"
+                            aria-label="Search APIs"
+                            placeholder="Search APIs">
+                
+                    <input type="hidden" name="vs" value="yuilibrary.com">
+                    <input type="hidden" name="vs" value="yuiblog.com">
+                </form>
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+                <ul class="nav hoverable-group">
+                        <li class="nav-tab hoverable ">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/yui/quick-start/">Quick Start</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/download/yui3/">Download YUI 3</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable  nav-tab-active">
+                            <a href="/yui/docs/">Documentation</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/guides/">User Guides</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/examples/">Examples</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/api/">API Docs</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/environments/">Environments</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable nav-break">
+                            <a href="/community/">Community</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="/gallery/">Gallery</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yuiblog.com/">Blog</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/forum/">Forums</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/theater/">YUI Theater</a>
+                                        </li>
+                                </ul>
+                        </li>
+                        <li class="nav-tab hoverable ">
+                            <a href="/projects/">Other Projects</a>
+                                <ul class="nav-submenu">
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yui2/">YUI 2</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/yuitest/">YUI Test</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="/projects/phploader/">YUI PHP Loader</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                        </li>
+                                        <li class="nav-child ">
+                                                <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                        </li>
+                                </ul>
+                        </li>
+                </ul>
+            </nav></div>
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+            <div id="breadcrumbs" class="yui3-u-1">
+                <ul class="breadcrumbs">
+                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/utilities/">Utilities</a></li>
+                            <li class="separator">&gt;</li>
+                        <li class="crumb"><a href="/yui/docs/cookie/">Cookie Utility</a></li>
+                </ul>
+            </div>
+                <div class="project-version yui3-u">Version 3.18.1</div>
+
+
+            
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Cookie Utility</h1>
+
+        
+            <a href="#docs-toc" class="jump" tabindex="1">Jump to Table of Contents</a>
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <div class="intro">
+    <p>The YUI Cookie utility provides a simple API for interacting with cookies, including the creation and manipulation of subcookies.</p>
+
+    <p><strong>Note about HTTPOnly Cookies:</strong> HTTPOnly cookies are cookies that may be set either by JavaScript or by the server but cannot be read from JavaScript. The YUI Cookie utility does not provide support for setting HTTPOnly cookies because browser support is not well-established and there is no fallback mechanism. Setting an HTTPOnly cookie on a browser that doesn't support it is the same as setting any other cookie (no error is thrown). When all A-grade browsers support setting HTTPOnly cookies by JavaScript, we will revisit adding support for it in the Cookie utility.</p>
+</div>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>
+To include the source files for Cookie Utility and its dependencies, first load
+the YUI seed file if you haven't already loaded it.
+</p>
+
+<pre class="code prettyprint">&lt;script src=&quot;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.18.1&#x2F;build&#x2F;yui&#x2F;yui-min.js&quot;&gt;&lt;&#x2F;script&gt;</pre>
+
+
+<p>
+Next, create a new YUI instance for your application and populate it with the
+modules you need by specifying them as arguments to the <code>YUI().use()</code> method.
+YUI will automatically load any dependencies required by the modules you
+specify.
+</p>
+
+<pre class="code prettyprint">&lt;script&gt;
+&#x2F;&#x2F; Create a new YUI instance and populate it with the required modules.
+YUI().use(&#x27;cookie&#x27;, function (Y) {
+    &#x2F;&#x2F; Cookie Utility is available and ready for use. Add implementation
+    &#x2F;&#x2F; code here.
+});
+&lt;&#x2F;script&gt;</pre>
+
+
+<p>
+For more information on creating YUI instances and on the
+<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+documentation for the <a href="../yui/index.html">YUI Global Object</a>.
+</p>
+
+
+<h2 id="using">Using the Cookie Utility</h2>
+
+<h3 id="create">Creating Cookies</h3>
+
+<p>The simplest way to create a cookie is to provide a name and a value to the <code>set()</code> method:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y) {
+    Y.Cookie.set(&quot;name&quot;, &quot;value&quot;);
+});</pre>
+
+
+<p>This example creates a cookie called &quot;name&quot; that has a value of &quot;value&quot;. Since
+this cookie is created with all of the default settings, it becomes a session cookie.</p>
+
+<p>There is a third argument for <code>set()</code>, which is an object containing additional settings for the cookie. To create a persistent cookie, you can specify an expiration date by supplying a <code>Date</code> object:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y) {
+    Y.Cookie.set(&quot;name&quot;, &quot;value&quot;, { expires: new Date(&quot;January 12, 2025&quot;) });
+});</pre>
+
+
+<p>By providing an &quot;expires&quot; option in the third argument, the cookie persists until the given date. In this example,
+the cookie will remain until January 12, 2025. The value for &quot;expires&quot; must be a <code>Date</code> object, otherwise
+it is ignored.</p>
+
+<p>It's possible to restrict access to a cookie by setting path and/or domain information. Setting a path on the cookie restricts access to pages that match that path; setting a domain restricts access to pages on a given domain (typically used to allow cookie access across subdomains). Both options can be easily set using the &quot;path&quot; and &quot;domain&quot; options:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y) {
+    Y.Cookie.set(&quot;name&quot;, &quot;value&quot;, {
+        path: &quot;&#x2F;&quot;,           &#x2F;&#x2F;all pages
+        domain: &quot;yahoo.com&quot;   &#x2F;&#x2F;any subdomain of yahoo.com, including www.yahoo.com
+    });
+});</pre>
+
+
+<p>In this example, a cookie is created that can be accessed from all pages on a yahoo.com subdomain. This cookie would
+then be accessible from pages on <a href="http://sports.yahoo.com">sports.yahoo.com</a> as well as <a href="http://www.yahoo.com">www.yahoo.com</a>.
+The &quot;path&quot; and &quot;domain&quot; options need not be used together; they may be used independently as well.</p>
+
+<p>The last option is &quot;secure&quot;, which indicates that the cookie should only be accessible via SSL on a page
+using the HTTPS protocol. All other aspects of the cookie remain the same based on the other options provided. To set a
+secure cookie, use the &quot;secure&quot; option:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+    Y.Cookie.set(&quot;name&quot;, &quot;value&quot;, { secure: true });
+});</pre>
+
+
+<p>This code creates a secure cookie by setting the &quot;secure&quot; option to <code>true</code>. Note that this will only work if the page calling this code uses the HTTPS protocol, otherwise the cookie will be created with default options.</p>
+
+<p>There is one more option called &quot;raw&quot;. When this option is specified, the cookie will not be URL-encoded before being set. Setting a &quot;raw&quot; cookie typically means that you have specialized server-side logic to deal with cookies that aren't URL-encoded. This is considered an advanced option that should only be used when necessary. Example usage:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+    Y.Cookie.set(&quot;name&quot;, &quot;value&quot;, { raw: true });
+});</pre>
+
+
+<h3 id="read">Reading Cookies</h3>
+
+<p>The <code>get()</code> method retrieves cookies that are accessible by the current page. If a cookie doesn't exist, <code>get()</code> returns <code>null</code>.</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+    var value = Y.Cookie.get(&quot;name&quot;);
+});</pre>
+
+
+<p>This example retrieves the cookie called &quot;name&quot; and stores its value in the variable <code>value</code>. By default, values returned by <code>get()</code> are strings (if the cookie exists) or <code>null</code> (if the cookie doesn't exist). You can change the return value by providing a conversion function as the second argument. For example, to return a number, you can pass in the native <code>Number()</code> function:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+    var value = Y.Cookie.get(&quot;age&quot;, Number);
+});</pre>
+
+
+<p>In this code, the returned cookie value will be a number if the cookie exists (it will still be <code>null</code> if the cookie doesn't exist). Other native functions that convert values are <code>Boolean()</code> and <code>Date</code>, or you can define your own conversion function:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+    var value = Y.Cookie.get(&quot;code&quot;, function(stringValue){
+        return parseInt(stringValue, 16);   &#x2F;&#x2F; Create a number from a hexadecimal code
+    });
+});</pre>
+
+
+<p>Conversion functions accept a single argument, the string value of the cookie, and must return a value. In this example, the conversion function expects a hexadecimal code to be returned and passes it into <code>parseInt()</code> to convert the value into a number. Note that the conversion function is never called if the cookie doesn't exist (<code>get()</code> always returns <code>null</code> when the cookie doesn't exist).</p>
+
+<p>The second argument can optionally be an object if you'd like to read a raw cookie. As with, writing cookies, it's possible to read a cookie without URL-decoding the value. To specify this, the second argument should be an object, such as:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+    var value = Y.Cookie.get(&quot;code&quot;, { raw: true });
+});</pre>
+
+
+<p>If you'd like to use a converter on a raw cookie, you can specify this using the &quot;converter&quot; option:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+    var value = Y.Cookie.get(&quot;code&quot;, {
+        raw: true,
+        converter: function(stringValue){
+            return parseInt(stringValue, 16);   &#x2F;&#x2F; Create a number from a hexadecimal code
+        }
+    });
+});</pre>
+
+
+<h3 id="delete">Deleting Cookies</h3>
+
+<p>When a cookie is no longer need, it can be removed from the browser by calling the <code>remove()</code> method. This method takes two arguments: the name of the cookie to remove and an optional cookie options object. A cookie created with specific options can only be deleted by specifying the same options. For instance, a cookie created with a <code>domain</code> property of &quot;yahoo.com&quot; can only be deleted by also specifying the <code>domain</code> property as &quot;yahoo.com&quot;. Examples:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+    &#x2F;&#x2F;delete the cookie named &quot;code&quot;
+    Y.Cookie.remove(&quot;code&quot;);
+
+    &#x2F;&#x2F;delete the cookie named &quot;info&quot; on the &quot;yahoo.com&quot; domain
+    Y.Cookie.remove(&quot;info&quot;, { domain: &quot;yahoo.com&quot; });
+
+    &#x2F;&#x2F;delete a secure cookie named &quot;username&quot;
+    Y.Cookie.remove(&quot;username&quot;, { secure: true });
+});</pre>
+
+
+<h3 id="sub">Subcookies</h3>
+
+<p>Each browser has a limit to the number of cookies that can be set per domain. These limits can be problematic for domains with different sites under different subdomains. Since cookie name-value pairs are rarely large enough to reach the byte limit for an individual cookie, it represents an opportunity to store multiple name-value pairs in a single cookie; these are called subcookies.</p>
+
+<p>A subcookie string looks similar to a URL and takes the following form:</p>
+
+<p><code>cookiename=name1=value1&amp;name2=value2&amp;name3=value3</code></p>
+
+<p>The Cookie utility supports this style of subcookies to allow multiple values to be stored in a single cookie. To set a subcookie value, use the <code>setSub()</code> method. This method accepts four arguments: the cookie name, the subcookie name, the subcookie value, and an optional options object. Note that the options object works on the entire cookie, it is not specific to the subcookie.</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+
+    &#x2F;&#x2F;set a cookie named &quot;name&quot; with a subcookie named &quot;subname&quot; whose value is &quot;value&quot;
+    Y.Cookie.setSub(&quot;name&quot;, &quot;subname&quot;, &quot;value&quot;);
+
+    &#x2F;&#x2F;set a second subcookie on &quot;name&quot;, with a name of &quot;subname2&quot; and a value of &quot;value2&quot;
+    Y.Cookie.setSub(&quot;name&quot;, &quot;subname2&quot;, &quot;value2&quot;);
+
+    &#x2F;&#x2F;set subcookie on the &quot;yahoo.com&quot; domain
+    Y.Cookie.setSub(&quot;info&quot;, &quot;age&quot;, 22, { domain: &quot;yahoo.com&quot; });
+
+    &#x2F;&#x2F;set subcookie to a secure cookie named &quot;user&quot;
+    Y.Cookie.setSub(&quot;user&quot;, &quot;name&quot;, &quot;ace123&quot;, { secure:true });
+});</pre>
+
+
+<p>It's possible to set the entire contents of a subcookie by using the <code>setSubs()</code> method, which accepts three arguments:
+the name of the cookie, and object containing name-value pairs, and an optional cookie options object. For instance, this code
+sets three subcookies at once:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+
+    var data = {
+        name: &quot;ace123&quot;,
+        age: 22,
+        track: true
+    };
+
+    &#x2F;&#x2F;set a cookie named &quot;user&quot; with subcookies
+    Y.Cookie.setSubs(&quot;user&quot;, data);
+
+});</pre>
+
+
+<p>Note that calls to <code>setSubs()</code> will always completely overwrite the cookie.</p>
+
+<p>To retrieve subcookie values, there are two methods. The first is <code>getSub()</code>, which retrieves a single subcookie value.
+This method accepts three arguments: the cookie name, the subcookie name, and an optional converter function. As with <code>get()</code>,
+the converter function changes the data or type of data retrieved from the cookie before it's returned (and isn't called at all
+if the cookie or subcookie doesn't exist):</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+
+    &#x2F;&#x2F;get subcookie
+    var stringValue = Y.Cookie.getSub(&quot;name&quot;, &quot;subname&quot;);
+
+    &#x2F;&#x2F;get subcookie and convert to number
+    var numberValue = Y.Cookie.getSub(&quot;user&quot;, &quot;age&quot;, Number);
+
+    &#x2F;&#x2F;get subcookie and convert from hex code to decimal number
+    var integerValue = Y.Cookie.getSub(&quot;settings&quot;, &quot;bgcolor&quot;, function(stringValue){
+        return parseInt(stringValue, 16);   &#x2F;&#x2F; Create a number from a hexadecimal code
+    });
+
+});</pre>
+
+
+<p>The second method to retrieve subcookies is <code>getSubs()</code>, which retrieves all subcookies and returns an object
+with name-value pairs for each subcookie. The <code>getSubs()</code> method takes a single argument, the name of the cookie
+containing subcookies to retrieve. The returned value is either an object or <code>null</code> if the cookie doesn't exist.</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+
+    &#x2F;&#x2F;get all subcookies
+    var data = Y.Cookie.getSubs(&quot;name&quot;);
+    var subValue = data.subname;
+
+    &#x2F;&#x2F;get all subcookies
+    var user = Y.Cookie.getSubs(&quot;user&quot;);
+    var userName = user.name;
+
+});</pre>
+
+
+<p>Removing subcookies is accomplished using the <code>removeSub()</code> method. This method accepts three arguments: the cookie name, the subcookie name, and an optional cookie options object. The options object, if specified, must have the same options
+as when the cookie was originally created. Example:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+
+    &#x2F;&#x2F;set subcookie on the &quot;yahoo.com&quot; domain
+    Y.Cookie.setSub(&quot;info&quot;, &quot;age&quot;, 22, { domain: &quot;yahoo.com&quot; });
+
+    &#x2F;&#x2F;remove the subcookie
+    Y.Cookie.removeSub(&quot;info&quot;, &quot;age&quot;, { domain: &quot;yahoo.com&quot; });
+});</pre>
+
+
+<p>Removing a subcookie keeps all other subcookies for that cookie intact. If you want to remove all subcookies, it's easiest to use <code>remove()</code> to remove the entire cookie.</p>
+
+<p>When the last subcookie is removed, the overall cookie still remains. If you'd like to remove the cookie when the last subcookie is removed, then specify the "removeIfEmpty" option:</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Create a YUI instance and use the cookie module.
+YUI().use(&#x27;cookie&#x27;, function(Y){
+
+    &#x2F;&#x2F;remove the subcookie
+    Y.Cookie.removeSub(&quot;info&quot;, &quot;age&quot;, { removeIfEmpty: true });
+});</pre>
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+                
+                    
+                        <a class="button link-apidocs" href="/yui/docs/api/modules/cookie.html">
+                            API Docs
+                        </a>
+                    
+                
+            
+        
+
+        
+            <div id="docs-toc" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Table of Contents</h2>
+                </div>
+
+                <div class="bd">
+                    <ul class="toc">
+<li>
+<a href="#getting-started">Getting Started</a>
+</li>
+<li>
+<a href="#using">Using the Cookie Utility</a>
+<ul class="toc">
+<li>
+<a href="#create">Creating Cookies</a>
+</li>
+<li>
+<a href="#read">Reading Cookies</a>
+</li>
+<li>
+<a href="#delete">Deleting Cookies</a>
+</li>
+<li>
+<a href="#sub">Subcookies</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Demonstrates basic usage of the Cookie utility for reading and writing cookies.">
+                                        <a href="cookie-simple-example.html">Simple Cookie Example</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Demonstrates using the Cookie utility to get, set and remove cookies.">
+                                        <a href="cookie-advanced-example.html">Advanced Cookie Example</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Demonstrates using the Cookie utility to get and set subcookies.">
+                                        <a href="cookie-subcookie-example.html">Subcookie Example</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+    </div>
+</div>
+
+
+
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+</body>
+</html>

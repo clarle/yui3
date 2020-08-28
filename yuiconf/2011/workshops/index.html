@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>YUIConf 2011 Workshops</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/combo/css-main-min.css">
+
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/quick-start/">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui/docs/">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+
+        
+
+
+        
+            <div class="yui3-u-1">
+                <div class="body-heading">
+                    
+    <h1>YUIConf 2011 Workshops</h1>
+
+                </div>
+            </div>
+        
+
+        
+            
+    
+        
+            
+        
+    
+
+
+            
+
+
+
+
+<div id="breadcrumbs" class="yui3-u-1">
+    <ul class="breadcrumbs">
+        <li class="crumb"><a href="/yuiconf/2011/">YUIConf 2011</a></li>
+        <li class="separator">&gt;</li>
+        <li class="crumb">Workshops</li>
+    </ul>
+</div>
+
+<div class="yui3-u-1">
+    <div class="content">
+
+        <style scoped>
+        th,td {border:2px solid white; vertical-align:middle;}
+        dd {margin-bottom:2em;}
+        .instructors dt {font-weight:bold;clear:both;}
+        .instructors .photo {margin:10px;float:right;}
+        </style>
+
+        <p><em>All workshops include hands-on exercises. Please bring your laptop.</em></p>
+
+        <p><em>Internal Yahoos please register for a Yahoo! Employee ticket and provide your work email address.</em></p>
+
+        <h3 id="workshops">Workshops</h3>
+
+        <table>
+        <tr>
+        <th rowspan="2"></th>
+        <th colspan="4">Wednesday, Nov. 2</th>
+        </tr>
+
+        <tr>
+        <th width="25%">Training Room 9</th>
+        <th width="25%">Training Room 10</th>
+        <th width="25%">Mozart</th>
+        <th width="25%">Bach</th>
+        </tr>
+
+        <tr>
+        <th>Morning</th>
+        <td rowspan="2"><a href="#intro">Intro to YUI</a>, Allen Rabinovich (<a href="http://www.eventbrite.com/event/2302946174">Register</a>)</td>
+        <td rowspan="2"><a href="#buildingblocks">YUI Building Blocks</a>, <a href="#luke-smith">Luke Smith</a> (<a href="http://www.eventbrite.com/event/2302954198">Register</a>)</td>
+        <td><a href="#css">Industrial Strengh CSS</a>, <a href="#thierry-koblentz">Thierry Koblentz</a> (<a href="http://www.eventbrite.com/event/2302978270">Register</a>)</td>
+        <td></td>
+        </tr>
+
+        <tr>
+        <th>Afternoon</th>
+        <td><a href="#jute">JUTE &mdash; A Deep Dive in Javascript Unit Testing</a>, <a href="#mark-trostler">Mark Trostler</a> (<a href="http://www.eventbrite.com/event/2302992312">Register</a>)</td>
+        <td><a href="#mail-apps">(Free!) Developing Apps for Yahoo! Mail</a>, <a href="#joe-covalesky">Joe Covalesky</a> (<a href="http://www.eventbrite.com/event/2395079748">Register</a>)</td>
+        </tr>
+
+        </table>
+
+        <h3 id="details">Details</h3>
+
+        <dl>
+        <dt><a name="intro"></a>Intro to YUI, Allen Rabinovich<br>
+        <em>Wednesday, November 2, 2011, 9am-5pm</em><dt>
+        <dd><p>This workshop will cover the core concepts, patterns, and APIs to get you started using YUI, including:
+
+        <ul>
+        <li>Getting YUI 3 onto the page</li>
+        <li>Basic DOM manipulation and event handling</li>
+        <li>Simple animations</li>
+        <li>Ajax APIs</li>
+        <li>Working with YUI's classes, widgets, plugins, and custom events</li>
+        <li>Understanding the YUI sandbox</li>
+        <li>Optimizing your loading strategy</li>
+        </ul>
+
+        <p>This session is intended for developers who are already familiar with JavaScript, CSS, HTML, and the DOM API.</p>
+
+        <p><em>This workshop include hands-on exercises. Please bring your laptop.</em></p>
+        </dd>
+
+        <dt><a name="buildingblocks"></a>YUI Building Blocks, Luke Smith<br>
+        <em>Wednesday, November 2, 2011, 9am-5pm</em><dt>
+        <dd><p>In this workshop, you will be using YUI's class infrastructure components (Y.Base, Y.Widget, Y.Plugin.Base, and more) to build reusable components. You will also learn how to create custom modules that can be deployed to YUI Gallery for automatic loading via the use() statement.</p>
+
+        <p>This session is intended for developers who have previously taken Intro to YUI or have had some first-hand development experience using YUI.</p>
+
+        <p><em>This workshop include hands-on exercises. Please bring your laptop.</em></p>
+        </dd>
+
+        <dt><a name="css"></a>Industrial Strength CSS, Thierry Koblentz<br>
+        <em>Wednesday, November 2, 2011, 9am-12pm</em><dt>
+        <dd><p>Take an iPad mockup to production-quality code with future-proof CSS by starting with semantic markup and using techniques like pseudo-elements, box-sizing, flex-box, etc. Learn how to take advantage of modern techniques plus progressive enhancement to build more robust and flexible layouts in newer browsers while while still supporting older but still important browsers.</p>
+
+        <p><em>This workshop include hands-on exercises. Please bring your laptop.</em></p>
+        </dd>
+
+        <dt><a name="jute"></a>JUTE &mdash; A Deep Dive in Javascript Unit Testing, Mark Trostler<br>
+        <em>Wednesday, November 2, 2011, 1pm-4pm</em><dt>
+        <dd><p>Using the open-source <a href="https://github.com/zzo/JUTE">JUTE</a> tool, we will investigate how to integrate your code into the developer-friendly, build-friendly, and manager-friendly Unit Test Environment. We will examine in detail what your unit tests should be testing, how to write them, and what they look like. We will then run them in various different ways (command line, webapp) and across different back ends (captured browsers, Selenium, V8) and examine (and make sense of) the output. So bring some code (or you'll be testing mine...) and we'll whip it into shape!</p>
+
+        <p><em>This workshop include hands-on exercises. Please bring your laptop.</em></p>
+        </dd>
+
+        <dt><a name="mail-apps"></a>Developing Apps for Yahoo! Mail, Joe Covalesky<br>
+        <em>Wednesday, November 2, 2011, 1pm-4pm</em><dt>
+        <dd><p>Think you can make Yahoo! Mail better?  Use our development platform to build an app that changes Yahoo! Mail's personality and gets your idea or service exposure to hundreds of millions of users.</p>
+
+        <p>In this workshop, you'll get hands-on experience using HTML, CSS, YUI and our JavaScript API to:</p>
+
+        <ul>
+        <li>dynamically change how messages are rendered.</li>
+        <li>inject JavaScript into an email to make it interactive.</li>
+        <li>call external web services to expand or update an email's content.</li>
+        <li>launch an app-specific UI within the Yahoo! Mail chrome.</li>
+        <li>create new ways to compose, read, and organize messages.</li>
+        </ul>
+
+
+        <p>Intended for developers already comfortable with HTML, CSS, and javascript. YUI experience helpful, but not required.</p>
+
+        <p><em>This workshop include hands-on exercises. Please bring your laptop.</em></p>
+        </dd>
+
+        </dl>
+
+        <h3 id="instructors">Instructors</h3>
+
+        <dl class="instructors">
+        <dt id="joe-covalesky"><img class="photo" src="/img/yuiconf/2011/joe-covalesky.png" width="90" height="90" alt="Joe Covalesky">Joe Covalesky</dt>
+        <dd><p>Joe Covalesky is a Senior Technical Yahoo! and Developer Advocate for Yahoo! Mail.  Before joining Yahoo!, he spent a decade making systems for automatically tracking cargo in intermodal container ports.  He enjoys helping developers build mail apps far more than trying to convince longshoremen that his job isn't to eliminate theirs.</p>
+
+        <p>He holds a BA in Electrical, Computer, and Systems Engineering from Harvard University and a Master of Fine Arts in Creative Writing from the University of Arizona.</p></dd>
+
+        <dt id="luke-smith"><img class="photo" src="/img/yuiconf/2011/luke-smith.jpg" width="90" height="90" alt="Luke Smith">Luke Smith</dt>
+        <dd>Luke Smith is a YUI core developer, frontend engineering advocate, presenter, and teacher.  He works on bits of everything in YUI from the custom event system to the JSON polyfill, Slider, DataTable and a few other components.  He cohosts <a href="http://www.youtube.com/playlist?list=PL29854C3883AA8170">YUI Open Hours</a> and moderates #yui on freenode.</dd>
+
+        <dt id="mark-trostler"><img class="photo" src="/img/yuiconf/2011/mark-trostler.jpg" width="90" height="90" alt="Mark Trostler">Mark Trostler</dt>
+        <dd>Mark has been working at Yahoo! for almost 7 years, the last 2 at Yahoo Mail.  He has been focused on Front End automation, testing, and build processes &mdash; and lots of coding too.  Before Yahoo he worked on front-end projects for Juniper Networks, Redback Networks, and Intel.</dd>
+
+        <dt id="thierry-koblentz"><img class="photo" src="/img/yuiconf/2011/thierry-koblentz.jpg" width="90" height="90" alt="Thierry Koblentz">Thierry Koblentz</dt>
+        <dd>Thierry Koblentz is a front-end engineer at Yahoo! He owns <a title="TJK Design" href="http://www.tjkdesign.com/">TJK Design</a>, <a title="Lightweight CSS framework" href="http://www.ez-css.org/">ez-css.org</a> and <a title="Interactive CSS tutorial" href="http://www.css-101.org/">css-101.org</a>. You can follow Thierry on Twitter at <a title="Thierry Koblentz on Twitter" href="http://twitter.com/thierrykoblentz">@thierrykoblentz</a>.</dd>
+        </dl>
+    </div>
+</div>
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

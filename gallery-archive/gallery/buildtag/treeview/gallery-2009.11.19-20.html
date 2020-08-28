@@ -1,0 +1,593 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery</title>
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/home.png" /> <a href="../../index.html">Home</a><li><img src="../../../assets/gallery/star.png" /> <a href="../../featured.html">Featured</a><li><img src="../../../assets/gallery/thumb_up.png" /> <a href="../../popular.html">Popular</a><li><img src="../../../assets/gallery/greenled.png" /> <a href="../../new.html">New</a><li><img src="../../../assets/gallery/script_code_red.png" /> <a href="../../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../../assets/gear.png" /> <a href="../../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<h2>Build Tag: <a href="../gallery-2009.11.19-20.html">gallery-2009.11.19-20</a></h2>
+									<p><a href="../../show/treeview.html">Return to YUI 2 treeview port</a><div class="syntax-highlight" id="yui-syn-1"><pre class="javascript" style="font-family:monospace;">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;YUI 3 gallery treeview checkbox test&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;http://yui.yahooapis.com/gallery-2010.02.17-20/build/gallery-treeview/assets/skins/sam/gallery-treeview.css&quot; /&gt;
+    &lt;script src=&quot;http://yui.yahooapis.com/3.0.0/build/yui/yui-debug.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt; 
+&lt;/head&gt;
+&lt;body class=&quot;yui-skin-sam&quot;&gt;
+    &lt;h3&gt;Tree with highlight propagation and 'checkbox' skin&lt;/h3&gt;
+    &lt;div id=&quot;treeDiv1&quot;  class=&quot;whitebg ygtv-checkbox&quot;&gt;&lt;/div&gt;
+    &lt;button id=&quot;logHilit&quot;&gt;Log selected&lt;/button&gt;
+&nbsp;
+    &lt;hr/&gt;
+    &lt;h3&gt;Tree with single node highlighting and simple skin&lt;/h3&gt;
+&nbsp;
+    &lt;div id=&quot;treeDiv2&quot; class=&quot;whitebg ygtv-highlight&quot;&gt;&lt;/div&gt;
+    <span style="color: #339933;">&lt;</span>script type<span style="color: #339933;">=</span><span style="color: #3366CC;">&quot;text/javascript&quot;</span><span style="color: #339933;">&gt;</span>
+        YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+            modules<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+                <span style="color: #3366CC;">'gallery-port'</span><span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+                    fullpath<span style="color: #339933;">:</span> <span style="color: #3366CC;">'http://yui.yahooapis.com/gallery-2010.02.17-20/build/gallery-port/gallery-port-min.js'</span><span style="color: #339933;">,</span>
+                    requires<span style="color: #339933;">:</span> <span style="color: #009900;">&#91;</span><span style="color: #3366CC;">'base'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'node'</span><span style="color: #009900;">&#93;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+                <span style="color: #3366CC;">'gallery-treeview'</span><span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+                    fullpath<span style="color: #339933;">:</span> <span style="color: #3366CC;">'http://yui.yahooapis.com/gallery-2010.02.17-20/build/gallery-treeview/gallery-treeview-min.js'</span><span style="color: #339933;">,</span>
+                    requires<span style="color: #339933;">:</span> <span style="color: #009900;">&#91;</span><span style="color: #3366CC;">'node'</span><span style="color: #339933;">,</span><span style="color: #3366CC;">'gallery-port'</span><span style="color: #009900;">&#93;</span>
+                 <span style="color: #009900;">&#125;</span>
+            <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span>
+&nbsp;
+            filter<span style="color: #339933;">:</span> <span style="color: #3366CC;">'debug'</span><span style="color: #339933;">,</span>
+&nbsp;
+            logExclude<span style="color: #339933;">:</span> <span style="color: #009900;">&#123;</span>
+                attribute<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+                event<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+                base<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+                deprecated<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">,</span>
+                Selector<span style="color: #339933;">:</span> <span style="color: #003366; font-weight: bold;">true</span>
+            <span style="color: #009900;">&#125;</span>
+&nbsp;
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-treeview'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            <span style="color: #006600; font-style: italic;">//Creating the local YAHOO copy</span>
+            <span style="color: #003366; font-weight: bold;">var</span> YAHOO <span style="color: #339933;">=</span> Y.<span style="color: #660066;">Port</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+                Lang <span style="color: #339933;">=</span> YAHOO.<span style="color: #660066;">lang</span><span style="color: #339933;">,</span>
+                Dom <span style="color: #339933;">=</span> YAHOO.<span style="color: #660066;">util</span>.<span style="color: #660066;">Dom</span><span style="color: #339933;">,</span>
+                Event <span style="color: #339933;">=</span> YAHOO.<span style="color: #660066;">util</span>.<span style="color: #660066;">Event</span><span style="color: #339933;">,</span>
+                Gallery <span style="color: #339933;">=</span> Y.<span style="color: #660066;">apm</span><span style="color: #339933;">;</span> 
+&nbsp;
+            <span style="color: #006600; font-style: italic;">//global variable to allow console inspection of tree:</span>
+            <span style="color: #003366; font-weight: bold;">var</span> tree1<span style="color: #339933;">,</span> tree2<span style="color: #339933;">;</span>
+&nbsp;
+            <span style="color: #003366; font-weight: bold;">var</span> makeBranch <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">function</span> <span style="color: #009900;">&#40;</span>parent<span style="color: #339933;">,</span>label<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                label <span style="color: #339933;">=</span> label <span style="color: #339933;">||</span> <span style="color: #3366CC;">''</span><span style="color: #339933;">;</span>
+                <span style="color: #003366; font-weight: bold;">var</span> n <span style="color: #339933;">=</span> Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">*</span> <span style="color: #009900;">&#40;</span><span style="color: #CC0000;">6</span> <span style="color: #339933;">-</span> <span style="color: #009900;">&#40;</span>label.<span style="color: #660066;">length</span> <span style="color: #339933;">||</span> <span style="color: #CC0000;">0</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #000066; font-weight: bold;">for</span> <span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">var</span> i <span style="color: #339933;">=</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span>i <span style="color: #339933;">&lt;</span> n<span style="color: #339933;">;</span>i<span style="color: #339933;">++</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                    <span style="color: #003366; font-weight: bold;">var</span> tmpNode <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Gallery.<span style="color: #660066;">TextNode</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'label'</span> <span style="color: #339933;">+</span> label <span style="color: #339933;">+</span> <span style="color: #3366CC;">'-'</span> <span style="color: #339933;">+</span> i<span style="color: #339933;">,</span> parent<span style="color: #339933;">,</span> Math.<span style="color: #660066;">random</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">&gt;</span> .5<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    makeBranch<span style="color: #009900;">&#40;</span>tmpNode<span style="color: #339933;">,</span>label <span style="color: #339933;">+</span> <span style="color: #3366CC;">'-'</span> <span style="color: #339933;">+</span> i<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                <span style="color: #009900;">&#125;</span>
+            <span style="color: #009900;">&#125;</span>
+&nbsp;
+            <span style="color: #003366; font-weight: bold;">var</span> treeInit <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                tree1 <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Gallery.<span style="color: #660066;">TreeView</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;treeDiv1&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                makeBranch<span style="color: #009900;">&#40;</span>tree1.<span style="color: #660066;">getRoot</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                tree1.<span style="color: #660066;">setNodesProperty</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'propagateHighlightUp'</span><span style="color: #339933;">,</span><span style="color: #003366; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                tree1.<span style="color: #660066;">setNodesProperty</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'propagateHighlightDown'</span><span style="color: #339933;">,</span><span style="color: #003366; font-weight: bold;">true</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                tree1.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'clickEvent'</span><span style="color: #339933;">,</span>tree1.<span style="color: #660066;">onEventToggleHighlight</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>		
+                tree1.<span style="color: #660066;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+                Y.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'click'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                    <span style="color: #003366; font-weight: bold;">var</span> hiLit <span style="color: #339933;">=</span> tree1.<span style="color: #660066;">getNodesByProperty</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'highlightState'</span><span style="color: #339933;">,</span><span style="color: #CC0000;">1</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #000066; font-weight: bold;">if</span> <span style="color: #009900;">&#40;</span>Lang.<span style="color: #660066;">isNull</span><span style="color: #009900;">&#40;</span>hiLit<span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span> 
+                        Y.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;None selected&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span> <span style="color: #000066; font-weight: bold;">else</span> <span style="color: #009900;">&#123;</span>
+                        <span style="color: #003366; font-weight: bold;">var</span> labels <span style="color: #339933;">=</span> <span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">;</span>
+                        <span style="color: #000066; font-weight: bold;">for</span> <span style="color: #009900;">&#40;</span><span style="color: #003366; font-weight: bold;">var</span> i <span style="color: #339933;">=</span> <span style="color: #CC0000;">0</span><span style="color: #339933;">;</span> i <span style="color: #339933;">&lt;</span> hiLit.<span style="color: #660066;">length</span><span style="color: #339933;">;</span> i<span style="color: #339933;">++</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+                            labels.<span style="color: #660066;">push</span><span style="color: #009900;">&#40;</span>hiLit<span style="color: #009900;">&#91;</span>i<span style="color: #009900;">&#93;</span>.<span style="color: #660066;">label</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                        <span style="color: #009900;">&#125;</span>
+                        Y.<span style="color: #660066;">log</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;Highlighted nodes:<span style="color: #000099; font-weight: bold;">\n</span>&quot;</span> <span style="color: #339933;">+</span> labels.<span style="color: #660066;">join</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;<span style="color: #000099; font-weight: bold;">\n</span>&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;info&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;example&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                    <span style="color: #009900;">&#125;</span>
+                <span style="color: #009900;">&#125;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">'#logHilit'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+                tree2 <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">new</span> Gallery.<span style="color: #660066;">TreeView</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;treeDiv2&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                makeBranch<span style="color: #009900;">&#40;</span>tree2.<span style="color: #660066;">getRoot</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+                tree2.<span style="color: #660066;">singleNodeHighlight</span> <span style="color: #339933;">=</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">;</span>
+                tree2.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'clickEvent'</span><span style="color: #339933;">,</span>tree2.<span style="color: #660066;">onEventToggleHighlight</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>		
+                tree2.<span style="color: #660066;">render</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+            <span style="color: #009900;">&#125;</span><span style="color: #339933;">;</span>
+&nbsp;
+            <span style="color: #006600; font-style: italic;">//Add an onDOMReady handler to build the tree when the document is ready</span>
+            Y.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'domready'</span><span style="color: #339933;">,</span> treeInit<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #339933;">&lt;/</span>script<span style="color: #339933;">&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+&nbsp;</pre><textarea id="yui-syn-1-plain">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;
+
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+
+    &lt;title&gt;YUI 3 gallery treeview checkbox test&lt;/title&gt;
+
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;http://yui.yahooapis.com/gallery-2010.02.17-20/build/gallery-treeview/assets/skins/sam/gallery-treeview.css&quot; /&gt;
+
+    &lt;script src=&quot;http://yui.yahooapis.com/3.0.0/build/yui/yui-debug.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt; 
+
+&lt;/head&gt;
+
+&lt;body class=&quot;yui-skin-sam&quot;&gt;
+
+    &lt;h3&gt;Tree with highlight propagation and 'checkbox' skin&lt;/h3&gt;
+
+    &lt;div id=&quot;treeDiv1&quot;  class=&quot;whitebg ygtv-checkbox&quot;&gt;&lt;/div&gt;
+
+    &lt;button id=&quot;logHilit&quot;&gt;Log selected&lt;/button&gt;
+
+
+
+    &lt;hr/&gt;
+
+    &lt;h3&gt;Tree with single node highlighting and simple skin&lt;/h3&gt;
+
+
+
+    &lt;div id=&quot;treeDiv2&quot; class=&quot;whitebg ygtv-highlight&quot;&gt;&lt;/div&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+
+        YUI({
+
+            modules: {
+
+                'gallery-port': {
+
+                    fullpath: 'http://yui.yahooapis.com/gallery-2010.02.17-20/build/gallery-port/gallery-port-min.js',
+
+                    requires: ['base','node']
+
+                },
+
+                'gallery-treeview': {
+
+                    fullpath: 'http://yui.yahooapis.com/gallery-2010.02.17-20/build/gallery-treeview/gallery-treeview-min.js',
+
+                    requires: ['node','gallery-port']
+
+                 }
+
+            },
+
+
+
+            filter: 'debug',
+
+
+
+            logExclude: {
+
+                attribute: true,
+
+                event: true,
+
+                base: true,
+
+                deprecated: true,
+
+                Selector: true
+
+            }
+
+
+
+        }).use('gallery-treeview', function(Y) {
+
+            //Creating the local YAHOO copy
+
+            var YAHOO = Y.Port(),
+
+                Lang = YAHOO.lang,
+
+                Dom = YAHOO.util.Dom,
+
+                Event = YAHOO.util.Event,
+
+                Gallery = Y.apm; 
+
+
+
+            //global variable to allow console inspection of tree:
+
+            var tree1, tree2;
+
+
+
+            var makeBranch = function (parent,label) {
+
+                label = label || '';
+
+                var n = Math.random() * (6 - (label.length || 0));
+
+                for (var i = 0;i &lt; n;i++) {
+
+                    var tmpNode = new Gallery.TextNode('label' + label + '-' + i, parent, Math.random() &gt; .5);
+
+                    makeBranch(tmpNode,label + '-' + i);
+
+                }
+
+            }
+
+
+
+            var treeInit = function() {
+
+                tree1 = new Gallery.TreeView(&quot;treeDiv1&quot;);
+
+                makeBranch(tree1.getRoot());
+
+                tree1.setNodesProperty('propagateHighlightUp',true);
+
+                tree1.setNodesProperty('propagateHighlightDown',true);
+
+                tree1.on('clickEvent',tree1.onEventToggleHighlight);		
+
+                tree1.render();
+
+
+
+                Y.on('click', function() {
+
+                    var hiLit = tree1.getNodesByProperty('highlightState',1);
+
+                    if (Lang.isNull(hiLit)) { 
+
+                        Y.log(&quot;None selected&quot;);
+
+                    } else {
+
+                        var labels = [];
+
+                        for (var i = 0; i &lt; hiLit.length; i++) {
+
+                            labels.push(hiLit[i].label);
+
+                        }
+
+                        Y.log(&quot;Highlighted nodes:\n&quot; + labels.join(&quot;\n&quot;), &quot;info&quot;, &quot;example&quot;);
+
+                    }
+
+                }, '#logHilit');
+
+
+
+                tree2 = new Gallery.TreeView(&quot;treeDiv2&quot;);
+
+                makeBranch(tree2.getRoot());
+
+                tree2.singleNodeHighlight = true;
+
+                tree2.on('clickEvent',tree2.onEventToggleHighlight);		
+
+                tree2.render();
+
+                
+
+            };
+
+
+
+            //Add an onDOMReady handler to build the tree when the document is ready
+
+            Y.on('domready', treeInit);
+
+
+
+        });
+
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+</textarea>
+									</div>
+									<div id="build_info">
+										<h3 id="build_output">Build Output</h3><pre class="cmd" id="build_output_cmd" style="background-color: black; color: white;">/home/y/libexec/ant/bin/ant all
+Buildfile: build.xml
+     [echo] Starting Build For gallery-treeview
+     [echo] Ant Properties
+     [echo]     Home : /home/y/libexec/ant
+     [echo]     Ant Version : Apache Ant version 1.7.1 compiled on June 27 2008
+     [echo]     Build File : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build.xml
+     [echo] Local Build Properties
+     [echo]     version : 3
+     [echo]     srcdir : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery
+     [echo]     builddir : ../../../builder/componentbuild
+     [echo]     component : gallery-treeview
+     [echo]     component.basefilename : gallery-treeview
+     [echo]     component.basedir : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview
+     [echo]     component.builddir : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp
+     [echo] Global Build Properties
+     [echo]     global.build.base : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/build
+     [echo]     global.build.component : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/build/gallery-treeview
+     [echo]     global.build.component.assets : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/build/gallery-treeview/assets
+
+clean:
+
+init:
+    [mkdir] Created dir: /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp
+
+-concatdebug:
+     [echo] Concatenating
+     [echo]     Source Files : TreeView.js, Node.js, RootNode.js, TextNode.js, MenuNode.js, HTMLNode.js, TreeViewEd.js
+     [echo]     In Source Dir : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/js
+     [echo]     To : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/gallery-treeview-debug.js
+     [copy] Copying 7 files to /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/ant
+
+-registerdebug:
+     [echo] Wrapping /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/gallery-treeview-debug.js in YUI.add module
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp
+
+-prependdebug:
+
+-appenddebug:
+
+builddebug:
+
+-createcore:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp
+
+-loggerregex:
+     [echo] Replacing Logger Statements in /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/gallery-treeview.js
+
+buildcore:
+
+-rollupjs:
+
+-concatskins:
+     [echo] Concatenating
+     [echo]     Source Files : gallery-treeview-core.css, skins/sam/gallery-treeview-skin.css
+     [echo]     In Source Dir : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/assets
+     [echo]     To : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/assets/skins/sam/gallery-treeview.css
+     [copy] Copying 2 files to /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/ant
+   [delete] Deleting directory /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/ant
+     [echo] Running yuicompressor on /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/assets/skins/sam/gallery-treeview.css
+     [java] 
+     [java] [INFO] Using charset UTF-8
+
+-buildskins:
+
+-rollupcss:
+
+buildskins:
+
+build:
+
+minify:
+     [echo] Running yuicompressor on /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/gallery-treeview.js
+     [java] 
+     [java] [INFO] Using charset UTF-8
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] widget=YAHOO.widget||{}; ---> var  <--- Widget=YAHOO.widget;var TV=function
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] };var Widget=YAHOO.widget; ---> var  <--- TV=function(id,oConfig){TV
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] =KEY;Widget.TreeView=TV; ---> var  <--- NS=Y.namespace("apm");NS
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] .maxAnim){var tree=this; ---> var  <--- a=Widget.TVAnim.getAnim(this.
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] .maxAnim){var tree=this; ---> var  <--- a=Widget.TVAnim.getAnim(this.
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] }else{config.type="html"; ---> var  <--- d=document.createElement("div");d
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] break;}}returnbranch;}; ---> var  <--- markup=Y.Selector.query("#"+
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ;}if(targetEl.id){ ---> var  <--- m=targetEl.id.match(/bygtv([^d]*)(.*)/)
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] );break;caseKEY.RIGHT: ---> var  <--- self=this,moveFocusRight,focusOnExpand=function(
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ._nodes.hasOwnProperty(i)){ ---> var  <--- n=this._nodes[i];if
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] {var values=[];for( ---> var  <--- i in this._nodes){if(this
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ._nodes.hasOwnProperty(i)){ ---> var  <--- n=this._nodes[i];if
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] {var values=[];for( ---> var  <--- i in this._nodes){if(this
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ._nodes.hasOwnProperty(i)){ ---> var  <--- n=this._nodes[i];if
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ){var p=node.parent; ---> var  <--- a=[];for(var i=
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ;var a=[];for( ---> var  <--- i=0,len=p.children.
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] removeListener(el,"keydown");for( ---> var  <--- i=0;i var  <--- node=this._nodes[i];if
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] );returnfalse;}}); ---> var  <--- PROT=TV.prototype;PROT.draw=
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ,oParent,expanded);}}; ---> var  <--- NS=Y.namespace("apm");NS
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] .tree.popNode(this);} ---> var  <--- refIndex=node.isChildOf(p);p
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] .tree.popNode(this);} ---> var  <--- refIndex=node.isChildOf(p);if
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] children.slice(0);for( ---> var  <--- i=0;i var  <--- sibs=this.getSiblings();for(
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] =this.getSiblings();for( ---> var  <--- i=0;sibs&&i var  <--- type="n";if(this.hasChildren(
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] =this.children.length;for( ---> var  <--- i=0;i var  <--- c=this.children[i];if
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] {var sb=[];for( ---> var  <--- i=0;i var  <--- i=0;i var  <--- expandParent=function(node){if(node
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ;}};expandParent(this); ---> var  <--- root=new Y.Node(self.getEl
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] self.getEl().firstChild); ---> var  <--- tds=root.queryAll("td");tds
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ,true);if(a){ ---> var  <--- aRef=a._node;a.focus(
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] .type=this._type;for( ---> var  <--- i=0;i var  <--- i=0;i var  <--- RootNode=function(oTree){this._nodeinit
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ;YAHOO.widget.RootNode=RootNode; ---> var  <--- NS=Y.namespace("apm");NS
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] .setUpLabel(oData);}}; ---> var  <--- NS=Y.namespace("apm");NS
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ;this.multiExpand=false;}; ---> var  <--- NS=Y.namespace("apm");NS
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] (oData,hasIcon);}}; ---> var  <--- NS=Y.namespace("apm");NS
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] ed.active=false;}}; ---> var  <--- Nproto=YAHOO.widget.Node.prototype;
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] value)){returnfalse;}} ---> var  <--- ret=this.tree.fire("editorSaveEvent",
+     [java] 
+     [java] [WARNING] Try to use a single 'var' statement per scope.
+     [java] function(value,editorData){}; ---> var  <--- TNproto=YAHOO.widget.TextNode.prototype;
+     [java] 
+     [java] [WARNING] Found an undeclared symbol: YUI
+     [java]  ---> YUI <--- .add("gallery-treeview",function(Y){
+     [java] 
+     [java] [WARNING] The symbol crit is declared but is apparently never used.
+     [java] This code can probably be written in a more compact way.
+     [java] ){var target=ev.target, ---> crit <--- ="td .ygtvrow",targetEl,pnode=target.get
+     [java] 
+     [java] [WARNING] The symbol targetEl is declared but is apparently never used.
+     [java] This code can probably be written in a more compact way.
+     [java] ){var target=ev.target, ---> targetEl <--- =target._node,node=TV.editorData
+     [java] 
+     [java] [WARNING] The symbol node is declared but is apparently never used.
+     [java] This code can probably be written in a more compact way.
+     [java] .target,targetEl=target._node, ---> node <--- =TV.editorData.node;if(target
+
+lint:
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/gallery-treeview-debug.js
+     [java] - OK
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/gallery-treeview-min.js
+     [java] - OK
+     [java] Running JSLint on : /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/src/gallery-treeview/build_tmp/gallery-treeview.js
+     [java] - OK
+
+local:
+
+deploybuild:
+     [copy] Copying 3 files to /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/build/gallery-treeview
+
+deployassets:
+
+deployskins:
+     [copy] Copying 1 file to /home/y/var/builds/workspace/gallery-test/build_tmp/src/yui3-gallery/build/gallery-treeview/assets/skins/sam
+
+deploydocs:
+
+deploy:
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 7 seconds</pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

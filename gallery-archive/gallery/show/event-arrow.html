@@ -1,0 +1,273 @@
+<html>
+	<head>
+		<title>YUI Library - Gallery :: Arrow event</title>
+		<link href="https://github.com/lsmith" rel="author" title="lsmith" />
+		<meta charset="utf-8" />
+		<link href="http://yui.yahooapis.com/combo?2.8.2/build/reset-fonts-grids/reset-fonts-grids.css" rel="stylesheet" />
+		<link href="../../assets/skin/yuilib-08.25.2011.css" rel="stylesheet" />
+		<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css" rel="stylesheet" />
+		<link href="../../combo/css@main-min.css" rel="stylesheet" />
+		<meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible" />
+		<meta content="/xrds.xml" http-equiv="X-XRDS-Location" />
+		<link href="../../img/favicon.png" rel="shortcut icon" type="image/png" />
+	</head>
+	<body class="yui3-skin-sam">
+		<div id="wrap">
+			<div class="yui-t2 gallery" id="doc3"><a name="top"></a><div class="yui3-g" id="hd">
+					<ul class="gallery-header-links">
+						<li><a href="http://www.yuilibrary.com">YUI Home</a><li><a href="../index.html">Gallery Archive</a></ul>
+					<div class="content">
+						<div class="yui3-u-1-4">
+							<ul id="userinfo">
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="bd">
+					<div class="yui3-u-1" id="breadcrumbs">
+						<ul class="breadcrumbs">
+							<li class="crumb"><a href="http://yuilibrary.com/">YUI</a><li class="separator">&gt;<li class="crumb"><a href="http://yuilibrary.com/community/">Community</a><li class="separator">&gt;<li class="crumb"><a href="../index.html">Gallery</a></ul>
+					</div>
+					<div class="content" id="docs-hd">
+						<h1>Gallery</h1>
+					</div>
+					<div id="deprecated">
+						<p>The Gallery is deprecated. No new Gallery components may be submitted, and modifying existing components is disabled. For more information please read the <a href="http://www.yuiblog.com/blog/2014/06/16/yui-gallery-deprecation-announcement/">Gallery Deprecation blog post</a>. This is a static snapshot of the Gallery for archive purposes. </div>
+					<div id="content-wrap">
+						<div class="yui-b">
+							<div class="sidenav">
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Modules</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/home.png" /> <a href="../index.html">Home</a><li><img src="../../assets/gallery/star.png" /> <a href="../featured.html">Featured</a><li><img src="../../assets/gallery/thumb_up.png" /> <a href="../popular.html">Popular</a><li><img src="../../assets/gallery/greenled.png" /> <a href="../new.html">New</a><li><img src="../../assets/gallery/script_code_red.png" /> <a href="../show.html">All</a></ul>
+									</div>
+								</div>
+								<div class="sidebox">
+									<div class="hd">
+										<h2>Documentation</h2>
+									</div>
+									<div class="bd">
+										<ul class="blank">
+											<li><img src="../../assets/script.png" /> <a href="http://yui.github.com/yogi/">Yogi Documentation</a><li><img src="../../assets/notepaper.png" /> <a href="http://yui.github.com/shifter/">Shifter Documentation</a><li><img src="../../assets/gallery/book.png" /> <a href="http://yuilibrary.com/yui/docs/tutorials/gallery">Developer Guide</a><li><img src="../../assets/gear.png" /> <a href="../setup.html">Module Setup</a></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="yui-main">
+							<div class="yui-b" id="gallery">
+								<div class="yui-g">
+									<div class="nav" id="ctxtnav">
+										<h2>Context Navigation</h2>
+										<ul>
+										</ul>
+									</div>
+									<div class="warning"> YUI Library is not responsible for bugs or support with this module. It is available as a free service. For support please contact the module owner with the provided links. </div>
+									<div class="gallery-item" id="gallery-item_369">
+										<div class="item-hd">
+											<h2>Arrow event (gallery-event-arrow) <span class="oncdn" title="This module is available on the CDN.">on cdn</span></h2> Last Updated: <span title="09 Feb 2011 00:07">02/9/11</span><div class="votes"><a class="up" href="#" title="Vote this item up.">+</a> <span>0</span> <a class="down" href="#" title="Vote this item down.">-</a></div>
+										</div>
+										<div class="mod">
+											<div class="yui-gf profile">
+												<div class="yui-u first">
+													<h3><img class="medal" src="../../assets/medal_gold.png" title="YUI Developer" /> <span class="gallery-user">Luke Smith</span></h3>
+													<h4>YUI Contributor</h4>
+													<p><img src="http://www.gravatar.com/avatar/3974d5bcfbdb27cc99d10706dc5b85f7?s=64&d=http://yuilibrary.com/assets/gravatar-64.png" /><p><a href="../user/lsmith.html">See 19 more by this user.</a> Created: <span title="05 Jan 2011 20:31">01/5/11</span><br /> Last CDN Push: <span title="18 Jan 2011 21:07">01/18/11</span><br /> Build Tag: <a href="../buildtag/event-arrow/gallery-2011.01.18-21-05.html">gallery-2011.01.18-21-05</a><br /> Project: <a href="http://yuilibrary.com/projects/yui3">YUI 3</a><br /> License: <a href="http://yuilibrary.com/license/" target="_blank">YUI BSD</a><br /> YUI Version: 3.3.0<br /> Free for use. </div>
+												<div class="yui-u">
+													<div class="desc"><span class="wikipage"><p>The event passed to subscribers includes a property e.direction with value in ('n', 's', 'e', 'w', 'nw', 'ne', 'sw', 'se'). The event repeats as long as an arrow key remains depressed, and preventing the event with e.preventDefault() will stop native page scrolling.<p>This event first saw life in gallery-event-nav-keys, then was explored a bit more in a YUI Event Utility example. The example is a simplified form of this one.</span></div>
+												</div>
+												<div class="tags">
+													<ul>
+														<li>Tags: <li><a href="../tag/lsmith.html" title="Search by this tag: lsmith">lsmith</a><li><a href="../tag/synthetic.html" title="Search by this tag: synthetic">synthetic</a><li><a href="../tag/event.html" title="Search by this tag: event">event</a></ul>
+												</div>
+											</div>
+										</div>
+										<ul class="gallery-links">
+											<li class="download"><a href="http://github.com/lsmith/yui3-gallery/downloads" target="_blank" title="Download">Download</a><li class="docs empty">Docs<li class="homepage"><a href="http://github.com/lsmith/yui3-gallery/" target="_blank" title="Homepage">Homepage</a><li class="bugs"><a href="http://github.com/lsmith/yui3-gallery/issues" target="_blank" title="Bugs">Bugs</a><li class="source"><a href="http://github.com/lsmith/yui3-gallery/tree/master/build/gallery-event-arrow/gallery-event-arrow-debug.js" target="_blank" title="Source">Source</a><li class="example empty">Example<li class="forum"><a href="../forum/event-arrow.html" title="Forum">Forum</a><li class="history"><a href="../history/event-arrow.html" title="History">History</a></ul>
+										<div class="mod"><span class="wikipage"><p>Here's an improved version of the Event Utility example &quot;Creating an Arrow Event for DOM Subscription&quot;. The example synthetic arrow event supports only four directions.</span><h3 id="code">Code Sample</h3>
+											<div class="syntax-highlight" id="yui-syn-1"><pre class="html4strict" style="font-family:monospace;"><span style="color: #009900;">&lt;<span style="color: #000000; font-weight: bold;">script</span> <span style="color: #000066;">src</span><span style="color: #66cc66;">=</span><span style="color: #ff0000;">&quot;http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js&quot;</span>&gt;&lt;<span style="color: #66cc66;">/</span><span style="color: #000000; font-weight: bold;">script</span>&gt;</span></pre><textarea id="yui-syn-1-plain">&lt;script src=&quot;http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js&quot;&gt;&lt;/script&gt;</textarea>
+											</div>
+											<div class="syntax-highlight" id="yui-syn-2"><pre class="javascript" style="font-family:monospace;"><span style="color: #006600; font-style: italic;">// Use this in place of the current Event Utility 'arrow' example code</span>
+YUI<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+    <span style="color: #006600; font-style: italic;">//Last Gallery Build of this module</span>
+    gallery<span style="color: #339933;">:</span> <span style="color: #3366CC;">'gallery-2011.01.18-21-05'</span>
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span>.<span style="color: #003366; font-weight: bold;">use</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'gallery-event-arrow'</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">function</span><span style="color: #009900;">&#40;</span>Y<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+&nbsp;
+    <span style="color: #003366; font-weight: bold;">var</span> robotA <span style="color: #339933;">=</span> Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#A'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+        robotB <span style="color: #339933;">=</span> Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#B'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+    robotA.<span style="color: #660066;">setData</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'x'</span><span style="color: #339933;">,</span> parseInt<span style="color: #009900;">&#40;</span>robotA.<span style="color: #660066;">getStyle</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'left'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">10</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    robotA.<span style="color: #660066;">setData</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'y'</span><span style="color: #339933;">,</span> parseInt<span style="color: #009900;">&#40;</span>robotA.<span style="color: #660066;">getStyle</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'top'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">10</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    robotB.<span style="color: #660066;">setData</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'x'</span><span style="color: #339933;">,</span> parseInt<span style="color: #009900;">&#40;</span>robotB.<span style="color: #660066;">getStyle</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'left'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">10</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    robotB.<span style="color: #660066;">setData</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'y'</span><span style="color: #339933;">,</span> parseInt<span style="color: #009900;">&#40;</span>robotB.<span style="color: #660066;">getStyle</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'top'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">10</span><span style="color: #009900;">&#41;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+    <span style="color: #003366; font-weight: bold;">function</span> move<span style="color: #009900;">&#40;</span>e<span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+        <span style="color: #006600; font-style: italic;">// to prevent page scrolling</span>
+        e.<span style="color: #660066;">preventDefault</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #003366; font-weight: bold;">var</span> xy <span style="color: #339933;">=</span> <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">getData</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+        <span style="color: #000066; font-weight: bold;">switch</span> <span style="color: #009900;">&#40;</span>e.<span style="color: #660066;">direction</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span>
+            <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'n'</span><span style="color: #339933;">:</span>  xy.<span style="color: #660066;">y</span> <span style="color: #339933;">-=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'s'</span><span style="color: #339933;">:</span>  xy.<span style="color: #660066;">y</span> <span style="color: #339933;">+=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'w'</span><span style="color: #339933;">:</span> xy.<span style="color: #660066;">x</span> <span style="color: #339933;">-=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'e'</span><span style="color: #339933;">:</span>  xy.<span style="color: #660066;">x</span> <span style="color: #339933;">+=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'nw'</span><span style="color: #339933;">:</span> xy.<span style="color: #660066;">y</span> <span style="color: #339933;">-=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> xy.<span style="color: #660066;">x</span> <span style="color: #339933;">-=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'ne'</span><span style="color: #339933;">:</span> xy.<span style="color: #660066;">y</span> <span style="color: #339933;">-=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> xy.<span style="color: #660066;">x</span> <span style="color: #339933;">+=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'sw'</span><span style="color: #339933;">:</span> xy.<span style="color: #660066;">y</span> <span style="color: #339933;">+=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> xy.<span style="color: #660066;">x</span> <span style="color: #339933;">-=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+            <span style="color: #000066; font-weight: bold;">case</span> <span style="color: #3366CC;">'se'</span><span style="color: #339933;">:</span> xy.<span style="color: #660066;">y</span> <span style="color: #339933;">+=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> xy.<span style="color: #660066;">x</span> <span style="color: #339933;">+=</span> <span style="color: #CC0000;">10</span><span style="color: #339933;">;</span> <span style="color: #000066; font-weight: bold;">break</span><span style="color: #339933;">;</span>
+        <span style="color: #009900;">&#125;</span>
+&nbsp;
+        <span style="color: #000066; font-weight: bold;">this</span>.<span style="color: #660066;">transition</span><span style="color: #009900;">&#40;</span><span style="color: #009900;">&#123;</span>
+            top <span style="color: #339933;">:</span> <span style="color: #009900;">&#40;</span>xy.<span style="color: #660066;">y</span> <span style="color: #339933;">+</span> <span style="color: #3366CC;">'px'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            left<span style="color: #339933;">:</span> <span style="color: #009900;">&#40;</span>xy.<span style="color: #660066;">x</span> <span style="color: #339933;">+</span> <span style="color: #3366CC;">'px'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>
+            duration<span style="color: #339933;">:</span> .2
+        <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    <span style="color: #009900;">&#125;</span>
+&nbsp;
+    robotA.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;arrow&quot;</span><span style="color: #339933;">,</span> move<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+    robotB.<span style="color: #660066;">on</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;arrow&quot;</span><span style="color: #339933;">,</span> move<span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+    <span style="color: #006600; font-style: italic;">// Or via delegation</span>
+    Y.<span style="color: #660066;">one</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'#demo'</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">delegate</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'arrow'</span><span style="color: #339933;">,</span> move<span style="color: #339933;">,</span> <span style="color: #3366CC;">'.robot'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span>
+&nbsp;
+<span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></pre><textarea id="yui-syn-2-plain">// Use this in place of the current Event Utility 'arrow' example code
+
+YUI({
+    //Last Gallery Build of this module
+    gallery: 'gallery-2011.01.18-21-05'
+}).use('gallery-event-arrow', function(Y) {
+
+
+
+    var robotA = Y.one('#A'),
+
+        robotB = Y.one('#B');
+
+ 
+
+    robotA.setData('x', parseInt(robotA.getStyle('left'), 10));
+
+    robotA.setData('y', parseInt(robotA.getStyle('top'), 10));
+
+    robotB.setData('x', parseInt(robotB.getStyle('left'), 10));
+
+    robotB.setData('y', parseInt(robotB.getStyle('top'), 10));
+
+ 
+
+    function move(e) {
+
+        // to prevent page scrolling
+
+        e.preventDefault();
+
+ 
+
+        var xy = this.getData();
+
+ 
+
+        switch (e.direction) {
+
+            case 'n':  xy.y -= 10; break;
+
+            case 's':  xy.y += 10; break;
+
+            case 'w': xy.x -= 10; break;
+
+            case 'e':  xy.x += 10; break;
+
+            case 'nw': xy.y -= 10; xy.x -= 10; break;
+
+            case 'ne': xy.y -= 10; xy.x += 10; break;
+
+            case 'sw': xy.y += 10; xy.x -= 10; break;
+
+            case 'se': xy.y += 10; xy.x += 10; break;
+
+        }
+
+ 
+
+        this.transition({
+
+            top : (xy.y + 'px'),
+
+            left: (xy.x + 'px'),
+
+            duration: .2
+
+        });
+
+    }
+
+
+
+    robotA.on(&quot;arrow&quot;, move);
+
+    robotB.on(&quot;arrow&quot;, move);
+
+
+
+    // Or via delegation
+
+    Y.one('#demo').delegate('arrow', move, '.robot');
+
+ 
+
+});</textarea>
+											</div>
+											<br />
+											<h3>Forum Posts</h3>
+											<div class="forum">
+												<table>
+													<tr>
+														<th>Subject</th>
+														<th>Author</th>
+														<th>Date</th>
+													</tr>
+													<tr class="even">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=23752.html#p23752">trying to get a simple example to work...</a></td>
+														<td><span class="gallery-user">Andrew Wooldridge</span></td>
+														<td><span title="23 Mar 2011 23:57">03/23/11</span></td>
+													</tr>
+													<tr class="odd">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=23786.html#p23786">Re: trying to get a simple example to work...</a></td>
+														<td><span class="gallery-user">Andrew Wooldridge</span></td>
+														<td><span title="24 Mar 2011 18:56">03/24/11</span></td>
+													</tr>
+													<tr class="even">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=23787.html#p23787">Re: trying to get a simple example to work...</a></td>
+														<td><span class="gallery-user">Andrew Wooldridge</span></td>
+														<td><span title="24 Mar 2011 19:15">03/24/11</span></td>
+													</tr>
+													<tr class="odd">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=23807.html#p23807">Re: trying to get a simple example to work...</a></td>
+														<td><span class="gallery-user">Luke Smith</span></td>
+														<td><span title="25 Mar 2011 05:12">03/25/11</span></td>
+													</tr>
+													<tr class="even">
+														<td><a href="http://yuilibrary.com/forum-archive/forum/viewtopic.php@p=23861.html#p23861">Advice on key &amp;quot;holding&amp;quot; issue?</a></td>
+														<td><span class="gallery-user">Andrew Wooldridge</span></td>
+														<td><span title="28 Mar 2011 22:07">03/28/11</span></td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="ft">
+					<p class="copyright"> All code on this site is licensed under the <a href="http://yuilibrary.com/license/">BSD License</a> unless stated otherwise.<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
