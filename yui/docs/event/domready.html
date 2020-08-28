@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DOM Lifecycle Events - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/yui3/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/event/domready.html">
+    <meta name="twitter:title" content="DOM Lifecycle Events">
+    <meta name="twitter:description" content="The Event system provides APIs for subscribing to and working with DOM events">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/yui3/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/yui3" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui3">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="https://github.com/yui/yui3/wiki/Quick-Start">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="https://github.com/yui/yui3/wiki/YUI-Documentation">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="https://github.com/yui/yui3/wiki/YUI-Documentation">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui3/yui/core">Core</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui3/yui/docs/event/domready.html">Event</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>DOM Lifecycle Events</h1>
+
+        
+            <a href="#docs-toc" class="jump" tabindex="1">Jump to Table of Contents</a>
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <div class="intro">
+    <p>The <code>event-base</code> module includes three special events that can be used to execute code as soon as the DOM, or certain elements in the DOM tree, are ready to be scripted.</p>
+
+    <p>Because all of these events are designed to target elements that aren't present or parsed yet, <strong>you must use <code>Y.on(...)</code> to subscribe to them</strong>.  <code>Y.one(&#x27;#notHereYet&#x27;)</code> will return <code>null</code>, and you can't do much with <code>null</code>.</p>
+
+    <p>Be sure to read <a href="#caveat">the final note on this page</a> about performance.</p>
+</div>
+
+<h2 id="domready"><code>domready</code></h2>
+
+<pre class="code prettyprint">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;domready&lt;&#x2F;title&gt;
+    &lt;script src=&quot;...yui-min.js&quot;&gt;&lt;&#x2F;script&gt;
+    &lt;script&gt;
+    YUI().use(&#x27;event-base&#x27;, function (Y) {
+        var notHereYet = Y.one(&#x27;#readygo&#x27;); &#x2F;&#x2F; null
+
+        Y.on(&#x27;domready&#x27;, function () {
+            Y.one(&#x27;#readygo&#x27;).on(&#x27;click&#x27;, function () {
+                Y.log(&#x27;This works fine, before the images are loaded&#x27;);
+            });
+        });
+    });
+    &lt;&#x2F;script&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+    ... lots of markup including images and stuff
+    &lt;button id=&quot;readygo&quot;&gt;Go!&lt;&#x2F;button&gt;
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;</pre>
+
+
+<p>Modern browsers support an event that signals when the markup has been
+completely parsed and the DOM tree is built.  This event happens before the
+window's <code>load</code> event, which fires when all images and other resources have
+been fetched.  For setting up event subscriptions and core page interactivity,
+it's usually enough that all DOM elements are available, regardless of their
+loading state.</p>
+
+<p>The <code>domready</code> event abstracts over the patchwork necessary for browsers without a native "domready" event.</p>
+
+<p>Note the subscription signature does not include a target, only the event name and callback.</p>
+
+<h2 id="contentready"><code>contentready</code></h2>
+
+<pre class="code prettyprint">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;contentready&lt;&#x2F;title&gt;
+    &lt;script src=&quot;...yui-min.js&quot;&gt;&lt;&#x2F;script&gt;
+    &lt;script&gt;
+    YUI().use(&#x27;event-base&#x27;, function (Y) {
+        var notHereYet = Y.one(&#x27;#todoList&#x27;); &#x2F;&#x2F; null
+
+        function addItem() {
+            &#x2F;&#x2F; children of #todoList are in the DOM tree
+            this.one(&#x27;ul&#x27;).append(&#x27;&lt;li&gt;This will be four&lt;&#x2F;li&gt;&#x27;);
+        }
+
+        Y.on(&#x27;contentready&#x27;, addItem, &#x27;#todoList&#x27;);
+    });
+    &lt;&#x2F;script&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+    ... lots of markup including images and stuff
+    &lt;div id=&quot;todoList&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;one&lt;&#x2F;li&gt;
+            &lt;li&gt;two&lt;&#x2F;li&gt;
+            &lt;li&gt;three&lt;&#x2F;li&gt;
+        &lt;&#x2F;ul&gt;
+    &lt;&#x2F;div&gt;
+    ... more markup
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;</pre>
+
+
+<p>You may want to script some nodes that are in the middle of the page markup inside a specific containing element.  You just need to know that the container and its children have been parsed from markup and added to the DOM tree.  But you don't want to wait for the entire DOM tree to finish.  That's what the <code>contentready</code> event is for.</p>
+
+<p>YUI will check the DOM periodically, looking for an element matching the selector passed as the the third argument.  When it finds one and can verify that that element's children are also in the DOM tree, it will execute the callback.</p>
+
+<p>Callbacks will be executed with <code>this</code> assigned to the Node matching the selector.</p>
+
+<h2 id="available"><code>available</code></h2>
+
+<pre class="code prettyprint">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;available&lt;&#x2F;title&gt;
+    &lt;script src=&quot;...yui-min.js&quot;&gt;&lt;&#x2F;script&gt;
+    &lt;script&gt;
+    YUI().use(&#x27;event-hover&#x27;, function (Y) {
+        var notHereYet = Y.one(&#x27;#highlight-me&#x27;); &#x2F;&#x2F; null
+
+        function over() {
+            this.addClass(&quot;over&quot;);
+        }
+        function out() {
+            this.removeClass(&quot;over&quot;);
+        }
+
+        function addSubscribers() {
+            this.on(&#x27;hover&#x27;, over, out);
+        }
+
+        Y.on(&#x27;available&#x27;, addSubscribers, &#x27;#highlight-me&#x27;);
+    });
+    &lt;&#x2F;script&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+    ... lots of markup including images and stuff
+    &lt;div id=&quot;highlight-me&quot;&gt;
+        ... stuff that doesn&#x27;t need to be ready
+    &lt;&#x2F;div&gt;
+    ... more markup
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;</pre>
+
+
+<p>The <code>available</code> event is almost identical to <a href="#contentready"><code>contentready</code></a> except it does not wait for children of the matching element to be ready.  If your code only needs to reference the targeted Node, not any of its children, use <code>available</code> instead of <code>contentready</code>.</p>
+
+<h2 id="caveat">Just put your &lt;script&gt; tags at the bottom</h2>
+
+<p>You might not need to use any of these events, and maybe you shouldn't.</p>
+
+<p>It is always safe to script nodes defined in the markup above the JavaScript that references it.  In practice, if you have the option, it is preferable to move &lt;script&gt; tags below the markup that it needs in place, and often it is best to simply <a href="http://developer.yahoo.com/blogs/ydn/posts/2007/07/high_performanc_5/">move scripts to the bottom of the page</a>.</p>
+
+<pre class="code prettyprint">&lt;div id=&quot;stuff-i-need&quot;&gt;
+    ...
+&lt;&#x2F;div&gt;
+&lt;script&gt;
+&#x2F;&#x2F; Scripts below markup can access the DOM elements above
+YUI().use(&#x27;node&#x27;, function (Y) {
+    Y.one(&#x27;#stuff-i-need&#x27;, function () {
+        Y.log(&#x27;This will always work&#x27;);
+    });
+});
+&lt;&#x2F;script&gt;</pre>
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+                
+            
+        
+
+        
+            <div id="docs-toc" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Table of Contents</h2>
+                </div>
+
+                <div class="bd">
+                    <ul class="toc">
+<li>
+<a href="#domready"><code>domready</code></a>
+</li>
+<li>
+<a href="#contentready"><code>contentready</code></a>
+</li>
+<li>
+<a href="#available"><code>available</code></a>
+</li>
+<li>
+<a href="#caveat">Just put your &lt;script&gt; tags at the bottom</a>
+</li>
+</ul>
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Use the Event Utility to attach simple DOM event handlers.">
+                                        <a href="basic-example.html">Simple DOM Events</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Using the synthetic event API to create a DOM event that fires in response to arrow keys being pressed.">
+                                        <a href="synth-example.html">Creating an Arrow Event for DOM Subscription</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Supporting cross-device swipe gestures, using the event-move gesture events">
+                                        <a href="swipe-example.html">Supporting A Swipe Left Gesture</a>
+                                    </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Related Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li data-description="Example Photo Browser application.">
+                                        <a href="../dd/photo-browser.html">Photo Browser</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Portal style example using Drag &amp; Drop Event Bubbling and Animation.">
+                                        <a href="../dd/portal-drag.html">Portal Style Example</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Use IO to request data over HTTP.">
+                                        <a href="../io/get.html">HTTP GET to request data</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.">
+                                        <a href="../node-focusmanager/node-focusmanager-button.html">Accessible Menu Button</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to extend the base widget class, to create your own Widgets.">
+                                        <a href="../widget/widget-extend.html">Extending the Base Widget Class</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/yui3/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Graded Browser Support - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/yui3/combo/css-main-min.css&docs-min.css&environments-min.css&gbs-min.css">
+
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/yui3/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/yui3" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui3">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="https://github.com/yui/yui3/wiki/Quick-Start">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="https://github.com/yui/yui3/wiki/YUI-Documentation">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child  nav-child-active">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+            <div class="yui3-u-1">
+                <div class="body-heading">
+                    
+    <h1>Graded Browser Support</h1>
+
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="yui3-u-3-4 print-max-width">
+                    <div class="content">
+                        
+    
+        
+            
+                <div id="subnav" class="yui3-u-1"><nav>
+                    <ul class="subnav">
+                        
+                            <li><a href="/yui3/yui/docs/guides/">User Guides</a></li>
+                        
+                            <li><a href="/yui3/yui/docs/examples/">Examples</a></li>
+                        
+                            <li><a href="/yui3/yui/docs/api/">API Docs</a></li>
+                        
+                            <li><a href="/yui3/yui/environments/">Environments</a></li>
+                        
+                            <li class="subnav-active"><a href="/yui3/yui/docs/tutorials/">Tutorials</a></li>
+                        
+                            <li><a href="/yui3/yui/docs/tutorials/faq/">FAQ</a></li>
+                        
+                    </ul>
+                </nav></div>
+            
+        
+    
+
+
+                        
+
+
+
+
+
+
+
+<div class="article">
+
+<div class="environments-matrix">
+    <h3 class="environments-matrix-band">
+        <a class="environments-matrix-cover" href="/yui/environments/">
+            The YUI Target Environments matrix
+            <a class="environments-matrix-moved" href="/yui/environments/">has moved</a>
+        </a>
+    </h3>
+
+    <a class="environments-matrix-cover" href="/yui/environments/">
+        <table class="environments">
+            <tr>
+                <th>Internet Explorer</th>
+                <td>6.0</td>
+                <td>7.0</td>
+                <td>8.0</td>
+                <td>9.0</td>
+            </tr>
+
+            <tr>
+                <th>Chrome &#0134;</th>
+                <td colspan=4>Latest stable</td>
+            </tr>
+
+            <tr>
+                <th>Firefox &#0134;</th>
+                <td colspan="4">Latest stable</td>
+            </tr>
+
+            <tr>
+                <th>Safari</th>
+                <td colspan="2">Latest stable (desktop)</td>
+                <td>iOS 4.&#0134;</td>
+                <td>iOS 5.&#0134;</td>
+            </tr>
+
+            <tr>
+                <th>WebKit</th>
+                <td>Android 2.2.&#0134;</td>
+                <td>Android 2.3.&#0134;</td>
+                <td colspan="2">Android 4.&#0134;</td>
+            </tr>
+        </table>
+    </a>
+</div>
+
+<h2 id="about">About the Browser Test Baseline and Operating Systems</h2>
+
+<p>The Browser Test Baseline provides a baseline set of browsers that should be tested. It is designed to maximize coverage with limited testing resources by testing the smallest possible subset of browser combinations and leveraging implicit coverage from shared core browser engines. At the very least, all listed browsers should be tested in one operating system, in order to provide "baseline" coverage. Testing on multiple operating systems should be accommodated after all browsers have been verified with baseline coverage and should start with features that have known platform-specific issues. The test platforms should be chosen based on usage statistics and market trends.</p>
+
+<p>The Browser Test Baseline defines the current set of browsers that should receive a verified, usable experience. However, trying to deliver the same "A-grade" experience across all tested browsers is neither cost-effective nor common. We support a tiered approach to user experience design, development, and testing, and encourage each project to define their own tiers that serve their users and their testing resources best.</p>
+
+<h2 id="history">Graded Browser Support: What and Why</h2>
+
+<p>In the first 10 years of professional web development, back in the early '90s, browser support was binary: Do you &#8212; or don't you &#8212; support a given browser? When the answer was "No", user access to the site was often actively prevented. In the years following <abbr title="Internet Explorer">IE</abbr>5's release in 1998, professional web designers and developers have become accustomed to asking at the outset of any new undertaking, "Do I have to support Netscape 4.x browsers for this project?"</p>
+
+<p>By contrast, in modern web development we must support <em>all</em> browsers. Choosing to exclude a segment of users is inappropriate, and, with a "GradedBrowser Support" strategy, unnecessary.</p>
+
+<p>Graded Browser Support offers two fundamental ideas:</p>
+<ul>
+	<li>A broader and more reasonable definition of "support."</li>
+
+	<li>The notion of "grades" of support.</li>
+</ul>
+
+<h4 id="support">What Does "Support" Mean?</h4>
+
+<p>Support does not mean that everybody gets the same thing. Expecting two users using different browser software to have an identical experience fails to embrace or acknowledge the heterogeneous essence of the Web. In fact, requiring the same experience for all users creates an artificial barrier to participation. Availability and accessibility of content should be our key priority.</p>
+
+<p>Consider television. At the core: TV distributes information. A hand-cranked emergency radio is capable of receiving television audio transmissions. It would be counter-productive to prevent access to this content, even though it's a fringe experience.</p>
+
+<p>Some viewers still have black-and-white televisions. Broadcasting only in black-and-white &#8212; the "lowest common denominator" approach &#8212; ensures a shared experience but benefits no one. Excluding the black-and-white television owners &#8212; the "you must be this tall to ride" approach &#8212; provides no benefit either.</p>
+
+<p>An appropriate support strategy allows every user to consume as much visual and interactive richness as their environment can support. This approach&#8212;commonly referred to as <em>progressive enhancement</em> &#8212; builds a rich experience on top of an accessible core, without compromising that core.</p>
+
+<h4 id="progressive-enhancement">Progressive Enhancement vs. Graceful Degradation </h4>
+
+<p>The concepts of <em>graceful degradation</em> and <em>progressive enhancement</em> are often applied to describe browser support strategies. Indeed, they are closely related approaches to the engineering of "fault tolerance".</p>
+
+<p>These two concepts influence decision-making about browser support. Because they reflect different priorities, they frame the support discussion differently. Graceful degradation prioritizes <em>presentation</em>, and permits less widely-used browsers to receive less (and give less to the user). Progressive enhancement puts <em>content</em> at the center, and allows most browsers to receive more (and show more to the user). While close in meaning, progressive enhancement is a healthier and more forward-looking approach. Progressive enhancement is a core concept of Graded Browser Support.</p>
+
+<h4 id="grades">What are Grades of Support?</h4>
+
+<p>While an inclusive definition of browser support is necessary, the support continuum does present design, development, and testing challenges. If anything goes, how do I know when the experience is broken? To address this question and return a sense of order to the system, we define <em>grades</em> of support. There are three grades: A-grade, C-grade, and X-grade support.</p>
+
+<p>Before examining each grade, here are some characteristics useful for defining levels of support.</p>
+
+<p><span class="gloss">Identified vs. Unknown</span> There are over 10,000 browser brands, versions, and configurations and that number is growing. It is possible to group known browsers together.</p>
+
+<p><span class="gloss">Capable vs. Incapable</span> No two browsers have an identical implementation. However, it is possible to group browsers according to their support for most web standards.</p>
+
+<p><span class="gloss">Modern vs. Antiquated</span> As newer browser versions are released, the relevancy of earlier versions decreases.</p>
+
+
+<p><span class="gloss">Common vs. Rare</span> There are thousands of browsers in use, but only a few dozen are widely used.</p>
+
+
+<h4 id="the-three-grades">Three Grades of Support</h4>
+
+<h6 id="c-grade">C-grade</h6>
+
+<p>C-grade is the base level of support, providing core content and functionality. It is sometimes called core support. Delivered via nothing more than semantic <abbr title="HyperText Markup Language">HTML</abbr>, the content and experience is highly accessible, unenhanced by decoration or advanced functionality, and forward and backward compatible. Layers of style and behavior are omitted.</p>
+
+<p>C-grade browsers should be identified on a blacklist.</p>
+
+<p>Summary: C-grade browsers are identified, incapable, antiquated and rare. <abbr title="Quality Assurance">QA</abbr> tests a sampling of C-grade browsers, and bugs are addressed with high priority.</p>
+
+<h6 id="a-grade">A-grade</h6>
+
+<p>A-grade support is the highest support level. By taking full advantage of the powerful capabilities of modern web standards, the A-grade experience provides advanced functionality and visual fidelity.</p>
+
+<p>A-grade browsers should be identified on a whitelist. Approximately 96% of our audience enjoys an A-grade experience.</p>
+
+<p>Summary: A-grade browsers are identified, capable, modern and common. QA tests all A-grade browsers, and bugs are addressed with high priority.</p>
+
+<h6 id="x-grade">X-grade</h6>
+
+<p>X-grade provides support for unknown, fringe or rare browsers as well as browsers on which development has ceased. Browsers receiving X-grade support are assumed to be capable. (If a browser is shown to be incapable &#8212; if it chokes on modern methodologies and its user would be better served without decoration or functionality &#8212; then it should considered a C-grade browser.) </p>
+
+<p>X-grade browsers are all browsers not designated as any other grade.</p>
+
+<p><strong>Summary:</strong> X-grade browsers are assumed to be capable and modern. QA does not test, and bugs are not opened against X-grade browsers.</p>
+
+<h6 id="a-grade-vs-x-grade">The Relationship Between A-grade and X-grade Support</h6>
+
+<p>A bit more on the relationship between A-grade and X-grade browsers: One unexpected instance of X-grade is a newly released version of an A-grade browser. Since thorough QA testing is an A-grade requirement, a brand-new (and therefore untested) browser does not qualify as an A-grade browser. This example highlights a strength of the Graded Browser Support approach. The only practical difference between A-grade and X-grade browsers is that QA actively tests against A-grade browsers.</p>
+
+<p>Unlike the C-grade, which receives only <abbr title="HyperText Markup Language">HTML</abbr>, the X-grade receives everything that A-grade does. Though a brand-new browser might be characterized initially as a X-grade browser, we give its users every chance to have the same experience as A-grade browsers.</p>
+
+<h4 id="beyond-three-grades">Beyond the Three Grades</h4>
+
+<p>In recent years, we have seen a proliferation in tiers of support above and beyond the three grades identified above, where certain subsets of features are implemented only on certain subsets of browsers. Defining and implementing tiers of user experience should be done by each individual project. Overall, we promote the simplest Progressive Enhancement approach possible and discourage projects from creating new tiers without accounting for the additional costs in development, testing, and maintenance resources.</p>
+
+<h4 id="testing">Quality Assurance (QA) Testing</h4>
+
+<p>Grading the browser ecosystem enables meaningful, targeted, and cost-effective QA testing. As noted, representative C-grade testing and systematic A-grade testing ensures a usable and verified experience for the vast majority of our audience. A-grade testing must be thorough and complete, while C-grade testing can be accomplished with one or two representative browsers (e.g., Netscape 4.x and <a href="http://lynx.browser.org/">Lynx</a>), or by using a modern browser with CSS and JavaScript disabled.</p>
+
+<p>It's worth reiterating that testing resources do <em>not</em> examine X-grade browsers.</p>
+
+<p>Representative testing of the core experience is critical. If you choose to adopt a Graded Browser Support approach for your own projects, be sure your site's core content and functionality are accessible without images, <abbr title="Cascading Style Sheets">CSS</abbr>, and <abbr title="JavaScript">JS</abbr>. Ensure that the keyboard is adequate for task completion and that when your site is accessed by a C-grade browser all advanced functionality prompts are hidden.</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>Graded Browser Support provides an inclusive definition of support and a framework for taming the ever-expanding world of browsers and frontend technologies.</p>
+
+<p><a href="http://www.w3.org/People/domain?domain=Management#timbl%40w3.org">Tim Berners-Lee</a>, inventor of the World Wide Web and director of the <abbr title="World Wide Web Consortium"><a href="http://www.w3.org/">W3C</a></abbr>, has said it best:</p>
+
+
+<blockquote cite="http://en.thinkexist.com/quotation/anyone_who_slaps_a-this_page_is_best_viewed_with/334172.html">
+	<p>"Anyone who slaps a 'this page is best viewed with Browser X' label on a Web page appears to be yearning for the bad old days, before the Web, when you had very little chance of reading a document written on another computer, another word processor, or another network."</p>
+</blockquote>
+
+<h2 id="archive">Updates Archive</h2>
+
+<p>This page is the permanent home of the GBS strategy. Updates are publicized on the <a href="http://yuiblog.com">YUI Blog</a>. You may always reference past updates on the blog via the links gathered here.</p>
+
+<ul>
+    <li><a href="http://www.yuiblog.com/blog/2012/07/26/gbs-update-2012q3/">GBS Update, 2012-07-26</a></li>
+    <li><a href="http://www.yuiblog.com/blog/2011/07/12/gbs-update/">GBS Update, 2011-07-12</a></li>
+    <li><a href="http://www.yuiblog.com/blog/2010/11/03/gbs-update-2010q4/">GBS Update, 2010-11-03</a></li>
+    <li><a href="http://www.yuiblog.com/blog/2010/02/16/gbs-update-2010q1/">GBS Update, 2010-02-16</a></li>
+    <li><a href="http://www.yuiblog.com/blog/2009/10/16/gbs-update-2009q4/">GBS Update, 2009-10-16</a></li>
+    <li><a href="http://yuiblog.com/blog/2009/07/02/gbs-update-20090702/">GBS Update, 2009-07-02</a></li>
+    <li><a href="http://yuiblog.com/blog/2009/01/28/gbs-update-20090128/">GBS Update, 2009-01-28</a></li>
+    <li><a href="http://yuiblog.com/blog/2008/07/03/gbs-update-20080703/">GBS Update, 2008-07-03</a></li>
+    <li><a href="http://yuiblog.com/blog/2008/02/19/gbs-update-20080219/">GBS Update, 2008-02-19</a></li>
+</ul>
+
+</div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="yui3-u-1-4 no-print">
+                    <div class="sidebar"><aside>
+                        
+    <div class="sidebox">
+        <div class="hd">
+            <h2>Table of Contents</h2>
+        </div>
+
+        <div class="bd">
+            <ul class="toc">
+                <li><a href="#about">About the Browser Test Baseline and Operating Systems</a></li>
+                <li><a href="#history">Graded Browser Support: What &amp; Why</a></li>
+                <li><a href="#support">What Does "Support" Mean?</a></li>
+                <li><a href="#progressive-enhancement">Progressive Enhancement Vs. Graceful Degradation</a></li>
+                <li><a href="#grades">What Are Grades of Support?</a></li>
+                <li><a href="#the-three-grades">Three Grades of Support</a>
+                    <ul class="toc">
+                        <li><a href="#c-grade">C-grade</a></li>
+                        <li><a href="#a-grade">A-grade</a></li>
+                        <li><a href="#a-grade-vs-x-grade">The Relationship Between A-grade and X-grade Support</a></li>
+                    </ul>
+                </li>
+                <li><a href="#beyond-three-grades">Beyond the Three Grades</a></li>
+                <li><a href="#testing">QA Testing</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="#archive">Updates Archive</a></li>
+            </ul>
+        </div>
+    </div>
+
+                    </aside></div>
+                </div>
+            
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/yui3/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

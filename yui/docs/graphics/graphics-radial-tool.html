@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Graphics: Radial Gradient Tool - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/yui3/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/graphics/graphics-radial-tool.html">
+    <meta name="twitter:title" content="Graphics: Radial Gradient Tool">
+    <meta name="twitter:description" content="The Graphics module provides a JavaScript API for creating shapes in a variety of formats across all A-grade browsers.">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/yui3/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/yui3" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui3">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="https://github.com/yui/yui3/wiki/Quick-Start">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="https://github.com/yui/yui3/wiki/YUI-Documentation">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="https://github.com/yui/yui3/wiki/YUI-Documentation">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui3/yui/utilities/">Utilities</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui3/yui/docs/graphics/graphics-radial-tool.html">Graphics</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Graphics: Radial Gradient Tool</h1>
+
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <div class="example">
+<style>
+.example{
+    position: relative;
+    background-color: #000;
+    font-family: verdana;
+    color: #ccc;
+    height: 250px;
+}
+
+.example #mygraphiccontainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 250px;
+    height: 233px;
+    background-color: #333;
+    /*border: 3px solid #ff0000;*/
+}
+
+.example .code-div{
+    position: absolute;
+    top: 70px;
+    left: 305px;
+    text-align: left;
+}
+
+.example .code-div label{
+    display: inline-block;
+    color: #ccc;
+    width: 7em;
+    text-align: right;
+}
+
+.example #output-grad input{
+    width: 5em;
+}
+
+/*gradient controls*/
+.example .grad-c{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 1px;
+    height: 1px;
+    cursor: move;
+}
+
+.example .grad-f{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff8800;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    cursor: move;
+}
+
+.example .grad-r{ /* is contained within .grad-c */
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background-color: #300060;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.example #grad-control{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: solid 1px #555;
+
+}
+
+.example #grad-control label{
+    position: absolute;
+    width: 100px;
+    top: 100%;
+    padding-top: 0.3em;
+    text-align: center;
+    color: #555;
+}
+
+.example #output-grad {
+    position: absolute;
+    left: 182px;
+    top: -53px;
+    width: 200px;
+}
+
+.example #output-grad ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.3em;
+}
+
+.example #output-grad li{
+    padding: 0.3em;
+}
+
+.example #output-grad li span {
+    display: inline-block;
+    width: 5em;
+    color: #fff;
+    margin-left: 0.5em;
+}
+
+.example #panel-content textarea {
+    width: 100%;
+    height: 257px;
+    resize: none;
+}
+
+.example #output-grad .button-item{
+    text-align: right;
+    padding: 1.5em 2.3em 0 0;
+}
+
+</style>
+        <div id="mygraphiccontainer">
+        </div>
+        <div class="code-div">
+            <div id="output-grad">
+                <ul>
+                    <li><label>cx:</label> <span id='out-cx'>0.5</span></li>
+                    <li><label>cy:</label> <span id='out-cy'>0.5</span></li>
+                    <li><label>fx:</label> <span id='out-fx'>0.5</span></li>
+                    <li><label>fy:</label> <span id='out-fy'>0.5</span></li>
+                    <li><label>r:</label> <span id='out-r'>0.5</span></li>
+                    <li><label>Center color:</label> <input type="text" id='center-color' value="#ff8800" /></li>
+                    <li><label>Outer color:</label> <input type="text" id='outer-color' value="#300060" /></li>
+                    <li class="button-item"><button id="btn-get-code" class='yui3-button'>Get Code Snippet</button></li>
+                </ul>
+
+            </div>
+            <div id="grad-control" title="Represents the boundary of the object">
+                <label>Interactive Control</label>
+                <div class="grad-c">
+                    <div id="resize-r" class="grad-r" title="Drag to set 'cx,cy' properties. Resize to set 'r' property."></div>
+                </div>
+                <div class="grad-f" title="Drag to set 'fx,fy' properties."></div>
+            </div>
+        </div>
+
+        <div class="yui3-skin-night">
+            <div id="panel-content">
+            </div>
+        </div>
+<script src="../assets/graphics/js/radial-tool.js"></script>
+
+</div>
+
+<h2>The Radial Gradient Tool</h2>
+
+<p>The Interactive Control modifies the gradient fill.
+As you drag the center dot, or drag or resize the outer disc,
+the fill preview updates. You can also see the fill's 
+property values update. The center color and outer color can also be changed.
+These are the colors of the gradient stops.
+Click the "Get Code Snippet" button. This code can be copied and pasted 
+into a graphics instance to reproduce the gradient fill in your code.
+</p>
+
+
+<h2>Using the Generated Code</h2>
+<p>When you click the "Get Code Snippet" button, generated code is placed
+in the text area control. The generated code assumes you will have a separate
+page to paste it into. This separate page must contain the following code: 
+A graphics container such as this,</p>
+<pre class="code prettyprint">&lt;div id=&quot;mygraphiccontainer&quot;&gt;&lt;&#x2F;div&gt;</pre>
+
+<p>CSS such as this,</p>
+<pre class="code prettyprint">#mygraphiccontainer {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}</pre>
+
+and a YUI instance containing a <code>Graphics</code> object such as this.
+<pre class="code prettyprint">YUI().use(&#x27;graphics&#x27;, function (Y) {
+
+    var mygraphic = new Y.Graphic({render:&quot;#mygraphiccontainer&quot;});
+    &#x2F;&#x2F; generated code from the radial gradient tool goes here
+    
+});</pre>
+
+<p>The tool generates paste-able code for an <code>addShape</code> method that will
+create and render an ellipse. You can change this after it's pasted into 
+your code.</p>
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+                
+            
+        
+
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Shows how to create a Graphic instance and add shapes.">
+                                        <a href="graphics-simple.html">Basic Graphics Implementation</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to draw lines and polygons.">
+                                        <a href="graphics-path.html">Basic Path</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to create linear and radial gradient fills.">
+                                        <a href="graphics-gradients.html">Create Gradient Fills</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to add drag to a shape.">
+                                        <a href="graphics-drag.html">Basic drag with graphic object</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to apply transforms to shape.">
+                                        <a href="graphics-transforms.html">Using Transforms</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows how to use a custom shape with the Graphics module.">
+                                        <a href="graphics-customshape.html">Custom Shape</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows to use the graphics api to draw a realistic glass.">
+                                        <a href="graphics-muddyglass.html">Transparent Glass with Shadow</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Shows to use the graphics api to draw a violin.">
+                                        <a href="graphics-violin.html">Complex Drawing: Violin</a>
+                                    </li>
+                                
+                            
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Related Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li data-description="This example demonstrates animating an element along a curved path using bezier control points.">
+                                        <a href="../anim/curve.html">Animating Along a Curved Path</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/yui3/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

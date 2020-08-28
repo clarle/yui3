@@ -87,7 +87,7 @@ var YUIConfig = {
             <header>
                 <div class="content">
                 <div class="yui3-u-3-4">
-                    <a href="/" rel="home"><div aria-label="YUI logo" role="image" id="hd-logo"></div></a>
+                    <a href="/yui3" rel="home"><div aria-label="YUI logo" role="image" id="hd-logo"></div></a>
                 </div>
 
             <div class="yui3-u-1-4"><!-- Fetching Partial from Node site: Thu, 04 Sep 2014 01:07:15 +0000 -->

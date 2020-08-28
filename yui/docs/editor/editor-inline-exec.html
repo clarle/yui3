@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: InlineEditor ExecCommands - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/yui3/combo/css-main-min.css">
+
+
+
+    <link rel="stylesheet" href="/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="/css/docs-min.css">
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@yuilibrary">
+    <meta name="twitter:creator" content="@yuilibrary">
+    <meta name="twitter:url" content="http://yuilibrary.com/yui/docs/editor/editor-inline-exec.html">
+    <meta name="twitter:title" content="Example: InlineEditor ExecCommands">
+    <meta name="twitter:description" content="Creating and using your own ExecCommands">
+    
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/yui3/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/yui3" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui3">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="https://github.com/yui/yui3/wiki/Quick-Start">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="https://github.com/yui/yui3/wiki/YUI-Documentation">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+    <div id="breadcrumbs" class="yui3-u-1">
+        <ul class="breadcrumbs">
+            
+                <li class="crumb"><a href="https://github.com/yui/yui3/wiki/YUI-Documentation">YUI</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui3/yui/utilities/">Utilities</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui3/yui/docs/editor/">Rich Text Editor</a></li>
+                
+                    <li class="separator">&gt;</li>
+                
+            
+                <li class="crumb"><a href="/yui3/yui/docs/editor/editor-inline-exec.html">Example: InlineEditor ExecCommands</a></li>
+                
+            
+        </ul>
+    </div>
+
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+
+        
+            
+    
+
+
+            
+
+
+
+
+    
+
+
+
+<div class="yui3-u-1">
+    <div id="docs-hd" class="content">
+        <h1>Example: InlineEditor ExecCommands</h1>
+
+        
+            <a href="#docs-toc" class="jump" tabindex="1">Jump to Table of Contents</a>
+        
+    </div>
+</div>
+
+<div class="yui3-u-3-4 print-max-width">
+    <div id="docs-main" class="content">
+        <div class="intro">
+<p>Creating and using custom ExecCommands.</p>
+</div>
+
+<div class="example">
+    <style>
+    #editor_cont {
+        width: 600px;
+        border: 1px solid #999;
+        margin: 2em;
+        background-color: #f2f2f2;
+    }
+    #editor {
+        height: 265px;
+        overflow: auto;
+        background-color: #fff;
+    }
+    #buttons, #out {
+        padding: 10px;
+    }
+    #buttons {
+        border-bottom: 1px solid #999;
+    }
+    #out {
+        font-weight: bold;
+        border-top: 1px solid #999;
+    }
+
+
+</style>
+
+<p>Clicking on one of the buttons below will execute a custom <code>execCommand</code> on the Editor.</p>
+
+<div id="editor_cont">
+    <div id="buttons">
+        <button id="foo">Foo Command</button>
+        <button id="bar">Bar Command</button>
+        <button id="baz">Baz Command</button>
+    </div>
+    <div id="editor"></div>
+    <div id="out">&nbsp;</div>    
+</div>
+
+
+
+<script>
+YUI().use('editor-inline', function(Y) {
+
+    var logFn = function(str) {
+        Y.one('#out').set('innerHTML', str);
+    };
+
+    //Create the Base Editor
+    var editor = new Y.InlineEditor({
+        content: '<p><b>This is <i class="foo">a test</i></b></p><p><b style="color: red; font-family: Comic Sans MS">This is <span class="foo">a test</span></b></p>',
+        extracss: '.foo { font-weight: normal; color: black; background-color: yellow; }'
+    });
+
+    //Mixin the new commands
+    Y.mix(Y.Plugin.ExecCommand.COMMANDS, {
+        foo: function(cmd, val) {
+            logFn('You clicked on Foo');
+            var container = this.get('host').get('container');
+            container.setStyle('backgroundColor', 'yellow');
+        },
+        bar: function(cmd, val) {
+            logFn('You clicked on Bar');
+            var container = this.get('host').get('container');
+            container.setStyle('backgroundColor', 'green');
+        },
+        baz: function(cmd, val) {
+            logFn('You clicked on Baz');
+            var container = this.get('host').get('container');
+            container.setStyle('backgroundColor', 'blue');
+        }
+    });
+
+
+    //Rendering the Editor.
+    editor.render('#editor');
+
+    Y.delegate('click', function(e) {
+        editor.execCommand(e.target.get('id'));
+    }, '#buttons', 'button');
+});
+
+
+</script>
+
+</div>
+
+<h3 id="working-with-inlineeditor">Working with InlineEditor</h3>
+<p><code>InlineEditor</code> is not a fully functional Editor, it is simply the base utility that will be used under the hood to create an Editor.</p>
+
+<h3 id="creating-the-editor">Creating the Editor</h3>
+<p>In this step we are going to do the initial render of the Editor, set its content, and focus it when it's ready.</p>
+
+<pre class="code prettyprint">YUI().use(&#x27;editor-inline&#x27;, function(Y) {
+
+    &#x2F;&#x2F;Create the Inline Editor
+    var editor = new Y.InlineEditor({
+        content: &#x27;&lt;p&gt;&lt;b&gt;This is &lt;i class=&quot;foo&quot;&gt;a test&lt;&#x2F;i&gt;&lt;&#x2F;b&gt;&lt;&#x2F;p&gt;&lt;p&gt;&lt;b style=&quot;color: red; font-family: Comic Sans MS&quot;&gt;This is &lt;span class=&quot;foo&quot;&gt;a test&lt;&#x2F;span&gt;&lt;&#x2F;b&gt;&lt;&#x2F;p&gt;&#x27;,
+        extracss: &#x27;.foo { font-weight: normal; color: black; background-color: yellow; }&#x27;
+    });
+
+    &#x2F;&#x2F;Rendering the Editor.
+    editor.render(&#x27;#editor&#x27;);
+
+});</pre>
+
+
+<h3 id="registering-a-new-execcommand">Registering a new execCommand</h3>
+
+<p>ExecCommand overrides are stored on the <code>execCommand</code> plugin. This way, you can write a plugin for Editor and have it available
+to all Editor instances in your sandbox.</p>
+
+<p>To create a new execCommand, we simply add an object literal to the <code>Y.Plugin.ExecCommand.COMMANDS</code> static object like this:</p>
+
+<pre class="code prettyprint">Y.mix(Y.Plugin.ExecCommand.COMMANDS, {
+    foo: function(cmd, val) {
+        logFn(&#x27;You clicked on Foo&#x27;);
+        var container = this.get(&#x27;host&#x27;).get(&#x27;container&#x27;);
+        container.setStyle(&#x27;backgroundColor&#x27;, &#x27;yellow&#x27;);
+    }
+});</pre>
+
+
+<p>Now we can use this new command like:</p>
+
+<pre class="code prettyprint">editor.execCommand(&#x27;foo&#x27;);</pre>
+
+
+
+<h3 id="full-example-source">Full Example Source</h3>
+
+<h4 id="html">HTML</h4>
+<pre class="code prettyprint">&lt;p&gt;Clicking on one of the buttons below will execute a custom &lt;code&gt;execCommand&lt;&#x2F;code&gt; on the Editor.&lt;&#x2F;p&gt;
+
+&lt;div id=&quot;editor_cont&quot;&gt;
+    &lt;div id=&quot;buttons&quot;&gt;
+        &lt;button id=&quot;foo&quot;&gt;Foo Command&lt;&#x2F;button&gt;
+        &lt;button id=&quot;bar&quot;&gt;Bar Command&lt;&#x2F;button&gt;
+        &lt;button id=&quot;baz&quot;&gt;Baz Command&lt;&#x2F;button&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div id=&quot;editor&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div id=&quot;out&quot;&gt;&amp;nbsp;&lt;&#x2F;div&gt;    
+&lt;&#x2F;div&gt;</pre>
+
+
+<h4 id="css">CSS</h4>
+<pre class="code prettyprint">#editor_cont {
+    width: 600px;
+    border: 1px solid #999;
+    margin: 2em;
+    background-color: #f2f2f2;
+}
+#editor {
+    height: 265px;
+    overflow: auto;
+    background-color: #fff;
+}
+#buttons, #out {
+    padding: 10px;
+}
+#buttons {
+    border-bottom: 1px solid #999;
+}
+#out {
+    font-weight: bold;
+    border-top: 1px solid #999;
+}</pre>
+
+
+
+<h4 id="javascript">Javascript</h4>
+<pre class="code prettyprint">YUI().use(&#x27;editor-inline&#x27;, function(Y) {
+
+    var logFn = function(str) {
+        Y.one(&#x27;#out&#x27;).set(&#x27;innerHTML&#x27;, str);
+    };
+
+    &#x2F;&#x2F;Create the Base Editor
+    var editor = new Y.InlineEditor({
+        content: &#x27;&lt;p&gt;&lt;b&gt;This is &lt;i class=&quot;foo&quot;&gt;a test&lt;&#x2F;i&gt;&lt;&#x2F;b&gt;&lt;&#x2F;p&gt;&lt;p&gt;&lt;b style=&quot;color: red; font-family: Comic Sans MS&quot;&gt;This is &lt;span class=&quot;foo&quot;&gt;a test&lt;&#x2F;span&gt;&lt;&#x2F;b&gt;&lt;&#x2F;p&gt;&#x27;,
+        extracss: &#x27;.foo { font-weight: normal; color: black; background-color: yellow; }&#x27;
+    });
+
+    &#x2F;&#x2F;Mixin the new commands
+    Y.mix(Y.Plugin.ExecCommand.COMMANDS, {
+        foo: function(cmd, val) {
+            logFn(&#x27;You clicked on Foo&#x27;);
+            var container = this.get(&#x27;host&#x27;).get(&#x27;container&#x27;);
+            container.setStyle(&#x27;backgroundColor&#x27;, &#x27;yellow&#x27;);
+        },
+        bar: function(cmd, val) {
+            logFn(&#x27;You clicked on Bar&#x27;);
+            var container = this.get(&#x27;host&#x27;).get(&#x27;container&#x27;);
+            container.setStyle(&#x27;backgroundColor&#x27;, &#x27;green&#x27;);
+        },
+        baz: function(cmd, val) {
+            logFn(&#x27;You clicked on Baz&#x27;);
+            var container = this.get(&#x27;host&#x27;).get(&#x27;container&#x27;);
+            container.setStyle(&#x27;backgroundColor&#x27;, &#x27;blue&#x27;);
+        }
+    });
+
+
+    &#x2F;&#x2F;Rendering the Editor.
+    editor.render(&#x27;#editor&#x27;);
+
+    Y.delegate(&#x27;click&#x27;, function(e) {
+        editor.execCommand(e.target.get(&#x27;id&#x27;));
+    }, &#x27;#buttons&#x27;, &#x27;button&#x27;);
+});</pre>
+
+
+    </div>
+</div>
+
+<div class="yui3-u-1-4">
+    <div id="docs-sidebar" class="sidebar">
+        
+            
+        
+
+        
+            <div id="docs-toc" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Table of Contents</h2>
+                </div>
+
+                <div class="bd">
+                    <ul class="toc">
+<li>
+<a href="#working-with-inlineeditor">Working with InlineEditor</a>
+</li>
+<li>
+<a href="#creating-the-editor">Creating the Editor</a>
+</li>
+<li>
+<a href="#registering-a-new-execcommand">Registering a new execCommand</a>
+</li>
+<li>
+<a href="#full-example-source">Full Example Source</a>
+<ul class="toc">
+<li>
+<a href="#html">HTML</a>
+</li>
+<li>
+<a href="#css">CSS</a>
+</li>
+<li>
+<a href="#javascript">Javascript</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="sidebox">
+                    <div class="hd">
+                        <h2 class="no-toc">Examples</h2>
+                    </div>
+
+                    <div class="bd">
+                        <ul class="examples">
+                            
+                                
+                                    <li data-description="Use the Editor&#x27;s instance to query the iframe">
+                                        <a href="editor-instance.html">Using the Editor&#x27;s instance</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Using the Editor&#x27;s built in events.">
+                                        <a href="editor-events.html">Editor Events</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Using the Editor&#x27;s nodeChange Event.">
+                                        <a href="editor-nodechange.html">NodeChange Event</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Creating and using your own ExecCommands">
+                                        <a href="editor-exec.html">ExecCommands</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Use the InlineEditor&#x27;s instance to query the content editable section">
+                                        <a href="editor-inline-instance.html">Using the InlineEditor&#x27;s instance</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Using the InlineEditor&#x27;s built in events.">
+                                        <a href="editor-inline-events.html">InlineEditor Events</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Using the InlineEditor&#x27;s nodeChange Event.">
+                                        <a href="editor-inline-nodechange.html">InlineEditor&#x27;s NodeChange Event</a>
+                                    </li>
+                                
+                            
+                                
+                                    <li data-description="Creating and using your own ExecCommands">
+                                        <a href="editor-inline-exec.html">InlineEditor ExecCommands</a>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                </div>
+            
+        
+
+        
+    </div>
+</div>
+
+
+
+
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/yui3/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>

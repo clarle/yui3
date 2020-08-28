@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FAQ - YUI Library</title>
+
+    <meta name="viewport" content="width=960" id="meta-viewport">
+    <script>
+    if (screen.width < 768) {
+        document.getElementById('meta-viewport').setAttribute('content', 'width=768');
+    }
+    </script>
+
+    
+    
+    
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+
+    <link rel="stylesheet" href="https://yui-s.yahooapis.com/3.9.0/build/cssgrids/cssgrids-min.css">
+
+
+    <link rel="stylesheet" href="/yui3/combo/css-main-min.css&docs-min.css">
+
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="X-XRDS-Location" content="/xrds.xml">
+
+<link rel="shortcut icon" type="image/png" href="/img/favicon.png">
+
+
+
+
+    
+
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29453705-2']);
+    _gaq.push(['_trackPageview']);
+    </script>
+
+
+
+    
+
+    
+        <script>
+        var YUI_config={"filter":"min","maxURLLength":1024,"root":"3.17.2/","groups":{"site":{"combine":true,"comboBase":"/combo/js?","root":"","modules":{"hoverable":{"path":"hoverable-min.js","requires":["event-hover","node-base","node-event-delegate"]},"search":{"path":"search-min.js","requires":["autocomplete","autocomplete-highlighters","node-pluginhost"]},"api-filter":{"path":"apidocs/api-filter-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources"]},"api-list":{"path":"apidocs/api-list-min.js","requires":["api-filter","api-search","event-key","node-focusmanager","tabview"]},"api-search":{"path":"apidocs/api-search-min.js","requires":["autocomplete-base","autocomplete-highlighters","autocomplete-sources","escape"]}}}}};
+        if (location.protocol.indexOf('https') > -1) {
+            YUI_config.comboBase = 'https://yui-s.yahooapis.com/combo?';
+            YUI_config.combine = true;
+        }
+        </script>
+    
+
+    
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+    
+
+
+</head>
+<body class="yui3-skin-sam">
+
+<!--
+<a href="/yuiconf/" class="yuiconf ribbon">
+    <img src="/yui3/img/yuiconf/2013/ribbon.png" alt="YUIConf 2013" width="139" height="139">
+</a>
+-->
+
+<div id="doc">
+    <div id="hd" class="yui3-g"><header>
+        <div class="content">
+            <div class="yui3-u-3-4">
+                <a href="/yui3" rel="home"><div id="hd-logo" role="image" aria-label="YUI logo"></div></a>
+                
+                
+            </div>
+
+            <div class="yui3-u-1-4">
+                <form id="main-search" class="search" action="http://search.yahoo.com/search"
+        method="get" role="search">
+
+    <input type="search" class="search-input" name="q"
+            aria-label="Search docs and APIs"
+            placeholder="Search docs and APIs">
+
+    <input type="hidden" name="vs" value="yuilibrary.com">
+    <input type="hidden" name="vs" value="yuiblog.com">
+</form>
+
+            </div>
+
+            <div id="main-nav" class="yui3-u"><nav>
+    <ul class="nav hoverable-group">
+        
+            <li class="nav-tab hoverable ">
+                <a href="/yui3">Home</a>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="https://github.com/yui/yui3/wiki/Quick-Start">Quick Start</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/configurator/">Configurator</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/download/yui3/">Download YUI 3</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable  nav-tab-active">
+                <a href="https://github.com/yui/yui3/wiki/YUI-Documentation">Documentation</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/guides/">User Guides</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/examples/">Examples</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/api/">API Docs</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/environments/">Environments</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child  nav-child-active">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable nav-break">
+                <a href="/community/">Community</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/gallery/">Gallery</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yuiblog.com/">Blog</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/forum/">Forums</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/theater/">YUI Theater</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/yui3/wiki/Development-Schedule" target="_blank" title="External link">Calendar &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/contribute/">Contribute</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="https://github.com/yui/" target="_blank" title="External link">YUI on GitHub &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/newticket/">File a Ticket</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/report/">View Tickets</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui3/dashboard/">Dashboard</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li class="nav-tab hoverable ">
+                <a href="/projects/">Other Projects</a>
+                
+                    <ul class="nav-submenu">
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/shifter/" target="_blank" title="External link">Shifter &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yogi/" target="_blank" title="External link">Yogi &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yui2/">YUI 2</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuidoc/" target="_blank" title="External link">YUI Doc &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuitest/">YUI Test</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/yuilibrary/">YUI Website</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/yuicompressor/" target="_blank" title="External link">YUI Compressor &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://github.com/yui/builder" target="_blank" title="External link">YUI Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="/projects/phploader/">YUI PHP Loader</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/gridbuilder/" target="_blank" title="External link">Grid Builder &#187;</a>
+                                
+                            </li>
+                        
+                            <li class="nav-child ">
+                                
+                                    <a href="http://yui.github.com/skinbuilder/" target="_blank" title="External link">Skin Builder &#187;</a>
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav></div>
+
+        </div>
+    </header></div>
+
+    <div id="bd" class="clearfix yui3-g">
+        
+
+        
+    
+        <div class="project-version yui3-u">Version 3.17.2</div>
+    
+
+
+
+        
+            <div class="yui3-u-1">
+                <div class="body-heading">
+                    
+    <h1>YUI FAQ</h1>
+
+                </div>
+            </div>
+        
+
+        
+            
+                <div class="yui3-u-1">
+                    <div class="content">
+                        
+    
+        
+            
+                <div id="subnav" class="yui3-u-1"><nav>
+                    <ul class="subnav">
+                        
+                            <li><a href="/yui3/yui/docs/guides/">User Guides</a></li>
+                        
+                            <li><a href="/yui3/yui/docs/examples/">Examples</a></li>
+                        
+                            <li><a href="/yui3/yui/docs/api/">API Docs</a></li>
+                        
+                            <li><a href="/yui3/yui/environments/">Environments</a></li>
+                        
+                            <li class="subnav-active"><a href="/yui3/yui/docs/tutorials/">Tutorials</a></li>
+                        
+                            <li><a href="/yui3/yui/docs/tutorials/faq/">FAQ</a></li>
+                        
+                    </ul>
+                </nav></div>
+            
+        
+    
+
+
+                        
+
+
+
+
+
+
+
+<p>Not finding the answer you're looking for here?  Check out <a href="http://yuilibrary.com/forum/">the YUI developer forums</a>, where thousands of YUI users and developers gather to discuss the library, or head over to the #yui IRC channel on freenode.net.</p>
+
+<ul class="toc">
+<li>
+<a href="#what-is-yui">What is YUI?</a>
+</li>
+<li>
+<a href="#why-yui">Why YUI?</a>
+</li>
+<li>
+<a href="#where-can-i-download-yui">Where can I download YUI?</a>
+</li>
+<li>
+<a href="#does-yahoos-cdn-support-ssl">Does Yahoo's CDN support SSL?</a>
+</li>
+<li>
+<a href="#im-having-trouble-implementing-yui-where-can-i-get-support-or-help">I'm having trouble implementing YUI. Where can I get support or help?</a>
+</li>
+<li>
+<a href="#does-yui-work-in-all-web-browsers">Does YUI work in all web browsers?</a>
+</li>
+<li>
+<a href="#what-does-it-mean-when-a-product-or-component-is-released-as-beta">What does it mean when a product or component is released as <em>beta</em>?</a>
+</li>
+<li>
+<a href="#what-does-it-mean-when-a-yui-product-or-component-is-released-as-experimental">What does it mean when a YUI product or component is released as <em>experimental</em>?</a>
+</li>
+<li>
+<a href="#how-do-i-contribute-a-patch-or-a-component-to-yui">How do I contribute a patch or a component to YUI?</a>
+</li>
+<li>
+<a href="#where-is-the-yui-source-code">Where is the YUI source code?</a>
+</li>
+<li>
+<a href="#what-are-the--debugjs-and--minjs-versions-of-yui-build-files">What are the <em>-debug.js</em> and <em>-min.js</em> versions of YUI build files?</a>
+</li>
+<li>
+<a href="#where-can-i-go-to-learn-more-about-the-yui-roadmap-and-plans-for-future-components">Where can I go to learn more about the YUI roadmap and plans for future components?</a>
+</li>
+<li>
+<a href="#how-do-i-report-a-bug">How do I report a bug?</a>
+</li>
+<li>
+<a href="#how-is-yui-pronounced">How is "YUI" pronounced?</a>
+</li>
+</ul>
+
+<h2 id="what-is-yui">What is YUI?</h2>
+
+<p>YUI is a free, open source JavaScript and CSS framework for building richly interactive web applications. YUI is provided under a <a href="/license/">BSD license</a> and is <a href="https://github.com/yui">available on GitHub</a> for forking and contribution.</p>
+
+<h2 id="why-yui">Why YUI?</h2>
+
+<p>YUI is proven to be scalable, fast, and robust. Built by frontend engineers at Yahoo! and contributors from around the world, it's an industrial-strength JavaScript library for professionals who love JavaScript, whether is it run on mobile devices, on desktop browsers, or even on the server.</p>
+
+<p>With a wealth of documentation and a thriving online community, YUI takes you from basic DOM manipulations to the most complex applications without missing a beat. It is a world-class platform for novices, hackers, and application developers alike. By providing a concise, convenient, and intuitive API that is lightweight and lightning fast, <em>plus</em> a well-thought-out infrastructure and a comprehensive suite of tools to help you code like a professional, YUI is perfect for throwing together simple effects on a web page and engineering maintainable, performant, and well-architected web applications.</p>
+
+<h2 id="where-can-i-download-yui">Where can I download YUI?</h2>
+
+<p>All YUI project releases can be downloaded from the <a href="/download/">downloads</a> page.  You can download the latest YUI 3 distribution directly at <a href="/download/yui3/">http://yuilibrary.com/yui/3/download/</a>.</p>
+
+<h2 id="does-yahoos-cdn-support-ssl">Does Yahoo's CDN support SSL?</h2>
+
+<p>No. If you're using SSL, it is recommended, and honorable, that YUI is hosted and loaded from your own server. SSL implies the user is communicating strictly with your website, and your website only. When YUI is hosted under your own server, you must also implement your own <a href="http://yuiblog.com/blog/2008/07/16/combohandler">combo handler</a>.</p>
+
+<h2 id="im-having-trouble-implementing-yui-where-can-i-get-support-or-help">I'm having trouble implementing YUI. Where can I get support or help?</h2>
+
+<p>The <a href="/forum/">YUI forums</a> are a great place to go to ask a question. They're searchable too, and with thousands of questions already having been answered, a quick search there might get you just the answer you need.</p>
+
+<p>The #yui IRC channel on <a href="http://freenode.net/">Freenode</a> is another great place to give and get community support. There are almost always YUI core developers or contributors around to answer your questions.</p>
+
+<h2 id="does-yui-work-in-all-web-browsers">Does YUI work in all web browsers?</h2>
+
+<p>Strictly speaking, there is no full-featured JavaScript or CSS library that can work in every browser ever created. But YUI supports the vast majority of browsers that are in general use.  Moreover, we have <a href="/yui3/yui/docs/tutorials/gbs/">a comprehensive approach to browser support</a>, and we are committed to making sure that our components work well in all of what we designate as "A-Grade" browsers.  To stay up to date on what browsers we support, bookmark our <a href="/yui3/yui/environments/">YUI Target Environments</a> page and subscribe to <a href="http://yuiblog.com/">YUIBlog.com</a>, where we publish regular <a href="http://www.yuiblog.com/blog/category/target-environments/">updates</a>.</p>
+
+<h2 id="what-does-it-mean-when-a-product-or-component-is-released-as-beta">What does it mean when a product or component is released as <em>beta</em>?</h2>
+
+<p>The YUI team designates products or components as <em>beta</em> during their initial release phase. This allows us to get valuable feedback from the community about the product and its API before we lock down that API from major changes. If a product is marked as beta, that means we're expecting to make modifications to the API that may not be backward-compatible. If you include a beta product in your project, you may find that when you upgrade to a future release, you'll need to make changes in your implementation code for that product.</p>
+
+<h2 id="what-does-it-mean-when-a-yui-product-or-component-is-released-as-experimental">What does it mean when a YUI product or component is released as <em>experimental</em>?</h2>
+
+<p>In some circumstances, the YUI team may release a product or component in an <em>experimental</em> state to indicate that it has not been extensively tested or  may involve a technical approach that has not been proven out in other applications. We release such products to solicit community feedback and to begin the process of evaluating them in a wider context than we can provide within the YUI team. Significant work may need to be done before the product is ready for production release on mission-critical applications. Some products will evolve from experimental state to beta and then to GA, but other experimental products may never evolve to production quality due to technical hurdles identified during community experimentation.</p>
+
+<h2 id="how-do-i-contribute-a-patch-or-a-component-to-yui">How do I contribute a patch or a component to YUI?</h2>
+
+<p>Awesome! First, be sure to <a href="/contribute/cla/">submit a CLA</a>. Then see <a href="/yui3/yui/docs/tutorials/contribute/">Tutorial: Contribute to YUI</a> for more information on contributing to YUI.</p>
+
+<h2 id="where-is-the-yui-source-code">Where is the YUI source code?</h2>
+
+<p>All of YUI's open source code is available on <a href="http://github.com/yui/">GitHub</a>.</p>
+
+<h2 id="what-are-the--debugjs-and--minjs-versions-of-yui-build-files">What are the <em>-debug.js</em> and <em>-min.js</em> versions of YUI build files?</h2>
+
+<p>The <em>-debug.js</em> versions of YUI build files contain additional log messages that output to the browser console or <a href="/yui3/yui/docs/console/"> Console</a> component. These messages include information about any warnings or errors that may happen at runtime, as well as "interesting moments" that happen during an interaction.</p>
+
+<p>The <em>-min.js</em> versions of YUI build files have been minified via <a href="/projects/yuicompressor/">YUI Compressor</a> for maximum performance in a production environment.</p>
+
+<h2 id="where-can-i-go-to-learn-more-about-the-yui-roadmap-and-plans-for-future-components">Where can I go to learn more about the YUI roadmap and plans for future components?</h2>
+
+<p>Our <a href="https://github.com/yui/yui3/wiki/Development-Schedule">development schedule</a> is available on GitHub and you are free to join our <a href="https://groups.google.com/forum/?fromgroups#!forum/yui-contrib"><code>yui-contrib</code></a> mailing list to stay up date on the latest developments in the community. (<strong>Note</strong> <code>yui-contrib</code> is not a support forum. Please visit the <a href="/forum/">YUI forums</a> for support questions.)
+
+<h2 id="how-do-i-report-a-bug">How do I report a bug?</h2>
+
+<p>See <a href="/yui3/yui/docs/tutorials/report-bugs/">Tutorial: Report a Bug</a> for everything you need to know.</p>
+
+<h2 id="how-is-yui-pronounced">How is "YUI" pronounced?</h2>
+
+<p>Within the YUI team, we tend to pronounce it "why-you-eye".  However, in the community and all over the world we more often hear it pronounced "yooey." We answer to both!</p>
+
+
+
+
+                    </div>
+                </div>
+            
+        
+    </div>
+
+    <div id="ft"><footer>
+        <p class="copyright">
+        All code on this site is licensed under the <a href="/license/">BSD License</a> unless stated otherwise.<br>
+        <span class="links"><a href="/about/">About This Site</a> &middot; <a href="/security/">Security Contact Info</a></span>
+        </p>
+    </footer></div>
+</div>
+
+
+
+
+
+
+    <script src="/yui3/combo/js-search-min.js-hoverable-min.js-main-min.js"></script>
+
+
+
+    <script src="/vendor/prettify/prettify-min.js"></script>
+    <script>prettyPrint();</script>
+
+
+
+    <script>
+    (function() {
+        var ga = document.createElement('script'); ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    }());
+
+    (function() {
+        var ya = document.createElement('script'); ya.async = true;
+        ya.src = ('https:' == document.location.protocol ? 'https://s' : 'http://d') + '.yimg.com/mi/ywa.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ya, s);
+
+        window.onload = function () {
+            try {
+                var YWATracker = YWA.getTracker("10001393677061", "US");
+                YWATracker.submit();
+            } catch (eYWATCUnavailable) {
+                if (window.console && window.console.warn) {
+                    window.console.warn(eYWATCUnavailable.message || "Unknown error");
+                }
+            }
+        };
+    }());
+    </script>
+
+
+
+
+</body>
+</html>
