@@ -115,13 +115,13 @@ var YUIConfig = {
             </li>
         
             <li class="nav-tab hoverable ">
-                <a href="/yui/quick-start/">Quick Start</a>
+                <a href="/yui3/yui/quick-start/">Quick Start</a>
                 
                     <ul class="nav-submenu">
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/configurator/">Configurator</a>
+                                    <a href="/yui3/yui/configurator/">Configurator</a>
                                 
                             </li>
                         
@@ -136,43 +136,43 @@ var YUIConfig = {
             </li>
         
             <li class="nav-tab hoverable ">
-                <a href="/yui/docs/">Documentation</a>
+                <a href="/yui3/yui/docs/">Documentation</a>
                 
                     <ul class="nav-submenu">
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/guides/">User Guides</a>
+                                    <a href="/yui3/yui/docs/guides/">User Guides</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/examples/">Examples</a>
+                                    <a href="/yui3/yui/docs/examples/">Examples</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/api/">API Docs</a>
+                                    <a href="/yui3/yui/docs/api/">API Docs</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/environments/">Environments</a>
+                                    <a href="/yui3/yui/environments/">Environments</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                    <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                    <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                 
                             </li>
                         

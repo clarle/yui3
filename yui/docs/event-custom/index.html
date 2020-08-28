@@ -82,7 +82,7 @@
                             <a href="/yui3">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="/yui3/yui/quick-start/">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="/yui3/yui/docs/">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/infrastructure/">Infrastructure</a></li>
+                        <li class="crumb"><a href="/yui3/yui/infrastructure/">Infrastructure</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/event-custom/">EventTarget</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/event-custom/">EventTarget</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -268,7 +268,7 @@ YUI().use(&#x27;event-custom&#x27;, function (Y) {
 
 <p>
 For more information on creating YUI instances and on the
-<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+<a href="/yui3/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
 documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 </p>
 
@@ -322,14 +322,14 @@ Y.after(&quot;spa-category|pedicure&quot;, gelatoTime);</pre>
 
 <p>
     All <code>EventTarget</code>s host methods
-    <a href="/yui/docs/api/classes/EventTarget.html#method_on"><code>on</code></a>,
-    <a href="/yui/docs/api/classes/EventTarget.html#method_once"><code>once</code></a>,
-    <a href="/yui/docs/api/classes/EventTarget.html#method_after"><code>after</code></a>, and
-    <a href="/yui/docs/api/classes/EventTarget.html#method_onceAfter"><code>onceAfter</code></a>.
+    <a href="/yui3/yui/docs/api/classes/EventTarget.html#method_on"><code>on</code></a>,
+    <a href="/yui3/yui/docs/api/classes/EventTarget.html#method_once"><code>once</code></a>,
+    <a href="/yui3/yui/docs/api/classes/EventTarget.html#method_after"><code>after</code></a>, and
+    <a href="/yui3/yui/docs/api/classes/EventTarget.html#method_onceAfter"><code>onceAfter</code></a>.
     Both <code>once</code> and <code>onceAfter</code> will automatically detach the subscription
     after the callback is executed the first time.  All subscription methods
     return a subscription object called an
-    <a href="/yui/docs/api/classes/EventHandle.html">EventHandle</a>. The
+    <a href="/yui3/yui/docs/api/classes/EventHandle.html">EventHandle</a>. The
     distinction between <code>on</code> and <code>after</code> is discussed in the
     <a href="#after">"after" phase</a> section below.
 </p>
@@ -421,7 +421,7 @@ Y.fire(&#x27;bill:due&#x27;, {
 
 <p>
     Custom event callbacks are <em>usually, but not always</em> passed an
-    <a href="/yui/docs/api/classes/EventFacade.html">EventFacade</a> as their
+    <a href="/yui3/yui/docs/api/classes/EventFacade.html">EventFacade</a> as their
     first argument.  Custom events can be configured to send event facades or
     only the data they were fired with.  <a href="#event-data-object">Always
     passing event data in an object</a> as the second argument to <code>fire</code> allows
@@ -451,9 +451,9 @@ Y.detach(&#x27;spa-category|*&#x27;);</pre>
 
 <p>
     The preferred method of detaching subscriptions is to use the
-    <a href="/yui/docs/api/classes/EventHandle.html">EventHandle</a> that is
+    <a href="/yui3/yui/docs/api/classes/EventHandle.html">EventHandle</a> that is
     returned from the subscription methods.  Alternately you can use the
-    <a href="/yui/docs/api/classes/EventTarget.html#method_detach"><code>detach</code> or
+    <a href="/yui3/yui/docs/api/classes/EventTarget.html#method_detach"><code>detach</code> or
     <code>detachAll</code> methods</a> which work as described in the
     <a href="../event/index.html#detach-methods">Event user guide</a>.
 </p>
