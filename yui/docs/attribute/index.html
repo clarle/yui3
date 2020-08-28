@@ -82,7 +82,7 @@
                             <a href="/yui3">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="/yui3/yui/quick-start/">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="/yui3/yui/docs/">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/infrastructure/">Infrastructure</a></li>
+                        <li class="crumb"><a href="/yui3/yui/infrastructure/">Infrastructure</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/attribute/index.html">Attribute</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/attribute/index.html">Attribute</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -235,7 +235,7 @@ YUI().use(&#x27;attribute&#x27;, function (Y) {
 
 <p>
 For more information on creating YUI instances and on the
-<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+<a href="/yui3/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
 documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 </p>
 
@@ -256,7 +256,7 @@ you can simply augment your class with Attribute, as shown below:</p>
 });</pre>
 
 <p>Instances of your class will now have Attribute methods available, which your class can use to configure attributes for itself, and which users of your
-class can use to get and set attribute values. See the <a href="/yui/docs/api/Attribute.html">Attribute API documentation</a> for a complete list of
+class can use to get and set attribute values. See the <a href="/yui3/yui/docs/api/Attribute.html">Attribute API documentation</a> for a complete list of
 methods which Attribute will add to your class.</p>
 
 <p>Note that in general, rather than augmenting Attribute directly, most implementations will simply extend <a href="../base/index.html">Base</a>, which
@@ -428,7 +428,7 @@ o.set(&quot;attrB&quot;, &quot;Hello World!&quot;);</pre>
             <td>
              By default attribute change events are not broadcast to the YUI instance or global YUI object. The broadcast property
              can be used to set specific attribute change events to be broadcast to either the YUI instance or the global YUI object.
-             See CustomEvent's <a href="/yui/docs/api/CustomEvent.html#property_broadcast">broadcast</a> property for valid values.
+             See CustomEvent's <a href="/yui3/yui/docs/api/CustomEvent.html#property_broadcast">broadcast</a> property for valid values.
             </td>
         </tr>
         <tr>
@@ -438,7 +438,7 @@ o.set(&quot;attrB&quot;, &quot;Hello World!&quot;);</pre>
                 <p>
                 Whether or not to delay initialization of the attribute until the first call to get/set it.
                 This flag can be used to over-ride lazy initialization on a per attribute basis, when adding multiple attributes through
-                the <a href="/yui/docs/api/Attribute.html#method_addAttrs"><code>addAttrs</code></a> method.
+                the <a href="/yui3/yui/docs/api/Attribute.html#method_addAttrs"><code>addAttrs</code></a> method.
                 </p>
                 <p>When extending Base, all attributes are added lazily, so this flag can be used to over-ride
                 lazyAdd behavior for specific attributes.</p>
@@ -454,7 +454,7 @@ o.set(&quot;attrB&quot;, &quot;Hello World!&quot;);</pre>
             <td>
                 <p>
                 This configuration value is not actually supported by Attribute natively, but is available when
-                working with Base, and defining attribute configurations using Base's static <a href="/yui/docs/api/Base.html#property_ATTRS">ATTRS</a> property.
+                working with Base, and defining attribute configurations using Base's static <a href="/yui3/yui/docs/api/Base.html#property_ATTRS">ATTRS</a> property.
                 </p>
                 <p>
                 This property controls how the statically defined default <code>value</code> field in Base's <code>ATTRS</code> attribute configuration is handled,
@@ -605,7 +605,7 @@ from anywhere but the UI, it sets the input box to the new value.</p>
 
 <p>Listeners registered using the <code>on</code> method, are notified <strong>before</strong> the stored state of the attribute has been updated.
 Functions registered as "on" listeners receive an <code>Event</code> object as the first argument (actually an
-instance of <a href="/yui/docs/api/EventFacade.html"><code>EventFacade</code></a>) which contains information
+instance of <a href="/yui3/yui/docs/api/EventFacade.html"><code>EventFacade</code></a>) which contains information
 about the attribute being modified.</p>
 
 <p>Since these listeners are invoked before any state change has occurred, they have the ability to

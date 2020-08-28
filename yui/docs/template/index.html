@@ -119,13 +119,13 @@
             </li>
         
             <li class="nav-tab hoverable ">
-                <a href="/yui/quick-start/">Quick Start</a>
+                <a href="/yui3/yui/quick-start/">Quick Start</a>
                 
                     <ul class="nav-submenu">
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/configurator/">Configurator</a>
+                                    <a href="/yui3/yui/configurator/">Configurator</a>
                                 
                             </li>
                         
@@ -140,43 +140,43 @@
             </li>
         
             <li class="nav-tab hoverable  nav-tab-active">
-                <a href="/yui/docs/">Documentation</a>
+                <a href="/yui3/yui/docs/">Documentation</a>
                 
                     <ul class="nav-submenu">
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/guides/">User Guides</a>
+                                    <a href="/yui3/yui/docs/guides/">User Guides</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/examples/">Examples</a>
+                                    <a href="/yui3/yui/docs/examples/">Examples</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/api/">API Docs</a>
+                                    <a href="/yui3/yui/docs/api/">API Docs</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/environments/">Environments</a>
+                                    <a href="/yui3/yui/environments/">Environments</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/tutorials/">Tutorials</a>
+                                    <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                 
                             </li>
                         
                             <li class="nav-child ">
                                 
-                                    <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                    <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                 
                             </li>
                         
@@ -342,17 +342,17 @@
     <div id="breadcrumbs" class="yui3-u-1">
         <ul class="breadcrumbs">
             
-                <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                 
                     <li class="separator">&gt;</li>
                 
             
-                <li class="crumb"><a href="/yui/utilities/">Utilities</a></li>
+                <li class="crumb"><a href="/yui3/yui/utilities/">Utilities</a></li>
                 
                     <li class="separator">&gt;</li>
                 
             
-                <li class="crumb"><a href="/yui/docs/template/">Template</a></li>
+                <li class="crumb"><a href="/yui3/yui/docs/template/">Template</a></li>
                 
             
         </ul>
@@ -446,7 +446,7 @@ YUI().use(&#x27;template&#x27;, function (Y) {
 
 <p>
 For more information on creating YUI instances and on the
-<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+<a href="/yui3/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
 documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 </p>
 
@@ -635,7 +635,7 @@ The following example loads only the Handlebars runtime and generic <code>Y.Temp
 </p>
 
 <p>
-The following example, uses the <code>handlebars</code> virtual rollup module which includes the <code>handlebars-compiler</code>. This enables the Handlebars-backed template engine instances to use the <a href="/yui/docs/api/classes/Template.html">full API</a>:
+The following example, uses the <code>handlebars</code> virtual rollup module which includes the <code>handlebars-compiler</code>. This enables the Handlebars-backed template engine instances to use the <a href="/yui3/yui/docs/api/classes/Template.html">full API</a>:
 </p>
 
 <pre class="code prettyprint lang-javascript">YUI().use(&#x27;template-base&#x27;, &#x27;handlebars&#x27;, function (Y) {
@@ -652,7 +652,7 @@ Both Handlebars and Micro templates must be compiled before they can be rendered
 </p>
 
 <p>
-Before compiling a template string, a template engine needs to be created. Once the engine instance has been created, the template string can be passed to its <a href="/yui/docs/api/classes/Template.html#method_compile"><code>compile()</code></a> method. What's returned is a reusable function.
+Before compiling a template string, a template engine needs to be created. Once the engine instance has been created, the template string can be passed to its <a href="/yui3/yui/docs/api/classes/Template.html#method_compile"><code>compile()</code></a> method. What's returned is a reusable function.
 </p>
 
 <pre class="code prettyprint lang-javascript">var engine, template;
@@ -683,7 +683,7 @@ Y.log(output); &#x2F;&#x2F; =&gt; &quot;My favorite animal is a Spotted Cuscus.&
 
 
 <p>
-If you don't plan to use a template more than once, you can compile and render it in a single step with the template engine's <a href="/yui/docs/api/classes/Template.html#method_render"><code>render()</code></a> method.
+If you don't plan to use a template more than once, you can compile and render it in a single step with the template engine's <a href="/yui3/yui/docs/api/classes/Template.html#method_render"><code>render()</code></a> method.
 </p>
 
 <pre class="code prettyprint lang-javascript">&#x2F;&#x2F; Compile and render a template in a single step.
@@ -706,7 +706,7 @@ The main benefit of precompilation is performance. Not only does the client not 
 </p>
 
 <p>
-<code>Y.Template</code> engine instances have a <a href="/yui/docs/api/classes/Template.html#method_precompile"><code>precompile()</code> method</a> which uses the underlaying <code>engine</code> to convert the specified <code>text</code> into a string of JavaScript source code. This string of code which represents the template, can later be revived using the engine instance's <a href="/yui/docs/api/classes/Template.html#method_revive"><code>revive()</code> method</a> which turns it into a JavaScript function.
+<code>Y.Template</code> engine instances have a <a href="/yui3/yui/docs/api/classes/Template.html#method_precompile"><code>precompile()</code> method</a> which uses the underlaying <code>engine</code> to convert the specified <code>text</code> into a string of JavaScript source code. This string of code which represents the template, can later be revived using the engine instance's <a href="/yui3/yui/docs/api/classes/Template.html#method_revive"><code>revive()</code> method</a> which turns it into a JavaScript function.
 </p>
 
 <p>
@@ -1010,7 +1010,7 @@ This will install the <code>yui</code> npm module in the current directory and m
 </p>
 
 <p>
-Next, in your application code, call the <a href="/yui/docs/api/classes/Template.Micro.html#method_precompile"><code>precompile()</code></a> method to precompile a Micro template. It will return a string containing JavaScript code.
+Next, in your application code, call the <a href="/yui3/yui/docs/api/classes/Template.Micro.html#method_precompile"><code>precompile()</code></a> method to precompile a Micro template. It will return a string containing JavaScript code.
 </p>
 
 <pre class="code prettyprint lang-javascript">&#x2F;&#x2F; Load the YUI Template.Micro module.
@@ -1033,7 +1033,7 @@ return $t;
 
 
 <p>
-You can now serve this precompiled JS to the client in whatever way makes the most sense for your application. On the client, load the <code>template</code> YUI module, create a <code>Y.Template</code> engine instance, and pass the precompiled template to its <a href="/yui/docs/api/classes/Template.html#method_revive"><code>revive()</code></a> method to convert it into a renderable template function.
+You can now serve this precompiled JS to the client in whatever way makes the most sense for your application. On the client, load the <code>template</code> YUI module, create a <code>Y.Template</code> engine instance, and pass the precompiled template to its <a href="/yui3/yui/docs/api/classes/Template.html#method_revive"><code>revive()</code></a> method to convert it into a renderable template function.
 </p>
 
 <p>
@@ -1099,7 +1099,7 @@ Micro templates have a simple syntax, there are only three forms:
 </dl>
 
 <p>
-These syntax identifiers are defined as RegExp on <a href="/yui/docs/api/classes/Template.Micro.html#property_options"><code>Y.Template.Micro.options</code></a>. If you wish to define a custom syntax for your Micro templates, you can do so by defining new RegExps for your custom identifiers.
+These syntax identifiers are defined as RegExp on <a href="/yui3/yui/docs/api/classes/Template.Micro.html#property_options"><code>Y.Template.Micro.options</code></a>. If you wish to define a custom syntax for your Micro templates, you can do so by defining new RegExps for your custom identifiers.
 </p>
 
 <h4 id="defining-a-handlebars-like-syntax">Defining a Handlebars-like Syntax</h4>
