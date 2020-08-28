@@ -82,7 +82,7 @@
                             <a href="/">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="https://github.com/yui/yui3/wiki/Quick-Start">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="https://github.com/yui/yui3/wiki/YUI-Documentation">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="https://github.com/yui/yui3/wiki/YUI-Documentation">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/infrastructure/">Infrastructure</a></li>
+                        <li class="crumb"><a href="/yui3/yui/infrastructure/">Infrastructure</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/base/">Base</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/base/">Base</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -252,7 +252,7 @@ YUI().use(&#x27;base&#x27;, function (Y) {
 
 <p>
 For more information on creating YUI instances and on the
-<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+<a href="/yui3/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
 documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 </p>
 
@@ -354,7 +354,7 @@ attributes that your class adds to each instance. The instance will contain attr
 hierarchy from which it is created, with each class adding the set of attributes and supporting code that it
 requires.</p>
 
-<p>For example, this is the (partial) set of attributes which the <a href="/yui/docs/api/classes/DD.Drag.html#attrs">Drag</a> class defines:</p>
+<p>For example, this is the (partial) set of attributes which the <a href="/yui3/yui/docs/api/classes/DD.Drag.html#attrs">Drag</a> class defines:</p>
 
 <pre class="code prettyprint">Drag.ATTRS = {
 
@@ -415,7 +415,7 @@ for setting some other non attribute state in the object).
 </p>
 
 <p>
-<strong>Note:</strong> If the <code>ATTRS</code> of a class need to be statically updated after the class has been created or defined, then to do so safely use the <a href="/yui/docs/api/classes/Base.html#method_modifyAttrs">static <code>modifyAttrs()</code> method</a>.
+<strong>Note:</strong> If the <code>ATTRS</code> of a class need to be statically updated after the class has been created or defined, then to do so safely use the <a href="/yui3/yui/docs/api/classes/Base.html#method_modifyAttrs">static <code>modifyAttrs()</code> method</a>.
 </p>
 
 <h2 id="initdestroy">Initialization and Destruction</h2>
@@ -477,7 +477,7 @@ classes with varying permutations of features.
 </p>
 
 <dl>
-    <dt><a href="/yui/docs/api/Plugin.Host.html#method_plug"><code>plug(pluginClass, pluginConfig)</code></a></dt>
+    <dt><a href="/yui3/yui/docs/api/Plugin.Host.html#method_plug"><code>plug(pluginClass, pluginConfig)</code></a></dt>
     <dd>
     <p>Adds a plugin to the instance with the configuration specified. The <code>plug</code> method adds a new instance of the plugin
     and attaches it to the instance on the namespace (property) defined by the plugin class' <code>NS</code> property.</p>
@@ -485,7 +485,7 @@ classes with varying permutations of features.
     <p>The <code>plug</code> method also allows multiple plugins to be added in a single call by passing in an array of plugins with optional configurations as defined in the API documentation.</p>
 
     </dd>
-    <dt><a href="/yui/docs/api/Plugin.Host.html#method_unplug"><code>unplug(pluginClass)</code></a> or <a href="/yui/docs/api/Plugin.Host.html#method_unplug"><code>unplug(namespace)</code></a></dt>
+    <dt><a href="/yui3/yui/docs/api/Plugin.Host.html#method_unplug"><code>unplug(pluginClass)</code></a> or <a href="/yui3/yui/docs/api/Plugin.Host.html#method_unplug"><code>unplug(namespace)</code></a></dt>
     <dd>Removes the provided plugin or the plugin at the attached namespace from the instance and destroys it.</dd>
 </dl>
 
@@ -500,7 +500,7 @@ configuration key. For example:</p>
 
 
 <p>
-Additionally, if the component developer wants a certain set of plugins added to his or her component by default, static <a href="/yui/docs/api/Base.html#method_Base.plug"><code>Base.plug</code></a> and <a href="/yui/docs/api/Base.html#method_Base.unplug"><code>Base.unplug</code></a>
+Additionally, if the component developer wants a certain set of plugins added to his or her component by default, static <a href="/yui3/yui/docs/api/Base.html#method_Base.plug"><code>Base.plug</code></a> and <a href="/yui3/yui/docs/api/Base.html#method_Base.unplug"><code>Base.unplug</code></a>
 methods are provided, allowing the developer to define the list of plugins to be added as part of the class definition.
 </p>
 
@@ -522,10 +522,10 @@ The <a href="../assets/base/../plugin/myplugin.js.txt">"MyPlugin" template file<
 <p>In addition to <code>build</code>, Base also provides the static <code>create</code> and <code>mix</code> methods, which are sugar methods on top of <code>Base.build</code>.</p>
 
 <dl>
-    <dt><a href="/yui/docs/api/Base.html#method_Base.create"><code>Base.create</code></a></dt>
+    <dt><a href="/yui3/yui/docs/api/Base.html#method_Base.create"><code>Base.create</code></a></dt>
     <dd>The <code>create</code> sugar method makes the task of creating a completely new class, which mixes in extensions, a lot more succint, by providing a way for the caller to pass in additional prototype and static properties which
     will exist on the newly created class.</dd>
-    <dt><a href="/yui/docs/api/Base.html#method_Base.mix"><code>Base.mix</code></a></dt>
+    <dt><a href="/yui3/yui/docs/api/Base.html#method_Base.mix"><code>Base.mix</code></a></dt>
     <dd>The <code>mix</code> sugar method on the other hand, can be used to add extensions into an already existing class.</dd>
 </dl>
 
@@ -610,14 +610,14 @@ wp.lock();</pre>
        For example Base defines the <code>ATTRS</code> property as a property which needs to be custom aggregated when mixing in extensions, and Widget adds the <code>HTML_PARSER</code> property for aggregation.
        </p>
        <p>
-       The <a href="/yui/docs/api/Base.html#method_Base.create"><code>Base.create</code> API Documention</a> provides more details about the structure of <code>_buildCfg</code> and how it can be used by component authors.
+       The <a href="/yui3/yui/docs/api/Base.html#method_Base.create"><code>Base.create</code> API Documention</a> provides more details about the structure of <code>_buildCfg</code> and how it can be used by component authors.
        </p>
     </li>
 </ul>
 
 <p>The new class constructor created by <code>Base.create</code> will invoke the constructors for the main and feature classes when the new class is instantiated, during the init part of the lifecycle.</p>
 
-<p>See Base's <a href="/yui/docs/api/Base.html"><code>API documentation</code></a> for more details on the <code>create</code> and <code>mix</code> methods.</p>
+<p>See Base's <a href="/yui3/yui/docs/api/Base.html"><code>API documentation</code></a> for more details on the <code>create</code> and <code>mix</code> methods.</p>
 
 <p>The <a href="../assets/base/myextension.js.txt">"MyExtension" template file</a> provides a starting point for you to create your own extensions.</p>
 

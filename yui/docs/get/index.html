@@ -82,7 +82,7 @@
                             <a href="/">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="https://github.com/yui/yui3/wiki/Quick-Start">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="https://github.com/yui/yui3/wiki/YUI-Documentation">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="https://github.com/yui/yui3/wiki/YUI-Documentation">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/utilities/">Utilities</a></li>
+                        <li class="crumb"><a href="/yui3/yui/utilities/">Utilities</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/get/index.html">Get</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/get/index.html">Get</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -232,7 +232,7 @@ YUI().use(&#x27;get&#x27;, function (Y) {
 
 <p>
 For more information on creating YUI instances and on the
-<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+<a href="/yui3/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
 documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 </p>
 
@@ -244,7 +244,7 @@ documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 <h4 id="js"><code>js()</code></h4>
 
 <p>
-To load a JavaScript resource, pass a URL (both relative and absolute URLs are fine) and a callback function to the <a href="/yui/docs/api/classes/Get.html#method_js"><code>Y.Get.js()</code></a> method. Get will execute the callback function when the resource has finished loading. If an error occurs, the first argument passed to the callback will be an array of error objects.
+To load a JavaScript resource, pass a URL (both relative and absolute URLs are fine) and a callback function to the <a href="/yui3/yui/docs/api/classes/Get.html#method_js"><code>Y.Get.js()</code></a> method. Get will execute the callback function when the resource has finished loading. If an error occurs, the first argument passed to the callback will be an array of error objects.
 </p>
 
 <p>
@@ -265,7 +265,7 @@ Y.Get.js(&#x27;http:&#x2F;&#x2F;example.com&#x2F;file.js&#x27;, function (err) {
 <h4 id="css"><code>css()</code></h4>
 
 <p>
-Loading CSS works the same way as JS, but you call the <a href="/yui/docs/api/classes/Get.html#method_css"><code>css()</code></a> method instead of <code>js()</code>:
+Loading CSS works the same way as JS, but you call the <a href="/yui3/yui/docs/api/classes/Get.html#method_css"><code>css()</code></a> method instead of <code>js()</code>:
 </p>
 
 <pre class="code prettyprint">&#x2F;&#x2F; Load a single CSS resource.
@@ -300,7 +300,7 @@ Y.Get.js([&#x27;one.js&#x27;, &#x27;two.js&#x27;, &#x27;http:&#x2F;&#x2F;example
 
 
 <p>
-You can even mix and match both JavaScript and CSS files in the same transaction by calling <a href="/yui/docs/api/classes/Get.html#method_load"><code>Y.Get.load()</code></a>, which will guess the type of each URL by looking at the file extension.
+You can even mix and match both JavaScript and CSS files in the same transaction by calling <a href="/yui3/yui/docs/api/classes/Get.html#method_load"><code>Y.Get.load()</code></a>, which will guess the type of each URL by looking at the file extension.
 </p>
 
 <pre class="code prettyprint">&#x2F;&#x2F; Load both CSS and JS in a single transaction and execute the callback after
@@ -350,13 +350,13 @@ Within a transaction, CSS resources are always loaded in parallel. This is becau
 
 <li>
 <p>
-Within a transaction, JS resources are loaded in parallel in Firefox and Opera, because these browsers are capable of preserving script execution order regardless of load order. In all other browsers, JS resources are loaded serially unless the <a href="/yui/docs/api/classes/Get.html#property_options"><code>async</code> option</a> is set to <code>true</code>.
+Within a transaction, JS resources are loaded in parallel in Firefox and Opera, because these browsers are capable of preserving script execution order regardless of load order. In all other browsers, JS resources are loaded serially unless the <a href="/yui3/yui/docs/api/classes/Get.html#property_options"><code>async</code> option</a> is set to <code>true</code>.
 </p>
 </li>
 
 <li>
 <p>
-When the <a href="/yui/docs/api/classes/Get.html#property_options"><code>async</code> option</a> is set to <code>true</code>, JS resources are loaded in parallel regardless of the browser, and execution order is not guaranteed.
+When the <a href="/yui3/yui/docs/api/classes/Get.html#property_options"><code>async</code> option</a> is set to <code>true</code>, JS resources are loaded in parallel regardless of the browser, and execution order is not guaranteed.
 </p>
 </li>
 
@@ -365,7 +365,7 @@ When the <a href="/yui/docs/api/classes/Get.html#property_options"><code>async</
 <h3 id="working-with-transactions">Working With Transactions</h3>
 
 <p>
-A transaction object is an instance of the <a href="/yui/docs/api/classes/Get.Transaction.html"><code>Y.Get.Transaction</code></a> class. It contains methods and properties that allow you to inspect and manipulate a transaction, which encompasses one or more CSS or JS requests and a set of config options associated with those requests.
+A transaction object is an instance of the <a href="/yui3/yui/docs/api/classes/Get.Transaction.html"><code>Y.Get.Transaction</code></a> class. It contains methods and properties that allow you to inspect and manipulate a transaction, which encompasses one or more CSS or JS requests and a set of config options associated with those requests.
 </p>
 
 <p>
@@ -386,7 +386,7 @@ It's not necessary to hold onto a transaction object unless you want to be able 
 <h4 id="aborting-transactions">Aborting Transactions</h4>
 
 <p>
-You can abort a transaction in progress by calling the transaction's <a href="/yui/docs/api/classes/Get.Transaction.html#method_abort"><code>abort()</code></a> method.
+You can abort a transaction in progress by calling the transaction's <a href="/yui3/yui/docs/api/classes/Get.Transaction.html#method_abort"><code>abort()</code></a> method.
 </p>
 
 <pre class="code prettyprint">var tx = Y.Get.js([&#x27;one.js&#x27;, &#x27;two.js&#x27;], function (err) {
@@ -423,7 +423,7 @@ By default, the Get Utility will automatically purge script nodes after every 20
 
 
 <p>
-You can customize the automatic purge threshold by setting the <a href="/yui/docs/api/classes/Get.html#property_options"><code>purgethreshold</code></a> config option, and you can disable automatic purging completely by setting the <a href="/yui/docs/api/classes/Get.html#property_options"><code>autopurge</code></a> option to <code>false</code>.
+You can customize the automatic purge threshold by setting the <a href="/yui3/yui/docs/api/classes/Get.html#property_options"><code>purgethreshold</code></a> config option, and you can disable automatic purging completely by setting the <a href="/yui3/yui/docs/api/classes/Get.html#property_options"><code>autopurge</code></a> option to <code>false</code>.
 </p>
 
 <p>
