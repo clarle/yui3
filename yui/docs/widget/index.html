@@ -82,7 +82,7 @@
                             <a href="/yui3">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="/yui3/yui/quick-start/">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="/yui3/yui/docs/">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/infrastructure/">Infrastructure</a></li>
+                        <li class="crumb"><a href="/yui3/yui/infrastructure/">Infrastructure</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/widget/">Widget</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/widget/">Widget</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -220,7 +220,7 @@
 Although instantiable and usable by itself, it is designed to be extended to create widgets which address
 specific user interaction patterns.</p>
 
-<p>The <code>Widget</code> class extends <a href="/yui/docs/api/Base.html"><code>Base</code></a>. Therefore it provides
+<p>The <code>Widget</code> class extends <a href="/yui3/yui/docs/api/Base.html"><code>Base</code></a>. Therefore it provides
 the same <code>Attribute</code>, <code>Event.Provider</code> and <code>Plugin.Host</code> support as <a href="../base/index.html#extendbase"><code>Base</code></a> does.
 
 <p>It adds the following core functionality:</p>
@@ -291,7 +291,7 @@ Following this practice makes it easier to customize and test one area or the ot
 widget implementation's <code>renderer</code> method to perform the actual rendering work:</p>
 
 <dl>
-    <dt><a href="/yui/docs/api/Base.html#method_init"><code>init</code></a> <em>(inherited from <code>Base</code>)</em>:</dt>
+    <dt><a href="/yui3/yui/docs/api/Base.html#method_init"><code>init</code></a> <em>(inherited from <code>Base</code>)</em>:</dt>
     <dd>
         <p>
         The <code>init</code> method loops through the class hierarchy, top down (Base first, subclass last) and:
@@ -304,14 +304,14 @@ widget implementation's <code>renderer</code> method to perform the actual rende
     </dd>
 </dl>
 <dl>
-    <dt><a href="/yui/docs/api/Base.html#method_destroy"><code>destroy</code></a> <em>(inherited from <code>Base</code>)</em>:</dt>
+    <dt><a href="/yui3/yui/docs/api/Base.html#method_destroy"><code>destroy</code></a> <em>(inherited from <code>Base</code>)</em>:</dt>
     <dd>
         <p>Invokes the <code>destructor</code> method for all classes in the widget hierarchy, bottom up (subclass first, Base last).</p>
         <p>The <code>destroy</code> method fires a <code>destroy</code> event, which can be prevented to stop destruction from proceeding.</p>
     </dd>
 </dl>
 <dl>
-    <dt><a href="/yui/docs/api/Widget.html#method_render"><code>render</code></a>:</dt>
+    <dt><a href="/yui3/yui/docs/api/Widget.html#method_render"><code>render</code></a>:</dt>
     <dd>
         <p>Invokes the <code>renderer</code> method for the Widget instance. Unlike the <code>initializer</code> and <code>destructor</code>, this method
         is not chained automatically for the widget's class hierarchy.</p>
@@ -327,7 +327,7 @@ widget implementation's <code>renderer</code> method to perform the actual rende
 
 <h4 id="widgets-renderer-method">Widget's <code>renderer</code> Method</h4>
 
-<p>Widget provides a <a href="/yui/docs/api/Widget.html#method_renderer"><code>renderer</code></a> method implementation, which for most simple widgets will not need to be over-ridden.
+<p>Widget provides a <a href="/yui3/yui/docs/api/Widget.html#method_renderer"><code>renderer</code></a> method implementation, which for most simple widgets will not need to be over-ridden.
 This <code>renderer</code> method is shown below:</p>
 
 <pre class="code prettyprint">renderer: function() {
@@ -343,18 +343,18 @@ The intended role of each of these methods is described below, and most widgets 
 </p>
 
 <dl>
-    <dt><a href="/yui/docs/api/Widget.html#method_renderUI"><code>renderUI</code></a></dt>
+    <dt><a href="/yui3/yui/docs/api/Widget.html#method_renderUI"><code>renderUI</code></a></dt>
     <dd>This method is responsible for creating and adding the nodes which the widget needs into the document (or modifying existing nodes, in the case of progressive enhancement).
     It is usually the point at which the DOM is first modified by the widget.</dd>
 </dl>
 <dl>
-    <dt><a href="/yui/docs/api/Widget.html#method_bindUI"><code>bindUI</code></a></dt>
+    <dt><a href="/yui3/yui/docs/api/Widget.html#method_bindUI"><code>bindUI</code></a></dt>
     <dd>This method is responsible for attaching event listeners which bind the UI to the widget state.
     These listeners are generally attribute change listeners &mdash; used to update the state of the UI in response to changes in the attribute's value.
     It also attaches DOM event listeners to the UI to map user interactions to the widget's API.</dd>
 </dl>
 <dl>
-    <dt><a href="/yui/docs/api/Widget.html#method_syncUI"><code>syncUI</code></a></dt>
+    <dt><a href="/yui3/yui/docs/api/Widget.html#method_syncUI"><code>syncUI</code></a></dt>
     <dd>This method is responsible for setting the initial state of the UI based on the current state of the widget at the time of rendering.</dd>
 </dl>
 
@@ -362,7 +362,7 @@ The intended role of each of these methods is described below, and most widgets 
 
 <p>The <code>Widget</code> class establishes a standard entry point for widgets that need to provide support for <a href="http://en.wikipedia.org/wiki/Progressive_Enhancement">Progressive Enhancement</a>; this entry point is provided in the form of an <code>HTML_PARSER</code> property on each class.</p>
 
-<p><a href="/yui/docs/api/Widget.html#property_Widget.HTML_PARSER"><code>HTML_PARSER</code></a> is a static property, used to define a hash of selectors or functions that are responsible for (a) parsing content for the widget from existing DOM elements and (b) extracting attribute configuration values for use during initialization.</p>
+<p><a href="/yui3/yui/docs/api/Widget.html#property_Widget.HTML_PARSER"><code>HTML_PARSER</code></a> is a static property, used to define a hash of selectors or functions that are responsible for (a) parsing content for the widget from existing DOM elements and (b) extracting attribute configuration values for use during initialization.</p>
 
 <pre class="code prettyprint">MyWidget.HTML_PARSER = {
 
@@ -444,8 +444,8 @@ For example, the parser definition above may lead to the following object litera
 
 <h3 id="markup">Rendered Markup</h3>
 
-<p>The <code>Widget</code> class establishes a common markup format for all widgets, through its <a href="/yui/docs/api/Widget.html#attr_boundingBox"><code>boundingBox</code></a> and
-<a href="/yui/docs/api/Widget.html#attr_contentBox"><code>contentBox</code></a> attributes.</p>
+<p>The <code>Widget</code> class establishes a common markup format for all widgets, through its <a href="/yui3/yui/docs/api/Widget.html#attr_boundingBox"><code>boundingBox</code></a> and
+<a href="/yui3/yui/docs/api/Widget.html#attr_contentBox"><code>contentBox</code></a> attributes.</p>
 
 <p>
     Most widgets will have a bounding box wrapping a content box. They are both <code>DIV</code>s by default but can be customized by overriding the <code>BOUNDING_TEMPLATE</code> and <code>CONTENT_TEMPLATE</code> prototype properties.
@@ -659,7 +659,7 @@ These events provide application developers the ability to listen for UI events 
         UI_EVENTS prototype property.</p>
 
         <p>
-        This property defaults to <a href="/yui/docs/api/Node.html#property_DOM_EVENTS"><code>Node.DOM_EVENTS</code></a>.
+        This property defaults to <a href="/yui3/yui/docs/api/Node.html#property_DOM_EVENTS"><code>Node.DOM_EVENTS</code></a>.
         Widget developers can use this property to pare down or extend the number of events that are published and fired automatically.
         </p>
     </li>
@@ -815,7 +815,7 @@ parent.remove(n);</pre>
                 <li><p>Parents are automatically set up as event targets for their children's events, allowing you to leverage custom event bubbling to listen for events higher up in the hierarchy.</p></li>
                 <li><p>Parents automatically render their children when rendered.</p></li>
                 <li>
-                    <p>Widget Parent augments the <a href="/yui/docs/api/ArrayList.html">ArrayList API</a>, providing a full range of iteration and traversal methods for it's children:</p>
+                    <p>Widget Parent augments the <a href="/yui3/yui/docs/api/ArrayList.html">ArrayList API</a>, providing a full range of iteration and traversal methods for it's children:</p>
 
 <pre class="code prettyprint">parent.each(function(child) {...});
 parent.item(n);
@@ -871,8 +871,8 @@ parent.size();</pre>
 <p>The YUI 3 library ships with a couple of Widget plugins for the 3.1.0 release, and also provides examples which show how you can create your own plugins:</p>
 
 <ul>
-    <li><a href="/yui/docs/api/Plugin.WidgetAnim.html">Widget Animation Plugin</a> (api documentation)</li>
-    <li><a href="/yui/docs/api/Plugin.Drag.html">Widget (and Node) Drag/Drop Plugin</a> (api documentation)</li>
+    <li><a href="/yui3/yui/docs/api/Plugin.WidgetAnim.html">Widget Animation Plugin</a> (api documentation)</li>
+    <li><a href="/yui3/yui/docs/api/Plugin.Drag.html">Widget (and Node) Drag/Drop Plugin</a> (api documentation)</li>
 
     <li><a href="widget-plugin.html">Creating Widget Plugins</a> (example)</li>
     <li><a href="../overlay/overlay-io-plugin.html">Creating An Overlay IO Plugin</a> (example)</li>

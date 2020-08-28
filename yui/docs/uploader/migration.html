@@ -82,7 +82,7 @@
                             <a href="/yui3">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="/yui3/yui/quick-start/">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="/yui3/yui/docs/">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/utilities/">Utilities</a></li>
+                        <li class="crumb"><a href="/yui3/yui/utilities/">Utilities</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/uploader/migration.html">Uploader</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/uploader/migration.html">Uploader</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -326,7 +326,7 @@ li code {
     <tr>
         <td><code>cancel</code></td>
         <td><strong>No longer exists</strong> on the Uploader instance. Instead, a <code>cancelUpload()</code> method is present on the instance of Uploader's queue, stored in <code>uploaderInstance.queue</code>.
-            (See the <a href="/yui/docs/api/classes/Uploader.Queue.html#method_cancelUpload">API Docs</a> for more information).
+            (See the <a href="/yui3/yui/docs/api/classes/Uploader.Queue.html#method_cancelUpload">API Docs</a> for more information).
         </td>
     </tr>
     <tr>
@@ -353,17 +353,17 @@ li code {
             <code>file</code>, <code>url</code>, and <code>postVars</code> as arguments, where <code>file</code> is a references to an instance
             of <code>Y.File</code> (can be obtained from the <code>fileList</code> attribute), <code>url</code> is the target URL
             to upload the file to, and <code>postVars</code> is a set of key-value pairs specifying the variables
-            that should be POSTed along with the file upload. The old <code>method</code> argument has been removed since file upload requests are always POSTed. The old <code>postFileVarName</code> argument has been replaced with an instance-level <code>fileFieldName</code> attribute. (See the <a href="/yui/docs/api/classes/UploaderFlash.html#method_upload">API Docs</a> for more information).</td>
+            that should be POSTed along with the file upload. The old <code>method</code> argument has been removed since file upload requests are always POSTed. The old <code>postFileVarName</code> argument has been replaced with an instance-level <code>fileFieldName</code> attribute. (See the <a href="/yui3/yui/docs/api/classes/UploaderFlash.html#method_upload">API Docs</a> for more information).</td>
     </tr>
     <tr>
         <td><code>uploadAll</code></td>
         <td><strong>The method signature has changed</strong>. The new <code>uploadAll()</code> method takes
-            <code>url</code>, and <code>postVars</code> as arguments, where <code>url</code> is the target URL to upload the files to, and <code>postVars</code> is a set of key-value pairs specifying the variables that should be POSTed along with the file upload. If POST variables need to be specified per file, you can use the <code>postVarsPerFile</code> attribute instead of specifying the third argument. The old <code>method</code> argument has been removed since file upload requests are always POSTed. The old <code>postFileVarName</code> argument has been replaced with an instance-level <code>fileFieldName</code> attribute. (See the <a href="/yui/docs/api/classes/UploaderFlash.html#method_uploadAll">API Docs</a> for more information).</td>
+            <code>url</code>, and <code>postVars</code> as arguments, where <code>url</code> is the target URL to upload the files to, and <code>postVars</code> is a set of key-value pairs specifying the variables that should be POSTed along with the file upload. If POST variables need to be specified per file, you can use the <code>postVarsPerFile</code> attribute instead of specifying the third argument. The old <code>method</code> argument has been removed since file upload requests are always POSTed. The old <code>postFileVarName</code> argument has been replaced with an instance-level <code>fileFieldName</code> attribute. (See the <a href="/yui3/yui/docs/api/classes/UploaderFlash.html#method_uploadAll">API Docs</a> for more information).</td>
     </tr>
     <tr>
         <td><code>uploadThese</code></td>
         <td><strong>The method signature has changed</strong>. The new <code>uploadThese()</code> method takes
-            <code>files</code>, <code>url</code>, and <code>postVars</code> as arguments, where <code>files</code> is an array of <code>Y.File</code> instances (can be obtained as a subset of <code>fileList</code> attribute), <code>url</code> is the target URL to upload the files to, and <code>postVars</code> is a set of key-value pairs specifying the variables that should be POSTed along with the file upload. If POST variables need to be specified per file, you can use the <code>postVarsPerFile</code> attribute instead of specifying the third argument. The old <code>method</code> argument has been removed since file upload requests are always POSTed. The old <code>postFileVarName</code> argument has been replaced with an instance-level <code>fileFieldName</code> attribute. (See the <a href="/yui/docs/api/classes/UploaderFlash.html#method_uploadThese">API Docs</a> for more information).</td>
+            <code>files</code>, <code>url</code>, and <code>postVars</code> as arguments, where <code>files</code> is an array of <code>Y.File</code> instances (can be obtained as a subset of <code>fileList</code> attribute), <code>url</code> is the target URL to upload the files to, and <code>postVars</code> is a set of key-value pairs specifying the variables that should be POSTed along with the file upload. If POST variables need to be specified per file, you can use the <code>postVarsPerFile</code> attribute instead of specifying the third argument. The old <code>method</code> argument has been removed since file upload requests are always POSTed. The old <code>postFileVarName</code> argument has been replaced with an instance-level <code>fileFieldName</code> attribute. (See the <a href="/yui3/yui/docs/api/classes/UploaderFlash.html#method_uploadThese">API Docs</a> for more information).</td>
     </tr>
 </table>
 <h2 id="progressive-enhancement">Improved Progressive Enhancement</h2>

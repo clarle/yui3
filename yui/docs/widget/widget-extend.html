@@ -82,7 +82,7 @@
                             <a href="/yui3">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="/yui3/yui/quick-start/">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="/yui3/yui/docs/">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,13 +172,13 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/infrastructure/">Infrastructure</a></li>
+                        <li class="crumb"><a href="/yui3/yui/infrastructure/">Infrastructure</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/widget/">Widget</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/widget/">Widget</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/widget/widget-extend.html">Example: Extending the Base Widget Class</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/widget/widget-extend.html">Example: Extending the Base Widget Class</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -781,7 +781,7 @@ to bundle the strings for your widget separately from the code, and avoid hard-c
 <h3>The HTML_PARSER Property</h3>
 
 <p>
-The first Widget-specific property <code>Spinner</code> implements is the static <a href="/yui/docs/api/Widget.html#property_Widget.HTML_PARSER"><code>HTML_PARSER</code></a> property. It is used to set the initial widget configuration based on markup, providing basic progressive enhancement support.
+The first Widget-specific property <code>Spinner</code> implements is the static <a href="/yui3/yui/docs/api/Widget.html#property_Widget.HTML_PARSER"><code>HTML_PARSER</code></a> property. It is used to set the initial widget configuration based on markup, providing basic progressive enhancement support.
 </p>
 <p>
 The value of the <code>HTML_PARSER</code> property is an object literal, where each property is a widget attribute name, and the value is either a selector string (if the attribute is a node reference) or a function which is executed to provide
@@ -910,7 +910,7 @@ syncUI : function() {
 <p>The <code>Spinner</code> uses Event's <code>&quot;key&quot;</code> support, to set up a listener for arrow up/down and page up/down keys on the spinner's bounding box (line 31).</p>
 
 <p>Event's <code>&quot;key&quot;</code> support allows <code>Spinner</code> to define a single listener, which is only invoked for the key specification provided. The key specification in the above use case is <code>&quot;down:38, 40, 33, 34&quot;</code> for most browsers, indicating that
-the <code>_onDirectionKey</code> method should only be called if the bounding box receives a keydown event with a character code which is either 38, 40, 33 or 34. <code>&quot;key&quot;</code> specifications can also contain more <a href="/yui/docs/api/YUI.html#event_key">advanced filter criteria</a>, involving modifiers such as CTRL and SHIFT.</p>
+the <code>_onDirectionKey</code> method should only be called if the bounding box receives a keydown event with a character code which is either 38, 40, 33 or 34. <code>&quot;key&quot;</code> specifications can also contain more <a href="/yui3/yui/docs/api/YUI.html#event_key">advanced filter criteria</a>, involving modifiers such as CTRL and SHIFT.</p>
 
 <p>For the Spinner widget, we're looking for a key event which fires repeatedly while the key is held down. This differs for Opera, so we need to fork for the key event we're interested in. Future versions of <code>&quot;key&quot;</code> support will aim to provide this type of higher level cross-browser abstraction also.</p>
 

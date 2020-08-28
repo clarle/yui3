@@ -82,7 +82,7 @@
                             <a href="/yui3">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="/yui3/yui/quick-start/">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="/yui3/yui/docs/">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/infrastructure/">Infrastructure</a></li>
+                        <li class="crumb"><a href="/yui3/yui/infrastructure/">Infrastructure</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/tree/">Tree</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/tree/">Tree</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -240,7 +240,7 @@ YUI().use(&#x27;tree&#x27;, function (Y) {
 
 <p>
 For more information on creating YUI instances and on the
-<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+<a href="/yui3/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
 documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 </p>
 
@@ -450,7 +450,7 @@ console.log(tree.children[0].foo); &#x2F;&#x2F; =&gt; &#x27;bar&#x27;
 console.log(tree.children[1].baz); &#x2F;&#x2F; =&gt; &#x27;quux&#x27;</pre>
 
 
-<p>Note that arbitrary properties placed on the node itself won't be serialized if you call the node's <a href="/yui/docs/api/classes/Tree.Node.html#method_toJSON"><code>toJSON()</code></a> method or pass it to <code>JSON.stringify()</code>. If you want to store serializable data on a node, store it in the node's <code>data</code> property.</p>
+<p>Note that arbitrary properties placed on the node itself won't be serialized if you call the node's <a href="/yui3/yui/docs/api/classes/Tree.Node.html#method_toJSON"><code>toJSON()</code></a> method or pass it to <code>JSON.stringify()</code>. If you want to store serializable data on a node, store it in the node's <code>data</code> property.</p>
 
 <h4 id="creating-unattached-nodes">Creating Unattached Nodes</h4>
 
@@ -504,7 +504,7 @@ console.log(node.tree); &#x2F;&#x2F; =&gt; treeB</pre>
 
 <h4 id="adding-nodes-to-a-tree">Adding Nodes To a Tree</h4>
 
-<p>Use <code>Y.Tree.Node</code>'s <a href="/yui/docs/api/classes/Tree.Node.html#method_append"><code>append()</code></a>, <a href="/yui/docs/api/classes/Tree.Node.html#method_insert"><code>insert()</code></a>, and <a href="/yui/docs/api/classes/Tree.Node.html#method_prepend"><code>prepend()</code></a> methods to add nodes to other nodes as children. Each method accepts a <code>Y.Tree.Node</code> instance, a node config object, or an array of Node instances or config objects.</p>
+<p>Use <code>Y.Tree.Node</code>'s <a href="/yui3/yui/docs/api/classes/Tree.Node.html#method_append"><code>append()</code></a>, <a href="/yui3/yui/docs/api/classes/Tree.Node.html#method_insert"><code>insert()</code></a>, and <a href="/yui3/yui/docs/api/classes/Tree.Node.html#method_prepend"><code>prepend()</code></a> methods to add nodes to other nodes as children. Each method accepts a <code>Y.Tree.Node</code> instance, a node config object, or an array of Node instances or config objects.</p>
 
 <p>After adding the node, each method returns the node that was added.</p>
 
@@ -544,7 +544,7 @@ If you add an existing node that's already a child of another node, the node wil
 
 <h4 id="getting-nodes-from-a-tree">Getting Nodes From a Tree</h4>
 
-<p>Use <code>Y.Tree</code>'s <a href="/yui/docs/api/classes/Tree.html#method_getNodeById"><code>getNodeById()</code></a> method to look up any node in the tree (including <a href="#creating-unattached-nodes">unattached nodes</a>) by its <code>id</code>.</p>
+<p>Use <code>Y.Tree</code>'s <a href="/yui3/yui/docs/api/classes/Tree.html#method_getNodeById"><code>getNodeById()</code></a> method to look up any node in the tree (including <a href="#creating-unattached-nodes">unattached nodes</a>) by its <code>id</code>.</p>
 
 <pre class="code prettyprint lang-js">tree.rootNode.append({id: &#x27;foo&#x27;});
 
@@ -552,7 +552,7 @@ If you add an existing node that's already a child of another node, the node wil
 var node = tree.getNodeById(&#x27;foo&#x27;); &#x2F;&#x2F; returns the previously added node</pre>
 
 
-<p>Use <code>Y.Tree.Node</code>'s <a href="/yui/docs/api/classes/Tree.Node.html#method_next"><code>next()</code></a> and <a href="/yui/docs/api/classes/Tree.Node.html#method_previous"><code>previous()</code></a> methods to get the next and previous siblings of a node, respectively.</p>
+<p>Use <code>Y.Tree.Node</code>'s <a href="/yui3/yui/docs/api/classes/Tree.Node.html#method_next"><code>next()</code></a> and <a href="/yui3/yui/docs/api/classes/Tree.Node.html#method_previous"><code>previous()</code></a> methods to get the next and previous siblings of a node, respectively.</p>
 
 <pre class="code prettyprint lang-js">tree.rootNode.append([
     {id: &#x27;zero&#x27;},
@@ -573,7 +573,7 @@ parent.children[0]; &#x2F;&#x2F; returns the first child of &#x60;parent&#x60;</
 
 <h4 id="removing-nodes-from-a-tree">Removing Nodes From a Tree</h4>
 
-<p>Use <code>Y.Tree.Node</code>'s <a href="/yui/docs/api/classes/Tree.Node.html#method_empty"><code>empty()</code></a> and <a href="/yui/docs/api/classes/Tree.Node.html#method_remove"><code>remove()</code></a> methods to remove nodes from a tree.</p>
+<p>Use <code>Y.Tree.Node</code>'s <a href="/yui3/yui/docs/api/classes/Tree.Node.html#method_empty"><code>empty()</code></a> and <a href="/yui3/yui/docs/api/classes/Tree.Node.html#method_remove"><code>remove()</code></a> methods to remove nodes from a tree.</p>
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Remove all of this node&#x27;s children.
 node.empty(); &#x2F;&#x2F; returns an array of removed child nodes
@@ -593,7 +593,7 @@ node.empty({destroy: true});
 node.remove({destroy: true});</pre>
 
 
-<p>Use <code>Y.Tree</code>'s <a href="/yui/docs/api/classes/Tree.html#method_clear"><code>clear()</code></a> method to completely clear a tree by destroying all its nodes (including the root node) and then creating a new root node.</p>
+<p>Use <code>Y.Tree</code>'s <a href="/yui3/yui/docs/api/classes/Tree.html#method_clear"><code>clear()</code></a> method to completely clear a tree by destroying all its nodes (including the root node) and then creating a new root node.</p>
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Remove and destroy all the tree&#x27;s nodes, including the root node.
 tree.clear();</pre>
@@ -679,7 +679,7 @@ tree.clear();</pre>
 
 <p>The Labelable extension adds support for a serializable <code>label</code> property on <code>Y.Tree.Node</code> instances. This can be useful when a tree is the backing data structure for a widget with labeled nodes, such as a treeview or menu.</p>
 
-<p>To use the Labelable extension, include the <a href="/yui/docs/api/modules/tree-labelable.html"><code>tree-labelable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <code>Y.Tree.Labelable</code>.</p>
+<p>To use the Labelable extension, include the <a href="/yui3/yui/docs/api/modules/tree-labelable.html"><code>tree-labelable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <code>Y.Tree.Labelable</code>.</p>
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-labelable module.
 YUI().use(&#x27;tree-labelable&#x27;, function (Y) {
@@ -713,7 +713,7 @@ var tree = new Y.PieTree({
 
 <p>The Openable extension adds the concept of an "open" and "closed" state for tree nodes, along with related methods and events.</p>
 
-<p>To use the Openable extension, include the <a href="/yui/docs/api/modules/tree-openable.html"><code>tree-openable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <a href="/yui/docs/api/classes/Tree.Openable.html"><code>Y.Tree.Openable</code></a>.</p>
+<p>To use the Openable extension, include the <a href="/yui3/yui/docs/api/modules/tree-openable.html"><code>tree-openable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <a href="/yui3/yui/docs/api/classes/Tree.Openable.html"><code>Y.Tree.Openable</code></a>.</p>
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-openable module.
 YUI().use(&#x27;tree-openable&#x27;, function (Y) {
@@ -724,7 +724,7 @@ YUI().use(&#x27;tree-openable&#x27;, function (Y) {
 });</pre>
 
 
-<p>Tree nodes created by this custom class are now considered closed by default, but can be opened either by setting the <code>state.open</code> property to <code>true</code> at creation time or by calling the node's <a href="/yui/docs/api/classes/Tree.Node.Openable.html#method_open"><code>open()</code></a> method.</p>
+<p>Tree nodes created by this custom class are now considered closed by default, but can be opened either by setting the <code>state.open</code> property to <code>true</code> at creation time or by calling the node's <a href="/yui3/yui/docs/api/classes/Tree.Node.Openable.html#method_open"><code>open()</code></a> method.</p>
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a new tree with some openable nodes.
 var tree = new Y.MenuTree({
@@ -750,15 +750,15 @@ tree.getNodeById(&#x27;edit&#x27;).close();
 tree.getNodeById(&#x27;file&#x27;).open();</pre>
 
 
-<p>Tree instances that mix in the Openable extension receive two new events: <a href="/yui/docs/api/classes/Tree.Openable.html#event_open"><code>open</code></a> and <a href="/yui/docs/api/classes/Tree.Openable.html#event_close"><code>close</code></a>. These events fire when a node is opened or closed, respectively.</p>
+<p>Tree instances that mix in the Openable extension receive two new events: <a href="/yui3/yui/docs/api/classes/Tree.Openable.html#event_open"><code>open</code></a> and <a href="/yui3/yui/docs/api/classes/Tree.Openable.html#event_close"><code>close</code></a>. These events fire when a node is opened or closed, respectively.</p>
 
-<p>See the <a href="/yui/docs/api/modules/tree-openable.html">API docs</a> for more details on the methods and events added by the Openable extension.</p>
+<p>See the <a href="/yui3/yui/docs/api/modules/tree-openable.html">API docs</a> for more details on the methods and events added by the Openable extension.</p>
 
 <h4 id="lazy-tree-plugin">Lazy Tree Plugin</h4>
 
 <p>The Lazy Tree plugin is a companion for the Openable extension that makes it easy to load and populate a node's children on demand the first time that node is opened. This can help improve performance in very large trees by avoiding populating the children of closed nodes until they're needed.</p>
 
-<p>To use the Lazy Tree plugin, include the <a href="/yui/docs/api/modules/tree-lazy.html"><code>tree-lazy</code></a> and <a href="/yui/docs/api/modules/tree-openable.html"><code>tree-openable</code></a> modules and create a custom tree class that mixes in the <a href="#openable-extension">Openable extension</a>, as described above.</p>
+<p>To use the Lazy Tree plugin, include the <a href="/yui3/yui/docs/api/modules/tree-lazy.html"><code>tree-lazy</code></a> and <a href="/yui3/yui/docs/api/modules/tree-openable.html"><code>tree-openable</code></a> modules and create a custom tree class that mixes in the <a href="#openable-extension">Openable extension</a>, as described above.</p>
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-lazy and tree-openable modules. In this example we&#x27;ll also
 &#x2F;&#x2F; load the jsonp module to demonstrate how to load node data via JSONP.
@@ -770,7 +770,7 @@ YUI().use(&#x27;jsonp&#x27;, &#x27;tree-lazy&#x27;, &#x27;tree-openable&#x27;, f
 });</pre>
 
 
-<p>Next, create an instance of your tree class, and plug <a href="/yui/docs/api/classes/Plugin.Tree.Lazy.html"><code>Y.Plugin.Tree.Lazy</code></a> into it. Provide a custom <code>load()</code> function that will be called the first time a node is opened. This callback is responsible for populating the node with children if necessary.</p>
+<p>Next, create an instance of your tree class, and plug <a href="/yui3/yui/docs/api/classes/Plugin.Tree.Lazy.html"><code>Y.Plugin.Tree.Lazy</code></a> into it. Provide a custom <code>load()</code> function that will be called the first time a node is opened. This callback is responsible for populating the node with children if necessary.</p>
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a new tree instance.
 var tree = new Y.LazyTree();
@@ -817,19 +817,19 @@ tree.plug(Y.Plugin.Tree.Lazy, {
 });</pre>
 
 
-<p>The first time any node with a truthy <code>canHaveChildren</code> property is opened, the Lazy Tree plugin will fire a <a href="/yui/docs/api/classes/Plugin.Tree.Lazy.html#event_beforeLoad"><code>beforeLoad</code></a> event and then call your custom <code>load()</code> function, passing in the node being opened and a callback that you should call once you've finished populating the node with children.</p>
+<p>The first time any node with a truthy <code>canHaveChildren</code> property is opened, the Lazy Tree plugin will fire a <a href="/yui3/yui/docs/api/classes/Plugin.Tree.Lazy.html#event_beforeLoad"><code>beforeLoad</code></a> event and then call your custom <code>load()</code> function, passing in the node being opened and a callback that you should call once you've finished populating the node with children.</p>
 
 <p>How you load your node data is entirely up to you. You could use JSONP, XHR, pull it out of localStorage, or use any number of other techniques. All the Lazy Tree plugin cares about is that you populate the node and call the provided callback when you're done.</p>
 
-<p>If you pass an error to the callback, the plugin will fire an <a href="/yui/docs/api/classes/Plugin.Tree.Lazy.html#event_error"><code>error</code></a> event.</p>
+<p>If you pass an error to the callback, the plugin will fire an <a href="/yui3/yui/docs/api/classes/Plugin.Tree.Lazy.html#event_error"><code>error</code></a> event.</p>
 
-<p>If you call the callback without an error, the plugin will fire a <a href="/yui/docs/api/classes/Plugin.Tree.Lazy.html#event_load"><code>load</code></a> event to indicate that the node's children were loaded successfully.</p>
+<p>If you call the callback without an error, the plugin will fire a <a href="/yui3/yui/docs/api/classes/Plugin.Tree.Lazy.html#event_load"><code>load</code></a> event to indicate that the node's children were loaded successfully.</p>
 
 <h3 id="selectable-extension">Selectable Extension</h3>
 
 <p>The Selectable extension adds the concept of a "selected" state for tree nodes, along with related methods, events, and tree attributes.</p>
 
-<p>To use the Selectable extension, include the <a href="/yui/docs/api/modules/tree-selectable.html"><code>tree-selectable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <a href="/yui/docs/api/classes/Tree.Selectable.html"><code>Y.Tree.Selectable</code></a>.</p>
+<p>To use the Selectable extension, include the <a href="/yui3/yui/docs/api/modules/tree-selectable.html"><code>tree-selectable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <a href="/yui3/yui/docs/api/classes/Tree.Selectable.html"><code>Y.Tree.Selectable</code></a>.</p>
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-selectable module.
 YUI().use(&#x27;tree-selectable&#x27;, function (Y) {
@@ -840,7 +840,7 @@ YUI().use(&#x27;tree-selectable&#x27;, function (Y) {
 });</pre>
 
 
-<p>Tree nodes created by this custom class are now considered unselected by default, but can be selected either by setting the <code>state.selected</code> property to <code>true</code> at creation time or by calling the node's <a href="/yui/docs/api/classes/Tree.Node.Selectable.html#method_select"><code>select()</code></a> method.</p>
+<p>Tree nodes created by this custom class are now considered unselected by default, but can be selected either by setting the <code>state.selected</code> property to <code>true</code> at creation time or by calling the node's <a href="/yui3/yui/docs/api/classes/Tree.Node.Selectable.html#method_select"><code>select()</code></a> method.</p>
 
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a new tree with selectable nodes.
@@ -864,17 +864,17 @@ var tree = new Y.OptionTree({
 tree.getNodeById(&#x27;pug&#x27;).select();</pre>
 
 
-<p>By default, only one node in the tree may be selected at a time. Selecting a node when another node is already selected will cause the original node to be unselected. To allow multiple selection, set the tree's <a href="/yui/docs/api/classes/Tree.Selectable.html#attr_multiSelect"><code>multiSelect</code></a> attribute to <code>true</code>.</p>
+<p>By default, only one node in the tree may be selected at a time. Selecting a node when another node is already selected will cause the original node to be unselected. To allow multiple selection, set the tree's <a href="/yui3/yui/docs/api/classes/Tree.Selectable.html#attr_multiSelect"><code>multiSelect</code></a> attribute to <code>true</code>.</p>
 
-<p>When a node is selected, the Selectable extension fires a <a href="/yui/docs/api/classes/Tree.Selectable.html#event_select"><code>select</code></a> event. When a node is unselected, it fires an <a href="/yui/docs/api/classes/Tree.Selectable.html#event_unselect"><code>unselect</code></a> event.</p>
+<p>When a node is selected, the Selectable extension fires a <a href="/yui3/yui/docs/api/classes/Tree.Selectable.html#event_select"><code>select</code></a> event. When a node is unselected, it fires an <a href="/yui3/yui/docs/api/classes/Tree.Selectable.html#event_unselect"><code>unselect</code></a> event.</p>
 
-<p>See the <a href="/yui/docs/api/modules/tree-selectable.html">API docs</a> for more details.</p>
+<p>See the <a href="/yui3/yui/docs/api/modules/tree-selectable.html">API docs</a> for more details.</p>
 
 <h3 id="sortable-extension">Sortable Extension</h3>
 
 <p>The Sortable extension makes it possible to sort the children of any node using custom sorting logic, and also ensures that inserted nodes are added at the appropriate index to maintain the current sort order.</p>
 
-<p>To use the Sortable extension, include the <a href="/yui/docs/api/modules/tree-sortable.html"><code>tree-sortable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <a href="/yui/docs/api/classes/Tree.Sortable.html"><code>Y.Tree.Sortable</code></a>.</p>
+<p>To use the Sortable extension, include the <a href="/yui3/yui/docs/api/modules/tree-sortable.html"><code>tree-sortable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <a href="/yui3/yui/docs/api/classes/Tree.Sortable.html"><code>Y.Tree.Sortable</code></a>.</p>
 
 <pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-sortable module.
 YUI().use(&#x27;tree-sortable&#x27;, function (Y) {
@@ -885,7 +885,7 @@ YUI().use(&#x27;tree-sortable&#x27;, function (Y) {
 });</pre>
 
 
-<p>Nodes will now be sorted automatically as they're inserted in this tree, or you can manually re-sort all children of a specific node by calling that node's <a href="/yui/docs/api/classes/Tree.Node.Sortable.html#method_sort"><code>sort()</code></a> method.</p>
+<p>Nodes will now be sorted automatically as they're inserted in this tree, or you can manually re-sort all children of a specific node by calling that node's <a href="/yui3/yui/docs/api/classes/Tree.Node.Sortable.html#method_sort"><code>sort()</code></a> method.</p>
 
 <p>By default, nodes are sorted in insertion order, meaning that the first node you insert gets index 0, the second node inserted gets index 1, and so on. To customize the sort criteria, pass a custom <code>sortComparator</code> function to the tree's constructor, or set it on the tree's prototype. This function will receive a node as an argument, and should return a value by which that node should be sorted.</p>
 
@@ -898,13 +898,13 @@ YUI().use(&#x27;tree-sortable&#x27;, function (Y) {
 });</pre>
 
 
-<p>To sort nodes in descending order instead of ascending order, set the tree's <a href="/yui/docs/api/classes/Tree.Sortable.html#property_sortReverse"><code>sortReverse</code></a> property to <code>true</code>.</p>
+<p>To sort nodes in descending order instead of ascending order, set the tree's <a href="/yui3/yui/docs/api/classes/Tree.Sortable.html#property_sortReverse"><code>sortReverse</code></a> property to <code>true</code>.</p>
 
 <p>Each node in a tree may optionally have its own custom <code>sortComparator</code> and/or <code>sortReverse</code> properties to govern the sort order of its children. This makes it possible to use different sort criteria for different nodes in the tree. Setting these properties on a node will override the tree's <code>sortComparator</code> and <code>sortReverse</code> properties for that node's children (but not for its children's children).</p>
 
-<p>Tree instances that mix in the Sortable extension receive a <a href="/yui/docs/api/classes/Tree.Sortable.html#event_sort"><code>sort</code></a> event that fires when a node's children are manually re-sorted by calling the <code>sort()</code> method.</p>
+<p>Tree instances that mix in the Sortable extension receive a <a href="/yui3/yui/docs/api/classes/Tree.Sortable.html#event_sort"><code>sort</code></a> event that fires when a node's children are manually re-sorted by calling the <code>sort()</code> method.</p>
 
-<p>See the <a href="/yui/docs/api/modules/tree-sortable.html">API docs</a> for more details on the methods and events added by the Sortable extension.</p>
+<p>See the <a href="/yui3/yui/docs/api/modules/tree-sortable.html">API docs</a> for more details on the methods and events added by the Sortable extension.</p>
 
 <h2 id="creating-custom-tree-extensions">Creating Custom Tree Extensions</h2>
 
@@ -926,7 +926,7 @@ Labelable.prototype = {
 Y.Tree.Labelable = Labelable;</pre>
 
 
-<p>In the <code>initializer()</code> method, the Labelable extension creates a copy of the tree's <a href="/yui/docs/api/classes/Tree.html#property_nodeExtensions"><code>nodeExtensions</code></a> array, then adds the <code>Y.Tree.Node.Labelable</code> class to it.</p>
+<p>In the <code>initializer()</code> method, the Labelable extension creates a copy of the tree's <a href="/yui3/yui/docs/api/classes/Tree.html#property_nodeExtensions"><code>nodeExtensions</code></a> array, then adds the <code>Y.Tree.Node.Labelable</code> class to it.</p>
 
 <p>The <code>Y.Tree.Node.Labelable</code> class looks like this:</p>
 

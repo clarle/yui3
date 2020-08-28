@@ -82,7 +82,7 @@
                             <a href="/yui3">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="/yui3/yui/quick-start/">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="/yui3/yui/docs/">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/utilities/">Utilities</a></li>
+                        <li class="crumb"><a href="/yui3/yui/utilities/">Utilities</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/handlebars/">Handlebars</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/handlebars/">Handlebars</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -252,7 +252,7 @@ YUI().use(&#x27;handlebars&#x27;, function (Y) {
 
 <p>
 For more information on creating YUI instances and on the
-<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+<a href="/yui3/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
 documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 </p>
 
@@ -344,7 +344,7 @@ var html = template({
 
 
 <p>
-Alternatively, if you only need to render something once, you can use the convenient <a href="/yui/docs/api/classes/Handlebars.html#method_render"><code>render()</code></a> method to parse and render a template in a single step.
+Alternatively, if you only need to render something once, you can use the convenient <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_render"><code>render()</code></a> method to parse and render a template in a single step.
 </p>
 
 <pre class="code prettyprint">&#x2F;&#x2F; Parse and render a template in a single step.
@@ -905,7 +905,7 @@ Unfortunately, Handlebars doesn't ignore expressions inside comments, so you can
 <h4 id="partial-expressions">Partial Expressions</h4>
 
 <p>
-An expression like <code>{{&gt; partialName}}</code> will render the named partial template at that position in the output, inheriting the current data context. A partial is a reusable template that's registered using the <a href="/yui/docs/api/classes/Handlebars.html#method_registerPartial"><code>registerPartial()</code></a> method.
+An expression like <code>{{&gt; partialName}}</code> will render the named partial template at that position in the output, inheriting the current data context. A partial is a reusable template that's registered using the <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_registerPartial"><code>registerPartial()</code></a> method.
 </p>
 
 <p>
@@ -915,7 +915,7 @@ See the <a href="#partials">Partials</a> section of this guide for more details 
 <h3 id="helper-functions">Helper Functions</h3>
 
 <p>
-Helper functions (often referred to simply as "helpers") are functions that are registered with the Handlebars runtime using the <a href="/yui/docs/api/classes/Handlebars.html#method_registerHelper"><code>registerHelper()</code></a> method and can then be called from within a template at render-time. Helper functions can transform text, iterate over arbitrary data, implement branching logic, and more.
+Helper functions (often referred to simply as "helpers") are functions that are registered with the Handlebars runtime using the <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_registerHelper"><code>registerHelper()</code></a> method and can then be called from within a template at render-time. Helper functions can transform text, iterate over arbitrary data, implement branching logic, and more.
 </p>
 
 <p>
@@ -945,7 +945,7 @@ Helper functions are executed when a template is rendered, not when it's compile
 <h4 id="defining-custom-helpers">Defining Custom Helpers</h4>
 
 <p>
-To define a custom helper function, call the <a href="/yui/docs/api/classes/Handlebars.html#method_registerHelper"><code>registerHelper()</code></a> method and provide a name and a function to execute when the helper is called. The function may accept any number of arguments from the template, which may be provided either as literal values or as references to data properties. The final argument passed to the function will always be an <code>options</code> object (more on this <a href="#hash-arguments">later</a>).
+To define a custom helper function, call the <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_registerHelper"><code>registerHelper()</code></a> method and provide a name and a function to execute when the helper is called. The function may accept any number of arguments from the template, which may be provided either as literal values or as references to data properties. The final argument passed to the function will always be an <code>options</code> object (more on this <a href="#hash-arguments">later</a>).
 </p>
 
 <h5 id="basic-helpers">Basic Helpers</h5>
@@ -1160,7 +1160,7 @@ A partial is like a mini-template that can be called from a larger template. Par
 </p>
 
 <p>
-Partials are registered with Handlebars through the <a href="/yui/docs/api/classes/Handlebars.html#method_registerPartial"><code>registerPartial()</code></a> method. Once registered, a partial can be referenced from a template using an expression like <code>{{&gt; partialName }}</code>. Partials may be registered as string templates or as compiled template functions.
+Partials are registered with Handlebars through the <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_registerPartial"><code>registerPartial()</code></a> method. Once registered, a partial can be referenced from a template using an expression like <code>{{&gt; partialName }}</code>. Partials may be registered as string templates or as compiled template functions.
 </p>
 
 <p>
@@ -1222,7 +1222,7 @@ Handlebars templates must be compiled before they can be rendered. One benefit o
 </p>
 
 <p>
-To compile a template string, pass it to the <a href="/yui/docs/api/classes/Handlebars.html#method_compile"><code>Y.Handlebars.compile()</code></a> method. You'll get back a function.
+To compile a template string, pass it to the <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_compile"><code>Y.Handlebars.compile()</code></a> method. You'll get back a function.
 </p>
 
 <pre class="code prettyprint">&#x2F;&#x2F; Compile a template into a reusable function.
@@ -1248,7 +1248,7 @@ output = template({food: &#x27;cheesecake&#x27;});
 
 
 <p>
-If you don't plan to use a template more than once, you can compile and render it in a single step with <a href="/yui/docs/api/classes/Handlebars.html#method_render"><code>Y.Handlebars.render()</code></a>.
+If you don't plan to use a template more than once, you can compile and render it in a single step with <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_render"><code>Y.Handlebars.render()</code></a>.
 </p>
 
 <pre class="code prettyprint">&#x2F;&#x2F; Compile and render a template in a single step.
@@ -1280,7 +1280,7 @@ This will install the <code>yui</code> npm module in the current directory and m
 </p>
 
 <p>
-Next, in your application code, call the <a href="/yui/docs/api/classes/Handlebars.html#method_precompile"><code>precompile()</code></a> method to precompile a Handlebars template. It will return a string containing JavaScript code.
+Next, in your application code, call the <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_precompile"><code>precompile()</code></a> method to precompile a Handlebars template. It will return a string containing JavaScript code.
 </p>
 
 <pre class="code prettyprint">&#x2F;&#x2F; Load the YUI Handlebars module.
@@ -1304,11 +1304,11 @@ The <code>precompile()</code> method differs from the <code>compile()</code> met
 <ul>
 <li><p>The <code>precompile()</code> method returns a string of JavaScript code that's meant to be parsed and executed later, whereas <code>compile()</code> returns a live JavaScript function.</p></li>
 
-<li><p>The code returned by the <code>precompile()</code> method contains no references to any outside objects. Once it's evaluated, the resulting precompiled function must be passed to the <a href="/yui/docs/api/classes/Handlebars.html#method_template"><code>Y.Handlebars.template()</code></a> method, which will "revive" it and make the functionality of the current page's Handlebars class available to it.</p></li>
+<li><p>The code returned by the <code>precompile()</code> method contains no references to any outside objects. Once it's evaluated, the resulting precompiled function must be passed to the <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_template"><code>Y.Handlebars.template()</code></a> method, which will "revive" it and make the functionality of the current page's Handlebars class available to it.</p></li>
 </ul>
 
 <p>
-You can now serve this precompiled JS to the client in whatever way makes the most sense for your application. On the client, load the <code>handlebars-base</code> YUI module and pass the precompiled template to the <a href="/yui/docs/api/classes/Handlebars.html#method_template"><code>Y.Handlebars.template()</code></a> method to convert it into a renderable template function.
+You can now serve this precompiled JS to the client in whatever way makes the most sense for your application. On the client, load the <code>handlebars-base</code> YUI module and pass the precompiled template to the <a href="/yui3/yui/docs/api/classes/Handlebars.html#method_template"><code>Y.Handlebars.template()</code></a> method to convert it into a renderable template function.
 </p>
 
 <p>

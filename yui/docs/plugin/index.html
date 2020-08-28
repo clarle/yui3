@@ -82,7 +82,7 @@
                             <a href="/yui3">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="/yui3/yui/quick-start/">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="/yui3/yui/docs/">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/infrastructure/">Infrastructure</a></li>
+                        <li class="crumb"><a href="/yui3/yui/infrastructure/">Infrastructure</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/plugin/index.html">Plugin</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/plugin/index.html">Plugin</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -239,7 +239,7 @@ YUI().use(&#x27;plugin&#x27;, function (Y) {
 
 <p>
 For more information on creating YUI instances and on the
-<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+<a href="/yui3/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
 documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 </p>
 
@@ -309,10 +309,10 @@ container.plug(AnchorPlugin);</pre>
 attributes and events for your plugin implementation becomes useful. More importantly, for many plugins, you'll be looking to modify the default
 behavior of the host instance in some way (for example an Animation Plugin may want to change the default show/hide behavior of a Widget, to be animated).</p>
 
-<p>For these richer plugins, you should extend the base plugin class <a href="/yui/docs/api/Plugin.Base.html"><code>Plugin.Base</code></a>. </p>
+<p>For these richer plugins, you should extend the base plugin class <a href="/yui3/yui/docs/api/Plugin.Base.html"><code>Plugin.Base</code></a>. </p>
 
 <p><code>Plugin</code> is a subclass of <code>Base</code>, thereby providing managed attributes, lifecycle methods, and custom event support. Additionally it allows the plugin code to
-either listen for and react to events fired by the host or inject custom logic before or after methods invoked on the host object (through the YUI 3 <a href="/yui/docs/api/Do.html">AOP</a> infrastructure).
+either listen for and react to events fired by the host or inject custom logic before or after methods invoked on the host object (through the YUI 3 <a href="/yui3/yui/docs/api/Do.html">AOP</a> infrastructure).
 <code>Plugin.Base</code> also sets up <code>host</code> as an attribute, so you can access it through <code>this.get(&quot;host&quot;)</code> in your plugin implementation code.
 </p>
 
@@ -359,8 +359,8 @@ Y.extend(WidgetAnimPlugin, Y.Plugin.Base, {
 <h4 id="pluginlisteners">Plugin Listeners</h4>
 
 <p>The main value obtained by extending <code>Plugin.Base</code> is the ability to react to events fired by the host
-using <code>Plugin.Base</code>'s <a href="/yui/docs/api/Plugin.Base.html#method_onHostEvent"><code>onHostEvent</code></a> and <a href="/yui/docs/api/Plugin.Base.html#method_afterHostEvent"><code>afterHostEvent</code></a> methods, or
-modify methods on the host, using <a href="/yui/docs/api/Plugin.Base.html#method_beforeHostMethod"><code>beforeHostMethod</code></a> and <a href="/yui/docs/api/Plugin.Base.html#method_afterHostMethod"><code>afterHostMethod</code></a>.</p>
+using <code>Plugin.Base</code>'s <a href="/yui3/yui/docs/api/Plugin.Base.html#method_onHostEvent"><code>onHostEvent</code></a> and <a href="/yui3/yui/docs/api/Plugin.Base.html#method_afterHostEvent"><code>afterHostEvent</code></a> methods, or
+modify methods on the host, using <a href="/yui3/yui/docs/api/Plugin.Base.html#method_beforeHostMethod"><code>beforeHostMethod</code></a> and <a href="/yui3/yui/docs/api/Plugin.Base.html#method_afterHostMethod"><code>afterHostMethod</code></a>.</p>
 
 <p>The value of doing this through the above <code>Plugin.Base</code> methods as opposed to working with the host directly, is that any listeners added by the plugin using the above methods are removed when the plugin is unplugged.
 This is important. Plugins should clean up after themselves when unplugged from the host.</p>
