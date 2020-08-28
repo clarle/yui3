@@ -82,7 +82,7 @@
                             <a href="/yui3">Home</a>
                         </li>
                         <li class="nav-tab hoverable ">
-                            <a href="/yui/quick-start/">Quick Start</a>
+                            <a href="/yui3/yui/quick-start/">Quick Start</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
                                                 <a href="/download/yui3/">Download YUI 3</a>
@@ -90,25 +90,25 @@
                                 </ul>
                         </li>
                         <li class="nav-tab hoverable  nav-tab-active">
-                            <a href="/yui/docs/">Documentation</a>
+                            <a href="/yui3/yui/docs/">Documentation</a>
                                 <ul class="nav-submenu">
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/guides/">User Guides</a>
+                                                <a href="/yui3/yui/docs/guides/">User Guides</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/examples/">Examples</a>
+                                                <a href="/yui3/yui/docs/examples/">Examples</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/api/">API Docs</a>
+                                                <a href="/yui3/yui/docs/api/">API Docs</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/environments/">Environments</a>
+                                                <a href="/yui3/yui/environments/">Environments</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/">Tutorials</a>
+                                                <a href="/yui3/yui/docs/tutorials/">Tutorials</a>
                                         </li>
                                         <li class="nav-child ">
-                                                <a href="/yui/docs/tutorials/faq/">FAQ</a>
+                                                <a href="/yui3/yui/docs/tutorials/faq/">FAQ</a>
                                         </li>
                                 </ul>
                         </li>
@@ -172,11 +172,11 @@
     <div id="bd" class="clearfix yui3-g">
             <div id="breadcrumbs" class="yui3-u-1">
                 <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/yui/docs/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/">YUI</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/infrastructure/">Infrastructure</a></li>
+                        <li class="crumb"><a href="/yui3/yui/infrastructure/">Infrastructure</a></li>
                             <li class="separator">&gt;</li>
-                        <li class="crumb"><a href="/yui/docs/model-list/">Model List</a></li>
+                        <li class="crumb"><a href="/yui3/yui/docs/model-list/">Model List</a></li>
                 </ul>
             </div>
                 <div class="project-version yui3-u">Version 3.18.1</div>
@@ -240,7 +240,7 @@ YUI().use(&#x27;model-list&#x27;, function (Y) {
 
 <p>
 For more information on creating YUI instances and on the
-<a href="/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+<a href="/yui3/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
 documentation for the <a href="../yui/index.html">YUI Global Object</a>.
 </p>
 
@@ -346,7 +346,7 @@ You can now create instances of <code>Y.PieList</code>.
 <h4 id="adding-models">Adding Models</h4>
 
 <p>
-Use the <a href="/yui/docs/api/classes/ModelList.html#method_add"><code>add()</code></a>, <a href="/yui/docs/api/classes/ModelList.html#method_create"><code>create()</code></a>, and <a href="/yui/docs/api/classes/ModelList.html#method_reset"><code>reset()</code></a> methods to put models into a list.
+Use the <a href="/yui3/yui/docs/api/classes/ModelList.html#method_add"><code>add()</code></a>, <a href="/yui3/yui/docs/api/classes/ModelList.html#method_create"><code>create()</code></a>, and <a href="/yui3/yui/docs/api/classes/ModelList.html#method_reset"><code>reset()</code></a> methods to put models into a list.
 </p>
 
 <p>
@@ -503,7 +503,7 @@ Pass <code>{asList: true}</code> as the first argument to <code>filter()</code> 
 <h4 id="removing-models">Removing Models</h4>
 
 <p>
-Pass a model index, array of model indices, model instance, or array of model instances to the <a href="/yui/docs/api/classes/ModelList.html#method_remove"><code>remove()</code></a> method to remove them from the list.
+Pass a model index, array of model indices, model instance, or array of model instances to the <a href="/yui3/yui/docs/api/classes/ModelList.html#method_remove"><code>remove()</code></a> method to remove them from the list.
 </p>
 
 <pre class="code prettyprint">&#x2F;&#x2F; Remove the model at index 1 from the list.
@@ -523,7 +523,7 @@ pies.remove([
 
 
 <p>
-This will only remove the specified models from the list; it won't actually call the models' <a href="/yui/docs/api/classes/Model.html#method_destroy"><code>destroy()</code></a> methods or delete them via the models' sync layer. Calling a model's <code>destroy()</code> method will automatically remove it from any lists it's in, so that would be a better option if you want to both remove and destroy or delete a model.
+This will only remove the specified models from the list; it won't actually call the models' <a href="/yui3/yui/docs/api/classes/Model.html#method_destroy"><code>destroy()</code></a> methods or delete them via the models' sync layer. Calling a model's <code>destroy()</code> method will automatically remove it from any lists it's in, so that would be a better option if you want to both remove and destroy or delete a model.
 </p>
 
 <p>
@@ -533,7 +533,7 @@ You can also pass another ModelList instance to <code>remove()</code> to remove 
 <h3 id="list-attributes">List Attributes</h3>
 
 <p>
-Model Lists themselves don't provide any attributes, but calling the <a href="/yui/docs/api/classes/ModelList.html#method_get"><code>get()</code></a>, <a href="/yui/docs/api/classes/ModelList.html#method_getAsHTML"><code>getAsHTML()</code></a>, or <a href="/yui/docs/api/classes/ModelList.html#method_getAsURL"><code>getAsURL()</code></a> methods on the list will return an array containing the specified attribute values from every model in the list.
+Model Lists themselves don't provide any attributes, but calling the <a href="/yui3/yui/docs/api/classes/ModelList.html#method_get"><code>get()</code></a>, <a href="/yui3/yui/docs/api/classes/ModelList.html#method_getAsHTML"><code>getAsHTML()</code></a>, or <a href="/yui3/yui/docs/api/classes/ModelList.html#method_getAsURL"><code>getAsURL()</code></a> methods on the list will return an array containing the specified attribute values from every model in the list.
 </p>
 
 <pre class="code prettyprint">pies.add([
@@ -755,7 +755,7 @@ For example, you can use <code>each()</code> and <code>some()</code> to iterate 
 </p>
 
 <p>
-For more details, see the <a href="/yui/docs/api/classes/ModelList.html">Model List API docs</a>.
+For more details, see the <a href="/yui3/yui/docs/api/classes/ModelList.html">Model List API docs</a>.
 </p>
 
 <h2 id="creating-a-custom-sort-comparator">Creating a Custom Sort Comparator</h2>
@@ -822,13 +822,13 @@ function (a, b) {
 </p>
 
 <p>
-If necessary, you can override ModelList's protected <a href="/yui/docs/api/classes/ModelList.html#method__sort"><code>_sort()</code></a> method (note the underscore prefix) to further customize this sorting logic.
+If necessary, you can override ModelList's protected <a href="/yui3/yui/docs/api/classes/ModelList.html#method__sort"><code>_sort()</code></a> method (note the underscore prefix) to further customize this sorting logic.
 </p>
 
 <h2 id="implementing-a-list-sync-layer">Implementing a List Sync Layer</h2>
 
 <p>
-A list's <a href="/yui/docs/api/classes/ModelList.html#method_load"><code>load()</code></a> method internally calls the list's <a href="/yui/docs/api/classes/ModelList.html#method_sync"><code>sync()</code></a> method to carry out the load action. The default <code>sync()</code> method doesn't actually do anything, but by overriding the <code>sync()</code> method, you can provide a custom sync layer.
+A list's <a href="/yui3/yui/docs/api/classes/ModelList.html#method_load"><code>load()</code></a> method internally calls the list's <a href="/yui3/yui/docs/api/classes/ModelList.html#method_sync"><code>sync()</code></a> method to carry out the load action. The default <code>sync()</code> method doesn't actually do anything, but by overriding the <code>sync()</code> method, you can provide a custom sync layer.
 </p>
 
 <p>
@@ -919,7 +919,7 @@ Implementing a sync layer is as simple as handling the requested sync action and
 <h3 id="the-parse-method">The <code>parse()</code> Method</h3>
 
 <p>
-Depending on the kind of response your sync layer returns, you may need to override the <a href="/yui/docs/api/classes/ModelList.html#method_parse"><code>parse()</code></a> method as well. The default <code>parse()</code> implementation can parse either a JavaScript array of model hashes or a JSON string that represents a JavaScript array of model hashes. If your response data is in another format, such as a nested JSON object or XML, override the <code>parse()</code> method to provide a custom parser implementation.
+Depending on the kind of response your sync layer returns, you may need to override the <a href="/yui3/yui/docs/api/classes/ModelList.html#method_parse"><code>parse()</code></a> method as well. The default <code>parse()</code> implementation can parse either a JavaScript array of model hashes or a JSON string that represents a JavaScript array of model hashes. If your response data is in another format, such as a nested JSON object or XML, override the <code>parse()</code> method to provide a custom parser implementation.
 </p>
 
 <p>
@@ -946,7 +946,7 @@ parse: function (response) {
 <h2 id="lazymodellist">LazyModelList</h2>
 
 <p>
-The <a href="/yui/docs/api/classes/LazyModelList.html">LazyModelList</a> class is a subclass of ModelList that stores plain objects instead of fully instantiated Model instances. This can be useful when you're dealing with a large number of items that you don't want to instantiate up front for performance or memory usage reasons. To use a LazyModelList, load the <code>lazy-model-list</code> module and instantiate <code>Y.LazyModelList</code> instead of <code>Y.ModelList</code>.
+The <a href="/yui3/yui/docs/api/classes/LazyModelList.html">LazyModelList</a> class is a subclass of ModelList that stores plain objects instead of fully instantiated Model instances. This can be useful when you're dealing with a large number of items that you don't want to instantiate up front for performance or memory usage reasons. To use a LazyModelList, load the <code>lazy-model-list</code> module and instantiate <code>Y.LazyModelList</code> instead of <code>Y.ModelList</code>.
 </p>
 
 <pre class="code prettyprint">YUI().use(&#x27;lazy-model-list&#x27;, function (Y) {
@@ -957,11 +957,11 @@ The <a href="/yui/docs/api/classes/LazyModelList.html">LazyModelList</a> class i
 
 
 <p>
-LazyModelList shares the same API as ModelList, but in all cases where ModelList provides or accepts a Model instance, LazyModelList provides or accepts a plain JavaScript object. An object in a LazyModelList can be revived into a full Model instance by passing it (or its index) to the list's <a href="/yui/docs/api/classes/LazyModelList.html#method_revive"><code>revive()</code></a> method.
+LazyModelList shares the same API as ModelList, but in all cases where ModelList provides or accepts a Model instance, LazyModelList provides or accepts a plain JavaScript object. An object in a LazyModelList can be revived into a full Model instance by passing it (or its index) to the list's <a href="/yui3/yui/docs/api/classes/LazyModelList.html#method_revive"><code>revive()</code></a> method.
 </p>
 
 <p>
-Once an item is revived, its model instance is cached internally for future use. To delete a cached model instance and free up memory, pass it (or its index) to the <a href="/yui/docs/api/classes/LazyModelList.html#method_free"><code>free()</code></a> method.
+Once an item is revived, its model instance is cached internally for future use. To delete a cached model instance and free up memory, pass it (or its index) to the <a href="/yui3/yui/docs/api/classes/LazyModelList.html#method_free"><code>free()</code></a> method.
 </p>
 
 <p>
