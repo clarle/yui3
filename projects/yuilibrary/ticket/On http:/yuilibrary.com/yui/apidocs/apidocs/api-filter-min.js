@@ -110,7 +110,7 @@ var YUIConfig = {
     <ul class="nav hoverable-group">
         
             <li class="nav-tab hoverable ">
-                <a href="/">Home</a>
+                <a href="/yui3">Home</a>
                 
             </li>
         
@@ -336,7 +336,7 @@ var YUIConfig = {
     	<div id="bd">
                 <div class="yui3-u-1" id="breadcrumbs">
                     <ul class="breadcrumbs">
-                        <li class="crumb"><a href="/">YUI</a></li>
+                        <li class="crumb"><a href="/yui3">YUI</a></li>
                         <li class="separator">&gt;</li>                        <li class="crumb"><a href="/projects">Other Projects</a></li>
                         <li class="separator">&gt;</li>                        <li class="crumb"><a href="/projects/yuilibrary/">YUI Website</a></li>
                     </ul>
