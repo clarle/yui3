@@ -60,7 +60,7 @@
     
 
     
-        <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+        <script src="https://yui-s.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
     
 
 <!-- Finished fetching Partial: Thu, 04 Sep 2014 01:07:19 +0000 -->
